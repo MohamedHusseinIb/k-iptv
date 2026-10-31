@@ -1,0 +1,171 @@
+<div class="apd">
+    <app-dialog-shell
+        [heading]="'HOME.URL_UPLOAD.ADD_PLAYLIST' | translate"
+        [subtitle]="'HOME.ADD_PLAYLIST.PICK_METHOD' | translate"
+    >
+        <div
+            class="apd-method-grid"
+            appRadioGroup
+            [attr.aria-label]="
+                'HOME.ADD_PLAYLIST.METHOD_GROUP_LABEL' | translate
+            "
+        >
+            @for (opt of methodOptions; track opt.value) {
+                <button
+                    type="button"
+                    [appRadioOption]="method() === opt.value"
+                    class="apd-method"
+                    [class.active]="method() === opt.value"
+                    (click)="method.set(opt.value)"
+                >
+                    <span class="apd-method__icon" aria-hidden="true">
+                        <mat-icon>{{ opt.icon }}</mat-icon>
+                    </span>
+                    <span class="apd-method__title">
+                        {{ opt.labelKey | translate }}
+                    </span>
+                    <span class="apd-method__sub">
+                        {{ opt.subKey | translate }}
+                    </span>
+                </button>
+            }
+        </div>
+
+        <div class="apd-form-area">
+            @switch (playlistType()) {
+                @case ('file') {
+                    <app-file-upload
+                        (fileRejected)="rejectFile($event)"
+                        (imported)="onFileImported()"
+                        (closeDialog)="closeDialog()"
+                    />
+                }
+                @case ('url') {
+                    <app-url-upload />
+                }
+                @case ('text') {
+                    <app-text-import (textAdded)="uploadAsText($event)" />
+                }
+                @case ('stalker') {
+                    <app-stalker-portal-import (addClicked)="closeDialog()" />
+                }
+                @case ('xtream') {
+                    <app-xtream-code-import (addClicked)="closeDialog()" />
+                }
+                @case ('auto') {
+                    <app-auto-import
+                        [initialText]="autoDetectText()"
+                        (textChanged)="autoDetectText.set($event)"
+                        (candidateSelected)="onCandidateSelected($event)"
+                    />
+                }
+            }
+        </div>
+        <div appDialogFooterStart>
+            @if (playlistType() === 'xtream') {
+                <p class="w-full" id="xtream-http-test-notice">
+                    {{
+                        'HOME.XTREAM_PLAYLIST.CONNECTION_TEST.HTTP_PERMISSION'
+                            | translate
+                    }}
+                </p>
+            }
+            <button
+                mat-button
+                type="button"
+                [disabled]="isClearDisabled()"
+                (click)="clearCurrentForm()"
+            >
+                {{ 'CLEAR' | translate }}
+            </button>
+        </div>
+        <div appDialogFooter>
+            <button mat-button type="button" (click)="closeDialog()">
+                {{ 'CANCEL' | translate }}
+            </button>
+            @switch (playlistType()) {
+                @case ('url') {
+                    <button
+                        mat-flat-button
+                        type="button"
+                        [disabled]="!urlUpload()?.form?.valid"
+                        (click)="submitUrlPlaylist()"
+                    >
+                        {{ 'HOME.URL_UPLOAD.ADD_PLAYLIST' | translate }}
+                    </button>
+                }
+                @case ('file') {
+                    <button
+                        mat-flat-button
+                        type="button"
+                        [disabled]="!fileUpload()?.selectedFile()"
+                        (click)="fileUpload()?.confirm()"
+                    >
+                        {{ 'HOME.URL_UPLOAD.ADD_PLAYLIST' | translate }}
+                    </button>
+                }
+                @case ('text') {
+                    <button
+                        mat-flat-button
+                        type="button"
+                        [disabled]="!textImport()?.textForm?.valid"
+                        (click)="
+                            textImport()?.textAdded?.emit(
+                                textImport()?.textForm?.value?.text ?? undefined
+                            )
+                        "
+                    >
+                        {{ 'HOME.URL_UPLOAD.ADD_PLAYLIST' | translate }}
+                    </button>
+                }
+                @case ('xtream') {
+                    <button
+                        mat-flat-button
+                        class="app-dialog__secondary"
+                        type="button"
+                        [disabled]="
+                            !xtreamImport()?.form?.valid ||
+                            xtreamImport()?.isTestingConnection
+                        "
+                        (click)="xtreamImport()?.testConnection(true)"
+                        aria-describedby="xtream-http-test-notice"
+                    >
+                        {{
+                            (xtreamImport()?.isTestingConnection
+                                ? 'HOME.XTREAM_PLAYLIST.CONNECTION_TEST.TESTING'
+                                : 'HOME.XTREAM_PLAYLIST.CONNECTION_TEST.TEST_PROTOCOLS'
+                            ) | translate
+                        }}
+                    </button>
+                    <button
+                        mat-flat-button
+                        type="button"
+                        [disabled]="
+                            !xtreamImport()?.form?.valid ||
+                            xtreamImport()?.isTestingConnection
+                        "
+                        (click)="xtreamImport()?.addPlaylist()"
+                    >
+                        {{ 'HOME.URL_UPLOAD.ADD_PLAYLIST' | translate }}
+                    </button>
+                }
+                @case ('stalker') {
+                    @if (stalkerImport()?.isLoading()) {
+                        <button mat-flat-button type="button" disabled>
+                            {{ 'HOME.STALKER_PORTAL.VALIDATING' | translate }}
+                        </button>
+                    } @else {
+                        <button
+                            mat-flat-button
+                            type="button"
+                            [disabled]="!stalkerImport()?.form?.valid"
+                            (click)="stalkerImport()?.addPlaylist()"
+                        >
+                            {{ 'HOME.URL_UPLOAD.ADD_PLAYLIST' | translate }}
+                        </button>
+                    }
+                }
+            }
+        </div>
+    </app-dialog-shell>
+</div>
