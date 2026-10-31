@@ -40,8 +40,21 @@ desktop remote-control server.
 
 ## Building from source
 
-See **[ANDROID.md](./ANDROID.md)** for prerequisites, build commands, and an
-explanation of how the native layer works.
+You need Node.js (`^22.23.4 || ^24.22.1`), pnpm 10, JDK 21, and the Android SDK
+with Platform 35 and Build-Tools 35.0.0. Point `JAVA_HOME` and `ANDROID_HOME` at
+them, and set `sdk.dir` in `android/local.properties`.
+
+```bash
+pnpm install
+
+pnpm run build:android   # Angular bundle only -> dist/apps/web
+pnpm run android:sync    # bundle + copy into the native project
+pnpm run android:apk     # bundle + sync + debug APK
+```
+
+The APK lands at `android/app/build/outputs/apk/debug/app-debug.apk`. Install it
+with `adb install -r <path>`, or copy it to the device and open it with
+"install from unknown sources" enabled.
 
 ## License
 
