@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     PlaybackPositionData,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { EpisodeItemComponent } from './episode-item.component';
 import { SeasonDownloadPresenter } from './season-download-presenter';
 

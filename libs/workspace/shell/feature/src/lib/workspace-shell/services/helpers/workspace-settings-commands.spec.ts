@@ -3,7 +3,7 @@ import {
     SettingsSearchResult,
     SettingsSearchService,
     SETTINGS_SECTION_DEFINITIONS,
-} from '@iptvnator/workspace/shell/util/settings-search';
+} from '@kiptv/workspace/shell/util/settings-search';
 import {
     buildSettingsPaletteCommands,
     SETTINGS_PALETTE_RESULT_LIMIT,

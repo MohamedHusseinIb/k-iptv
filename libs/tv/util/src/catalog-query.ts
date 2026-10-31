@@ -1,4 +1,4 @@
-import { normalizeTitleKeys } from '@iptvnator/shared/interfaces';
+import { normalizeTitleKeys } from '@kiptv/shared/interfaces';
 
 /** Keep literal partial searches and admit equivalent punctuation/diacritics. */
 export function catalogTitleMatcher(query: string): (title: string) => boolean {

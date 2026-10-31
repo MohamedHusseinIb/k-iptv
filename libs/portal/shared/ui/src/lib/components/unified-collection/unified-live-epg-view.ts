@@ -4,31 +4,31 @@ import {
     getM3uArchiveDays,
     getM3uCatchupWindowEndSeconds,
     isM3uCatchupPlaybackSupported,
-} from '@iptvnator/shared/m3u-utils';
-import { ResolvedLiveCollectionDetail } from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/shared/m3u-utils';
+import { ResolvedLiveCollectionDetail } from '@kiptv/portal/shared/data-access';
 import {
     LiveEpgPanelState,
     persistLiveEpgPanelState,
     restoreLiveEpgPanelState,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     EpgDateNavigationDirection,
     getTodayEpgDateKey,
     shiftEpgDateKey,
-} from '@iptvnator/ui/epg';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
+} from '@kiptv/ui/epg';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
 import {
     Channel,
     EpgItem,
     EpgProgram,
     EpgViewMode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildCatchupTimelineSegments,
     type PlayerTimelineSegment,
-} from '@iptvnator/ui/playback';
-import { LiveEpgPanelSummary } from '@iptvnator/ui/shared-portals';
+} from '@kiptv/ui/playback';
+import { LiveEpgPanelSummary } from '@kiptv/ui/shared-portals';
 import {
     getLiveEpgPanelSummary,
     toEpgProgram,

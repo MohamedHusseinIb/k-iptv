@@ -1,5 +1,5 @@
 import { computed, effect, inject, Injectable, signal } from '@angular/core';
-import { createDevLogger, EpgProgram } from '@iptvnator/shared/interfaces';
+import { createDevLogger, EpgProgram } from '@kiptv/shared/interfaces';
 import {
     EPG_GUIDE_SOURCE,
     EpgGuideChannel,

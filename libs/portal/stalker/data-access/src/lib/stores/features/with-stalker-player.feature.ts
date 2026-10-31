@@ -3,14 +3,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { signalStoreFeature, withMethods } from '@ngrx/signals';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { PORTAL_PLAYER, createLogger } from '@iptvnator/portal/shared/util';
-import { DataService, PlaylistsService } from '@iptvnator/services';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
+import { PORTAL_PLAYER, createLogger } from '@kiptv/portal/shared/util';
+import { DataService, PlaylistsService } from '@kiptv/services';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
 import {
     PlaylistMeta,
     ResolvedPortalPlayback,
     StalkerPortalItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildStalkerExternalPlaybackHeaders,
     getStalkerPortalOrigin,

@@ -1,4 +1,4 @@
-import { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import {
     ElectronXtreamDataSourceHarness,
     setupElectronXtreamDataSource,

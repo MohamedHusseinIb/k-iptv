@@ -1,5 +1,5 @@
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
-import type { UnifiedCollectionItem } from '@iptvnator/portal/shared/util';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
+import type { UnifiedCollectionItem } from '@kiptv/portal/shared/util';
 import { createUnifiedLivePlaybackSessionKey } from './unified-live-playback-session-key';
 
 describe('createUnifiedLivePlaybackSessionKey', () => {

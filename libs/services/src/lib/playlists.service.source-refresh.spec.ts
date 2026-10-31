@@ -3,8 +3,8 @@ import type {
     Playlist,
     SourceDefinition,
     SourceServerRequest,
-} from '@iptvnator/shared/interfaces';
-import { applySourceDefinition } from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces';
+import { applySourceDefinition } from '@kiptv/shared/interfaces/source-definition';
 import { PlaylistsService } from './playlists.service';
 import type { PlaylistDocumentStore } from './playlist-storage-backend';
 import type { DataService } from './data.service';

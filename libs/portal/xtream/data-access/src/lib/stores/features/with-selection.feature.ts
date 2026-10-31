@@ -6,9 +6,9 @@ import {
     withMethods,
     withState,
 } from '@ngrx/signals';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
 import { ContentType, XtreamContentLoadState } from '../../xtream-state';
-import { foldSearchText } from '@iptvnator/shared/interfaces';
+import { foldSearchText } from '@kiptv/shared/interfaces';
 
 /**
  * Module-level collator — allocating Intl.Collator is expensive;

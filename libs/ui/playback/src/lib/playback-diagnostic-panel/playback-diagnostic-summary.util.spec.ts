@@ -3,7 +3,7 @@ import {
     createPlaybackSourceMetadata,
     classifyShakaPlaybackIssue,
     type PlaybackDiagnostic,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import { getDiagnosticDescriptionKey } from './playback-diagnostic-view.util';
 
 const metadata = createPlaybackSourceMetadata({

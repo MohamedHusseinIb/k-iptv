@@ -1,11 +1,11 @@
 import { signal } from '@angular/core';
 import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { Router } from '@angular/router';
-import { LiveLayoutSidebarStateService } from '@iptvnator/portal/shared/util';
+import { LiveLayoutSidebarStateService } from '@kiptv/portal/shared/util';
 import {
     StalkerItvChannel,
     StalkerStore,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import { StalkerLiveNavigation } from './stalker-live-navigation';
 
 const channel = (id: string, category = 'news'): StalkerItvChannel => ({

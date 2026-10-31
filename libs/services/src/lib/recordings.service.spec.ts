@@ -7,7 +7,7 @@ import {
     runInInjectionContext,
     signal,
 } from '@angular/core';
-import type { ElectronBridgeErrorResult } from '@iptvnator/shared/interfaces';
+import type { ElectronBridgeErrorResult } from '@kiptv/shared/interfaces';
 import { DownloadListLoadState } from './download-list-load-state';
 import { RecordingsService } from './recordings.service';
 import type { RecordingItem } from './recordings.service';

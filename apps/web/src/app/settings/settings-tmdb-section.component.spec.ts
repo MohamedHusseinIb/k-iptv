@@ -1,9 +1,9 @@
-import { AgeRatingPresentationService } from '@iptvnator/services/age-rating';
+import { AgeRatingPresentationService } from '@kiptv/services/age-rating';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { TmdbApiService, TmdbCacheService } from '@iptvnator/services';
+import { TmdbApiService, TmdbCacheService } from '@kiptv/services';
 import { SettingsTmdbSectionComponent } from './settings-tmdb-section.component';
 
 const CACHE_SIZE_LABEL = '{{entries}} entries · {{size}}';

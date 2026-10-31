@@ -5,8 +5,8 @@ import {
     DatabaseService,
     type DownloadItem,
     PlaylistsService,
-} from '@iptvnator/services';
-import type { Playlist, StalkerPortalItem } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import type { Playlist, StalkerPortalItem } from '@kiptv/shared/interfaces';
 import { DownloadLibraryNavigationService } from './download-library-navigation.service';
 
 const PLAYLIST_ID = 'playlist-a';

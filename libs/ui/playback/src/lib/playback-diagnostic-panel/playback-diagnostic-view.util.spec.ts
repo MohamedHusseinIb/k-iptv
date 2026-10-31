@@ -2,7 +2,7 @@ import {
     PlaybackDiagnosticCode,
     PlaybackDiagnosticSource,
     type PlaybackDiagnostic,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import {
     getDiagnosticCodecHint,
     getDiagnosticDescriptionKey,

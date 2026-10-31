@@ -2,8 +2,8 @@ import { inject, Injectable, signal } from '@angular/core';
 import {
     EpgRuntimeBridgeService,
     EpgService,
-} from '@iptvnator/epg/data-access';
-import { DialogService } from '@iptvnator/ui/components';
+} from '@kiptv/epg/data-access';
+import { DialogService } from '@kiptv/ui/components';
 import { TranslateService } from '@ngx-translate/core';
 import { SettingsStore } from '../services/settings-store.service';
 import { SettingsFormFacade } from './settings-form.facade';

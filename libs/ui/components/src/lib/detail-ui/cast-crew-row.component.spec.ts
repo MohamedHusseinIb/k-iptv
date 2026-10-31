@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import type { TmdbEnrichedCastMember } from '@iptvnator/shared/interfaces';
+import type { TmdbEnrichedCastMember } from '@kiptv/shared/interfaces';
 import { CastCrewRowComponent } from './cast-crew-row.component';
 
 const ACTOR: TmdbEnrichedCastMember = {

@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { resolveStalkerEpisodeCommand } from './stalker-episode-command';
-import { DataService } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { DataService } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { StalkerMappedEpisode } from './stalker-series.adapters';
 import { StalkerSessionService } from './stalker-session.service';
 import { StalkerPortalRepairService } from './stalker-portal-repair.service';

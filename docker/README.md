@@ -1,7 +1,7 @@
-# Self-hosted IPTVnator
+# Self-hosted K-IPTV
 
 User-facing overview with quick start, variables and FAQ:
-<https://4gray.github.io/iptvnator/download/docker/>. This file is the
+<https://github.com/MohamedHusseinIb/k-iptvdownload/docker/>. This file is the
 reference behind it.
 
 The self-hosted image contains both pieces required for the browser PWA:
@@ -9,7 +9,7 @@ The self-hosted image contains both pieces required for the browser PWA:
 - Angular PWA static files served by nginx
 - The monorepo `web-backend` Express app proxied under `/api`
 
-The historical standalone `4gray/iptvnator-backend` image is no longer needed
+The historical standalone `k-iptv-backend` image is no longer needed
 for the default Docker deployment.
 
 ## PWA Limitations And Playback Troubleshooting
@@ -43,7 +43,7 @@ container are required for the default local deployment.
 ## Build The Image
 
 ```bash
-docker build -t 4gray/iptvnator -f docker/Dockerfile .
+docker build -t k-iptv -f docker/Dockerfile .
 ```
 
 The image build runs:
@@ -79,13 +79,13 @@ secrets.
 
 Use `latest` for the simplest self-hosted setup. Pin `sha-<sha>` or
 `<version>-pwa-<sha>` when you need reproducible deployments. Use release tags
-when you want the Docker image to track a tagged IPTVnator release rather than
+when you want the Docker image to track a tagged K-IPTV release rather than
 every merge to `master`.
 
 ## Runtime Configuration
 
 The container writes `/usr/share/nginx/html/assets/app-config.js` on startup.
-That file sets `window.__IPTVNATOR_CONFIG__.BACKEND_URL`, which the PWA reads
+That file sets `window.__KIPTV_CONFIG__.BACKEND_URL`, which the PWA reads
 before it creates `PwaService`.
 
 These variables are supported by the Docker image. The compose file sets the
@@ -96,20 +96,20 @@ safe local defaults shown below.
 | `BACKEND_URL`                            | `/api`                  | Browser-facing backend URL used by the PWA. Keep `/api` for the bundled nginx proxy.                                                         |
 | `CLIENT_URL`                             | `http://localhost:4333` | Allowed browser origin for backend CORS. Use the public URL when hosting behind a reverse proxy. Multiple origins can be comma-separated.    |
 | `PORT`                                   | `3000`                  | Internal Express backend port. nginx proxy config is rendered from the template to match it at startup.                                      |
-| `IPTVNATOR_PROXY_ALLOW_PRIVATE_NETWORKS` | `0`                     | Set to `1` or `true` only for trusted local/LAN deployments that intentionally proxy private network IPTV or mock endpoints.                 |
+| `KIPTV_PROXY_ALLOW_PRIVATE_NETWORKS` | `0`                     | Set to `1` or `true` only for trusted local/LAN deployments that intentionally proxy private network IPTV or mock endpoints.                 |
 | `NODE_EXTRA_CA_CERTS`                    | unset                   | Optional Node.js CA bundle path for providers using private certificate authorities. Mount the CA file into the container and set this path. |
-| `IPTVNATOR_STORAGE`                      | `server` in the image   | `server` opens the server storage database under `IPTVNATOR_DATA_DIR` and its `/api/v1` routes; `none` keeps the backend stateless.          |
-| `IPTVNATOR_DATA_DIR`                     | `/data` in the image    | Data root; the database is `<root>/databases/iptvnator.db`. Mount a volume here.                                                             |
-| `IPTVNATOR_ACCESS_TOKEN`                 | unset                   | Optional shared access token. Enter it in the client connection UI; all non-public API and provider proxy routes require it. |
-| `IPTVNATOR_MAX_DOCUMENT_MB`              | `64`                    | Largest playlist document the backend accepts. Keep the nginx `client_max_body_size` in step.                                                |
-| `IPTVNATOR_BACKEND_START_TIMEOUT`        | `300`                   | Seconds the entrypoint waits for the backend's `/health` before giving up. Database migrations run before the backend listens.              |
+| `KIPTV_STORAGE`                      | `server` in the image   | `server` opens the server storage database under `KIPTV_DATA_DIR` and its `/api/v1` routes; `none` keeps the backend stateless.          |
+| `KIPTV_DATA_DIR`                     | `/data` in the image    | Data root; the database is `<root>/databases/kiptv.db`. Mount a volume here.                                                             |
+| `KIPTV_ACCESS_TOKEN`                 | unset                   | Optional shared access token. Enter it in the client connection UI; all non-public API and provider proxy routes require it. |
+| `KIPTV_MAX_DOCUMENT_MB`              | `64`                    | Largest playlist document the backend accepts. Keep the nginx `client_max_body_size` in step.                                                |
+| `KIPTV_BACKEND_START_TIMEOUT`        | `300`                   | Seconds the entrypoint waits for the backend's `/health` before giving up. Database migrations run before the backend listens.              |
 
 The web backend proxy accepts only `http` and `https` provider URLs. The PWA
 first registers provider URLs through `/provider-targets`, then uses the
 returned `targetId` for playlist, Xtream, and Stalker proxy calls. The backend
 blocks loopback, private, link-local, and reserved network targets by default so
 a publicly exposed instance cannot be used as a generic internal-network
-fetcher. If you enable `IPTVNATOR_PROXY_ALLOW_PRIVATE_NETWORKS=1`, keep the
+fetcher. If you enable `KIPTV_PROXY_ALLOW_PRIVATE_NETWORKS=1`, keep the
 instance restricted to trusted users.
 
 For providers that use private certificate authorities, keep TLS validation
@@ -117,7 +117,7 @@ enabled and pass the CA bundle to Node:
 
 ```yaml
 services:
-    iptvnator:
+    kiptv:
         volumes:
             - ./ca.pem:/etc/ssl/private/provider-ca.pem:ro
         environment:
@@ -135,7 +135,7 @@ the `restart: unless-stopped` policy.
 ## Server Storage
 
 The image opens a server storage database on the `/data` volume
-(`IPTVNATOR_STORAGE=server`, `IPTVNATOR_DATA_DIR=/data`) and serves its API
+(`KIPTV_STORAGE=server`, `KIPTV_DATA_DIR=/data`) and serves its API
 under `/api/v1`. Source definitions are shared between devices connected to
 that instance. Open the NAS web address on phones/tablets, or use Settings →
 Data → Server in Electron to enter the same app address. Names, connections
@@ -155,21 +155,21 @@ architecture. Set `CLIENT_URL` to the actual browser origin. Keep an HTTPS
 reverse proxy and a trusted certificate for browser installation/secure-context
 features; plain HTTP LAN access is not equivalent to an installable PWA.
 Manually entered client addresses accept the app's reverse-proxy subpath;
-`https://nas.example/iptvnator` selects `/iptvnator/api`.
+`https://nas.example/kiptv` selects `/kiptv/api`.
 
 Provider credentials will be stored unencrypted in that database, as the
 desktop app does. Protect externally accessible instances with the shared token
 or reverse-proxy authentication. Browser tokens last for the tab; desktop uses
 OS-protected storage where available and otherwise asks again after restart.
 Back up the volume like any database: stop the container, or copy
-`databases/iptvnator.db` together with its `-wal` file.
+`databases/kiptv.db` together with its `-wal` file.
 
 ## IPv6, VPNs, And Connection Fallback
 
 Node races IPv6 and IPv4 addresses when a provider hostname has both ("happy
 eyeballs"), and its stock per-attempt budget of 250 ms is too short for many
 VPN and container networks. The classic symptom is a provider that answers
-`wget` from inside the container but fails in IPTVnator with
+`wget` from inside the container but fails in K-IPTV with
 `Bad Gateway (ETIMEDOUT)` — typically behind an IPv4-only VPN namespace such
 as Gluetun/WireGuard, where the IPv6 route is unreachable and the working
 IPv4 handshake needs more than 250 ms.
@@ -188,7 +188,7 @@ legacy behavior entirely:
 
 ```yaml
 services:
-    iptvnator:
+    kiptv:
         environment:
             # Disables IPv6/IPv4 racing completely; only for networks where
             # IPv6 can never work. Breaks IPv6-only deployments.

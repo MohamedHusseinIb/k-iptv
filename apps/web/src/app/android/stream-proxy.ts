@@ -116,7 +116,7 @@ export async function startStreamProxy(): Promise<void> {
         // Playback should still be attempted directly if the proxy refuses to
         // bind; it works for providers that already serve usable headers.
         proxyStatus = 'failed';
-        console.warn('[iptvnator] stream proxy unavailable', error);
+        console.warn('[kiptv] stream proxy unavailable', error);
     }
 }
 
@@ -131,7 +131,7 @@ async function trackUpstreamOutcomes(): Promise<void> {
         });
     } catch (error) {
         // Diagnostics are a convenience; playback must not depend on them.
-        console.warn('[iptvnator] upstream diagnostics unavailable', error);
+        console.warn('[kiptv] upstream diagnostics unavailable', error);
     }
 }
 

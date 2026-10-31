@@ -1,4 +1,4 @@
-import type { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import type { PlaybackPositionData } from '@kiptv/shared/interfaces';
 
 /** What the loader reads positions through (PORTAL_PLAYBACK_POSITIONS). */
 export interface DashboardPlaybackPositionSource {

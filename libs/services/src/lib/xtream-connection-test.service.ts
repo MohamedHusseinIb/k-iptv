@@ -6,7 +6,7 @@ import {
     XtreamPortalStatusResponseLike,
     XtreamPortalStatusType,
     xtreamHttpAlternative,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { DataService } from './data.service';
 import { resetHostConnectivityGuard } from './host-connectivity-reset';
 import { PortalStatusService } from './portal-status.service';

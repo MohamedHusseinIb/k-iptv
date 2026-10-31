@@ -11,12 +11,12 @@ import { MatIconButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
 import { TranslatePipe } from '@ngx-translate/core';
-import { PlaylistSwitcherComponent } from '@iptvnator/playlist/shared/ui';
+import { PlaylistSwitcherComponent } from '@kiptv/playlist/shared/ui';
 import {
     WorkspaceBackTarget,
     WorkspaceHeaderAction,
-} from '@iptvnator/portal/shared/util';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { WorkspaceHeaderSidebarToggle } from '../../services/helpers/workspace-shell-constants';
 import { LayoutSlideDirective } from '../../layout-slide.directive';
 

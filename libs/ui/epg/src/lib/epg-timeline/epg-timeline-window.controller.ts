@@ -7,7 +7,7 @@ import {
     Signal,
     untracked,
 } from '@angular/core';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { getTodayEpgDateKey, parseEpgDateKey } from '../epg-date';
 import { programsFocusKey } from './epg-timeline-scroll.controller';
 import {

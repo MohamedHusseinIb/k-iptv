@@ -12,7 +12,7 @@ import { registerPlugin } from '@capacitor/core';
 import {
     registerExternalPlaybackLauncher,
     type ExternalPlaybackLaunchRequest,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import { isAndroidNativeRuntime } from './android-runtime';
 
 interface ExternalPlayerPlugin {

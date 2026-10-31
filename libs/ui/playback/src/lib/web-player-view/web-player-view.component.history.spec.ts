@@ -10,15 +10,15 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     PlaybackDiagnosticCode,
     PlaybackDiagnosticSource,
-} from '@iptvnator/playback/util';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
+} from '@kiptv/playback/util';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
 import {
     STORE_KEY,
     VideoPlayer,
     type ExternalPlayerSession,
-} from '@iptvnator/shared/interfaces';
-import { PORTAL_EXTERNAL_PLAYBACK } from '@iptvnator/portal/shared/util';
+} from '@kiptv/shared/interfaces';
+import { PORTAL_EXTERNAL_PLAYBACK } from '@kiptv/portal/shared/util';
 import { of } from 'rxjs';
 import {
     StubArtPlayerComponent,

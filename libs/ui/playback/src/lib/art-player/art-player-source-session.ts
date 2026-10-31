@@ -2,7 +2,7 @@ import type Artplayer from 'artplayer';
 import type { Option } from 'artplayer';
 import Hls, { type ErrorData, type ManifestParsedData } from 'hls.js';
 import mpegts from 'mpegts.js';
-import type { ChannelDrm } from '@iptvnator/shared/interfaces';
+import type { ChannelDrm } from '@kiptv/shared/interfaces';
 import {
     InlinePlaybackPlayer,
     type PlaybackDiagnostic,
@@ -13,7 +13,7 @@ import {
     createMpegTsPlaybackEvidence,
     createPlaybackSourceMetadata,
     collectPlaybackCodecs,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import { isBrowserMediaTypeSupported } from '../web-video-support/browser-media-type-support';
 import type { WebVideoControlsAdapter } from '../player-controls';
 import type { ShakaModuleLoader } from '../shaka-engine/shaka-module.types';

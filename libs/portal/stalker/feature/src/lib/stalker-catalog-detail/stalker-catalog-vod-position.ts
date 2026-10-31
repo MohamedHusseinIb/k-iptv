@@ -1,8 +1,8 @@
 import { type Signal, effect, signal } from '@angular/core';
-import type { PortalPlaybackPositions } from '@iptvnator/portal/shared/util';
-import type { StalkerSelectedVodItem } from '@iptvnator/portal/stalker/data-access';
-import type { PlaybackPositionRuntimeBridgeService } from '@iptvnator/services';
-import type { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import type { PortalPlaybackPositions } from '@kiptv/portal/shared/util';
+import type { StalkerSelectedVodItem } from '@kiptv/portal/stalker/data-access';
+import type { PlaybackPositionRuntimeBridgeService } from '@kiptv/services';
+import type { PlaybackPositionData } from '@kiptv/shared/interfaces';
 
 interface StalkerCatalogVodPositionConfig {
     readonly playbackPositions: Pick<

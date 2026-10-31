@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { EpgListRow } from '../epg-list-view.utils';
 import { EpgListViewRowComponent } from './epg-list-view-row.component';
 

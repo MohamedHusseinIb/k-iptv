@@ -1,5 +1,5 @@
-import { resolveM3uCatchupUrl } from '@iptvnator/shared/m3u-utils';
-import { Channel, EpgProgram } from '@iptvnator/shared/interfaces';
+import { resolveM3uCatchupUrl } from '@kiptv/shared/m3u-utils';
+import { Channel, EpgProgram } from '@kiptv/shared/interfaces';
 import { EpgActions } from './actions';
 
 /**

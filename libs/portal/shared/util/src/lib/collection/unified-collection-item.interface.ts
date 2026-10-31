@@ -1,7 +1,7 @@
 import type {
     ContentMetadataPatch,
     XtreamFavoriteCatalogStatus,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 /**
  * Unified interface for displaying favorites or recently-viewed items
  * from any source (M3U, Xtream, Stalker) in one list.
@@ -9,7 +9,7 @@ import type {
  * Extends the previous live-only UnifiedFavoriteChannel to cover
  * all content types: live TV, movies, and series.
  */
-import { Channel } from '@iptvnator/shared/interfaces';
+import { Channel } from '@kiptv/shared/interfaces';
 
 export type CollectionSourceType = 'm3u' | 'xtream' | 'stalker';
 export type CollectionContentType = 'live' | 'movie' | 'series';

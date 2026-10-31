@@ -1,7 +1,7 @@
 import {
     PARENTAL_LOCK_PIN_KEY,
     PARENTAL_LOCK_STORE_KEY,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { sourceProfileStorageKey } from '../source-sync/source-profile-storage';
 
 /** Keep the old browser's protection before a profile can read an absent PIN. */

@@ -16,7 +16,7 @@ jest.mock('@faker-js/faker', () => ({
 
 const TOKEN = 'benchmark-token';
 const AUTH_HEADERS = {
-    'x-iptvnator-performance-token': TOKEN,
+    'x-kiptv-performance-token': TOKEN,
 };
 jest.setTimeout(120_000);
 
@@ -43,7 +43,7 @@ describe('Xtream performance control API', () => {
         const missing = await fetch(`${running.origin}/__control/state`);
         const incorrect = await fetch(`${running.origin}/__control/state`, {
             headers: {
-                'x-iptvnator-performance-token': `${TOKEN}-wrong`,
+                'x-kiptv-performance-token': `${TOKEN}-wrong`,
             },
         });
         const valid = await fetch(`${running.origin}/__control/state`, {

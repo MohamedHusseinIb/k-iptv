@@ -1,5 +1,5 @@
 /**
- * Shared Database module for IPTVnator
+ * Shared Database module for K-IPTV
  * Provides Drizzle ORM schema and connection utilities for SQLite database
  * Used by both electron-backend (read-write) and agent-backend (read-only)
  */

@@ -2,8 +2,8 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { of } from 'rxjs';
-import { EpgSourceReconciliationError } from '@iptvnator/services';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
+import { EpgSourceReconciliationError } from '@kiptv/services';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
 import { SettingsStore } from '../services/settings-store.service';
 import { SettingsComponent } from './settings.component';
 import {

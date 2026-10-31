@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { StreamFormat, VideoPlayer } from '@iptvnator/shared/interfaces';
+import { StreamFormat, VideoPlayer } from '@kiptv/shared/interfaces';
 import { TranslateModule } from '@ngx-translate/core';
 import { SettingsPlaybackSectionComponent } from './settings-playback-section.component';
 

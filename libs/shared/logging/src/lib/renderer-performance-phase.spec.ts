@@ -51,7 +51,7 @@ interface RendererPerformancePhaseModule {
 
 const rendererPerformance =
     sharedLogging as unknown as RendererPerformancePhaseModule;
-const EXPECTED_HOOK_KEY = 'iptvnator.renderer.performance-phase-hook.v1';
+const EXPECTED_HOOK_KEY = 'kiptv.renderer.performance-phase-hook.v1';
 const hookSymbol = Symbol.for(EXPECTED_HOOK_KEY);
 
 function measure<T>(

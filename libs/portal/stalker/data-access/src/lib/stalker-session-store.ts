@@ -1,12 +1,12 @@
 import { firstValueFrom } from 'rxjs';
-import type { Playlist } from '@iptvnator/shared/interfaces';
-import type { PlaylistsService } from '@iptvnator/services';
-import type { createLogger } from '@iptvnator/portal/shared/util';
+import type { Playlist } from '@kiptv/shared/interfaces';
+import type { PlaylistsService } from '@kiptv/services';
+import type { createLogger } from '@kiptv/portal/shared/util';
 import { STALKER_WATCHDOG_DEFAULT_PERIOD_SECONDS } from './stalker-watchdog.controller';
-import { stalkerSessionFingerprint } from '@iptvnator/shared/interfaces/stalker-session';
+import { stalkerSessionFingerprint } from '@kiptv/shared/interfaces/stalker-session';
 import type { StalkerAuthenticationResult } from './stalker-auth.api';
 
-export { stalkerSessionFingerprint } from '@iptvnator/shared/interfaces/stalker-session';
+export { stalkerSessionFingerprint } from '@kiptv/shared/interfaces/stalker-session';
 
 /**
  * Session facts persisted with the playlist between app starts.

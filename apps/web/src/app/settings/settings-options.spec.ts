@@ -11,7 +11,7 @@ import { buildSettingsSectionNavItems } from './settings-options';
  *
  * The id coupling bit the Remote section once already in the scroll-anchor
  * era — its nav id was set to the Nx library name
- * (`@iptvnator/ui/remote-control`) instead of `remote-control`. The guard
+ * (`@kiptv/ui/remote-control`) instead of `remote-control`. The guard
  * below catches future rename/copy-paste regressions before they ship.
  */
 describe('buildSettingsSectionNavItems', () => {

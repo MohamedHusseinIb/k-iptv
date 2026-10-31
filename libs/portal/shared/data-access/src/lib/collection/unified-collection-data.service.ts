@@ -3,7 +3,7 @@ import {
     CollectionContentType,
     CollectionScope,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import { createCollectionReloadIndicator } from './collection-reload-indicator';
 import { UnifiedFavoritesDataService } from './unified-favorites-data.service';
 import { UnifiedRecentDataService } from './unified-recent-data.service';

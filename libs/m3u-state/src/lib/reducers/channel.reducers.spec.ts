@@ -1,5 +1,5 @@
 import { createReducer } from '@ngrx/store';
-import { Channel, EpgProgram } from '@iptvnator/shared/interfaces';
+import { Channel, EpgProgram } from '@kiptv/shared/interfaces';
 import { ChannelActions } from '../actions';
 import { initialState } from '../state';
 import { channelReducers } from './channel.reducers';

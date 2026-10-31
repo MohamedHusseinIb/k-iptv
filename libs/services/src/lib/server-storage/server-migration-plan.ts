@@ -1,4 +1,4 @@
-import { sourceIdentity, type Playlist } from '@iptvnator/shared/interfaces';
+import { sourceIdentity, type Playlist } from '@kiptv/shared/interfaces';
 
 /** Where one browser playlist goes on the server. */
 export type ServerMigrationStep =
@@ -58,4 +58,4 @@ export function planServerMigration(
     return steps;
 }
 
-export { sourceIdentity } from '@iptvnator/shared/interfaces';
+export { sourceIdentity } from '@kiptv/shared/interfaces';

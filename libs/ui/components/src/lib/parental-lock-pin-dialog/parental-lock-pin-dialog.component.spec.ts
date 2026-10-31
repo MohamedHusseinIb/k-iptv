@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     createParentalLockPinThrottle,
     PARENTAL_LOCK_PIN_MAX_ATTEMPTS,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     ParentalLockPinDialogComponent,
     ParentalLockPinDialogData,

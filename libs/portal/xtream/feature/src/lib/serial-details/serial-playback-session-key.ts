@@ -1,6 +1,6 @@
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
-import type { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
-import type { SeriesPlaybackEpisodeState } from '@iptvnator/ui/playback';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
+import type { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
+import type { SeriesPlaybackEpisodeState } from '@kiptv/ui/playback';
 
 export function createSerialPlaybackSessionKey(
     sourceId: string | undefined,

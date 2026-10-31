@@ -3,7 +3,7 @@ import { CanActivateFn, Router } from '@angular/router';
 import {
     SERVER_SIGN_IN_PATH,
     ServerStorageStatusService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 
 /** Without a valid token the workspace would show an empty library. */
 export const serverAccessGuard: CanActivateFn = () =>

@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
-import { TmdbMetadataClient } from '@iptvnator/shared/tmdb';
-import { TmdbMediaType } from '@iptvnator/shared/interfaces';
+import { TmdbMetadataClient } from '@kiptv/shared/tmdb';
+import { TmdbMediaType } from '@kiptv/shared/interfaces';
 import { TmdbApiService } from './tmdb-api.service';
 import { TmdbCacheService } from './tmdb-cache.service';
 import { TmdbIdResolverService } from './tmdb-id-resolver.service';

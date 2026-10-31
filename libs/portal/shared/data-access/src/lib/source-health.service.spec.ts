@@ -2,8 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import {
     RuntimeCapabilitiesService,
     SourceHealthEvidenceService,
-} from '@iptvnator/services';
-import { PlaylistMeta, SourceHealthResult } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { PlaylistMeta, SourceHealthResult } from '@kiptv/shared/interfaces';
 import { SourceHealthService } from './source-health.service';
 import { SourceHealthProbesService } from './source-health-probes.service';
 const active: SourceHealthResult = {

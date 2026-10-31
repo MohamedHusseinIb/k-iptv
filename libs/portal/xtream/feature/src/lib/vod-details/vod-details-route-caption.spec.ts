@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import type { ResolvedPortalPlayback } from '@iptvnator/shared/interfaces';
+import type { ResolvedPortalPlayback } from '@kiptv/shared/interfaces';
 import { VodDetailsPlaybackService } from './vod-details-playback.service';
 import { VodDetailsRouteComponent } from './vod-details-route.component';
 import {

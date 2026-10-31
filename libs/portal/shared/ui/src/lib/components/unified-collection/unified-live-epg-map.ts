@@ -1,7 +1,7 @@
 import { effect, inject, Signal, signal, untracked } from '@angular/core';
-import { StreamResolverService } from '@iptvnator/portal/shared/data-access';
-import { UnifiedCollectionItem } from '@iptvnator/portal/shared/util';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { StreamResolverService } from '@kiptv/portal/shared/data-access';
+import { UnifiedCollectionItem } from '@kiptv/portal/shared/util';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 
 export interface UnifiedLiveEpgMap {
     /** What is on now, per collection row, for the channel rail. */

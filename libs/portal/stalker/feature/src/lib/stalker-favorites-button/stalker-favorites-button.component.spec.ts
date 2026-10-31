@@ -2,8 +2,8 @@ import { signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
-import { StalkerStore } from '@iptvnator/portal/stalker/data-access';
-import { PlaylistsService } from '@iptvnator/services';
+import { StalkerStore } from '@kiptv/portal/stalker/data-access';
+import { PlaylistsService } from '@kiptv/services';
 import { of } from 'rxjs';
 import { FavoritesButtonComponent } from './stalker-favorites-button.component';
 

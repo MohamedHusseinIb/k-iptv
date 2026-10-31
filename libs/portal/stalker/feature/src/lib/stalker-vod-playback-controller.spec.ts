@@ -5,11 +5,11 @@ import type {
     Logger,
     PortalPlaybackPositions,
     PortalPlayer,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import type {
     PlaybackPositionData,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerVodPlaybackController } from './stalker-vod-playback-controller';
 
 interface Deferred<T> {

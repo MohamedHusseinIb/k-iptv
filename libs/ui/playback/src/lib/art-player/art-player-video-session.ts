@@ -4,7 +4,7 @@ import {
     type PlaybackDiagnostic,
     classifyNativePlaybackIssue,
     createPlaybackSourceMetadata,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import type { PlayerTimeUpdate } from '../playback-history/player-time-update';
 
 export interface ArtPlayerVideoSessionConfig {

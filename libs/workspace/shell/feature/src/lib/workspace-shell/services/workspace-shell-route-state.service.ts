@@ -10,21 +10,21 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
 import {
     buildPortalRailLinks,
     PortalRailLink,
-} from '@iptvnator/portal/shared/util';
-import { selectAllPlaylistsMeta } from '@iptvnator/m3u-state';
+} from '@kiptv/portal/shared/util';
+import { selectAllPlaylistsMeta } from '@kiptv/m3u-state';
 import {
     injectTranslationTick,
     RuntimeCapabilitiesService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     parseWorkspaceShellRoute,
     WorkspacePortalContext,
     WorkspaceStartupPreferencesService,
-} from '@iptvnator/workspace/shell/util';
+} from '@kiptv/workspace/shell/util';
 import { getProviderFromPlaylist } from './helpers/workspace-shell-route-utils';
 import { translateRailLinks } from './helpers/workspace-shell-search-labels';
 

@@ -1,11 +1,11 @@
 import { signal } from '@angular/core';
 import type { MatSnackBar } from '@angular/material/snack-bar';
 import type { TranslateService } from '@ngx-translate/core';
-import type { PortalPlaybackPositions } from '@iptvnator/portal/shared/util';
+import type { PortalPlaybackPositions } from '@kiptv/portal/shared/util';
 import {
     PlaybackPositionData,
     createStalkerVodItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     StalkerVodWatchedOwner,
     createStalkerVodWatchedToggle,

@@ -9,7 +9,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import {
     SettingsSearchEntry,
     SettingsSearchResult,
-} from '@iptvnator/workspace/shell/util/settings-search';
+} from '@kiptv/workspace/shell/util/settings-search';
 
 /**
  * Ranked settings matches for the header search term, shown in place of the

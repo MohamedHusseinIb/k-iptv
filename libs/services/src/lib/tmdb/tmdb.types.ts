@@ -20,4 +20,4 @@ export type {
     TmdbDiscoverResponse,
     TmdbDiscoverFilters,
     TmdbEnrichmentQuery,
-} from '@iptvnator/shared/tmdb';
+} from '@kiptv/shared/tmdb';

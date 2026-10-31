@@ -1,7 +1,7 @@
 import type {
     ServerUserStateCurrent,
     ServerUserStateNamespace,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     entryKey,
     type PendingEntry,

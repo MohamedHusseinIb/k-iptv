@@ -1,5 +1,5 @@
 import { EMPTY, firstValueFrom, from, of } from 'rxjs';
-import { DbStores, Playlist, PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { DbStores, Playlist, PlaylistMeta } from '@kiptv/shared/interfaces';
 import { reservePlaylistAuthority } from './playlist-cross-context-lock';
 import { PlaylistWriteConflict } from './playlist-storage-backend';
 import { PlaylistsService, resolvePlaylistParser } from './playlists.service';
@@ -510,14 +510,14 @@ describe('PlaylistsService', () => {
         expect(
             request.mock.calls.map(([name, options]) => [name, options])
         ).toEqual([
-            ['iptvnator:playlist-authority', { mode: 'shared' }],
+            ['kiptv:playlist-authority', { mode: 'shared' }],
             [
-                `iptvnator:playlist-authority:${playlist._id}`,
+                `kiptv:playlist-authority:${playlist._id}`,
                 { mode: 'exclusive' },
             ],
-            ['iptvnator:playlist-authority', { mode: 'shared' }],
+            ['kiptv:playlist-authority', { mode: 'shared' }],
             [
-                `iptvnator:playlist-authority:${playlist._id}`,
+                `kiptv:playlist-authority:${playlist._id}`,
                 { mode: 'exclusive' },
             ],
         ]);
@@ -1599,7 +1599,7 @@ describe('PlaylistsService', () => {
         await firstValueFrom(service.removeAll());
 
         expect(request).toHaveBeenCalledWith(
-            'iptvnator:playlist-authority',
+            'kiptv:playlist-authority',
             { mode: 'exclusive' },
             expect.any(Function)
         );
@@ -1833,7 +1833,7 @@ describe('PlaylistsService', () => {
                         name,
                         mode: options.mode ?? 'exclusive',
                     } as Lock;
-                    if (name !== 'iptvnator:playlist-authority') {
+                    if (name !== 'kiptv:playlist-authority') {
                         return callback(lock);
                     }
                     if (options.mode === 'shared') {

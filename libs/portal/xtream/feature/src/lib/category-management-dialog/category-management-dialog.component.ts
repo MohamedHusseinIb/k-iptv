@@ -19,19 +19,19 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { XTREAM_DATA_SOURCE } from '@iptvnator/portal/xtream/data-access';
+import { XTREAM_DATA_SOURCE } from '@kiptv/portal/xtream/data-access';
 import {
     DatabaseService,
     ParentalLockService,
     RuntimeCapabilitiesService,
     XCategoryFromDb,
-} from '@iptvnator/services';
-import { createLogger } from '@iptvnator/portal/shared/util';
-import { foldSearchText } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { createLogger } from '@kiptv/portal/shared/util';
+import { foldSearchText } from '@kiptv/shared/interfaces';
 import {
     DialogFooterDirective,
     DialogShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 export interface CategoryManagementDialogData {
     playlistId: string;

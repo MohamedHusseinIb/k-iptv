@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { DataService } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { DataService } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { StalkerSourceHealthService } from './stalker-source-health.service';
 import { StalkerSessionService } from './stalker-session.service';
 

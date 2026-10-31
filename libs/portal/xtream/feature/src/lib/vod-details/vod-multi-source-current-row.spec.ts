@@ -1,5 +1,5 @@
-import { audioDiffersFactually } from '@iptvnator/portal/shared/data-access';
-import type { VodSourceCandidate } from '@iptvnator/shared/interfaces';
+import { audioDiffersFactually } from '@kiptv/portal/shared/data-access';
+import type { VodSourceCandidate } from '@kiptv/shared/interfaces';
 import { currentSourceRow } from './vod-multi-source-current-row';
 import { resolveVodMultiSourceMovie } from './vod-multi-source-identity';
 

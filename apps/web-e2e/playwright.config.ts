@@ -4,8 +4,8 @@ import { defineConfig, devices } from '@playwright/test';
 import { nxE2EPreset } from '@nx/playwright/preset';
 import { workspaceRoot } from '@nx/devkit';
 
-const isStaticPwaE2E = process.env['IPTVNATOR_E2E_STATIC_PWA'] === '1';
-const staticPwaPort = process.env['IPTVNATOR_E2E_STATIC_PORT'] ?? '4300';
+const isStaticPwaE2E = process.env['KIPTV_E2E_STATIC_PWA'] === '1';
+const staticPwaPort = process.env['KIPTV_E2E_STATIC_PORT'] ?? '4300';
 // For CI, you may want to set BASE_URL to the deployed application.
 const baseURL =
     process.env['BASE_URL'] ||
@@ -23,7 +23,7 @@ const storageBackendPort = process.env['STORAGE_BACKEND_PORT'] ?? '3334';
 // Path only; the backend creates it. A new pid gives every run an empty store.
 const storageBackendDataDir = join(
     tmpdir(),
-    `iptvnator-web-e2e-storage-${process.pid}`
+    `kiptv-web-e2e-storage-${process.pid}`
 );
 
 /**
@@ -109,7 +109,7 @@ export default defineConfig({
                 PORT: webBackendPort,
                 CLIENT_URL: new URL(baseURL).origin,
                 BACKEND_URL: '/api',
-                IPTVNATOR_PROXY_ALLOW_PRIVATE_NETWORKS: '1',
+                KIPTV_PROXY_ALLOW_PRIVATE_NETWORKS: '1',
                 TSX_TSCONFIG_PATH: 'tsconfig.base.json',
             },
             url: `http://localhost:${webBackendPort}/health`,
@@ -125,10 +125,10 @@ export default defineConfig({
                 PORT: storageBackendPort,
                 CLIENT_URL: new URL(baseURL).origin,
                 BACKEND_URL: '/api',
-                IPTVNATOR_PROXY_ALLOW_PRIVATE_NETWORKS: '1',
+                KIPTV_PROXY_ALLOW_PRIVATE_NETWORKS: '1',
                 TSX_TSCONFIG_PATH: 'tsconfig.base.json',
-                IPTVNATOR_STORAGE: 'server',
-                IPTVNATOR_DATA_DIR: storageBackendDataDir,
+                KIPTV_STORAGE: 'server',
+                KIPTV_DATA_DIR: storageBackendDataDir,
             },
             url: `http://localhost:${storageBackendPort}/health`,
             // Never another backend on that port: the specs delete every

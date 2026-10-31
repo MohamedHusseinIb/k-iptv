@@ -5,23 +5,23 @@ import {
     resource,
     signal,
 } from '@angular/core';
-import type { Logger } from '@iptvnator/portal/shared/util';
+import type { Logger } from '@kiptv/portal/shared/util';
 import {
     executeStalkerRequest,
     type StalkerPortalRepairService,
     type StalkerSessionService,
     type StalkerVodSource,
     withoutWithheldStalkerItems,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import {
     type DataService,
     type ParentalLockService,
     resetHostConnectivityGuard,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     type PlaylistMeta,
     StalkerPortalActions,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { isStalkerSearchRequestCurrent } from './stalker-search-request.util';
 import {
     buildStalkerSearchRequestParams,

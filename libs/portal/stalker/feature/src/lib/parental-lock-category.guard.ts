@@ -5,8 +5,8 @@ import {
     Router,
     UrlTree,
 } from '@angular/router';
-import { ParentalLockService } from '@iptvnator/services';
-import { ParentalLockStalkerCategoryType } from '@iptvnator/shared/interfaces';
+import { ParentalLockService } from '@kiptv/services';
+import { ParentalLockStalkerCategoryType } from '@kiptv/shared/interfaces';
 
 function findPlaylistId(route: ActivatedRouteSnapshot): string | null {
     for (const snapshot of route.pathFromRoot) {

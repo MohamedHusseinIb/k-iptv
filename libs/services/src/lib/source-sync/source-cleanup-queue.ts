@@ -1,4 +1,4 @@
-import type { ElectronBridgeResult } from '@iptvnator/shared/interfaces';
+import type { ElectronBridgeResult } from '@kiptv/shared/interfaces';
 import type { PlaylistDocumentStore } from '../playlist-storage-backend';
 import type { PlaylistDeleteCleanup } from '../playlist-delete-cleanup.token';
 import { sourceProfileStorageKey } from './source-profile-storage';

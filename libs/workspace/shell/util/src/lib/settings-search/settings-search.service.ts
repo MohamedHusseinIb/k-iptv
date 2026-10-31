@@ -1,15 +1,15 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { VodSourceDiscoveryService } from '@iptvnator/portal/shared/data-access';
+import { VodSourceDiscoveryService } from '@kiptv/portal/shared/data-access';
 import {
     RuntimeCapabilitiesService,
     ServerStorageStatusService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     EmbeddedMpvSupport,
     watchEmbeddedMpvSupport,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { SETTINGS_SEARCH_ENTRIES } from './settings-search-entries';
 import { rankSearchMatch, tokenizeSearchQuery } from './settings-search-rank';
 import {

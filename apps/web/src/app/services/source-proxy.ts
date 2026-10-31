@@ -2,22 +2,22 @@ import {
     assertSourceRequestAllowed,
     sourceAuthorization,
     verifySourceInstance,
-} from '@iptvnator/services/source-sync/authorization';
+} from '@kiptv/services/source-sync/authorization';
 import {
     HttpErrorResponse,
     type HttpInterceptorFn,
 } from '@angular/common/http';
 import { catchError, from, switchMap, throwError } from 'rxjs';
-import { isGatewayOutage } from '@iptvnator/services';
+import { isGatewayOutage } from '@kiptv/services';
 import {
     invalidateSourceVerification,
     sourceConnection,
     sourceVerificationEpoch,
-} from '@iptvnator/services/source-sync/connection';
+} from '@kiptv/services/source-sync/connection';
 
 let pending: { epoch: number; promise: Promise<void> } | undefined;
 
-export { invalidateSourceVerification } from '@iptvnator/services/source-sync/connection';
+export { invalidateSourceVerification } from '@kiptv/services/source-sync/connection';
 export function sourceProxyHeaders(url: string): Record<string, string> {
     assertSourceRequestAllowed(url);
     return sourceAuthorization(url);

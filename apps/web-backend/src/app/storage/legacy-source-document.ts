@@ -1,6 +1,6 @@
 import parser from 'iptv-playlist-parser';
 import { createHash } from 'node:crypto';
-import { createPlaylistObject } from '@iptvnator/shared/m3u-utils';
+import { createPlaylistObject } from '@kiptv/shared/m3u-utils';
 
 /** Keep whole-document consumers (including TV) compatible with raw uploads. */
 export function legacySourceDocument(document: Record<string, unknown>) {

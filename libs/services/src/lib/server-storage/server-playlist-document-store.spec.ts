@@ -1,4 +1,4 @@
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import { PlaylistWriteConflict } from '../playlist-storage-backend';
 import { ServerApiError } from './server-api-client';
 import { ServerPlaylistDocumentStore } from './server-playlist-document-store';

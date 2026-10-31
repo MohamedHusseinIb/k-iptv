@@ -1,6 +1,6 @@
-import { Language, normalizeAppLanguage } from '@iptvnator/shared/interfaces';
+import { Language, normalizeAppLanguage } from '@kiptv/shared/interfaces';
 
-export const PREFERRED_LANGUAGE_STORAGE_KEY = 'iptvnator:preferred-language';
+export const PREFERRED_LANGUAGE_STORAGE_KEY = 'kiptv:preferred-language';
 
 /** Read the saved hint before IndexedDB settings are available. */
 export function getInitialLanguage(): Language {

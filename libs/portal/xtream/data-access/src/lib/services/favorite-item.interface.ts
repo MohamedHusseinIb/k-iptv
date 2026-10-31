@@ -1,4 +1,4 @@
-import type { XtreamFavoriteCatalogStatus } from '@iptvnator/shared/interfaces';
+import type { XtreamFavoriteCatalogStatus } from '@kiptv/shared/interfaces';
 export interface FavoriteItem {
     content_id: number | null;
     favorite_id?: number;

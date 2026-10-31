@@ -1,4 +1,4 @@
-import type { ServerUserStateNamespace } from '@iptvnator/shared/interfaces';
+import type { ServerUserStateNamespace } from '@kiptv/shared/interfaces';
 
 /** One playlist entry of a synced user-data map, on its way to the server. */
 export interface PendingEntry {

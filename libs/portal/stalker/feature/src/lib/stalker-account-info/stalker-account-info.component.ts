@@ -15,22 +15,22 @@ import {
     normalizeStoredStalkerAccountInfo,
     StalkerAccountInfoService,
     StalkerAccountSnapshot,
-} from '@iptvnator/portal/stalker/data-access';
-import { createLogger } from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/stalker/data-access';
+import { createLogger } from '@kiptv/portal/shared/util';
 import {
     DataService,
     PlaylistsService,
     resetHostConnectivityGuard,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     isHostConnectivityFastFailMessage,
     PlaylistMeta,
     type StalkerAccountInfoDialogData,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     DialogHeaderEndDirective,
     DialogShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 type AccountLoadState = 'loading' | 'ready' | 'error';
 

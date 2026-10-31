@@ -1,5 +1,5 @@
 import { Signal, computed, signal } from '@angular/core';
-import { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import type { Logger } from './logger';
 import {
     PortalPlaybackPositions,

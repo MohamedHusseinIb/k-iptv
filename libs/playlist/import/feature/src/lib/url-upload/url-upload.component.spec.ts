@@ -4,7 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
 import { MockModule } from 'ng-mocks';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
 import { UrlUploadComponent } from './url-upload.component';
 
 describe('UrlUploadComponent', () => {
@@ -93,7 +93,7 @@ describe('UrlUploadComponent', () => {
 
     it('clears the url playlist form', () => {
         component.form.setValue({
-            userAgent: 'IPTVnator-Test/1.0',
+            userAgent: 'K-IPTV-Test/1.0',
             playlistName: 'News',
             playlistUrl: 'http://example.org/playlist.m3u',
         });

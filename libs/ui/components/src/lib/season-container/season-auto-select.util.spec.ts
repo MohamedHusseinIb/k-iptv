@@ -1,7 +1,7 @@
 import {
     PlaybackPositionData,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     type AutoSeasonContext,
     resolveAutoSelectedSeason,

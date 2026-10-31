@@ -1,5 +1,5 @@
 /**
- * The set-top box IPTVnator presents itself as. Every value here is a constant
+ * The set-top box K-IPTV presents itself as. Every value here is a constant
  * describing the emulated device, never anything derived from the user's
  * account — the identity the portal binds to a MAC lives in `device_id` /
  * `device_id2` and is handled separately.

@@ -1,5 +1,5 @@
 import { Signal, computed, signal } from '@angular/core';
-import type { PlayerContentInfo } from '@iptvnator/shared/interfaces';
+import type { PlayerContentInfo } from '@kiptv/shared/interfaces';
 
 interface RouteScopedExternalLaunch {
     readonly routePlaylistId: string;

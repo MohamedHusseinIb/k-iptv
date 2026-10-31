@@ -5,7 +5,7 @@ import {
     ParsedPlaylist,
     ParsedPlaylistItem,
     Playlist,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { extractDrmFromRaw } from './kodiprop.utils';
 
 /**
@@ -464,7 +464,7 @@ export const getStreamExtensionFromUrl = (url: string): string | undefined => {
 
 const getExtensionFromUrlQuery = (url: string): string | undefined => {
     try {
-        const parsedUrl = new URL(url, 'http://iptvnator.local');
+        const parsedUrl = new URL(url, 'http://kiptv.local');
         return normalizeExtensionToken(parsedUrl.searchParams.get('extension'));
     } catch {
         return undefined;

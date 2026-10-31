@@ -1,7 +1,7 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { webcrypto } from 'node:crypto';
-import { hashParentalLockPin } from '@iptvnator/shared/interfaces';
+import { hashParentalLockPin } from '@kiptv/shared/interfaces';
 import { DatabaseService } from '../database-electron.service';
 import { RuntimeCapabilitiesService } from '../runtime-capabilities.service';
 import { SettingsStore } from '../settings-store.service';

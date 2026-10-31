@@ -1,4 +1,4 @@
-import type { ServerUserStateNamespace } from '@iptvnator/shared/interfaces';
+import type { ServerUserStateNamespace } from '@kiptv/shared/interfaces';
 
 /** One playlist's Xtream user data from one place (browser or server). */
 export type XtreamUserData = Partial<Record<ServerUserStateNamespace, unknown>>;

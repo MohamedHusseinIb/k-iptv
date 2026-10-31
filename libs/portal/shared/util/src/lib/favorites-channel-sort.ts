@@ -1,4 +1,4 @@
-import { foldSearchText } from '@iptvnator/shared/interfaces';
+import { foldSearchText } from '@kiptv/shared/interfaces';
 
 const FAVORITES_SORT_COLLATOR = new Intl.Collator(undefined, {
     numeric: true,

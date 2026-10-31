@@ -1,8 +1,8 @@
 import {
     asStalkerPortalError,
     type StalkerPortalErrorKind,
-} from '@iptvnator/portal/stalker/data-access';
-import type { StalkerPortalIdentity } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/stalker/data-access';
+import type { StalkerPortalIdentity } from '@kiptv/shared/interfaces';
 
 /** The `stalker*` playlist columns the import form writes. */
 export interface StalkerPlaylistIdentityFields {

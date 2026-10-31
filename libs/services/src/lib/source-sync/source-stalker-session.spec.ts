@@ -1,5 +1,5 @@
-import type { Playlist } from '@iptvnator/shared/interfaces';
-import { stalkerSessionFingerprint } from '@iptvnator/shared/interfaces/stalker-session';
+import type { Playlist } from '@kiptv/shared/interfaces';
+import { stalkerSessionFingerprint } from '@kiptv/shared/interfaces/stalker-session';
 import { invalidateObsoleteSourceSession } from './source-stalker-session';
 
 describe('source session verification', () => {

@@ -4,7 +4,7 @@ import {
     type XtreamVodInfo,
     type XtreamSerieInfo,
     type StalkerVodInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     mergeVodInfoWithTmdb,
     mergeSerieInfoWithTmdb,

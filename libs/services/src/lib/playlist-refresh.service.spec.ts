@@ -8,7 +8,7 @@ import type {
     ElectronBridgeApi,
     Playlist,
     PlaylistRefreshPayload,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 import { PlaylistRefreshService } from './playlist-refresh.service';
 

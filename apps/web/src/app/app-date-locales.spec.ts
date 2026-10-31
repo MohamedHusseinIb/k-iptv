@@ -1,8 +1,8 @@
 import { formatDate } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
 import { TranslateService } from '@ngx-translate/core';
-import { normalizeDateLocale } from '@iptvnator/pipes';
-import { Language } from '@iptvnator/shared/interfaces';
+import { normalizeDateLocale } from '@kiptv/pipes';
+import { Language } from '@kiptv/shared/interfaces';
 import { PREFERRED_LANGUAGE_STORAGE_KEY } from './app-language-preference';
 import {
     APP_DATE_LOCALE_LOADERS,

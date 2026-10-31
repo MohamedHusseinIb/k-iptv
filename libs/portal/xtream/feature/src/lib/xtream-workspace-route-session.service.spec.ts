@@ -2,15 +2,15 @@ import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
 import {
     PortalStatusType,
     XtreamContentInitBlockReason,
     XtreamPlaylistData,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { SourceActivityService } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/xtream/data-access';
+import { SourceActivityService } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { XtreamWorkspaceRouteSession } from './xtream-workspace-route-session.service';
 
 const PLAYLIST_ID = 'playlist-1';

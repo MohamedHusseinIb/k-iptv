@@ -21,7 +21,7 @@ import {
     createLogger,
     createPendingPlaybackStart,
     resolveStalkerBackNavigation,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     createPortalFavoritesResource,
     createRefreshTrigger,
@@ -30,19 +30,19 @@ import {
     normalizeStalkerEntityId,
     StalkerSelectedVodItem,
     toggleStalkerVodFavorite,
-} from '@iptvnator/portal/stalker/data-access';
-import { VodDetailsComponent } from '@iptvnator/ui/playback';
+} from '@kiptv/portal/stalker/data-access';
+import { VodDetailsComponent } from '@kiptv/ui/playback';
 import {
     DownloadsService,
     PlaybackPositionRuntimeBridgeService,
     PlaylistsService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     ResolvedPortalPlayback,
     StalkerVodDetails,
     VodDetailsItem,
     createStalkerVodItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerCatalogFacadeService } from '../stalker-catalog-facade.service';
 import { StalkerSeriesViewComponent } from '../stalker-series-view/stalker-series-view.component';
 
@@ -54,7 +54,7 @@ import {
     createStalkerVodDetailActions,
     beginTrackedExternalLaunch,
 } from '../stalker-vod-detail-actions';
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
 
 @Component({
     selector: 'app-stalker-catalog-detail',

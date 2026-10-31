@@ -1,4 +1,4 @@
-import { getXtreamPendingRestoreStorageKey } from '@iptvnator/shared/interfaces';
+import { getXtreamPendingRestoreStorageKey } from '@kiptv/shared/interfaces';
 import { sourceConnection } from './source-connection';
 import { wasLegacySourceClient } from './legacy-source-client';
 import { sourceProfileStorageKey } from './source-profile-storage';

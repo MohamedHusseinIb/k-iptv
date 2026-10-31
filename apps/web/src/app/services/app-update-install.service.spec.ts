@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import {
     ELECTRON_BRIDGE_APP_UPDATE_STATUSES,
     ElectronBridgeAppUpdateStatus,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     AppQuitUnloadGuardHooks,
     AppUpdateInstallService,
@@ -12,7 +12,7 @@ const BASE_STATUS: ElectronBridgeAppUpdateStatus = {
     currentVersion: '0.23.0',
     status: ELECTRON_BRIDGE_APP_UPDATE_STATUSES.Idle,
     supportedSelfUpdate: true,
-    manualDownloadUrl: 'https://github.com/4gray/iptvnator/releases/latest',
+    manualDownloadUrl: 'https://github.com/MohamedHusseinIb/k-iptv/releases/latest',
     channel: 'stable',
     installedChannel: 'stable',
 };

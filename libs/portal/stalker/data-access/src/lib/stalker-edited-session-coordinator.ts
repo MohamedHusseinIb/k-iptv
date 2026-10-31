@@ -3,8 +3,8 @@ import {
     isFullStalkerPortalPlaylist,
     type Playlist,
     type PlaylistMetaUpdate,
-} from '@iptvnator/shared/interfaces';
-import type { PlaylistsService } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import type { PlaylistsService } from '@kiptv/services';
 import { acquireCrossContextEditReservation } from './stalker-edit-cross-context-reservation';
 import { stalkerSessionFingerprint } from './stalker-session-store';
 import type { StalkerTokenCache } from './stalker-token-cache';

@@ -5,9 +5,9 @@ import {
     RecordingStartMetadata,
     RecordingStoppedEvent,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
-import type { PlaybackFallbackRequest } from '@iptvnator/ui/playback';
-import { LiveEpgPanelSummary } from '@iptvnator/ui/shared-portals';
+} from '@kiptv/shared/interfaces';
+import type { PlaybackFallbackRequest } from '@kiptv/ui/playback';
+import { LiveEpgPanelSummary } from '@kiptv/ui/shared-portals';
 
 /**
  * Stand-in for the live EPG panel. Matches both selectors so the host's

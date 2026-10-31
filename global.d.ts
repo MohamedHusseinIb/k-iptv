@@ -15,7 +15,7 @@ declare global {
     type ElectronDbOperationEvent = ElectronBridgeDbOperationEvent;
 
     interface Window {
-        __IPTVNATOR_CONFIG__?: {
+        __KIPTV_CONFIG__?: {
             BACKEND_URL?: string;
         };
         electron: ElectronBridgeApi;

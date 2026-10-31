@@ -2,7 +2,7 @@ import {
     isServerUserStateNamespace,
     SERVER_USER_STATE_NAMESPACES,
     type ServerUserStateNamespace,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { UserDataStorage } from '../user-data-storage';
 import {
     markUnconfirmed,
@@ -18,15 +18,15 @@ import { cacheKey } from './server-user-data-cache';
  * after the tab closed (by another, see `orphanedPages`), instead of being
  * replaced by the server's older value.
  */
-export const UNSENT_WRITES_KEY = 'iptvnator-server:unsent-writes';
+export const UNSENT_WRITES_KEY = 'kiptv-server:unsent-writes';
 /** Which server database the cached user data belongs to. */
-export const CACHE_OWNER_KEY = 'iptvnator-server:cache-owner';
+export const CACHE_OWNER_KEY = 'kiptv-server:cache-owner';
 
 const writesKey = (instanceId: string, page: string) =>
     `${UNSENT_WRITES_KEY}:${instanceId}:${page}`;
 
 /** Edits made before the first read of a visit, kept as before → after. */
-export const DEFERRED_EDITS_KEY = 'iptvnator-server:deferred-edits';
+export const DEFERRED_EDITS_KEY = 'kiptv-server:deferred-edits';
 const deferredKey = (instanceId: string, page: string) =>
     `${DEFERRED_EDITS_KEY}:${instanceId}:${page}`;
 
@@ -46,7 +46,7 @@ export function claimCache(local: UserDataStorage, instanceId: string): void {
         }
         for (const namespace of SERVER_USER_STATE_NAMESPACES) {
             // Also the unscoped keys of earlier builds.
-            local.removeItem(`iptvnator-server:${namespace}`);
+            local.removeItem(`kiptv-server:${namespace}`);
             if (owner) {
                 local.removeItem(cacheKey(owner, namespace));
             }

@@ -2,13 +2,13 @@ import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
-import { PlaylistsService } from '@iptvnator/services';
-import { type Channel, type Playlist } from '@iptvnator/shared/interfaces';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
+import { PlaylistsService } from '@kiptv/services';
+import { type Channel, type Playlist } from '@kiptv/shared/interfaces';
 import {
     RENDERER_PERFORMANCE_PHASE_HOOK_KEY,
     type RendererPerformancePhaseEvent,
-} from '@iptvnator/shared/logging';
+} from '@kiptv/shared/logging';
 import { of, Subject } from 'rxjs';
 import { M3uWorkspaceRouteSession } from './m3u-workspace-route-session.service';
 

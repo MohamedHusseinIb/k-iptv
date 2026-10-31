@@ -1,14 +1,14 @@
 import {
     XtreamSerieEpisode,
     resolveEnrichmentSeasonNumber,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     StalkerSeason,
     StalkerVodSeriesEpisode,
     StalkerVodSeriesSeason,
     StalkerVodSource,
 } from './models';
-import { isStalkerSeriesFlag } from '@iptvnator/shared/interfaces';
+import { isStalkerSeriesFlag } from '@kiptv/shared/interfaces';
 
 const naturalSeasonCollator = new Intl.Collator(undefined, {
     numeric: true,

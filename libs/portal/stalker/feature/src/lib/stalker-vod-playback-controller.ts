@@ -6,12 +6,12 @@ import {
     type PortalPlaybackPositions,
     type PortalPlayer,
     createPendingPlaybackStart,
-} from '@iptvnator/portal/shared/util';
-import type { PlaybackFallbackRequest } from '@iptvnator/ui/playback';
+} from '@kiptv/portal/shared/util';
+import type { PlaybackFallbackRequest } from '@kiptv/ui/playback';
 import {
     PlaybackPositionData,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { PendingExternalLaunch } from './stalker-vod-detail-actions';
 
 interface StalkerVodPlaybackControllerConfig {

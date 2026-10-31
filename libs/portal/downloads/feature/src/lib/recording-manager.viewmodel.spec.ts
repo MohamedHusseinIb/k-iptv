@@ -1,4 +1,4 @@
-import type { RecordingItem } from '@iptvnator/services';
+import type { RecordingItem } from '@kiptv/services';
 import {
     buildRecordingManagerViewModel,
     recordingDurationLabel,

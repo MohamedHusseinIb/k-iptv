@@ -3,11 +3,11 @@ import { TestBed } from '@angular/core/testing';
 import type {
     StalkerPlaylistConnectionEditor,
     StalkerPlaylistConnectionResult,
-} from '@iptvnator/playlist/shared/ui/stalker-connection-editor';
+} from '@kiptv/playlist/shared/ui/stalker-connection-editor';
 import type {
     PlaylistMeta,
     PlaylistMetaUpdate,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { LazyStalkerPlaylistConnectionEditor } from './lazy-stalker-playlist-connection-editor';
 
 const resolved: StalkerPlaylistConnectionResult = {

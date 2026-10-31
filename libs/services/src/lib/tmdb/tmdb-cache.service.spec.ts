@@ -1,4 +1,4 @@
-import { TmdbCacheEntry } from '@iptvnator/shared/interfaces';
+import { TmdbCacheEntry } from '@kiptv/shared/interfaces';
 import { TmdbCacheService } from './tmdb-cache.service';
 
 /** PWA path only — window.electron is undefined in the jsdom environment */

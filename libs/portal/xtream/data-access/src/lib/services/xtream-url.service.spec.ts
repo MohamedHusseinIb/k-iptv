@@ -1,11 +1,11 @@
 import { signal, WritableSignal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { DatabaseService, SettingsStore } from '@iptvnator/services';
+import { DatabaseService, SettingsStore } from '@kiptv/services';
 import {
     StreamFormat,
     XtreamSerieEpisode,
     XtreamVodDetails,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { XtreamCredentials } from './xtream-api.service';
 import { XtreamUrlService } from './xtream-url.service';
 

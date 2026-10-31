@@ -1,17 +1,17 @@
 import { TestBed } from '@angular/core/testing';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
 import {
     XtreamApiService,
     XtreamUrlService,
-} from '@iptvnator/portal/xtream/data-access';
-import { StalkerSessionService } from '@iptvnator/portal/stalker/data-access';
-import { UnifiedCollectionItem } from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/xtream/data-access';
+import { StalkerSessionService } from '@kiptv/portal/stalker/data-access';
+import { UnifiedCollectionItem } from '@kiptv/portal/shared/util';
 import {
     DataService,
     PlaylistsService,
     SettingsStore,
-} from '@iptvnator/services';
-import { Playlist } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { Playlist } from '@kiptv/shared/interfaces';
 import { of } from 'rxjs';
 import { StreamResolverService } from './stream-resolver.service';
 

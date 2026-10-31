@@ -73,7 +73,7 @@ export async function checkComponentSource(file, source, readTemplate) {
                 findings.push({
                     file,
                     line: lineOf(node),
-                    reason: `uses ${TOKEN}; provide the app defaults with ${PROVIDER}() from @iptvnator/ui/components/form-field-defaults`,
+                    reason: `uses ${TOKEN}; provide the app defaults with ${PROVIDER}() from @kiptv/ui/components/form-field-defaults`,
                 });
             }
         }

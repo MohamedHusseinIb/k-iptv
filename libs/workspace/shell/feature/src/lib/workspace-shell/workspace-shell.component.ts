@@ -11,8 +11,8 @@ import {
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ExternalPlaybackDockComponent } from '@iptvnator/ui/components';
-import { EmbeddedMpvOverlayVisibilityService } from '@iptvnator/ui/playback';
+import { ExternalPlaybackDockComponent } from '@kiptv/ui/components';
+import { EmbeddedMpvOverlayVisibilityService } from '@kiptv/ui/playback';
 import {
     PlaylistDropOverlayComponent,
     PlaylistDropZoneDirective,
@@ -34,8 +34,8 @@ import { WorkspaceShellSearchService } from './services/workspace-shell-search.s
 import { WorkspaceBackGesturesService } from '../workspace-back-gestures/workspace-back-gestures.service';
 import { WorkspaceKeyboardShortcutsService } from '../workspace-keyboard-shortcuts/workspace-keyboard-shortcuts.service';
 import { WorkspaceLiveCategoriesPopoverService } from '../workspace-live-categories-popover/workspace-live-categories-popover.service';
-import { WorkspaceShellContextDrawerService } from '@iptvnator/workspace/shell/util';
-import { LIVE_CATEGORIES_POPOVER } from '@iptvnator/portal/shared/util';
+import { WorkspaceShellContextDrawerService } from '@kiptv/workspace/shell/util';
+import { LIVE_CATEGORIES_POPOVER } from '@kiptv/portal/shared/util';
 
 @Component({
     selector: 'app-workspace-shell',

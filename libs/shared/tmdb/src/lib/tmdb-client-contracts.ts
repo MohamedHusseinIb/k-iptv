@@ -1,7 +1,7 @@
 import {
     TmdbCacheEntry,
     TmdbCacheMediaType,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /** Host-owned settings and storage; the metadata client has no framework/runtime dependency. */
 export interface TmdbClientRuntime {

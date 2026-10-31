@@ -11,7 +11,7 @@ import {
     createPlaybackSourceMetadata,
     collectPlaybackCodecs,
     type PlaybackCodecTrack,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import { isBrowserMediaTypeSupported } from '../web-video-support/browser-media-type-support';
 
 /**

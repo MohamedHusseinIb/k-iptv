@@ -11,7 +11,7 @@ import {
 import {
     isStalkerSeriesFlag,
     StalkerPortalItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Marks a Stalker handoff whose origin is exactly one history entry back, so

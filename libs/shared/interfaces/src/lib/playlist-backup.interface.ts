@@ -3,7 +3,7 @@ import { PlaybackPositionData } from './playback-position.interface';
 import { M3uRecentlyViewedItem } from './playlist-recently-viewed.interface';
 import { StalkerPortalItem } from './stalker-portal-item.interface';
 
-export const PLAYLIST_BACKUP_KIND = 'iptvnator-playlist-backup';
+export const PLAYLIST_BACKUP_KIND = 'kiptv-playlist-backup';
 export const PLAYLIST_BACKUP_VERSION = 1;
 
 export type PlaylistBackupPortalType = 'm3u' | 'xtream' | 'stalker';

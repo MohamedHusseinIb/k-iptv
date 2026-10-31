@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DownloadsService, type DownloadStartInput } from '@iptvnator/services';
+import { DownloadsService, type DownloadStartInput } from '@kiptv/services';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({ providedIn: 'root' })

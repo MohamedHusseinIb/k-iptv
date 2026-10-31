@@ -1,9 +1,9 @@
-import { clearServerAccessToken } from '@iptvnator/services';
-import type { ServerInstanceInfo } from '@iptvnator/shared/interfaces';
+import { clearServerAccessToken } from '@kiptv/services';
+import type { ServerInstanceInfo } from '@kiptv/shared/interfaces';
 import type { ServerInstanceProbe } from './server-instance-probe';
 
 /** Last instance this browser saw, per backend URL. */
-export const REMEMBERED_SERVER_KEY = 'iptvnator-server:instance';
+export const REMEMBERED_SERVER_KEY = 'kiptv-server:instance';
 
 export interface ServerStorageStart {
     readonly instance: ServerInstanceInfo;

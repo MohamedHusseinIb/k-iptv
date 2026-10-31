@@ -1,12 +1,12 @@
 import { inject, Injectable } from '@angular/core';
-import { ParentalLockService } from '@iptvnator/services';
+import { ParentalLockService } from '@kiptv/services';
 import {
     unambiguousCategoryLanguage,
     type VodSourceCandidate,
     type VodSourceCandidateRow,
     type VodSourceMatchKind,
-} from '@iptvnator/shared/interfaces';
-import { createLogger } from '@iptvnator/portal/shared/util';
+} from '@kiptv/shared/interfaces';
+import { createLogger } from '@kiptv/portal/shared/util';
 import { parseTitleMetadata } from './vod-source-metadata.util';
 
 /**

@@ -3,14 +3,14 @@ import { TestBed } from '@angular/core/testing';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { PORTAL_PLAYBACK_POSITIONS } from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
+import { PORTAL_PLAYBACK_POSITIONS } from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
 import {
     VideoPlayer,
     type PlaybackPositionData,
     type XtreamVodDetails,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     VOD_MENU_ACTION,
     VodDetailsMenuService,

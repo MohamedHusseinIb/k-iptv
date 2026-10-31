@@ -1,4 +1,4 @@
-import { AGE_RATING_COUNTRY_CODES, normalizeAgeRatingCountry } from '@iptvnator/shared/interfaces/age-rating';
+import { AGE_RATING_COUNTRY_CODES, normalizeAgeRatingCountry } from '@kiptv/shared/interfaces/age-rating';
 import { computed, inject, Injectable } from '@angular/core';
 
 import { toTmdbLanguage } from '../tmdb/tmdb-config';

@@ -5,10 +5,10 @@ import {
     ChannelActions,
     FavoritesActions,
     PlaylistActions,
-} from '@iptvnator/m3u-state';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
-import { PlaylistsService } from '@iptvnator/services';
-import { Channel, Playlist, PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/m3u-state';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
+import { PlaylistsService } from '@kiptv/services';
+import { Channel, Playlist, PlaylistMeta } from '@kiptv/shared/interfaces';
 import { Store } from '@ngrx/store';
 import { M3uWorkspaceRouteSession } from './m3u-workspace-route-session.service';
 

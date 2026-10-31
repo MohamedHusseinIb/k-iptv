@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import {
     SOURCE_EXPIRY_MAX_WAIT_MS,
     type SourceExpiryFacts,
-} from '@iptvnator/workspace/dashboard/data-access';
+} from '@kiptv/workspace/dashboard/data-access';
 import { createSourceExpiryClock } from './dashboard-source-expiry-clock';
 
 const DAY_MS = 86_400_000;

@@ -6,7 +6,7 @@ import {
     signal,
     Signal,
 } from '@angular/core';
-import { SettingsStore } from '@iptvnator/services';
+import { SettingsStore } from '@kiptv/services';
 
 const HOVER_CAPABLE_QUERY = '(any-hover: hover)';
 

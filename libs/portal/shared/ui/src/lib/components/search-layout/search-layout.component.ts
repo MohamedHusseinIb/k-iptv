@@ -10,7 +10,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatButton } from '@angular/material/button';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { TranslatePipe } from '@ngx-translate/core';
-import { registerWorkspaceBack } from '@iptvnator/portal/shared/data-access';
+import { registerWorkspaceBack } from '@kiptv/portal/shared/data-access';
 import { InfiniteScrollDirective } from '../../directives/infinite-scroll.directive';
 
 @Component({

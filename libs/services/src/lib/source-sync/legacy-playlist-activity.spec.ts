@@ -1,5 +1,5 @@
-import { type Playlist } from '@iptvnator/shared/interfaces';
-import { applySourceDefinition } from '@iptvnator/shared/interfaces/source-definition';
+import { type Playlist } from '@kiptv/shared/interfaces';
+import { applySourceDefinition } from '@kiptv/shared/interfaces/source-definition';
 import type { PlaylistDocumentStore } from '../playlist-storage-backend';
 import { migrateLegacyPlaylistActivity } from './legacy-playlist-activity';
 import { requestSourceServer } from './source-api';
@@ -8,7 +8,7 @@ jest.mock('./source-api', () => ({ requestSourceServer: jest.fn() }));
 describe('existing browser playlist activity upgrade', () => {
     const connection = { apiUrl: 'https://nas.test/api', instanceId: 'nas' };
     const instance = {
-        service: 'iptvnator',
+        service: 'kiptv',
         apiVersion: 1,
         storage: 'server',
         instanceId: 'nas',
@@ -71,7 +71,7 @@ describe('existing browser playlist activity upgrade', () => {
         expect(rows.size).toBe(0);
     });
     it('adopts old activity once and never copies sessions or overwrites current activity', async () => {
-        localStorage.setItem('iptvnator-server:cache-owner', 'nas');
+        localStorage.setItem('kiptv-server:cache-owner', 'nas');
         await migrateLegacyPlaylistActivity(local, connection, new Set(['p']));
         expect(rows.get('p')).toMatchObject({
             favorites: old.favorites,
@@ -97,7 +97,7 @@ describe('existing browser playlist activity upgrade', () => {
                 'https://epg.test/manual.xml',
             ],
         };
-        localStorage.setItem('iptvnator-server:cache-owner', 'nas');
+        localStorage.setItem('kiptv-server:cache-owner', 'nas');
         (fetch as jest.Mock).mockResolvedValueOnce({
             ok: true,
             json: async () => [{ ...old, ...preferences }],
@@ -110,7 +110,7 @@ describe('existing browser playlist activity upgrade', () => {
     });
     it('recognizes a remembered M3U-only client and refuses another server instance', async () => {
         localStorage.setItem(
-            'iptvnator-server:instance',
+            'kiptv-server:instance',
             JSON.stringify({ instance })
         );
         (requestSourceServer as jest.Mock).mockResolvedValueOnce({

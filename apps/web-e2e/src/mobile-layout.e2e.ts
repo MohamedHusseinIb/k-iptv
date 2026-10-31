@@ -28,7 +28,7 @@ import {
  *      sidebar at least 72px tall and the player container inside the
  *      viewport.
  *
- * Conventions: docs/architecture/iptvnator-ui-guidelines.md, "Phone Layout"
+ * Conventions: docs/architecture/kiptv-ui-guidelines.md, "Phone Layout"
  * (640px breakpoint, resizable rails stack full-width via `!important`).
  *
  * Tag: @mobile — run only this spec with:

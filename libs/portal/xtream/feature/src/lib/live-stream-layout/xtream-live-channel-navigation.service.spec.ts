@@ -14,9 +14,9 @@ import {
     provideRouter,
 } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
-import { LiveLayoutSidebarStateService } from '@iptvnator/portal/shared/util';
-import { foldSearchText } from '@iptvnator/shared/interfaces';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+import { LiveLayoutSidebarStateService } from '@kiptv/portal/shared/util';
+import { foldSearchText } from '@kiptv/shared/interfaces';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { XtreamLiveChannelNavigationService } from './xtream-live-channel-navigation.service';
 

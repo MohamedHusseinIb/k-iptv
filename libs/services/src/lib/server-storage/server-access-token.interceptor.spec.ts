@@ -45,7 +45,7 @@ describe('ServerAccessTokenInterceptor', () => {
     const activate = (verified = true) =>
         TestBed.inject(ServerStorageStatusService).activate(
             {
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 instanceId: 'i',
                 storage: 'server',
@@ -94,7 +94,7 @@ describe('ServerAccessTokenInterceptor', () => {
         const status = TestBed.inject(ServerStorageStatusService);
         status.activate(
             {
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 instanceId: 'i',
                 storage: 'server',
@@ -118,7 +118,7 @@ describe('ServerAccessTokenInterceptor', () => {
             {
                 status: 401,
                 statusText: 'Unauthorized',
-                headers: { 'WWW-Authenticate': 'Bearer realm="iptvnator"' },
+                headers: { 'WWW-Authenticate': 'Bearer realm="kiptv"' },
             }
         );
         expect(status.state()).toBe('unauthorized');

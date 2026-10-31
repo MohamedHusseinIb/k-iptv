@@ -3,7 +3,7 @@ import {
     findXtreamAccount,
     isSensitiveKey,
     looksLikeSearchParams,
-} from '@iptvnator/shared/logging';
+} from '@kiptv/shared/logging';
 
 /**
  * Short account keys some playlist URLs use. A log line keeps them for

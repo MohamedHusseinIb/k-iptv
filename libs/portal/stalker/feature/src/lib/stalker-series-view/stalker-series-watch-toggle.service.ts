@@ -4,20 +4,20 @@ import { TranslateService } from '@ngx-translate/core';
 import {
     createLogger,
     isPortalPlaybackWatched,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     isVodSeasonHydrationPending,
     StalkerStore,
     type StalkerSelectedVodItem,
     type VodSeriesSeasonVm,
-} from '@iptvnator/portal/stalker/data-access';
-import type { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/stalker/data-access';
+import type { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
 import {
     buildSeriesWatchToggleRequest,
     type SeasonContainerPlaybackToggleRequest,
     type SeasonContainerSeasonPlaybackToggleRequest,
     type SeasonContainerSeriesPlaybackToggleRequest,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import { StalkerCatalogFacadeService } from '../stalker-catalog-facade.service';
 import { toStalkerSeriesId } from './stalker-series-id';
 import { StalkerSeriesPositionsService } from './stalker-series-positions.service';

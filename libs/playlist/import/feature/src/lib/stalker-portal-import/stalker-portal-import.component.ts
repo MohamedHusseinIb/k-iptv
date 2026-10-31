@@ -24,7 +24,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { PlaylistActions } from '@iptvnator/m3u-state';
+import { PlaylistActions } from '@kiptv/m3u-state';
 import {
     legacyTransformStalkerPortalUrl,
     normalizeStalkerPortalInputUrl,
@@ -33,7 +33,7 @@ import {
     StalkerPortalDiscoveryService,
     normalizeStalkerPortalIdentity,
     stalkerSessionFingerprint,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import {
     createRandomId,
     deriveStalkerDeviceIdsFromMac,
@@ -43,15 +43,15 @@ import {
     Playlist,
     type StalkerDerivedDeviceIds,
     validateStalkerMacAddressControl,
-} from '@iptvnator/shared/interfaces';
-import { PasswordVisibilityToggleDirective } from '@iptvnator/ui/components/password-visibility-toggle';
+} from '@kiptv/shared/interfaces';
+import { PasswordVisibilityToggleDirective } from '@kiptv/ui/components/password-visibility-toggle';
 import {
     type StalkerImportFeedback,
     toStalkerImportFeedback,
     toStalkerPlaylistIdentityFields,
 } from './stalker-import-identity';
-import { RevealDetailsDirective } from '@iptvnator/ui/components/reveal-details';
-import { provideFormFieldDefaults } from '@iptvnator/ui/components/form-field-defaults';
+import { RevealDetailsDirective } from '@kiptv/ui/components/reveal-details';
+import { provideFormFieldDefaults } from '@kiptv/ui/components/form-field-defaults';
 
 /**
  * A MAC and the device IDs that belong to exactly it. Kept together because

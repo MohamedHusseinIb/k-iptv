@@ -19,7 +19,7 @@ export async function configureMockProviderBackend(page: Page): Promise<void> {
     await page.route('**/assets/app-config.js', (route) =>
         route.fulfill({
             contentType: 'application/javascript',
-            body: `window.__IPTVNATOR_CONFIG__ = { BACKEND_URL: ${JSON.stringify(BACKEND_ORIGIN)} };`,
+            body: `window.__KIPTV_CONFIG__ = { BACKEND_URL: ${JSON.stringify(BACKEND_ORIGIN)} };`,
         })
     );
     await page.route(`${BACKEND_ORIGIN}/v1/instance`, (route) =>
@@ -27,7 +27,7 @@ export async function configureMockProviderBackend(page: Page): Promise<void> {
             contentType: 'application/json',
             headers: CORS_HEADERS,
             body: JSON.stringify({
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 instanceId: null,
                 storage: 'none',

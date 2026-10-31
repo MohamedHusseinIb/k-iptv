@@ -1,7 +1,7 @@
 import {
     TmdbCacheEntry,
     TmdbCacheMediaType,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { TmdbClientCache } from './tmdb-client-contracts';
 
 /** Bounded, session-only cache for hosts without the desktop persistence bridge. */

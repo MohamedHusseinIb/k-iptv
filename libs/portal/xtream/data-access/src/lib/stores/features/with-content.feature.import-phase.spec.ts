@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { SourceActivityService } from '@iptvnator/services';
+import { SourceActivityService } from '@kiptv/services';
 import { PortalStatusType } from '../../xtream-state';
 import {
     createAbortError,
@@ -10,7 +10,7 @@ import {
     waitForCondition,
 } from './with-content.feature.spec-helpers';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),

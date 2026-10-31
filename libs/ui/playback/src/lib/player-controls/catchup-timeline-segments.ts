@@ -1,4 +1,4 @@
-import type { EpgProgram } from '@iptvnator/shared/interfaces';
+import type { EpgProgram } from '@kiptv/shared/interfaces';
 import type { PlayerTimelineSegment } from './player-controls.model';
 
 /** The EPG fields a catch-up timeline reads from a programme. */

@@ -20,7 +20,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import type {
     VodSourceDescriptor,
     VodSourceMatchKind,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { VIEW_IN_PORTAL_HANDOFF } from '../view-in-portal-action/view-in-portal-handoff.token';
 import { VodSourcesMenuComponent } from '../vod-sources/vod-sources-menu.component';
 import type {

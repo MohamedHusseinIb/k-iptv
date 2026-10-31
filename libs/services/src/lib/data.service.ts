@@ -30,7 +30,7 @@ export interface ElectronRemote {
 
 export abstract class DataService {
     /** Fetches a source snapshot without dispatching an import/navigation action. */
-    fetchPlaylistDefinition(_url: string, _userAgent?: string): Promise<import('@iptvnator/shared/interfaces').Playlist> {
+    fetchPlaylistDefinition(_url: string, _userAgent?: string): Promise<import('@kiptv/shared/interfaces').Playlist> {
         void _url; void _userAgent;
         return Promise.reject(new Error('Playlist fetching is unavailable'));
     }

@@ -24,7 +24,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { StorageMap } from '@ngx-pwa/local-storage';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ResizableDirective } from '@iptvnator/ui/components';
+import { ResizableDirective } from '@kiptv/ui/components';
 import {
     applyChannelNameStrip,
     getM3uArchiveDays,
@@ -36,8 +36,8 @@ import {
     isLikelyM3uVod,
     isM3uCatchupPlaybackSupported,
     resolveM3uCatchupUrl,
-} from '@iptvnator/shared/m3u-utils';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
+} from '@kiptv/shared/m3u-utils';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
 import {
     EpgArchiveCopyService,
     EPG_GUIDE_SOURCE,
@@ -52,8 +52,8 @@ import {
     persistEpgGuideDockCollapsed,
     restoreEpgGuideDockCollapsed,
     shiftEpgDateKey,
-} from '@iptvnator/ui/epg';
-import { EpgService } from '@iptvnator/epg/data-access';
+} from '@kiptv/ui/epg';
+import { EpgService } from '@kiptv/epg/data-access';
 import {
     ChannelActions,
     EpgActions,
@@ -69,7 +69,7 @@ import {
     selectChannelsLoading,
     selectCurrentEpgProgram,
     selectFavorites,
-} from '@iptvnator/m3u-state';
+} from '@kiptv/m3u-state';
 import {
     firstValueFrom,
     Observable,
@@ -95,11 +95,11 @@ import {
     REMOTE_CONTROL_RESET_STATUS,
     restoreLiveEpgPanelState,
     WorkspaceHeaderContextService,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     ChannelListHiddenStateComponent,
     PortalEmptyStateComponent,
-} from '@iptvnator/portal/shared/ui';
+} from '@kiptv/portal/shared/ui';
 import {
     AudioPlayerComponent,
     buildCatchupTimelineSegments,
@@ -109,10 +109,10 @@ import {
     type PlaybackFallbackRequest,
     SidebarComponent,
     WebPlayerViewComponent,
-} from '@iptvnator/ui/playback';
-import { LiveEpgPanelSummary } from '@iptvnator/ui/shared-portals';
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
-import { ChannelListLoadingStateComponent } from '@iptvnator/ui/components';
+} from '@kiptv/ui/playback';
+import { LiveEpgPanelSummary } from '@kiptv/ui/shared-portals';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
+import { ChannelListLoadingStateComponent } from '@kiptv/ui/components';
 import {
     DataService,
     ParentalLockService,
@@ -121,8 +121,8 @@ import {
     RuntimeCapabilitiesService,
     SettingsStore,
     TmdbEnrichmentService,
-} from '@iptvnator/services';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
+} from '@kiptv/services';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
 import {
     Channel,
     createDevLogger,
@@ -143,7 +143,7 @@ import {
     STORE_KEY,
     Settings,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { M3uEpgGuideSourceService } from '../epg-guide/m3u-epg-guide-source.service';
 import { M3uVodDetailComponent } from '../m3u-vod-detail/m3u-vod-detail.component';
 import { M3uFullscreenChannelListComponent } from './fullscreen-channel-list/m3u-fullscreen-channel-list.component';

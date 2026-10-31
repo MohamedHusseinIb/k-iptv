@@ -10,8 +10,8 @@ import {
     XtreamLiveStream,
     XtreamSerieItem,
     XtreamVodStream,
-} from '@iptvnator/shared/interfaces';
-import { createLogger } from '@iptvnator/portal/shared/util/logger';
+} from '@kiptv/shared/interfaces';
+import { createLogger } from '@kiptv/portal/shared/util/logger';
 import {
     CategoryType,
     StreamType,
@@ -24,7 +24,7 @@ import {
     USER_DATA_STORAGE,
     XTREAM_USER_DATA_KEYS,
     writeXtreamUserDataMap,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { firstValueFrom } from 'rxjs';
 import {
     DbCategoryType,

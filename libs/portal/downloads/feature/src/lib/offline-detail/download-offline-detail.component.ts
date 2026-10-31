@@ -10,7 +10,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ActivatedRoute } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { DownloadsService, SettingsStore } from '@iptvnator/services';
+import { DownloadsService, SettingsStore } from '@kiptv/services';
 import {
     CastCrewRowComponent,
     DetailActionsTemplateDirective,
@@ -20,7 +20,7 @@ import {
     MetaChipComponent,
     PortalDetailShellComponent,
     scrollToCastCrewRow,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import { DownloadLibraryNavigationService } from '../download-library-navigation.service';
 import { DownloadManagerActionsService } from '../download-manager-actions.service';
 import {

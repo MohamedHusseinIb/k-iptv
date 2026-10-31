@@ -1,4 +1,4 @@
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { addDays } from 'date-fns';
 export {
     buildGuideTicks,
@@ -6,7 +6,7 @@ export {
     guideTrackWidthPx,
     guideXForMs,
     type EpgGuideTick,
-} from '@iptvnator/shared/epg';
+} from '@kiptv/shared/epg';
 import { parseEpgDateKey } from '../epg-date';
 import {
     buildTimelineBlocks,

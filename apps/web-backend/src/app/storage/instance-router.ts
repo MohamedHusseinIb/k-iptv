@@ -4,7 +4,7 @@ import {
     SOURCE_SYNC_CAPABILITY,
     type ServerInstanceInfo,
     type ServerStorageStatusResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { ServerStorage } from './server-storage';
 import { StorageRequestError } from './storage-route-errors';
 
@@ -17,7 +17,7 @@ export function createInstanceRouter(deps: {
     router.get('/instance', (_req, res) => {
         const body: ServerInstanceInfo = {
             ...(deps.storage ? { capabilities: [SOURCE_SYNC_CAPABILITY] } : {}),
-            service: 'iptvnator',
+            service: 'kiptv',
             apiVersion: SERVER_STORAGE_API_VERSION,
             instanceId: deps.storage?.database.instanceId ?? null,
             storage: deps.storage ? 'server' : 'none',

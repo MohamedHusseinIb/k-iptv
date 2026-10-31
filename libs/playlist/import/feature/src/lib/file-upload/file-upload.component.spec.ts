@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { PlaylistFileImportService } from '@iptvnator/playlist/shared/util';
+import { PlaylistFileImportService } from '@kiptv/playlist/shared/util';
 import { FileUploadComponent } from './file-upload.component';
 
 describe('FileUploadComponent', () => {

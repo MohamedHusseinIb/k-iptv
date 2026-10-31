@@ -4,7 +4,7 @@ import {
     PlaylistMeta,
     SourceHealthResult,
     SourceProbeContext,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { DataService } from './data.service';
 
 @Injectable({ providedIn: 'root' })

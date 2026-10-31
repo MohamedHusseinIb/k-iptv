@@ -1,10 +1,10 @@
-import { createDevLogger } from '@iptvnator/shared/interfaces';
+import { createDevLogger } from '@kiptv/shared/interfaces';
 import {
     InlinePlaybackPlayer,
     type PlaybackDiagnostic,
     classifyNativePlaybackIssue,
     createPlaybackSourceMetadata,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import type { PlayerTimeUpdate } from '../playback-history/player-time-update';
 
 const debugHtmlPlayer = createDevLogger('HtmlVideoPlayer');

@@ -1,4 +1,4 @@
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { normalizeEpgPrograms } from './epg-program-normalization.util';
 
 function buildProgram(overrides: Partial<EpgProgram> = {}): EpgProgram {

@@ -1,7 +1,7 @@
 import {
     playlistDisplayLabel,
     type VodSourceDescriptor,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Collapses sources that come from the same playlist.

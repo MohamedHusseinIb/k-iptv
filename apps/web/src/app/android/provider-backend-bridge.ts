@@ -10,7 +10,7 @@
  * `fetch` patch for the second.
  *
  * Neither adapter touches a request whose origin is not the sentinel backend
- * origin, so a user who points the app at a real self-hosted IPTVnator server
+ * origin, so a user who points the app at a real self-hosted K-IPTV server
  * still talks to that server.
  */
 

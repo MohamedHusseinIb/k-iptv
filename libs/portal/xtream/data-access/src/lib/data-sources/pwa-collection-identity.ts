@@ -1,4 +1,4 @@
-import { normalizeContentMetadataPatch } from '@iptvnator/shared/interfaces';
+import { normalizeContentMetadataPatch } from '@kiptv/shared/interfaces';
 import type { XtreamCachedContentItem } from './pwa-cached-content';
 import {
     TypedXtreamCollectionRef,

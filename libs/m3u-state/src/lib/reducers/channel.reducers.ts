@@ -1,5 +1,5 @@
 import { on } from '@ngrx/store';
-import { Channel } from '@iptvnator/shared/interfaces';
+import { Channel } from '@kiptv/shared/interfaces';
 import { ChannelActions } from '../actions';
 import { PlaylistState } from '../state';
 

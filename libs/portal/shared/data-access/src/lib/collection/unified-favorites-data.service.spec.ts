@@ -2,15 +2,15 @@ import { TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { firstValueFrom, from, of } from 'rxjs';
-import { DatabaseService, PlaylistsService } from '@iptvnator/services';
+import { DatabaseService, PlaylistsService } from '@kiptv/services';
 import {
     Channel,
     Playlist,
     PlaylistMeta,
     StalkerPortalItem,
-} from '@iptvnator/shared/interfaces';
-import { UnifiedCollectionItem } from '@iptvnator/portal/shared/util';
-import { XTREAM_DATA_SOURCE } from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/shared/interfaces';
+import { UnifiedCollectionItem } from '@kiptv/portal/shared/util';
+import { XTREAM_DATA_SOURCE } from '@kiptv/portal/xtream/data-access';
 import { UnifiedFavoritesDataService } from './unified-favorites-data.service';
 import { UnifiedCollectionDataService } from './unified-collection-data.service';
 import { UnifiedRecentDataService } from './unified-recent-data.service';

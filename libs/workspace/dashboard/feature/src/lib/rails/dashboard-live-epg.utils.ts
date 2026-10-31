@@ -1,10 +1,10 @@
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
 import {
     epgDisplayTimeMs,
     epgProviderClockMs,
     type DashboardRailsSettings,
     type EpgProgram,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { DashboardRailCard } from './dashboard-rail.component';
 
 // EPG "now" data ticks every 30s: short enough that the progress bar moves
@@ -20,7 +20,7 @@ export const LIVE_EPG_MAX_ANSWER_AGE_MS = 5 * 60_000;
 // Reads either an ISO `start`/`stop` or the pre-computed `startTimestamp`
 // when present. The parsed XMLTV pipeline populates both, but legacy rows
 // only carry the strings. `startTimestamp`/`stopTimestamp` are unix SECONDS
-// (the same contract `getProgramTimeMs` in `@iptvnator/ui/epg` reads), so a
+// (the same contract `getProgramTimeMs` in `@kiptv/ui/epg` reads), so a
 // usable value is scaled to milliseconds; zero, negative or non-finite
 // values are treated as absent and fall back to the ISO string.
 function epgTimestampMs(

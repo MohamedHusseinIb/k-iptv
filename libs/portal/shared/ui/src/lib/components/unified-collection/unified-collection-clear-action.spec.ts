@@ -4,9 +4,9 @@ import { TranslateService } from '@ngx-translate/core';
 import {
     CollectionMode,
     UnifiedCollectionDataService,
-} from '@iptvnator/portal/shared/data-access';
-import { UnifiedCollectionItem } from '@iptvnator/portal/shared/util';
-import { ConfirmDialogData, DialogService } from '@iptvnator/ui/components';
+} from '@kiptv/portal/shared/data-access';
+import { UnifiedCollectionItem } from '@kiptv/portal/shared/util';
+import { ConfirmDialogData, DialogService } from '@kiptv/ui/components';
 import { createClearCollectionAction } from './unified-collection-clear-action';
 
 const recentItem: UnifiedCollectionItem = {

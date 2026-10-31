@@ -8,14 +8,14 @@ import parser from 'iptv-playlist-parser';
 import {
     HostConnectivityGuard,
     HostRequestToken,
-} from '@iptvnator/shared/host-health';
+} from '@kiptv/shared/host-health';
 import {
     buildStalkerIdentityRequestContext,
     buildStalkerRequestUrl,
     normalizeXtreamServerUrl,
     describeXtreamConnectionFailure,
-} from '@iptvnator/shared/interfaces';
-import { extractDrmFromRaw } from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/interfaces';
+import { extractDrmFromRaw } from '@kiptv/shared/m3u-utils';
 import {
     admitProviderRequest,
     observeProviderRequest,
@@ -129,15 +129,15 @@ export function createWebBackendApp(
         optionsSuccessStatus: 200,
     });
 
-    app.get('/', (_req, res) => res.send('IPTVnator web backend'));
+    app.get('/', (_req, res) => res.send('K-IPTV web backend'));
     app.get('/health', (_req, res) =>
-        res.json({ status: 'ok', service: 'iptvnator-web-backend' })
+        res.json({ status: 'ok', service: 'kiptv-web-backend' })
     );
 
     app.get('/config.js', corsMiddleware, (_req, res) => {
         const config = JSON.stringify({ BACKEND_URL: runtimeBackendUrl });
         res.type('application/javascript').send(
-            `window.__IPTVNATOR_CONFIG__ = Object.assign({}, window.__IPTVNATOR_CONFIG__, ${config});\n`
+            `window.__KIPTV_CONFIG__ = Object.assign({}, window.__KIPTV_CONFIG__, ${config});\n`
         );
     });
 
@@ -502,7 +502,7 @@ function createProviderTargetId(url: URL): string {
 }
 
 function isPrivateNetworkProxyAllowed(): boolean {
-    const value = process.env['IPTVNATOR_PROXY_ALLOW_PRIVATE_NETWORKS'];
+    const value = process.env['KIPTV_PROXY_ALLOW_PRIVATE_NETWORKS'];
     return value === '1' || value === 'true';
 }
 
@@ -673,7 +673,7 @@ function createPlaylistObject(options: {
             ...options.playlist,
             items: options.playlist.items.map((item) => {
                 // Keep this builder aligned with the shared
-                // createPlaylistObject() in @iptvnator/shared/m3u-utils:
+                // createPlaylistObject() in @kiptv/shared/m3u-utils:
                 // KODIPROP ClearKey DRM must survive the /parse URL-import
                 // path too.
                 const drm = extractDrmFromRaw(

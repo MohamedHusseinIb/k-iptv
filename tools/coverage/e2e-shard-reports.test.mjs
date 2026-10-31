@@ -83,7 +83,7 @@ function entry(shard, reportPath = `report-${shard?.current ?? 'single'}.json`) 
 
 describe('findPlaywrightJsonReports', () => {
     it('lists every nested results.json in sorted order', () => {
-        const root = makeTemporaryDir('iptvnator-shard-find-');
+        const root = makeTemporaryDir('kiptv-shard-find-');
         const second = writeReport(root, 'b-shard-2/dist/test-results/x', {});
         const first = writeReport(root, 'a-shard-1/dist/test-results/x', {});
         writeFileSync(path.join(root, 'a-shard-1', 'other.json'), '{}');
@@ -92,7 +92,7 @@ describe('findPlaywrightJsonReports', () => {
     });
 
     it('returns nothing for a missing directory or a file path', () => {
-        const root = makeTemporaryDir('iptvnator-shard-find-');
+        const root = makeTemporaryDir('kiptv-shard-find-');
         const reportPath = writeReport(root, 'single', {});
 
         assert.deepEqual(findPlaywrightJsonReports(path.join(root, 'nope')), []);
@@ -102,7 +102,7 @@ describe('findPlaywrightJsonReports', () => {
 
 describe('loadPlaywrightReports', () => {
     it('extracts a shard descriptor and flags malformed ones', () => {
-        const root = makeTemporaryDir('iptvnator-shard-load-');
+        const root = makeTemporaryDir('kiptv-shard-load-');
         const sharded = writeReport(root, 'sharded', {
             config: { shard: { current: 2, total: 3 } },
         });
@@ -216,7 +216,7 @@ describe('describeShardReports', () => {
 
 describe('e2e-semantic-summary CLI', () => {
     function makeWorkspace() {
-        const root = makeTemporaryDir('iptvnator-e2e-summary-');
+        const root = makeTemporaryDir('kiptv-e2e-summary-');
         mkdirSync(path.join(root, 'tools/coverage'), { recursive: true });
         copyFileSync(
             path.join(repositoryRoot, 'tools/coverage/coverage-policy.json'),

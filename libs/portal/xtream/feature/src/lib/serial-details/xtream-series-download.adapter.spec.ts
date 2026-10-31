@@ -1,7 +1,7 @@
 import {
     XTREAM_CLIENT_USER_AGENT,
     type XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { createXtreamSeriesDownloadAdapter } from './xtream-series-download.adapter';
 
 const POSTER_URL = 'https://images.test/stills/the-one.jpg';

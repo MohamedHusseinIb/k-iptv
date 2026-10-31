@@ -9,7 +9,7 @@ import {
     type ServerUserStateNamespace,
     type ServerUserStateResponse,
     withExplicitStalkerPortalFlag,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     combineRecentViews,
     combineUserData,
@@ -29,7 +29,7 @@ import { ParentalLockService } from '../parental-lock/parental-lock.service';
 import { SERVER_STORAGE_CONFIG } from './server-storage.config';
 import { ServerStorageSession } from './server-storage-session';
 
-const MARKER_PREFIX = 'iptvnator-server:migration:';
+const MARKER_PREFIX = 'kiptv-server:migration:';
 
 export interface ServerMigrationPlaylist {
     readonly id: string;

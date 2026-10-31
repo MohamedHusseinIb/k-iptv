@@ -5,12 +5,12 @@ import {
     input,
     output,
 } from '@angular/core';
-import { type PlaybackFallbackRequest } from '@iptvnator/ui/playback';
+import { type PlaybackFallbackRequest } from '@kiptv/ui/playback';
 import {
     EpgProgram,
     RecordingStartMetadata,
     RecordingStoppedEvent,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Stand-ins for the children StalkerLiveStreamLayoutComponent renders, mirroring

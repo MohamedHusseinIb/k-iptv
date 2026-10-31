@@ -2,7 +2,7 @@ import { computed, type Signal } from '@angular/core';
 import type {
     ExternalPlayerSession,
     PlayerContentInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Derives the primary Play/Stop button's state from the active external

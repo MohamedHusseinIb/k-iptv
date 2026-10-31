@@ -2,7 +2,7 @@ import { applyExplicitRestoreListEdits } from '../pwa-xtream-restore-edits';
 import type {
     XtreamPendingRestoreState,
     XtreamPlaylistBackupEntry,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { PwaXtreamBackupStorage } from '../pwa-xtream-backup-storage';
 import {
     XTREAM_USER_DATA_KEYS as KEYS,
@@ -155,7 +155,7 @@ it('keeps a failed receipt compaction pending and preserves a later explicit rem
         if (key.endsWith(':xtream-favorites')) {
             const parsed = JSON.parse(value);
             const receipt =
-                parsed?.['__iptvnator_xtream_restore_receipts__']?.p1;
+                parsed?.['__kiptv_xtream_restore_receipts__']?.p1;
             if (denied && receipt && receipt.serverList === undefined)
                 throw new DOMException('ack full', 'QuotaExceededError');
         }

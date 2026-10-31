@@ -56,10 +56,10 @@ function resolvePackagedExecutable() {
                 executable: path.join(
                     executablesRoot,
                     'mac',
-                    'IPTVnator.app',
+                    'K-IPTV.app',
                     'Contents',
                     'MacOS',
-                    'IPTVnator'
+                    'K-IPTV'
                 ),
             },
             {
@@ -67,10 +67,10 @@ function resolvePackagedExecutable() {
                 executable: path.join(
                     executablesRoot,
                     'mac-arm64',
-                    'IPTVnator.app',
+                    'K-IPTV.app',
                     'Contents',
                     'MacOS',
-                    'IPTVnator'
+                    'K-IPTV'
                 ),
             },
         ];
@@ -82,11 +82,11 @@ function resolvePackagedExecutable() {
     }
 
     if (currentPlatform === 'windows') {
-        return findUnpackedExecutable('win', ['IPTVnator.exe']);
+        return findUnpackedExecutable('win', ['K-IPTV.exe']);
     }
 
     if (currentPlatform === 'linux') {
-        return findUnpackedExecutable('linux', ['IPTVnator', 'iptvnator']);
+        return findUnpackedExecutable('linux', ['K-IPTV', 'kiptv']);
     }
 
     return undefined;

@@ -1,7 +1,7 @@
-import { StalkerEpisodeResolver } from '@iptvnator/portal/stalker/data-access';
+import { StalkerEpisodeResolver } from '@kiptv/portal/stalker/data-access';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import { StalkerSeriesViewComponent } from './stalker-series-view.component';
 import { createStalkerSeriesViewHarness } from './stalker-series-view.test-harness';
 

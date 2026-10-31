@@ -8,7 +8,7 @@ import {
     PlaybackRuntimeSupport,
     SHAKA_ERROR_CODE,
     type PlaybackDiagnostic,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import { getDiagnosticEvidence } from './playback-diagnostic-summary.util';
 
 function allowed<T extends string>(

@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import type { DownloadItem } from '@iptvnator/services';
+import type { DownloadItem } from '@kiptv/services';
 import { TranslatePipe } from '@ngx-translate/core';
 import type {
     DownloadItemAction,
@@ -20,7 +20,7 @@ import type { DownloadSeriesCardViewModel } from './download-library.viewmodel';
 import {
     DialogHeaderEndDirective,
     DialogShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 const EMPTY_PENDING_IDS: ReadonlySet<number> = new Set();
 

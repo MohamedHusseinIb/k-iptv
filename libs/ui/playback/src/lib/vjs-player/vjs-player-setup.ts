@@ -1,4 +1,4 @@
-import { withPlayerTechOverrides } from '@iptvnator/playback/util';
+import { withPlayerTechOverrides } from '@kiptv/playback/util';
 import type {
     VideoJsPlayer,
     VideoPlayerOptions,

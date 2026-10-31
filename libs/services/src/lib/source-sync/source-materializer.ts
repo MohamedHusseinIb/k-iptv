@@ -2,16 +2,16 @@ import {
     PlaylistUpdateState,
     type Playlist,
     type SourceDefinition,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     applySourceDefinition,
     sourceFromPlaylist,
     sameSource,
-} from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces/source-definition';
 import {
     createPlaylistObject,
     resolvePlaylistEpgSourceState,
-} from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/m3u-utils';
 import type { DataService } from '../data.service';
 
 export async function materializeSource(

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
-import { DataService } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { DataService } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { StalkerVodSource } from '../../models';
 import { StalkerSessionService } from '../../stalker-session.service';
 import { withStalkerSnapshotRefresh } from './with-stalker-snapshot-refresh.feature';

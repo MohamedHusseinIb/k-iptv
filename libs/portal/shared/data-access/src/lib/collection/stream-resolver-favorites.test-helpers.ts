@@ -1,4 +1,4 @@
-import { UnifiedCollectionItem } from '@iptvnator/portal/shared/util';
+import { UnifiedCollectionItem } from '@kiptv/portal/shared/util';
 import { StreamResolverService } from './stream-resolver.service';
 
 export function registerUnavailableFavoriteEpgTests(

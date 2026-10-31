@@ -1,5 +1,5 @@
 export default {
-    displayName: '@iptvnator/shared/tmdb',
+    displayName: '@kiptv/shared/tmdb',
     preset: '../../../jest.preset.js',
     testEnvironment: 'node',
     transform: {

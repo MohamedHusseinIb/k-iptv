@@ -7,7 +7,7 @@ import {
     input,
     signal,
 } from '@angular/core';
-import { MACOS_TRAFFIC_LIGHTS_POSITION } from '@iptvnator/shared/interfaces';
+import { MACOS_TRAFFIC_LIGHTS_POSITION } from '@kiptv/shared/interfaces';
 
 /**
  * The three buttons are 14 pt circles. macOS 26 spaces them 23 pt apart

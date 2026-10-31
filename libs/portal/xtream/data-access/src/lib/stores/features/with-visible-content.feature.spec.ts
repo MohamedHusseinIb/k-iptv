@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { computed } from '@angular/core';
 import { patchState, signalStore, withState } from '@ngrx/signals';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
 import { withSelection } from './with-selection.feature';
 
 const TestPwaVisibleContentStore = signalStore(

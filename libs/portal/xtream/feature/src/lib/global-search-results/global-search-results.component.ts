@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import { SearchResultsComponent } from '../search-results/search-results.component';
 
 @Component({

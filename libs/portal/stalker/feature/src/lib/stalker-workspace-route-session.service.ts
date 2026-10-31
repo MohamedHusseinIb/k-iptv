@@ -15,16 +15,16 @@ import {
     Router,
 } from '@angular/router';
 import { filter, firstValueFrom } from 'rxjs';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
-import { PortalRailSection } from '@iptvnator/portal/shared/util';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
+import { PortalRailSection } from '@kiptv/portal/shared/util';
 import {
     StalkerContentType,
     StalkerStore,
-} from '@iptvnator/portal/stalker/data-access';
-import { PlaylistsService } from '@iptvnator/services';
-import { SourceSyncService } from '@iptvnator/services/source-sync';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
-import { SOURCE_CONNECTION_FIELDS } from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/portal/stalker/data-access';
+import { PlaylistsService } from '@kiptv/services';
+import { SourceSyncService } from '@kiptv/services/source-sync';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
+import { SOURCE_CONNECTION_FIELDS } from '@kiptv/shared/interfaces/source-definition';
 
 @Injectable()
 export class StalkerWorkspaceRouteSession {

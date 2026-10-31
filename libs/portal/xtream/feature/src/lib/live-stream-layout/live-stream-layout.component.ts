@@ -2,7 +2,7 @@ import {
     activateXtreamArchiveAction,
     getProgramTimestampSeconds,
 } from './xtream-live-archive-actions';
-import { EpgArchiveDownloadService } from '@iptvnator/ui/epg';
+import { EpgArchiveDownloadService } from '@kiptv/ui/epg';
 import { NgTemplateOutlet } from '@angular/common';
 import {
     ChangeDetectionStrategy,
@@ -32,13 +32,13 @@ import {
     MenuItemRadioCheckDirective,
     MenuItemRadioDirective,
     ResizableDirective,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     GridListComponent,
     InfiniteScrollDirective,
     ChannelListHiddenStateComponent,
     PortalEmptyStateComponent,
-} from '@iptvnator/portal/shared/ui';
+} from '@kiptv/portal/shared/ui';
 import {
     createLivePanelsController,
     PORTAL_PLAYER,
@@ -54,14 +54,14 @@ import {
     REMOTE_CONTROL_RESET_STATUS,
     restoreLiveEpgPanelState,
     restorePortalChannelSortMode,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     FavoriteItem,
     FavoritesService,
     findCurrentEpgItem,
     XtreamUrlService,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     EpgArchiveCopyService,
     EpgDateNavigationDirection,
@@ -70,7 +70,7 @@ import {
     EpgTimelineComponent,
     getTodayEpgDateKey,
     shiftEpgDateKey,
-} from '@iptvnator/ui/epg';
+} from '@kiptv/ui/epg';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {
     buildCatchupTimelineSegments,
@@ -79,8 +79,8 @@ import {
     type FullscreenChannelPanelHost,
     type PlaybackFallbackRequest,
     WebPlayerViewComponent,
-} from '@iptvnator/ui/playback';
-import { LiveEpgPanelSummary } from '@iptvnator/ui/shared-portals';
+} from '@kiptv/ui/playback';
+import { LiveEpgPanelSummary } from '@kiptv/ui/shared-portals';
 import {
     buildXtreamEpgMappingKey,
     EpgItem,
@@ -92,7 +92,7 @@ import {
     RecordingStoppedEvent,
     ResolvedPortalPlayback,
     toRecordingProgramSnapshot,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     PortalChannelsListComponent,
     type XtreamChannelListItem,
@@ -104,9 +104,9 @@ import {
     RecordingsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { LiveStreamAutoOpenStateService } from './live-stream-auto-open-state.service';
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
 import { injectXtreamRecentHistory } from '../xtream-recent-history';
 
 import {

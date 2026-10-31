@@ -22,7 +22,7 @@ export async function newServerPage(browser: Browser): Promise<Page> {
     await page.route('**/assets/app-config.js', (route) =>
         route.fulfill({
             contentType: 'application/javascript',
-            body: `window.__IPTVNATOR_CONFIG__ = { BACKEND_URL: ${JSON.stringify(STORAGE_BACKEND_URL)} };\n`,
+            body: `window.__KIPTV_CONFIG__ = { BACKEND_URL: ${JSON.stringify(STORAGE_BACKEND_URL)} };\n`,
         })
     );
     return page;
@@ -41,7 +41,7 @@ export async function seedBrowserPlaylist(
     await page.evaluate(
         ([playlistId, playlistTitle]) =>
             new Promise<void>((resolve, reject) => {
-                const request = indexedDB.open('iptvnator', 1);
+                const request = indexedDB.open('kiptv', 1);
                 request.onerror = () => reject(request.error);
                 request.onupgradeneeded = () => {
                     const store = request.result.createObjectStore(
@@ -247,7 +247,7 @@ export async function verifyLegacyUploadedChannelIdentity(
         ).json();
         await page.addInitScript(
             (owner) =>
-                localStorage.setItem('iptvnator-server:cache-owner', owner),
+                localStorage.setItem('kiptv-server:cache-owner', owner),
             instanceId
         );
         await openSources(page);
@@ -259,7 +259,7 @@ export async function verifyLegacyUploadedChannelIdentity(
                 new Promise<{ id?: string; name: string }[]>(
                     (resolve, reject) => {
                         const opening = indexedDB.open(
-                            `iptvnator-server:${instanceId}`
+                            `kiptv-server:${instanceId}`
                         );
                         opening.onerror = () => reject(opening.error);
                         opening.onsuccess = () => {

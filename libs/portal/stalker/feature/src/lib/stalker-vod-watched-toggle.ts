@@ -7,11 +7,11 @@ import {
     VOD_WATCHED_FEEDBACK_KEYS,
     type VodWatchedToggle,
     createVodWatchedToggle,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import type {
     PlaybackPositionData,
     VodDetailsItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /** The movie the host currently shows; null while nothing is open. */
 export interface StalkerVodWatchedOwner {

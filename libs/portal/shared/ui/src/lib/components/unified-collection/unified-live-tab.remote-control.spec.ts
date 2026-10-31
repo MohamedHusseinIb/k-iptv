@@ -5,13 +5,13 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     PORTAL_PLAYER,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     StreamResolverService,
     UnifiedRecentDataService,
-} from '@iptvnator/portal/shared/data-access';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
-import { VideoPlayer } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/data-access';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
+import { VideoPlayer } from '@kiptv/shared/interfaces';
 import { UnifiedLiveTabComponent } from './unified-live-tab.component';
 
 /**

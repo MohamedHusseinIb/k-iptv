@@ -1,4 +1,4 @@
-import { ResolvedLiveCollectionDetail } from '@iptvnator/portal/shared/data-access';
+import { ResolvedLiveCollectionDetail } from '@kiptv/portal/shared/data-access';
 import { getLiveEpgPanelSummary } from './unified-live-epg-summary.util';
 
 const HOUR_S = 3600;

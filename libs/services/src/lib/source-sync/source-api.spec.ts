@@ -2,7 +2,7 @@ import {
     sourceAuthorization,
     verifySourceInstance,
 } from './source-authorization';
-import type { SourceServerRequest } from '@iptvnator/shared/interfaces';
+import type { SourceServerRequest } from '@kiptv/shared/interfaces';
 import { requestSourceServer } from './source-api';
 import { prepareSourceConnection } from './source-connection';
 import { saveBrowserSourceConnection } from './source-browser-settings';
@@ -12,7 +12,7 @@ describe('source transport identity revocation', () => {
     const originalElectron = window.electron;
     const connection = { apiUrl: 'https://nas.test/api', instanceId: 'nas' };
     const instance = {
-        service: 'iptvnator',
+        service: 'kiptv',
         apiVersion: 1,
         storage: 'server',
         instanceId: 'nas',

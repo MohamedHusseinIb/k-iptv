@@ -4,9 +4,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
-import { SeasonDownloadCoordinator } from '@iptvnator/portal/shared/data-access';
-import { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
-import { DownloadsService } from '@iptvnator/services';
+import { SeasonDownloadCoordinator } from '@kiptv/portal/shared/data-access';
+import { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
+import { DownloadsService } from '@kiptv/services';
 import { SeasonContainerComponent } from './season-container.component';
 
 // Coverage for the default-season fallback (issue #1441): earliest season

@@ -1,4 +1,4 @@
-import { AgeRatingPresentationService } from '@iptvnator/services/age-rating';
+import { AgeRatingPresentationService } from '@kiptv/services/age-rating';
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';

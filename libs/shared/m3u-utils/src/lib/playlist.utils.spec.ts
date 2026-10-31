@@ -1,4 +1,4 @@
-import { Channel, Playlist } from '@iptvnator/shared/interfaces';
+import { Channel, Playlist } from '@kiptv/shared/interfaces';
 import {
     aggregateFavoriteChannels,
     createPlaylistObject,

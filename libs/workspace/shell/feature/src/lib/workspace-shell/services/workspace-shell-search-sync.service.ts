@@ -2,10 +2,10 @@ import { DestroyRef, effect, inject, Injectable, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
-import { StalkerStore } from '@iptvnator/portal/stalker/data-access';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { parseWorkspaceShellRoute } from '@iptvnator/workspace/shell/util';
-import { SettingsSearchService } from '@iptvnator/workspace/shell/util/settings-search';
+import { StalkerStore } from '@kiptv/portal/stalker/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { parseWorkspaceShellRoute } from '@kiptv/workspace/shell/util';
+import { SettingsSearchService } from '@kiptv/workspace/shell/util/settings-search';
 import { SEARCH_INPUT_DEBOUNCE_MS } from './helpers/workspace-shell-constants';
 import {
     getRoutePath,

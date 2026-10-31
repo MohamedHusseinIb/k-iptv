@@ -1,4 +1,4 @@
-import { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import {
     getPortalPlaybackProgressPercent,
     PORTAL_WATCHED_PROGRESS_PERCENT,

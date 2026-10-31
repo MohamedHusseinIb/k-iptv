@@ -1,12 +1,12 @@
 import { inject, Injectable } from '@angular/core';
-import { LazySnackBar } from '@iptvnator/services/lazy-snack-bar';
+import { LazySnackBar } from '@kiptv/services/lazy-snack-bar';
 import { Router } from '@angular/router';
-import { EpgService } from '@iptvnator/epg/data-access';
+import { EpgService } from '@kiptv/epg/data-access';
 import {
     isDashChannel,
     isDashStreamUrl,
     normalizeEpgUrls,
-} from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/m3u-utils';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { StorageMap } from '@ngx-pwa/local-storage';
@@ -32,7 +32,7 @@ import {
     EpgSourceSettingsService,
     PlaylistsService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     OPEN_MPV_PLAYER,
     OPEN_VLC_PLAYER,
@@ -41,7 +41,7 @@ import {
     PlaylistMeta,
     STORE_KEY,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     ChannelActions,
     EpgActions,

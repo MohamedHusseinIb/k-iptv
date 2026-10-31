@@ -12,7 +12,7 @@ import {
     output,
     ChangeDetectionStrategy,
 } from '@angular/core';
-import { registerWorkspaceBack } from '@iptvnator/portal/shared/data-access';
+import { registerWorkspaceBack } from '@kiptv/portal/shared/data-access';
 import { ContentHeroComponent } from '../content-hero/content-hero.component';
 import { ContentAboutComponent } from './content-about.component';
 import {

@@ -2,7 +2,7 @@
  * Per-host circuit breaker behaviour on the proxy routes.
  *
  * The rules themselves are covered by the guard's own spec in
- * `@iptvnator/shared/host-health`; what matters here is the wiring: which
+ * `@kiptv/shared/host-health`; what matters here is the wiring: which
  * routes consult it, what a refusal looks like on the wire, and that a refusal
  * really does skip the outbound request.
  */
@@ -10,8 +10,8 @@
 import {
     HostConnectivityGuard,
     OPEN_DURATION_MS,
-} from '@iptvnator/shared/host-health';
-import { isHostConnectivityFastFailMessage } from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/host-health';
+import { isHostConnectivityFastFailMessage } from '@kiptv/shared/interfaces';
 import { createWebBackendApp } from './web-backend-app';
 import express, { Response } from 'express';
 import {

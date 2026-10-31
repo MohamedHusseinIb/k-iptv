@@ -2,12 +2,12 @@ import { Component, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { ResolvedPortalPlayback } from '@iptvnator/shared/interfaces';
+import { ResolvedPortalPlayback } from '@kiptv/shared/interfaces';
 import {
     EmbeddedMpvOverlayVisibilityService,
     EmbeddedMpvPlayerComponent,
     EmbeddedMpvSessionController,
-} from '@iptvnator/ui/playback/embedded-mpv-player';
+} from '@kiptv/ui/playback/embedded-mpv-player';
 
 @Component({
     imports: [EmbeddedMpvPlayerComponent],

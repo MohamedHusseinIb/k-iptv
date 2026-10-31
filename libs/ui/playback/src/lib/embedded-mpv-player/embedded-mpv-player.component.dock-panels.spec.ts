@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     EmbeddedMpvSession,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { HIDDEN_BOUNDS } from './embedded-mpv-format.utils';
 import { EmbeddedMpvOverlayVisibilityService } from './embedded-mpv-overlay-visibility.service';
 import { EmbeddedMpvPlayerComponent } from './embedded-mpv-player.component';

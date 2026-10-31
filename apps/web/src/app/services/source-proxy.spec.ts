@@ -2,7 +2,7 @@ import {
     assertSourceRequestAllowed,
     sourceAuthorization,
     verifySourceInstance,
-} from '@iptvnator/services/source-sync/authorization';
+} from '@kiptv/services/source-sync/authorization';
 import {
     HttpErrorResponse,
     HttpHeaders,
@@ -14,10 +14,10 @@ import {
     invalidateSourceVerification,
     prepareSourceConnection,
     tokenKey,
-} from '@iptvnator/services/source-sync/connection';
+} from '@kiptv/services/source-sync/connection';
 import { sourceAuthInterceptor } from './source-sync.providers';
 import { ensureSourceProxy } from './source-proxy';
-import { requestSourceServer } from '@iptvnator/services/source-sync';
+import { requestSourceServer } from '@kiptv/services/source-sync';
 
 describe('selected source-server proxy recovery', () => {
     const originalElectron = window.electron;
@@ -25,7 +25,7 @@ describe('selected source-server proxy recovery', () => {
     const connection = { apiUrl: 'https://nas.test/api', instanceId: 'nas' };
     const url = `${connection.apiUrl}/xtream`;
     const instance = {
-        service: 'iptvnator',
+        service: 'kiptv',
         apiVersion: 1,
         storage: 'server',
         instanceId: 'nas',
@@ -34,7 +34,7 @@ describe('selected source-server proxy recovery', () => {
     beforeEach(async () => {
         Reflect.deleteProperty(window, 'electron');
         localStorage.setItem(
-            'iptvnator:source-server',
+            'kiptv:source-server',
             JSON.stringify(connection)
         );
         sessionStorage.setItem(tokenKey(connection), 'nas-secret');

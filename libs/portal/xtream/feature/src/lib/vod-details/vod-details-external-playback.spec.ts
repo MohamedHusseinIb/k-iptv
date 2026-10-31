@@ -4,10 +4,10 @@ import {
     PORTAL_EXTERNAL_PLAYBACK,
     PORTAL_PLAYBACK_POSITIONS,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { PlaybackPositionRuntimeBridgeService } from '@iptvnator/services';
-import type { PlayerContentInfo } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { PlaybackPositionRuntimeBridgeService } from '@kiptv/services';
+import type { PlayerContentInfo } from '@kiptv/shared/interfaces';
 import { VodDetailsPlaybackService } from './vod-details-playback.service';
 
 /**

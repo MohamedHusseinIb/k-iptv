@@ -5,12 +5,12 @@ import {
     isSelectedStalkerVodFavorite,
     StalkerStore,
     toggleStalkerVodFavorite,
-} from '@iptvnator/portal/stalker/data-access';
-import type { PlaylistsService } from '@iptvnator/services';
+} from '@kiptv/portal/stalker/data-access';
+import type { PlaylistsService } from '@kiptv/services';
 import {
     StalkerPortalItem,
     VodDetailsItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 interface StalkerCollectionFavoritesControllerConfig {
     playlistsService: PlaylistsService;

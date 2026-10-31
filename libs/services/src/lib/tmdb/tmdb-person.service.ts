@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { TmdbPersonClient } from '@iptvnator/shared/tmdb';
+import { TmdbPersonClient } from '@kiptv/shared/tmdb';
 import { TmdbApiService } from './tmdb-api.service';
 import { TmdbCacheService } from './tmdb-cache.service';
 import { TmdbRuntimeService } from './tmdb-runtime.service';

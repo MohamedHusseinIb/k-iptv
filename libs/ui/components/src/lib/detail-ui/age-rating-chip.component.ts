@@ -1,5 +1,5 @@
-import { selectAgeRating } from '@iptvnator/shared/interfaces/age-rating';
-import { AgeRatingPresentationService } from '@iptvnator/services/age-rating';
+import { selectAgeRating } from '@kiptv/shared/interfaces/age-rating';
+import { AgeRatingPresentationService } from '@kiptv/services/age-rating';
 import {
     ChangeDetectionStrategy,
     Component,
@@ -9,8 +9,8 @@ import {
 } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateService } from '@ngx-translate/core';
-import { injectTranslationTick } from '@iptvnator/services';
-import { type ContentCertification } from '@iptvnator/shared/interfaces';
+import { injectTranslationTick } from '@kiptv/services';
+import { type ContentCertification } from '@kiptv/shared/interfaces';
 import { MetaChipComponent } from './meta-chip.component';
 
 /** Informational classification, shared by provider and M3U detail views. */

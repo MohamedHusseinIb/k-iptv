@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter, Router, UrlTree } from '@angular/router';
-import { ServerStorageStatusService } from '@iptvnator/services';
+import { ServerStorageStatusService } from '@kiptv/services';
 import { serverAccessGuard, serverSignInGuard } from './server-access.guard';
 
 describe('server access guards', () => {

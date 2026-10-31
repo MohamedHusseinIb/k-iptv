@@ -1,4 +1,4 @@
-import { XtreamVodStream } from '@iptvnator/shared/interfaces';
+import { XtreamVodStream } from '@kiptv/shared/interfaces';
 import { resolveXtreamVodPlaybackSource } from '../services/xtream-vod-playback-source';
 import {
     buildXtreamVodSelection,

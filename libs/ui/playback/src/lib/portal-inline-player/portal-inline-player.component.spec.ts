@@ -2,9 +2,9 @@ import { Component, input, output, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { TranslateModule } from '@ngx-translate/core';
-import { SettingsStore } from '@iptvnator/services';
-import { ResolvedPortalPlayback } from '@iptvnator/shared/interfaces';
-import { PlaybackFallbackRequest } from '@iptvnator/playback/util';
+import { SettingsStore } from '@kiptv/services';
+import { ResolvedPortalPlayback } from '@kiptv/shared/interfaces';
+import { PlaybackFallbackRequest } from '@kiptv/playback/util';
 import type { PortalInlinePlayerComponent as PortalInlinePlayerComponentInstance } from './portal-inline-player.component';
 
 jest.unstable_mockModule('video.js', () => ({

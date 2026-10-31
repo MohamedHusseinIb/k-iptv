@@ -3,7 +3,7 @@ import {
     CatalogTitleMatch,
     normalizeTitleKeys,
     titleYearsCompatible,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { ParentalLockService } from './parental-lock/parental-lock.service';
 
 /** What one caller is looking for, in catalog-match terms */

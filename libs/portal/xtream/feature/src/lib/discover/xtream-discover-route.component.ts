@@ -8,20 +8,20 @@ import {
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import {
     CatalogTitleMatchService,
     DiscoverTitle,
     TmdbEnrichmentService,
     groupTitleMatchesByKey,
     pickTitleMatch,
-} from '@iptvnator/services';
-import { CatalogTitleMatch } from '@iptvnator/shared/interfaces';
-import { WorkspaceBackNavigationService } from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/services';
+import { CatalogTitleMatch } from '@kiptv/shared/interfaces';
+import { WorkspaceBackNavigationService } from '@kiptv/portal/shared/data-access';
 import {
     createLatestRequestGuard,
     workspacePortalCommands,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     DiscoverViewComponent,
     TitleResultsScope,
@@ -29,7 +29,7 @@ import {
     discoverFacetKey,
     hasDiscoverFacet,
     parseDiscoverParams,
-} from '@iptvnator/ui/shared-portals';
+} from '@kiptv/ui/shared-portals';
 import {
     buildCatalogTitleIndex,
     lookupCatalogTitle,

@@ -20,10 +20,10 @@ import {
     type PlaybackDiagnosticCode,
     type PlaybackFallbackRequest,
     type PlaybackRecommendationTarget,
-} from '@iptvnator/playback/util';
-import { PORTAL_EXTERNAL_PLAYBACK } from '@iptvnator/portal/shared/util';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
+} from '@kiptv/playback/util';
+import { PORTAL_EXTERNAL_PLAYBACK } from '@kiptv/portal/shared/util';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
 import {
     VideoPlayer,
     type Channel,
@@ -31,7 +31,7 @@ import {
     type RecordingStoppedEvent,
     type ResolvedPortalPlayback,
     type VodSourceDescriptor,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { ArtPlayerComponent } from '../art-player/art-player.component';
 import { EmbeddedMpvPlayerComponent } from '../embedded-mpv-player/embedded-mpv-player.component';
 import { FullscreenChannelPanelComponent } from '../fullscreen-channel-panel/fullscreen-channel-panel.component';

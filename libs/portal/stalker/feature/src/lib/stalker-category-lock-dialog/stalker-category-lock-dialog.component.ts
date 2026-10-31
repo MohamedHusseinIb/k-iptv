@@ -17,13 +17,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { StalkerCategoryItem } from '@iptvnator/portal/stalker/data-access';
-import { ParentalLockService } from '@iptvnator/services';
-import { ParentalLockStalkerCategoryType } from '@iptvnator/shared/interfaces';
+import { StalkerCategoryItem } from '@kiptv/portal/stalker/data-access';
+import { ParentalLockService } from '@kiptv/services';
+import { ParentalLockStalkerCategoryType } from '@kiptv/shared/interfaces';
 import {
     DialogFooterDirective,
     DialogShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 export interface StalkerCategoryLockDialogData {
     playlistId: string;

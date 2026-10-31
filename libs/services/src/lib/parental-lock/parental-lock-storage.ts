@@ -5,7 +5,7 @@ import {
     PARENTAL_LOCK_PIN_KEY,
     PARENTAL_LOCK_STORE_KEY,
     ParentalLockStore,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { DatabaseService } from '../database-electron.service';
 import { RuntimeCapabilitiesService } from '../runtime-capabilities.service';
 import { sourceProfileStorageKey } from '../source-sync/source-profile-storage';

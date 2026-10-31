@@ -4,13 +4,13 @@ import {
     loadTmdbMergers,
     mergeEpisodesWithTmdb,
     tmdbSeasonPosterUrl,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     XtreamSerieDetails,
     XtreamVodDetails,
     getXtreamVodInfo,
     resolveEnrichmentSeasonNumber,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Async TMDB enrichment of the currently selected Xtream detail item.

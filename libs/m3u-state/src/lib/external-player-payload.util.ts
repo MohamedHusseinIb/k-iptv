@@ -2,8 +2,8 @@ import {
     Channel,
     PlaylistMeta,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
-import { isDashChannel } from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/interfaces';
+import { isDashChannel } from '@kiptv/shared/m3u-utils';
 
 export type ExternalPlayerHeaderFallback = Pick<
     PlaylistMeta,

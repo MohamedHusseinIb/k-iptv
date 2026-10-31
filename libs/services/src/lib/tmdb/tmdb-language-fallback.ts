@@ -3,4 +3,4 @@ export {
     fillDetailsFromFallback,
     seasonNeedsTextFallback,
     fillSeasonFromFallback,
-} from '@iptvnator/shared/tmdb';
+} from '@kiptv/shared/tmdb';

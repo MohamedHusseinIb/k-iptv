@@ -17,13 +17,13 @@ test.beforeEach(async ({ page, request }) => {
     await page.route('**/assets/app-config.js', (route) =>
         route.fulfill({
             contentType: 'application/javascript',
-            body: 'window.__IPTVNATOR_CONFIG__ = { BACKEND_URL: "http://localhost:3000" };',
+            body: 'window.__KIPTV_CONFIG__ = { BACKEND_URL: "http://localhost:3000" };',
         })
     );
     await page.route('http://localhost:3000/v1/instance', (route) =>
         route.fulfill({
             json: {
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 storage: 'none',
                 capabilities: [],
@@ -772,7 +772,7 @@ test('@xtream @collections importing partial favorite identity rejects conflicti
         snapshot: { title: 'Partial saved original', tmdbId: 100 },
     };
     const manifest = {
-        kind: 'iptvnator-playlist-backup',
+        kind: 'kiptv-playlist-backup',
         version: 1,
         exportedAt: new Date().toISOString(),
         includeSecrets: true,

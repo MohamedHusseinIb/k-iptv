@@ -1,4 +1,4 @@
-import { XtreamPlaylistBackupEntry } from '@iptvnator/shared/interfaces';
+import { XtreamPlaylistBackupEntry } from '@kiptv/shared/interfaces';
 import { createPlaylistBackupService } from './playlist-backup.service.test-helpers';
 import {
     createRestoreCollaborators,

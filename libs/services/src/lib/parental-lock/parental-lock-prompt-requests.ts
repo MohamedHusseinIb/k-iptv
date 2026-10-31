@@ -1,7 +1,7 @@
 import {
     ParentalLockPinThrottle,
     verifyParentalLockPin,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { ParentalLockPromptRequest } from './parental-lock-prompt.token';
 
 type PromptLabels = Pick<

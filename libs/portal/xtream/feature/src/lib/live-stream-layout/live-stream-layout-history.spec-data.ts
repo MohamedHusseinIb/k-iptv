@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
 import { LiveStreamLayoutComponent } from './live-stream-layout.component';
 import { playlist, sampleChannel } from './live-stream-layout-stubs.spec-data';
 

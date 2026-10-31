@@ -1,9 +1,9 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { PORTAL_PLAYBACK_POSITIONS } from '@iptvnator/portal/shared/util';
-import { PlaybackPositionData } from '@iptvnator/shared/interfaces';
-import { SeasonContainerSeriesPlaybackToggleRequest } from '@iptvnator/ui/components';
+import { PORTAL_PLAYBACK_POSITIONS } from '@kiptv/portal/shared/util';
+import { PlaybackPositionData } from '@kiptv/shared/interfaces';
+import { SeasonContainerSeriesPlaybackToggleRequest } from '@kiptv/ui/components';
 import { SerialDetailsPlaybackPositionState } from './serial-details-playback-position-state';
 
 // The marked-watched key is scope-generic on purpose ("{{count}} episodes

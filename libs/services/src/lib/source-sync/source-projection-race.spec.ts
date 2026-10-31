@@ -1,5 +1,5 @@
-import type { Playlist, SourceDefinition } from '@iptvnator/shared/interfaces';
-import { applySourceDefinition } from '@iptvnator/shared/interfaces/source-definition';
+import type { Playlist, SourceDefinition } from '@kiptv/shared/interfaces';
+import { applySourceDefinition } from '@kiptv/shared/interfaces/source-definition';
 import {
     PlaylistWriteConflict,
     type PlaylistDocumentStore,

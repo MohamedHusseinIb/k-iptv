@@ -2,7 +2,7 @@ import {
     TmdbRecommendation,
     normalizeTitleKeys,
     titleYearsCompatible,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Matches TMDB recommendations against the provider catalog so the

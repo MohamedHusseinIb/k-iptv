@@ -5,7 +5,7 @@ import {
     PLAYLIST_BACKUP_KIND,
     PLAYLIST_BACKUP_VERSION,
     XtreamPlaylistBackupEntry,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { createPlaylistBackupService } from './playlist-backup.service.test-helpers';
 import {
     createRestoreCollaborators,

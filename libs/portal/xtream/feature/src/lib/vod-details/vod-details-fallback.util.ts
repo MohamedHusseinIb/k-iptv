@@ -4,7 +4,7 @@ import {
     XtreamVodStream,
     getXtreamVodInfo,
     readProviderRating,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 type XtreamCategoryContext = {
     readonly id?: string | number;

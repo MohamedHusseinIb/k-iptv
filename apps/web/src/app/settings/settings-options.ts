@@ -4,11 +4,11 @@ import {
     StartupBehavior,
     Theme,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     meetsSettingsRequirements,
     SETTINGS_SECTION_DEFINITIONS,
-} from '@iptvnator/workspace/shell/util/settings-search';
+} from '@kiptv/workspace/shell/util/settings-search';
 import {
     CoverSizeOption,
     EpgViewModeOption,

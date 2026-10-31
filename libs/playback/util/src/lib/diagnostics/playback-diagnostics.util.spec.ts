@@ -573,7 +573,7 @@ describe('playback diagnostics', () => {
             {
                 code: 2,
                 message:
-                    'Access to media at https://provider.example/live.m3u8 from origin app://iptvnator has been blocked by CORS policy: No Access-Control-Allow-Origin header is present.',
+                    'Access to media at https://provider.example/live.m3u8 from origin app://kiptv has been blocked by CORS policy: No Access-Control-Allow-Origin header is present.',
             },
             createPlaybackSourceMetadata({
                 url: 'https://provider.example/live.m3u8',

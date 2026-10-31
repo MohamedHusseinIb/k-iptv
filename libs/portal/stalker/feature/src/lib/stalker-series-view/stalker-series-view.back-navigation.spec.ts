@@ -8,13 +8,13 @@ import {
     PORTAL_EXTERNAL_PLAYBACK,
     PORTAL_PLAYBACK_POSITIONS,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     buildStalkerSelectedVodItem,
     StalkerStore,
     StalkerEpisodeResolver,
-} from '@iptvnator/portal/stalker/data-access';
-import { TmdbEnrichmentService } from '@iptvnator/services';
+} from '@kiptv/portal/stalker/data-access';
+import { TmdbEnrichmentService } from '@kiptv/services';
 import { EMPTY, of } from 'rxjs';
 import { StalkerSeriesViewComponent } from './stalker-series-view.component';
 

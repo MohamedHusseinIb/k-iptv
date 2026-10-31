@@ -7,18 +7,18 @@ import type {
     PortalPlaybackPositions,
     PortalPlayer,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     firstNonBlankStalkerIdText,
     StalkerStore,
-} from '@iptvnator/portal/stalker/data-access';
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
-import type { PlaybackFallbackRequest } from '@iptvnator/ui/playback';
+} from '@kiptv/portal/stalker/data-access';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
+import type { PlaybackFallbackRequest } from '@kiptv/ui/playback';
 import {
     PlaybackPositionData,
     ResolvedPortalPlayback,
     VodDetailsItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { createStalkerVodDetailActions } from './stalker-vod-detail-actions';
 import { StalkerVodPlaybackController } from './stalker-vod-playback-controller';
 import { createStalkerVodWatchedToggle } from './stalker-vod-watched-toggle';

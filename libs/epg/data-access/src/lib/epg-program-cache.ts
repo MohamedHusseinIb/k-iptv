@@ -1,7 +1,7 @@
 import { MonoTypeOperatorFunction, Observable, of } from 'rxjs';
 import { finalize, shareReplay, tap } from 'rxjs/operators';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
-import { normalizeEpgUrls } from '@iptvnator/shared/m3u-utils';
+import { EpgProgram } from '@kiptv/shared/interfaces';
+import { normalizeEpgUrls } from '@kiptv/shared/m3u-utils';
 
 export interface CachedProgram {
     program: EpgProgram | null;

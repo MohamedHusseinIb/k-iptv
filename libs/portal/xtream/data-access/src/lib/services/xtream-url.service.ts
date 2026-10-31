@@ -5,8 +5,8 @@ import {
     StreamFormat,
     XtreamSerieEpisode,
     XtreamVodDetails,
-} from '@iptvnator/shared/interfaces';
-import { DatabaseService, SettingsStore } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import { DatabaseService, SettingsStore } from '@kiptv/services';
 import { XtreamCredentials } from './xtream-api.service';
 import { resolveXtreamVodPlaybackSource } from './xtream-vod-playback-source';
 

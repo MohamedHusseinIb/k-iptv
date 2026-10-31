@@ -1,6 +1,6 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { ParentalLockService } from '@iptvnator/services';
+import { ParentalLockService } from '@kiptv/services';
 import { VodSourceDiscoveryService } from './vod-source-discovery.service';
 
 const withholdsEverything = signal(false);

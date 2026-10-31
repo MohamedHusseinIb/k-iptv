@@ -1,4 +1,4 @@
-# IPTVnator Player
+# K-IPTV Player
 
 <!-- impeccable:product-schema 1 -->
 
@@ -15,13 +15,13 @@ simple and advanced capabilities accessible.
 
 ## Product Purpose
 
-This is IPTVnator's primary product and the main focus for product and design
+This is K-IPTV's primary product and the main focus for product and design
 work: one application under `apps/web`, used both in Electron and in the browser.
 The TV client is a secondary experiment; the web remote is a secondary companion
 to this player. Neither has equal product priority with the main application.
 
 Connect users' sources, help them find something to watch, and play or resume it.
-IPTVnator is a free, open-source player. It does not provide or sell subscriptions,
+K-IPTV is a free, open-source player. It does not provide or sell subscriptions,
 channels, playlists or other media content.
 
 ## Positioning
@@ -59,7 +59,7 @@ environments; their capabilities are not interchangeable.
 
 ## Brand Commitments
 
-Preserve the IPTVnator name, official project identity and distinction between
+Preserve the K-IPTV name, official project identity and distinction between
 the player and content providers. The maintainer prohibits decorative vertical
 side borders or accent strips, including shadow and pseudo-element imitations.
 
@@ -68,7 +68,7 @@ side borders or accent strips, including shadow and pseudo-element imitations.
 - [Repository overview and existing screenshots](../../README.md).
 - [PWA runtime contract](../../docs/architecture/pwa-self-hosted.md).
 - [Workspace journeys and navigation](../../docs/architecture/workspace-shell.md).
-- [Existing UI guidance](../../docs/architecture/iptvnator-ui-guidelines.md).
+- [Existing UI guidance](../../docs/architecture/kiptv-ui-guidelines.md).
 - [Runtime capability implementation](../../libs/services/README.md).
 
 These contracts and the current implementation remain authoritative for detailed

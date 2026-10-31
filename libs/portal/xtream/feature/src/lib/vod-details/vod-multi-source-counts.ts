@@ -1,5 +1,5 @@
 import { Signal, computed } from '@angular/core';
-import type { VodSourceDescriptor } from '@iptvnator/shared/interfaces';
+import type { VodSourceDescriptor } from '@kiptv/shared/interfaces';
 
 /**
  * What the chip and the caption count.

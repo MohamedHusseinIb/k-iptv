@@ -9,19 +9,19 @@ import {
     STALKER_WATCHDOG_DEFAULT_PERIOD_SECONDS,
     stalkerSessionFingerprint,
     type StalkerPortalErrorKind,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import {
     STALKER_PLAYLIST_CONNECTION_EDITOR_STATUS,
     type StalkerPlaylistConnectionEditor,
     type StalkerPlaylistConnectionResult,
     type StalkerResolvedConnectionApplyOptions,
-} from '@iptvnator/playlist/shared/ui/stalker-connection-editor';
+} from '@kiptv/playlist/shared/ui/stalker-connection-editor';
 import {
     normalizeStalkerPortalIdentity,
     type Playlist,
     type PlaylistMeta,
     type PlaylistMetaUpdate,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 const STALKER_EDIT_ERROR_KEY_BY_KIND: Readonly<
     Record<StalkerPortalErrorKind, string>

@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { keepSourcesChecked } from './source-status-checks';
 import { SourceStatusService } from './source-status.service';
 

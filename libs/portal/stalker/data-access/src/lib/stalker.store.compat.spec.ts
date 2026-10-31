@@ -3,8 +3,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
-import { PORTAL_PLAYER } from '@iptvnator/portal/shared/util';
-import { DataService, PlaylistsService } from '@iptvnator/services';
+import { PORTAL_PLAYER } from '@kiptv/portal/shared/util';
+import { DataService, PlaylistsService } from '@kiptv/services';
 import { StalkerSessionService } from './stalker-session.service';
 import { StalkerStore } from './stalker.store';
 

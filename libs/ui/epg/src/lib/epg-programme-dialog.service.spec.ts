@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { MatDialog } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
-import { SettingsStore } from '@iptvnator/services';
+import { SettingsStore } from '@kiptv/services';
 import { EpgItemDialogData } from './epg-item-description/epg-item-description.component';
 import {
     EPG_PROGRAMME_DIALOG_CONFIG,

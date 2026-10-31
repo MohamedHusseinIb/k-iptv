@@ -21,12 +21,12 @@ import {
     type PlaybackDiagnostic,
     type PlaybackRecommendation,
     type PlaybackRecommendationTarget,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import type {
     ResolvedPortalPlayback,
     VodSourceDescriptor,
-} from '@iptvnator/shared/interfaces';
-import { VodSourceRowComponent } from '@iptvnator/ui/components';
+} from '@kiptv/shared/interfaces';
+import { VodSourceRowComponent } from '@kiptv/ui/components';
 import type {
     ExternalRecoveryStates,
     ExternalRecoveryTargetState,

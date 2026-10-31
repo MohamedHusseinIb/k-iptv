@@ -11,7 +11,7 @@ function safeArtifactName(value: string): string {
 
 export const test = base.extend<{ page: Page }>({
     page: async ({ page }, use, testInfo) => {
-        if (process.env['IPTVNATOR_E2E_V8_COVERAGE'] !== '1') {
+        if (process.env['KIPTV_E2E_V8_COVERAGE'] !== '1') {
             await use(page);
             return;
         }

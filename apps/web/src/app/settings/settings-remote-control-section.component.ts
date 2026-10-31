@@ -15,7 +15,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule } from '@ngx-translate/core';
 import { QRCodeComponent } from 'angularx-qrcode';
 import { markSectionForCheckOnFormEvents } from './settings-section-form-render';
-import { provideFormFieldDefaults } from '@iptvnator/ui/components/form-field-defaults';
+import { provideFormFieldDefaults } from '@kiptv/ui/components/form-field-defaults';
 
 @Component({
     selector: 'app-settings-remote-control-section',

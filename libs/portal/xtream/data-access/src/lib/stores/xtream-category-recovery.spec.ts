@@ -1,4 +1,4 @@
-import { XtreamVodStream } from '@iptvnator/shared/interfaces';
+import { XtreamVodStream } from '@kiptv/shared/interfaces';
 import { recoverXtreamVodCatalogItem } from './xtream-details-request';
 import { findCollectionItems } from '../data-sources/pwa-collection-identity';
 import type { XtreamContentItem } from '../data-sources/xtream-data-source.interface';

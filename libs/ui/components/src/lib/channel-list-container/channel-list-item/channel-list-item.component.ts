@@ -14,10 +14,10 @@ import { MatIconButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
 import { TranslatePipe } from '@ngx-translate/core';
-import { EpgProgrammeDialogService, getProgramTimeMs } from '@iptvnator/ui/epg';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
-import { SettingsStore } from '@iptvnator/services';
-import { applyChannelNameStrip } from '@iptvnator/shared/m3u-utils';
+import { EpgProgrammeDialogService, getProgramTimeMs } from '@kiptv/ui/epg';
+import { EpgProgram } from '@kiptv/shared/interfaces';
+import { SettingsStore } from '@kiptv/services';
+import { applyChannelNameStrip } from '@kiptv/shared/m3u-utils';
 
 @Component({
     selector: 'app-channel-list-item',

@@ -1,7 +1,7 @@
 import {
     ElectronBridgeXtreamFavorite,
     XtreamBackupFavoriteItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /** Export the saved display snapshot, including records without catalog rows. */
 export function toXtreamBackupFavorite(

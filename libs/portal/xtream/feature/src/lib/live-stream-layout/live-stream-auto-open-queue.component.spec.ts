@@ -1,5 +1,5 @@
-import { EpgArchiveDownloadService } from '@iptvnator/ui/epg';
-import { EpgArchiveCopyService } from '@iptvnator/ui/epg';
+import { EpgArchiveDownloadService } from '@kiptv/ui/epg';
+import { EpgArchiveCopyService } from '@kiptv/ui/epg';
 import { computed, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {
@@ -8,17 +8,17 @@ import {
     NavigationEnd,
     Router,
 } from '@angular/router';
-import { PORTAL_PLAYER } from '@iptvnator/portal/shared/util';
+import { PORTAL_PLAYER } from '@kiptv/portal/shared/util';
 import {
     FavoritesService,
     XtreamStore,
     XtreamUrlService,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     RecordingsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { BehaviorSubject, of, Subject } from 'rxjs';
 import { LiveStreamAutoOpenStateService } from './live-stream-auto-open-state.service';
 import { LiveStreamLayoutComponent } from './live-stream-layout.component';

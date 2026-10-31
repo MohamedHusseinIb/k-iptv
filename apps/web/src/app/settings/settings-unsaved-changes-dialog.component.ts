@@ -6,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     DialogFooterDirective,
     DialogShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 /** What the user picked; closing via backdrop/Esc yields `undefined` = stay. */
 export type SettingsUnsavedChangesChoice = 'save' | 'discard';

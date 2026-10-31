@@ -23,9 +23,9 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
-import { normalizeDateLocale } from '@iptvnator/pipes';
-import { SettingsStore, injectTranslationTick } from '@iptvnator/services';
-import { EpgProgram, epgProviderClockMs } from '@iptvnator/shared/interfaces';
+import { normalizeDateLocale } from '@kiptv/pipes';
+import { SettingsStore, injectTranslationTick } from '@kiptv/services';
+import { EpgProgram, epgProviderClockMs } from '@kiptv/shared/interfaces';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { EpgDateNavigationDirection } from '../epg-date';
 import { EpgProgrammeDialogService } from '../epg-programme-dialog.service';

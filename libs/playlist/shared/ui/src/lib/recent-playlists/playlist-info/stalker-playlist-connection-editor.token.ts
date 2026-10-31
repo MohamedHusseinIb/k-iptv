@@ -2,7 +2,7 @@ import { InjectionToken } from '@angular/core';
 import type {
     PlaylistMeta,
     PlaylistMetaUpdate,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export const STALKER_PLAYLIST_CONNECTION_EDITOR_STATUS = {
     RESOLVED: 'resolved',

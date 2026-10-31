@@ -53,7 +53,7 @@ describe('ServerStorageSession', () => {
                         baseUrl: '/api',
                         startedOffline,
                         instance: {
-                            service: 'iptvnator',
+                            service: 'kiptv',
                             apiVersion: 1,
                             instanceId: 'i-1',
                             storage: 'server',
@@ -377,9 +377,9 @@ describe('ServerStorageSession', () => {
 
         it('sends no write before the reload checks the instance', async () => {
             // A write this tab's last page load could not send.
-            sessionStorage.setItem('iptvnator-server:page:i-1', 'last');
+            sessionStorage.setItem('kiptv-server:page:i-1', 'last');
             localStorage.setItem(
-                'iptvnator-server:unsent-writes:i-1:last',
+                'kiptv-server:unsent-writes:i-1:last',
                 JSON.stringify([
                     {
                         namespace: 'xtream-favorites',

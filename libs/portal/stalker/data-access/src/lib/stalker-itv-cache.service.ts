@@ -1,7 +1,7 @@
 import { Injectable, WritableSignal, inject, signal } from '@angular/core';
-import { createLogger } from '@iptvnator/portal/shared/util';
-import { DataService, resetHostConnectivityGuard } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { createLogger } from '@kiptv/portal/shared/util';
+import { DataService, resetHostConnectivityGuard } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { StalkerItvChannel } from './models';
 import {
     StalkerItvLoadProgress,

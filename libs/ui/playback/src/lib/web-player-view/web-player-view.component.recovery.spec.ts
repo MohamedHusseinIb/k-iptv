@@ -17,16 +17,16 @@ import {
     PlaybackDiagnosticSource,
     type PlaybackDiagnostic,
     type PlaybackFallbackRequest,
-} from '@iptvnator/playback/util';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
+} from '@kiptv/playback/util';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
 import {
     type ExternalPlayerSession,
     STORE_KEY,
     VideoPlayer,
     type ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
-import { PORTAL_EXTERNAL_PLAYBACK } from '@iptvnator/portal/shared/util';
-import { VodSourceRowComponent } from '@iptvnator/ui/components';
+} from '@kiptv/shared/interfaces';
+import { PORTAL_EXTERNAL_PLAYBACK } from '@kiptv/portal/shared/util';
+import { VodSourceRowComponent } from '@kiptv/ui/components';
 import { of } from 'rxjs';
 import { PlaybackDiagnosticPanelComponent } from '../playback-diagnostic-panel/playback-diagnostic-panel.component';
 import {

@@ -6,11 +6,11 @@ export * from './lib/components/content-rail-shell/content-rail-shell.component'
 export * from './lib/components/global-favorites-list/global-favorites-list.component';
 export * from './lib/components/grid-list/grid-list.component';
 export * from './lib/components/playlist-error-view/playlist-error-view.component';
-export { ProgressCapsuleComponent } from '@iptvnator/ui/components';
+export { ProgressCapsuleComponent } from '@kiptv/ui/components';
 export * from './lib/components/portal-empty-state/portal-empty-state.component';
 export * from './lib/components/channel-list-hidden-state/channel-list-hidden-state.component';
 export * from './lib/components/search-layout/search-layout.component';
-export { WatchedBadgeComponent } from '@iptvnator/ui/components';
+export { WatchedBadgeComponent } from '@kiptv/ui/components';
 export * from './lib/components/unified-collection/unified-collection-page.component';
 export * from './lib/components/unified-collection/unified-collection-detail.directive';
 export * from './lib/components/unified-collection/unified-live-tab.component';

@@ -1,10 +1,10 @@
 import {
     XtreamSerieEpisode,
     XtreamSerieEpisodeInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { tmdbStillUrl } from './tmdb-config';
 import { TmdbEpisode } from './tmdb.types';
-import { isGenericEpisodeTitle } from '@iptvnator/shared/tmdb';
+import { isGenericEpisodeTitle } from '@kiptv/shared/tmdb';
 
 /**
  * Field-level merge of TMDB season data into an episode list (shared by

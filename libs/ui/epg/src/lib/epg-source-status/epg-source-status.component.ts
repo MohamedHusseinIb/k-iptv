@@ -15,7 +15,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import {
     EpgProgressService,
     EpgRuntimeBridgeService,
-} from '@iptvnator/epg/data-access';
+} from '@kiptv/epg/data-access';
 
 type BadgeStatus =
     'loading' | 'queued' | 'fresh' | 'stale' | 'error' | 'unknown';

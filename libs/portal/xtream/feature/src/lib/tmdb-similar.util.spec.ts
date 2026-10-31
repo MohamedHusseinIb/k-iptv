@@ -1,4 +1,4 @@
-import { TmdbRecommendation } from '@iptvnator/shared/interfaces';
+import { TmdbRecommendation } from '@kiptv/shared/interfaces';
 import {
     buildCatalogTitleIndex,
     lookupCatalogTitle,

@@ -1,5 +1,5 @@
 import type { APIRequestContext, Browser, Page } from '@playwright/test';
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import { expect } from './fixtures';
 import {
     newServerPage,
@@ -17,7 +17,7 @@ export async function cachedSource(
         ({ instanceId, id, write }) =>
             new Promise<Playlist | undefined>((resolve, reject) => {
                 const opening = indexedDB.open(
-                    `iptvnator-server:${instanceId}`
+                    `kiptv-server:${instanceId}`
                 );
                 opening.onerror = () => reject(opening.error);
                 opening.onsuccess = () => {
@@ -66,7 +66,7 @@ export async function verifyConcurrentSourcePruning(
     await context.route('**/assets/app-config.js', (route) =>
         route.fulfill({
             contentType: 'application/javascript',
-            body: `window.__IPTVNATOR_CONFIG__ = { BACKEND_URL: ${JSON.stringify(STORAGE_BACKEND_URL)} };`,
+            body: `window.__KIPTV_CONFIG__ = { BACKEND_URL: ${JSON.stringify(STORAGE_BACKEND_URL)} };`,
         })
     );
     const parsed = { header: { raw: '#EXTM3U', attrs: {} }, items: [] };

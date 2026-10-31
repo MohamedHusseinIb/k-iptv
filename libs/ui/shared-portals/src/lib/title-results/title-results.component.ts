@@ -9,7 +9,7 @@ import {
 import { MatIcon } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ActorCrewJob } from '@iptvnator/services';
+import { ActorCrewJob } from '@kiptv/services';
 
 /**
  * One entry of the shared title-results grid (actor filmography, Discover

@@ -1,12 +1,12 @@
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
-import { LazySnackBar } from '@iptvnator/services/lazy-snack-bar';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
+import { LazySnackBar } from '@kiptv/services/lazy-snack-bar';
 import { TranslateService } from '@ngx-translate/core';
 import { TestBed } from '@angular/core/testing';
 import { patchState, signalStore } from '@ngrx/signals';
 import { XTREAM_DATA_SOURCE } from './data-sources/xtream-data-source.interface';
 import { withFavorites } from './with-favorites.feature';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),

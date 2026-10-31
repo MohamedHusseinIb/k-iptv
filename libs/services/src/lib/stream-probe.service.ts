@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import type {
     StreamProbeHeaders,
     VodSourceProbeResult,
-} from '@iptvnator/shared/interfaces';
-import { redactSensitiveData } from '@iptvnator/shared/logging';
+} from '@kiptv/shared/interfaces';
+import { redactSensitiveData } from '@kiptv/shared/logging';
 
 /**
  * On-demand stream reachability checks via the Electron main process.

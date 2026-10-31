@@ -1,5 +1,5 @@
 import { Signal, computed } from '@angular/core';
-import { EmbeddedMpvAudioTrack } from '@iptvnator/shared/interfaces';
+import { EmbeddedMpvAudioTrack } from '@kiptv/shared/interfaces';
 import { ASPECT_PRESETS, SPEED_PRESETS } from './embedded-mpv-format.utils';
 import type { EmbeddedMpvMenuState } from './embedded-mpv-ui-state';
 

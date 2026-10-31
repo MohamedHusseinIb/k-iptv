@@ -6,8 +6,8 @@ import type {
     XtreamBackupRecentlyViewedItem,
     XtreamPendingRestoreState,
     XtreamPlaylistBackupEntry,
-} from '@iptvnator/shared/interfaces';
-import { normalizeXtreamPendingRestoreState } from '@iptvnator/shared/interfaces/xtream-restore-state';
+} from '@kiptv/shared/interfaces';
+import { normalizeXtreamPendingRestoreState } from '@kiptv/shared/interfaces/xtream-restore-state';
 import type { UserDataStorage } from './user-data-storage';
 import { XTREAM_USER_DATA_KEYS } from './xtream-user-data-keys';
 import { PwaXtreamRestoreProgress } from './pwa-xtream-restore-progress';

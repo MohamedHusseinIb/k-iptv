@@ -16,7 +16,7 @@ import { ApplicationRef } from '@angular/core';
  * profiler's count; it did so under zone.js too, before the zoneless flip.
  * Contract: docs/architecture/performance-journeys.md.
  */
-export const CHANGE_DETECTION_TICK_COUNTER_KEY = '__iptvnatorCdTicks';
+export const CHANGE_DETECTION_TICK_COUNTER_KEY = '__kiptvCdTicks';
 
 export interface ChangeDetectionTickCounter {
     /** `ApplicationRef._tick` calls since the counter was installed. */

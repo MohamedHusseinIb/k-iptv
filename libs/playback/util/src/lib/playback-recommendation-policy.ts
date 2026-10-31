@@ -1,4 +1,4 @@
-import type { ExternalPlayerName } from '@iptvnator/shared/interfaces';
+import type { ExternalPlayerName } from '@kiptv/shared/interfaces';
 import {
     InlinePlaybackPlayer,
     PlaybackDiagnosticCode,

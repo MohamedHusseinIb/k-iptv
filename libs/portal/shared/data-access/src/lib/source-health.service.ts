@@ -2,7 +2,7 @@ import { Injectable, inject, signal } from '@angular/core';
 import {
     SourceHealthEvidenceService,
     RuntimeCapabilitiesService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     PlaylistMeta,
     SourceHealthSnapshot,
@@ -11,7 +11,7 @@ import {
     sourceHealthKey,
     sourceHealthUnknown,
     sourceHealthError,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { fingerprintSourceHealthKey } from './source-health-identity';
 import { SourceHealthHistoryService } from './source-health-history.service';
 import { SourceHealthProbesService } from './source-health-probes.service';

@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { DataService, PlaylistsService } from '@iptvnator/services';
+import { DataService, PlaylistsService } from '@kiptv/services';
 import {
     Playlist,
     CONNECTIVITY_GUARD_RESET,
     STALKER_REQUEST,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerPortalDiscoveryService } from './stalker-portal-discovery.service';
 import { StalkerSessionService } from './stalker-session.service';
 

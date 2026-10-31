@@ -1,4 +1,4 @@
-import type { TmdbEnrichmentService } from '@iptvnator/services';
+import type { TmdbEnrichmentService } from '@kiptv/services';
 import {
     enrichSerialSeasonWithTmdb,
     enrichSerialSelectionWithTmdb,

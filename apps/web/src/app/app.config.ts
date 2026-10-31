@@ -22,20 +22,20 @@ import { provideRouterStore, routerReducer } from '@ngrx/router-store';
 import { provideStore } from '@ngrx/store';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { PlaylistEffects, playlistReducer } from '@iptvnator/m3u-state';
+import { PlaylistEffects, playlistReducer } from '@kiptv/m3u-state';
 import { NgxIndexedDBModule } from 'ngx-indexed-db';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import {
     PORTAL_EXTERNAL_PLAYBACK,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util/tokens';
-import { STALKER_PLAYLIST_CONNECTION_EDITOR } from '@iptvnator/playlist/shared/ui/stalker-connection-editor';
-import { provideXtreamDataSource } from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/shared/util/tokens';
+import { STALKER_PLAYLIST_CONNECTION_EDITOR } from '@kiptv/playlist/shared/ui/stalker-connection-editor';
+import { provideXtreamDataSource } from '@kiptv/portal/xtream/data-access';
 import {
     provideParentalLockPlaylistCleanup,
     DataService,
-} from '@iptvnator/services';
-import { dbConfig } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { dbConfig } from '@kiptv/shared/interfaces';
 import { getInitialLanguage } from './app-language-preference';
 import { platformProviders } from '../environments/platform.providers';
 import { storeDevtoolsProviders } from '../environments/store-devtools.providers';

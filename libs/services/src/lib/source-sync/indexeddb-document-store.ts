@@ -1,5 +1,5 @@
 import { firstValueFrom } from 'rxjs';
-import { DbStores, type Playlist } from '@iptvnator/shared/interfaces';
+import { DbStores, type Playlist } from '@kiptv/shared/interfaces';
 import { NgxIndexedDBService } from 'ngx-indexed-db';
 import type { PlaylistDocumentStore } from '../playlist-storage-backend';
 import {

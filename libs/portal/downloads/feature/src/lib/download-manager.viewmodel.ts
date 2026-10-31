@@ -1,5 +1,5 @@
-import type { DownloadItem } from '@iptvnator/services';
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { DownloadItem } from '@kiptv/services';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import {
     buildDownloadLibrary,
     compareDownloadIds,
@@ -9,7 +9,7 @@ import {
     type DownloadLibraryEntity,
     type DownloadLibraryRow,
 } from './download-library.viewmodel';
-import { foldSearchText } from '@iptvnator/shared/interfaces';
+import { foldSearchText } from '@kiptv/shared/interfaces';
 
 export type {
     DownloadCatchupCardViewModel,

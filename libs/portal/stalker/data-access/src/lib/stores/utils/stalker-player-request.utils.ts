@@ -1,10 +1,10 @@
-import { DataService } from '@iptvnator/services';
+import { DataService } from '@kiptv/services';
 import {
     isStalkerStreamCredentialSafe,
     PlaylistMeta,
     StalkerPortalActions,
     StalkerPortalItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerSessionService } from '../../stalker-session.service';
 import { StalkerContentTypes } from '../../stalker-content-types';
 import { StalkerContentType } from '../stalker-store.contracts';

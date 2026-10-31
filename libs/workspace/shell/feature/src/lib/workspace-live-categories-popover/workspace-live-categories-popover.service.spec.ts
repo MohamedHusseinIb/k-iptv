@@ -17,8 +17,8 @@ import {
     LIVE_CATEGORIES_POPOVER,
     LiveLayoutSidebarStateService,
     liveSidebarStateStorageKey,
-} from '@iptvnator/portal/shared/util';
-import { WorkspaceShellContextDrawerService } from '@iptvnator/workspace/shell/util';
+} from '@kiptv/portal/shared/util';
+import { WorkspaceShellContextDrawerService } from '@kiptv/workspace/shell/util';
 import { WorkspaceContextPanelComponent } from '../workspace-context-panel/workspace-context-panel.component';
 import { WorkspaceShellRouteStateService } from '../workspace-shell/services/workspace-shell-route-state.service';
 import { WorkspaceLiveCategoriesPopoverComponent } from './workspace-live-categories-popover.component';

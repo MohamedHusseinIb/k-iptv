@@ -5,14 +5,14 @@ import {
     WorkspaceCommandSelection,
     WorkspaceResolvedCommandItem,
     WorkspaceViewCommandService,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     WorkspaceCommandPaletteComponent,
     WorkspaceCommandPaletteData,
 } from '../../workspace-command-palette/workspace-command-palette.component';
 import { RecentCommandsService } from '../../recent-commands';
 import { WorkspacePlayerCommandsContributor } from '../../workspace-player-commands';
-import { SettingsSearchService } from '@iptvnator/workspace/shell/util/settings-search';
+import { SettingsSearchService } from '@kiptv/workspace/shell/util/settings-search';
 import { buildSettingsPaletteCommands } from './helpers/workspace-settings-commands';
 import {
     buildCommandPaletteItems,

@@ -5,7 +5,7 @@ import {
     Playlist,
     PlaylistRefreshEvent,
     PlaylistRefreshPayload,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export interface PlaylistRefreshOptions {
     onEvent?: (event: PlaylistRefreshEvent) => void;

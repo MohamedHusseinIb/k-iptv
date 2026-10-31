@@ -1,4 +1,4 @@
-import { Language } from '@iptvnator/shared/interfaces';
+import { Language } from '@kiptv/shared/interfaces';
 import { Injector, signal } from '@angular/core';
 import { SettingsStore } from '../settings-store.service';
 import { AgeRatingPresentationService } from './age-rating-presentation.service';

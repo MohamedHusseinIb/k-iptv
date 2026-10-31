@@ -1,4 +1,4 @@
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
 import { Injectable, computed, effect, inject, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
@@ -6,7 +6,7 @@ import {
     PlaylistActions,
     selectAllPlaylistsMeta,
     selectPlaylistsLoadingFlag,
-} from '@iptvnator/m3u-state';
+} from '@kiptv/m3u-state';
 import { firstValueFrom } from 'rxjs';
 import {
     DatabaseService,
@@ -14,11 +14,11 @@ import {
     PlaylistsService,
     RuntimeCapabilitiesService,
     injectTranslationTick,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     XTREAM_DATA_SOURCE,
     XtreamContentItem,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     buildPlaylistRecentItems,
     Channel,
@@ -32,7 +32,7 @@ import {
     PortalRecentItem,
     resolvePortalActivityWatchKind,
     stalkerItemMatchesId,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildStalkerFavoriteItems,
     mapDbFavoriteToItem,
@@ -45,8 +45,8 @@ import {
     COLLECTION_VIEW_STATE_KEY,
     PORTAL_PLAYBACK_POSITIONS,
     WorkspaceNavigationTarget,
-} from '@iptvnator/portal/shared/util';
-import type { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import type { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import {
     getGlobalFavoriteLink as getGlobalFavoriteLinkUtil,
     getGlobalFavoriteNavigationState as getGlobalFavoriteNavigationStateUtil,
@@ -71,11 +71,11 @@ import {
 
 export type { DashboardContentKind };
 
-/** @deprecated Use {@link PortalRecentItem} from `@iptvnator/shared/interfaces` instead. */
+/** @deprecated Use {@link PortalRecentItem} from `@kiptv/shared/interfaces` instead. */
 export type GlobalRecentItem = PortalRecentItem;
-/** @deprecated Use {@link PortalFavoriteItem} from `@iptvnator/shared/interfaces` instead. */
+/** @deprecated Use {@link PortalFavoriteItem} from `@kiptv/shared/interfaces` instead. */
 export type DashboardFavoriteItem = PortalFavoriteItem;
-/** @deprecated Use {@link PortalAddedItem} from `@iptvnator/shared/interfaces` instead. */
+/** @deprecated Use {@link PortalAddedItem} from `@kiptv/shared/interfaces` instead. */
 export type DashboardRecentlyAddedItem = PortalAddedItem;
 export type DashboardRecentlyAddedFilterKind = GlobalRecentlyAddedKind;
 
@@ -680,7 +680,7 @@ export class DashboardDataService {
     }
 
     private mapPwaXtreamFavoriteItem(
-        item: import('@iptvnator/portal/xtream/data-access').XtreamFavoriteItem,
+        item: import('@kiptv/portal/xtream/data-access').XtreamFavoriteItem,
         playlist: PlaylistMeta
     ): DashboardFavoriteItem {
         return {

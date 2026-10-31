@@ -1,5 +1,5 @@
 import { InjectionToken, Signal } from '@angular/core';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 
 /**
  * One row of the guide. `id` is the host's ROW id, unique within the current

@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { MatTooltip } from '@angular/material/tooltip';
 import { TranslatePipe } from '@ngx-translate/core';
 import { MockPipe } from 'ng-mocks';
-import { SettingsStore } from '@iptvnator/services';
+import { SettingsStore } from '@kiptv/services';
 import {
     formatGridRating,
     GridListComponent,

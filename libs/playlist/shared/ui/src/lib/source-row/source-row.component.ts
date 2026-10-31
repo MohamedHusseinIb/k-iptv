@@ -21,20 +21,20 @@ import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTooltip } from '@angular/material/tooltip';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { normalizeDateLocale } from '@iptvnator/pipes';
-import { SourceStatusService } from '@iptvnator/portal/shared/data-access';
-import { injectTranslationTick } from '@iptvnator/services';
+import { normalizeDateLocale } from '@kiptv/pipes';
+import { SourceStatusService } from '@kiptv/portal/shared/data-access';
+import { injectTranslationTick } from '@kiptv/services';
 import {
     isPortalAccountPlaylist,
     PlaylistMeta,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     sourceCopyUrl,
     sourceDisplayName,
     SourceFormatContext,
     sourceMetaParts,
     sourceStatusTag,
-} from '@iptvnator/playlist/shared/util';
+} from '@kiptv/playlist/shared/util';
 import { SourceClock } from './source-clock';
 import { SourceTileComponent } from './source-tile.component';
 

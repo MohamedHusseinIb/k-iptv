@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { SETTINGS_SEARCH_ENTRIES } from '@iptvnator/workspace/shell/util/settings-search';
+import { SETTINGS_SEARCH_ENTRIES } from '@kiptv/workspace/shell/util/settings-search';
 
 /**
  * The settings search index is hand-maintained next to templates whose

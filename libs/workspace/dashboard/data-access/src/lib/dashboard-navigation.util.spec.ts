@@ -1,7 +1,7 @@
 import type {
     PlaybackPositionData,
     PortalRecentItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     getRecentItemDetailNavigationState,
     getRecentItemNavigationState,

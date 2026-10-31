@@ -1,4 +1,4 @@
-import type { ServerUserStateWriteResponse } from '@iptvnator/shared/interfaces';
+import type { ServerUserStateWriteResponse } from '@kiptv/shared/interfaces';
 import {
     type KeepaliveOutcome,
     PLAYLIST_MISSING,

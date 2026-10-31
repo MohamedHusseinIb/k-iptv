@@ -29,7 +29,7 @@ test('@settings @web Portuguese regions remain distinct after saving and reloadi
     await expect
         .poll(() =>
             page.evaluate(() =>
-                localStorage.getItem('iptvnator:preferred-language')
+                localStorage.getItem('kiptv:preferred-language')
             )
         )
         .toBe('pt-PT');
@@ -50,7 +50,7 @@ test('@settings @web Portuguese regions remain distinct after saving and reloadi
     await expect
         .poll(() =>
             page.evaluate(() =>
-                localStorage.getItem('iptvnator:preferred-language')
+                localStorage.getItem('kiptv:preferred-language')
             )
         )
         .toBe('pt-BR');
@@ -90,7 +90,7 @@ test('@settings @web Portuguese regions remain distinct after saving and reloadi
             transaction.onerror = () => reject(transaction.error);
         });
         database.close();
-        localStorage.setItem('iptvnator:preferred-language', 'pt');
+        localStorage.setItem('kiptv:preferred-language', 'pt');
     });
     await page.reload();
     await expect(page.locator('html')).toHaveAttribute('lang', 'pt-BR');
@@ -100,7 +100,7 @@ test('@settings @web Portuguese regions remain distinct after saving and reloadi
     await expect
         .poll(() =>
             page.evaluate(() =>
-                localStorage.getItem('iptvnator:preferred-language')
+                localStorage.getItem('kiptv:preferred-language')
             )
         )
         .toBe('pt-BR');

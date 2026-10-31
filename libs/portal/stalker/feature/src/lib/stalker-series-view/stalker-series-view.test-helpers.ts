@@ -5,7 +5,7 @@ import {
     output,
     signal,
 } from '@angular/core';
-import type { SeasonEpisodeDownloadAdapter } from '@iptvnator/portal/shared/data-access';
+import type { SeasonEpisodeDownloadAdapter } from '@kiptv/portal/shared/data-access';
 
 @Component({
     selector: 'app-season-container',

@@ -16,7 +16,7 @@ it('keeps server-token routes protected while delegating only a one-session phon
                 '*'
             );
             expect(await identity.json()).toMatchObject({
-                service: 'iptvnator',
+                service: 'kiptv',
                 auth: 'token',
                 protocol: 1,
             });

@@ -21,7 +21,7 @@ export async function verifyConcurrentSourceProjection(
     await context.route('**/assets/app-config.js', (route) =>
         route.fulfill({
             contentType: 'application/javascript',
-            body: `window.__IPTVNATOR_CONFIG__ = { BACKEND_URL: ${JSON.stringify(STORAGE_BACKEND_URL)} };`,
+            body: `window.__KIPTV_CONFIG__ = { BACKEND_URL: ${JSON.stringify(STORAGE_BACKEND_URL)} };`,
         })
     );
     const provider = `http://localhost:${process.env['XTREAM_MOCK_PORT'] ?? '3211'}`;

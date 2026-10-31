@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { TmdbEnrichmentService } from '@iptvnator/services';
+import { TmdbEnrichmentService } from '@kiptv/services';
 import { M3uVodMetadataService } from './m3u-vod-metadata.service';
 
 describe('M3uVodMetadataService', () => {

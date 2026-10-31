@@ -12,15 +12,15 @@ import { MatIcon } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { RecordingsService, SettingsStore } from '@iptvnator/services';
-import { epgDisplayTimeMs } from '@iptvnator/shared/interfaces';
+import { RecordingsService, SettingsStore } from '@kiptv/services';
+import { epgDisplayTimeMs } from '@kiptv/shared/interfaces';
 import {
     DetailActionsTemplateDirective,
     DetailMetaTemplateDirective,
     DetailTagsTemplateDirective,
     MetaChipComponent,
     PortalDetailShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import { map } from 'rxjs';
 import { formatDownloadBytes } from '../download-queue.component';
 import type { RecordingItemActionType } from '../recording-actions';

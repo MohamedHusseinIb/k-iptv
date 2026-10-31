@@ -11,8 +11,8 @@ import {
     type Playlist,
     type SourceDefinition,
     type SourceServerRequest,
-} from '@iptvnator/shared/interfaces';
-import { applySourceDefinition } from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces';
+import { applySourceDefinition } from '@kiptv/shared/interfaces/source-definition';
 import { DataService } from '../data.service';
 import { PLAYLIST_DELETE_CLEANUP } from '../playlist-delete-cleanup.token';
 import { PlaylistStorageBackend } from '../playlist-storage-backend';
@@ -38,7 +38,7 @@ const source: SourceDefinition = {
     password: 'synthetic-secret',
 };
 const instance = {
-    service: 'iptvnator',
+    service: 'kiptv',
     apiVersion: 1,
     instanceId: 'nas',
     storage: 'server',
@@ -642,7 +642,7 @@ describe('source synchronization lifecycle', () => {
         try {
             window.electron = {} as typeof window.electron;
             localStorage.setItem(
-                'iptvnator:source-server',
+                'kiptv:source-server',
                 JSON.stringify(pending)
             );
             (sourceConnection as jest.Mock).mockReturnValue(pending);
@@ -652,12 +652,12 @@ describe('source synchronization lifecycle', () => {
             await recovery.initialize();
             await recovery.refresh();
             expect(
-                JSON.parse(localStorage.getItem('iptvnator:source-server')!)
+                JSON.parse(localStorage.getItem('kiptv:source-server')!)
             ).toEqual({ ...pending, instanceId: 'nas' });
             expect(recovery.errorKey()).toBeNull();
         } finally {
             window.electron = oldElectron;
-            localStorage.removeItem('iptvnator:source-server');
+            localStorage.removeItem('kiptv:source-server');
             errors.mockRestore();
         }
     });

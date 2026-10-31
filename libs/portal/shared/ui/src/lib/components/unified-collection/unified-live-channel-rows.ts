@@ -1,4 +1,4 @@
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
 import { computed, Signal } from '@angular/core';
 import {
     deriveVisibleFavoriteChannels,
@@ -7,7 +7,7 @@ import {
     resolveStalkerProviderId,
     UnifiedCollectionItem,
     UnifiedFavoriteChannel,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 export interface UnifiedLiveChannelRows {
     /** Every collection row, as the shared list renders them. */

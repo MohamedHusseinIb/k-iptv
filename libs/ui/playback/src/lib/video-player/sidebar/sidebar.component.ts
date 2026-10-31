@@ -5,9 +5,9 @@ import {
     output,
     ChangeDetectionStrategy,
 } from '@angular/core';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
-import { Channel } from '@iptvnator/shared/interfaces';
-import { ChannelListContainerComponent } from '@iptvnator/ui/components';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
+import { Channel } from '@kiptv/shared/interfaces';
+import { ChannelListContainerComponent } from '@kiptv/ui/components';
 
 @Component({
     selector: 'app-sidebar',

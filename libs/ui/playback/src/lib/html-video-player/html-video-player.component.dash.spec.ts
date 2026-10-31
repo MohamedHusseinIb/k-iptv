@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { DataService } from '@iptvnator/services';
-import { Channel } from '@iptvnator/shared/interfaces';
+import { DataService } from '@kiptv/services';
+import { Channel } from '@kiptv/shared/interfaces';
 import { HtmlVideoPlayerComponent } from './html-video-player.component';
 
 /** DASH-specific behavior of the HTML5 player (legacy controls mode). */

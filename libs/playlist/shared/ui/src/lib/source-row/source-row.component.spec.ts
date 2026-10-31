@@ -2,8 +2,8 @@ import { signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
-import { SourceStatusService } from '@iptvnator/portal/shared/data-access';
-import { PlaylistMeta, SourceStatus } from '@iptvnator/shared/interfaces';
+import { SourceStatusService } from '@kiptv/portal/shared/data-access';
+import { PlaylistMeta, SourceStatus } from '@kiptv/shared/interfaces';
 import { SourceClock } from './source-clock';
 import { SourceRowComponent } from './source-row.component';
 

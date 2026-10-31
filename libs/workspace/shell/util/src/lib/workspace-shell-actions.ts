@@ -2,7 +2,7 @@ import { InjectionToken } from '@angular/core';
 import type {
     StalkerAccountInfoDialogData,
     XtreamAccountInfoDialogData,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export type WorkspacePlaylistType =
     | 'xtream'

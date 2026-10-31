@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import type { VodSourceProbeResult } from '@iptvnator/shared/interfaces';
+import type { VodSourceProbeResult } from '@kiptv/shared/interfaces';
 
 /**
  * How long a verdict may stand in for a fresh check. Long enough that closing

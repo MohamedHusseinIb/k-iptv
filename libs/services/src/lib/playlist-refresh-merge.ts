@@ -1,13 +1,13 @@
 import {
     PlaylistUpdateState,
     type Playlist,
-} from '@iptvnator/shared/interfaces';
-import { applySourceDefinition } from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces';
+import { applySourceDefinition } from '@kiptv/shared/interfaces/source-definition';
 import {
     resolvePlaylistEpgSourceState,
     playlistRefreshMatchesSource,
     retainPlaylistRefreshSource,
-} from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/m3u-utils';
 import { inheritSourceRowSnapshot } from './source-sync/source-row-snapshot-context';
 
 /** Refresh owns parsed content; the current row owns connection and device activity. */

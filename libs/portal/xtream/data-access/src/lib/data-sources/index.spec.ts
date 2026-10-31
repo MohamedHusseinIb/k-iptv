@@ -4,7 +4,7 @@ import {
     PlaylistDeleteCleanup,
     PlaylistsService,
     RuntimeCapabilitiesService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { XtreamApiService } from '../services/xtream-api.service';
 import {
     ElectronXtreamDataSource,

@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     EpgProgressService,
     EpgRuntimeBridgeService,
-} from '@iptvnator/epg/data-access';
+} from '@kiptv/epg/data-access';
 import { EpgSourceStatusComponent } from './epg-source-status.component';
 
 /** Writable double for the bridge's read-only capability getters. */

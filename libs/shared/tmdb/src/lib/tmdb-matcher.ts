@@ -3,11 +3,11 @@ import {
     cleanTitleForSearch,
     extractYear,
     normalizeTitle,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { TmdbSearchResult } from './tmdb.types';
 
 // Re-exported for existing consumers of the tmdb barrel
-export { extractYear, normalizeTitle } from '@iptvnator/shared/interfaces';
+export { extractYear, normalizeTitle } from '@kiptv/shared/interfaces';
 
 /**
  * Title matching for TMDB search results. Provider titles are noisy

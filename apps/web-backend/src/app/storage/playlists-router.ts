@@ -1,5 +1,5 @@
 import express, { Router, type Response } from 'express';
-import { SERVER_REPLACED_ETAG_HEADER as REPLACED_ETAG_HEADER } from '@iptvnator/shared/interfaces';
+import { SERVER_REPLACED_ETAG_HEADER as REPLACED_ETAG_HEADER } from '@kiptv/shared/interfaces';
 import { matchesEtag } from './etag-match';
 import {
     deleteAllPlaylistsWithState,

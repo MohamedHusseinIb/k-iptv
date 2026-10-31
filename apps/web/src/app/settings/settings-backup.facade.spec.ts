@@ -3,9 +3,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import {
     selectAllPlaylistsMeta,
     selectIsEpgAvailable,
-} from '@iptvnator/m3u-state';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { PlaylistBackupService } from '@iptvnator/services/playlist-backup';
+} from '@kiptv/m3u-state';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { PlaylistBackupService } from '@kiptv/services/playlist-backup';
 import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { MockProvider } from 'ng-mocks';

@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { TranslateModule } from '@ngx-translate/core';
-import { DataService } from '@iptvnator/services';
-import type { Channel } from '@iptvnator/shared/interfaces';
+import { DataService } from '@kiptv/services';
+import type { Channel } from '@kiptv/shared/interfaces';
 import {
     PlayerControlsComponent,
     WEB_PLAYER_SHARED_CONTROLS,

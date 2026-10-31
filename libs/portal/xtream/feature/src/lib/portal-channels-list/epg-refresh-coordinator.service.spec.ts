@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { EpgQueueService } from '@iptvnator/portal/xtream/data-access';
+import { EpgQueueService } from '@kiptv/portal/xtream/data-access';
 import {
     EPG_REFRESH_INTERVAL_MS,
     EpgRefreshContribution,

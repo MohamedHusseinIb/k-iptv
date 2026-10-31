@@ -203,7 +203,7 @@ async function main() {
         return;
     }
     assert(
-        process.env['IPTVNATOR_E2E_DATA_DIR'],
+        process.env['KIPTV_E2E_DATA_DIR'],
         'Never open the user database'
     );
     const warnings: unknown[][] = [];

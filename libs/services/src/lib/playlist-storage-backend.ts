@@ -3,7 +3,7 @@ import type {
     ElectronBridgeApi,
     ElectronBridgeResult,
     Playlist,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { RuntimeCapabilitiesService } from './runtime-capabilities.service';
 import {
     sourceConnection,

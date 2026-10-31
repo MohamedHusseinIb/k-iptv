@@ -1,11 +1,11 @@
-import { SourceHealthEvidenceService } from '@iptvnator/services';
-import { accountHealth } from '@iptvnator/shared/interfaces';
+import { SourceHealthEvidenceService } from '@kiptv/services';
+import { accountHealth } from '@kiptv/shared/interfaces';
 import { inject, Injectable } from '@angular/core';
-import { DataService } from '@iptvnator/services';
+import { DataService } from '@kiptv/services';
 import {
     isFullStalkerPortalPlaylist,
     PlaylistMeta,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerPortalRepairService } from './stalker-portal-repair.service';
 import { StalkerSessionService } from './stalker-session.service';
 import {
@@ -246,7 +246,7 @@ export class StalkerAccountInfoService {
     }
 }
 
-// The portal-mode predicate moved to `@iptvnator/shared/interfaces`
+// The portal-mode predicate moved to `@kiptv/shared/interfaces`
 // (stalker-portal-mode.util) so every consumer shares one rule; re-exported
 // here for existing importers.
 export { isFullStalkerPortalPlaylist };

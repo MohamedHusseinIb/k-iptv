@@ -21,16 +21,16 @@ import {
     type RecordingItem,
     RecordingsService,
     injectTranslationTick,
-} from '@iptvnator/services';
-import { EmptyStateComponent } from '@iptvnator/playlist/shared/ui';
+} from '@kiptv/services';
+import { EmptyStateComponent } from '@kiptv/playlist/shared/ui';
 import {
     PORTAL_SHELL_ACTIONS,
     PortalCollectionContextService,
     buildStandardCollectionCategories,
     createPortalCollectionContext,
     queryParamSignal,
-} from '@iptvnator/portal/shared/util';
-import type { Playlist, XtreamCategory } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import type { Playlist, XtreamCategory } from '@kiptv/shared/interfaces';
 import { map, startWith, take } from 'rxjs';
 import type {
     DownloadActionResult,
@@ -54,7 +54,7 @@ import { RecordingLibraryComponent } from './recording-library.component';
 import { RecordingManagerActionsService } from './recording-manager-actions.service';
 import { buildRecordingManagerViewModel } from './recording-manager.viewmodel';
 import { RecordingQueueComponent } from './recording-queue.component';
-import { dialogSize } from '@iptvnator/ui/components/dialog-size';
+import { dialogSize } from '@kiptv/ui/components/dialog-size';
 
 const FILTER_KEYS = {
     all: 'DOWNLOADS.FILTER.ALL',

@@ -1,7 +1,7 @@
 import { signal, WritableSignal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { Observable } from 'rxjs';
-import { PlaylistsService } from '@iptvnator/services';
+import { PlaylistsService } from '@kiptv/services';
 import {
     createStalkerVodItem,
     firstProviderText,
@@ -11,7 +11,7 @@ import {
     StalkerVodDetails,
     StalkerVodInfo,
     VodDetailsItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     StalkerFavoriteItem,
     StalkerSelectedVodItem,

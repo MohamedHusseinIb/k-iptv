@@ -3,18 +3,18 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { DialogService } from '@iptvnator/ui/components';
+import { DialogService } from '@kiptv/ui/components';
 import {
     DataService,
     DatabaseService,
     DbOperationEvent,
     PlaybackPositionService,
     SourceActivityService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     CONNECTIVITY_GUARD_RESET,
     PlaylistMeta,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     XtreamRefreshFlowService,
     type XtreamRefreshProgressReporter,

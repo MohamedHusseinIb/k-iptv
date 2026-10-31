@@ -1,4 +1,4 @@
-import { clipGuideSpan, TimelineAxis } from '@iptvnator/shared/epg';
+import { clipGuideSpan, TimelineAxis } from '@kiptv/shared/epg';
 import type { GuideProgram } from './programme-guide';
 export const GUIDE_HOUR = 3600000;
 export const GUIDE_SPAN = 2 * GUIDE_HOUR;

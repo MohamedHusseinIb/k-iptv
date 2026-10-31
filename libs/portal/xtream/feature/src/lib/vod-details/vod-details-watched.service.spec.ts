@@ -2,12 +2,12 @@ import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { PORTAL_PLAYBACK_POSITIONS } from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+import { PORTAL_PLAYBACK_POSITIONS } from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import {
     PlaybackPositionData,
     XtreamVodDetails,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { VodDetailsPlaybackService } from './vod-details-playback.service';
 import { VodDetailsWatchedService } from './vod-details-watched.service';
 

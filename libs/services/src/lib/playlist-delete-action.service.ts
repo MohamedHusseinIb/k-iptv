@@ -1,7 +1,7 @@
 import { SourceActivityService } from './source-activity.service';
 import { inject, Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import {
     DatabaseService,
     type DbOperationEvent,

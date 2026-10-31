@@ -3,14 +3,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { PORTAL_PLAYER } from '@iptvnator/portal/shared/util';
-import { DataService, PlaylistsService } from '@iptvnator/services';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
+import { PORTAL_PLAYER } from '@kiptv/portal/shared/util';
+import { DataService, PlaylistsService } from '@kiptv/services';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
 import { of } from 'rxjs';
 import {
     PlaylistMeta,
     StalkerPortalActions,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerSessionService } from '../../stalker-session.service';
 import { withStalkerPlayer } from './with-stalker-player.feature';
 
@@ -21,8 +21,8 @@ function confirmPlayback(playback: { streamUrl: string }): void {
     });
 }
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
-    ...jest.requireActual('@iptvnator/portal/shared/util'),
+jest.mock('@kiptv/portal/shared/util', () => ({
+    ...jest.requireActual('@kiptv/portal/shared/util'),
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),

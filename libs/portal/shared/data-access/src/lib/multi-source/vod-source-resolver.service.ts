@@ -5,12 +5,12 @@ import {
     XtreamUrlService,
     type IXtreamDataSource,
     type XtreamCredentials,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import type {
     ResolvedPortalPlayback,
     VodSourceCandidate,
-} from '@iptvnator/shared/interfaces';
-import { createLogger } from '@iptvnator/portal/shared/util';
+} from '@kiptv/shared/interfaces';
+import { createLogger } from '@kiptv/portal/shared/util';
 import {
     applyApiMetadata,
     type ProviderVodMetadata,

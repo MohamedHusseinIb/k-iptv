@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ServerStorageStatusService } from '@iptvnator/services';
+import { ServerStorageStatusService } from '@kiptv/services';
 
 /**
  * Self-hosted server storage is unreachable: the library on screen is the

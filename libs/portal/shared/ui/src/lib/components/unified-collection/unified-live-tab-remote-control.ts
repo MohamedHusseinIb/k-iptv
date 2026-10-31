@@ -5,10 +5,10 @@ import {
     UnifiedFavoriteChannel,
     getAdjacentChannelItem,
     getChannelItemByNumber,
-} from '@iptvnator/portal/shared/util';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
-import { LiveEpgPanelSummary } from '@iptvnator/ui/shared-portals';
+} from '@kiptv/portal/shared/util';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
+import { LiveEpgPanelSummary } from '@kiptv/ui/shared-portals';
 
 /**
  * Remote-control integration for the unified live tab (portal favorites,

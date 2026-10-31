@@ -4,8 +4,8 @@ import {
     PlaylistsService,
     USER_DATA_STORAGE,
     type UserDataStorage,
-} from '@iptvnator/services';
-import { PwaXtreamBackupStorage } from '@iptvnator/services/pwa-xtream-backup-storage';
+} from '@kiptv/services';
+import { PwaXtreamBackupStorage } from '@kiptv/services/pwa-xtream-backup-storage';
 import { of } from 'rxjs';
 import { XtreamApiService } from '../services/xtream-api.service';
 import { PwaXtreamDataSource } from './pwa-xtream-data-source';

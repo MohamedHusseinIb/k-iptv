@@ -4,11 +4,11 @@ import {
     PlaybackDiagnosticCode,
     PlaybackDiagnosticSource,
     type PlaybackDiagnostic,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import {
     VideoPlayer,
     type ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { ErrorDetails } from 'hls.js';
 import { WebPlayerLiveAutoFormat } from './web-player-live-auto-format';
 

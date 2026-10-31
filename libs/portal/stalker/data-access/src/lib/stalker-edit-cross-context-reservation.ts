@@ -1,1 +1,1 @@
-export { acquirePlaylistAuthorityEditReservation as acquireCrossContextEditReservation } from '@iptvnator/services';
+export { acquirePlaylistAuthorityEditReservation as acquireCrossContextEditReservation } from '@kiptv/services';

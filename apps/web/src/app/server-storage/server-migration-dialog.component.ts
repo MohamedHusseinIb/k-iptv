@@ -17,12 +17,12 @@ import {
     ServerMigrationService,
     type ServerMigrationPlaylist,
     type ServerMigrationResult,
-} from '@iptvnator/services/server-storage';
-import { SOURCE_TYPE_ICONS } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services/server-storage';
+import { SOURCE_TYPE_ICONS } from '@kiptv/shared/interfaces';
 import {
     DialogFooterDirective,
     DialogShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 @Component({
     selector: 'app-server-migration-dialog',

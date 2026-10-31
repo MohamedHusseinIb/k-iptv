@@ -1,7 +1,7 @@
 import type {
     ServerInstanceInfo,
     SourceServerConnection,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { disconnectBrowserSourceConnection } from './source-browser-settings';
 
 /** An unconfirmed discovery can resolve to a stateless deployment. */
@@ -15,7 +15,7 @@ export function recoverPendingStatelessBackend(
     if (
         !connection.instanceId.startsWith('pending:') ||
         (status !== 404 &&
-            (instance?.service !== 'iptvnator' ||
+            (instance?.service !== 'kiptv' ||
                 instance.apiVersion !== 1 ||
                 instance.storage !== 'none'))
     )

@@ -1,6 +1,6 @@
 import { EventEmitter } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { LazySnackBar } from '@iptvnator/services/lazy-snack-bar';
+import { LazySnackBar } from '@kiptv/services/lazy-snack-bar';
 import { Router } from '@angular/router';
 import { Actions } from '@ngrx/effects';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
@@ -12,11 +12,11 @@ import {
 import {
     EpgRuntimeBridgeService,
     EpgService,
-} from '@iptvnator/epg/data-access';
+} from '@kiptv/epg/data-access';
 import {
     WorkspaceShellContextDrawerService,
     WORKSPACE_SHELL_ACTIONS,
-} from '@iptvnator/workspace/shell/util';
+} from '@kiptv/workspace/shell/util';
 import { MockProvider } from 'ng-mocks';
 import { EMPTY, of } from 'rxjs';
 import {
@@ -25,7 +25,7 @@ import {
     ParentalLockService,
     SettingsStore,
     RuntimeCapabilitiesService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { ParentalLockEnforcementService } from './services/parental-lock-enforcement.service';
 import {
     Language,
@@ -35,8 +35,8 @@ import {
     StreamFormat,
     Theme,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
-import { PlaylistActions } from '@iptvnator/m3u-state';
+} from '@kiptv/shared/interfaces';
+import { PlaylistActions } from '@kiptv/m3u-state';
 import { AppComponent } from './app.component';
 import { AppDateLocaleService } from './app-date-locales';
 import { ElectronServiceStub } from './services/electron.service.stub';

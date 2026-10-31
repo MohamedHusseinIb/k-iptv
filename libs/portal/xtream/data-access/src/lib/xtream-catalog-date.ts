@@ -1,4 +1,4 @@
-import { toXtreamRecentlyAddedTimestamp } from '@iptvnator/shared/interfaces';
+import { toXtreamRecentlyAddedTimestamp } from '@kiptv/shared/interfaces';
 /** Provider recency, never release year. Preserve the common epoch validity rules. */
 export function xtreamCatalogTimestamp(
     raw: Record<string, unknown>,

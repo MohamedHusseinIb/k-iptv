@@ -11,8 +11,8 @@ import {
 import { MatIconButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
-import { normalizeDateLocale } from '@iptvnator/pipes';
-import { injectTranslationTick } from '@iptvnator/services';
+import { normalizeDateLocale } from '@kiptv/pipes';
+import { injectTranslationTick } from '@kiptv/services';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { CoverTitlesService } from '../../cover-titles/cover-titles.service';
 

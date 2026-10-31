@@ -1,7 +1,7 @@
 import {
     createScrollPositionPreserver,
     focusLiveChannels,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     afterRenderEffect,
     ChangeDetectionStrategy,

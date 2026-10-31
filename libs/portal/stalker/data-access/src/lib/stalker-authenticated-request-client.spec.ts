@@ -1,5 +1,5 @@
-import type { DataService } from '@iptvnator/services';
-import { Playlist } from '@iptvnator/shared/interfaces';
+import type { DataService } from '@kiptv/services';
+import { Playlist } from '@kiptv/shared/interfaces';
 import { StalkerAuthenticatedRequestClient } from './stalker-authenticated-request-client';
 import { StalkerTokenCache } from './stalker-token-cache';
 

@@ -5,7 +5,7 @@ import type {
     ElectronBridgeDownloadStatus,
     ElectronBridgeDownloadStartPayload,
     ElectronDownloadFileAvailability,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export type DownloadStatus = ElectronBridgeDownloadStatus;
 

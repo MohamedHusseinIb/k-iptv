@@ -4,8 +4,8 @@ import { By } from '@angular/platform-browser';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { MockPipe } from 'ng-mocks';
 import { EMPTY, of } from 'rxjs';
-import { UnifiedCollectionItem } from '@iptvnator/portal/shared/util';
-import { SettingsStore } from '@iptvnator/services';
+import { UnifiedCollectionItem } from '@kiptv/portal/shared/util';
+import { SettingsStore } from '@kiptv/services';
 import { UnifiedGridTabComponent } from './unified-grid-tab.component';
 
 const ITEMS: UnifiedCollectionItem[] = [

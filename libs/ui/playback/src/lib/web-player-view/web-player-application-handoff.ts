@@ -1,4 +1,4 @@
-import type { ResolvedPortalPlayback } from '@iptvnator/shared/interfaces';
+import type { ResolvedPortalPlayback } from '@kiptv/shared/interfaces';
 import type { VideoPlayerOptions } from '../vjs-player/vjs-player.types';
 import { ElectronStreamHeadersService } from './electron-stream-headers.service';
 import {

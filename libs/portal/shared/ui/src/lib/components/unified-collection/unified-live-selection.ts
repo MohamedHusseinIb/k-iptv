@@ -1,16 +1,16 @@
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
 import { inject, WritableSignal } from '@angular/core';
 import {
     ResolvedLiveCollectionDetail,
     StreamResolverService,
     UnifiedRecentDataService,
-} from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/portal/shared/data-access';
 import {
     PORTAL_PLAYER,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
-import { ElectronStreamHeadersService } from '@iptvnator/ui/playback';
+} from '@kiptv/portal/shared/util';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
+import { ElectronStreamHeadersService } from '@kiptv/ui/playback';
 import { UnifiedLiveTimeshift } from './unified-live-catchup';
 import { createUnifiedLivePlaybackSessionKey } from './unified-live-playback-session-key';
 import { UnifiedLiveSelectionGeneration } from './unified-live-selection-generation';

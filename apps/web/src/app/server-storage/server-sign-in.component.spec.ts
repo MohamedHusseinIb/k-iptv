@@ -3,16 +3,16 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     readServerAccessToken,
     writeServerAccessToken,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     SERVER_STORAGE_CONFIG,
     ServerApiError,
     ServerStorageSession,
-} from '@iptvnator/services/server-storage';
+} from '@kiptv/services/server-storage';
 import { REMEMBERED_SERVER_KEY } from './server-storage-start';
 import { ServerSignInComponent } from './server-sign-in.component';
 
-const TOKEN_KEY = 'iptvnator-server:access-token';
+const TOKEN_KEY = 'kiptv-server:access-token';
 
 describe('ServerSignInComponent', () => {
     let fixture: ComponentFixture<ServerSignInComponent>;
@@ -29,7 +29,7 @@ describe('ServerSignInComponent', () => {
                     useValue: {
                         baseUrl: '/api',
                         instance: {
-                            service: 'iptvnator',
+                            service: 'kiptv',
                             apiVersion: 1,
                             instanceId: 'i-1',
                             storage: 'server',

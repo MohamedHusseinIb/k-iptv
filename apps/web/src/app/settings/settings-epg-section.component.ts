@@ -18,16 +18,16 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { EpgViewMode } from '@iptvnator/shared/interfaces';
-import { EpgSourceStatusComponent } from '@iptvnator/ui/epg';
+import { EpgViewMode } from '@kiptv/shared/interfaces';
+import { EpgSourceStatusComponent } from '@kiptv/ui/epg';
 import { TranslateModule } from '@ngx-translate/core';
 import { EpgViewModeOption } from './settings.models';
 import { markSectionForCheckOnFormEvents } from './settings-section-form-render';
 import {
     RadioGroupDirective,
     RadioOptionDirective,
-} from '@iptvnator/ui/components/radio-group';
-import { provideFormFieldDefaults } from '@iptvnator/ui/components/form-field-defaults';
+} from '@kiptv/ui/components/radio-group';
+import { provideFormFieldDefaults } from '@kiptv/ui/components/form-field-defaults';
 
 @Component({
     selector: 'app-settings-epg-section',

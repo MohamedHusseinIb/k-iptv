@@ -2,7 +2,7 @@ import {
     PlaylistMeta,
     STALKER_MAG_USER_AGENT,
     isStalkerStreamCredentialSafe,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildStalkerSerialCfduid,
     normalizeStalkerSerialNumber,

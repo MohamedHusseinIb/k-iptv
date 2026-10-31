@@ -1,4 +1,4 @@
-import type { ElectronRecordingItem } from '@iptvnator/shared/interfaces';
+import type { ElectronRecordingItem } from '@kiptv/shared/interfaces';
 
 /**
  * Renderer-facing live-TV recording row. The bridge type is already
@@ -11,4 +11,4 @@ export type {
     RecordingProgramSnapshot,
     RecordingSourceType,
     RecordingStatus,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';

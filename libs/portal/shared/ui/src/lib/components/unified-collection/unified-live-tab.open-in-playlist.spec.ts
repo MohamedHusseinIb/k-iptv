@@ -4,19 +4,19 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { By } from '@angular/platform-browser';
 import { provideRouter, Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { PORTAL_PLAYER } from '@iptvnator/portal/shared/util';
+import { PORTAL_PLAYER } from '@kiptv/portal/shared/util';
 import {
     StreamResolverService,
     UnifiedRecentDataService,
-} from '@iptvnator/portal/shared/data-access';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
-import { ResizableDirective } from '@iptvnator/ui/components';
-import { EpgListViewComponent, EpgTimelineComponent } from '@iptvnator/ui/epg';
+} from '@kiptv/portal/shared/data-access';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
+import { ResizableDirective } from '@kiptv/ui/components';
+import { EpgListViewComponent, EpgTimelineComponent } from '@kiptv/ui/epg';
 import {
     AudioPlayerComponent,
     WebPlayerViewComponent,
-} from '@iptvnator/ui/playback';
-import { VideoPlayer } from '@iptvnator/shared/interfaces';
+} from '@kiptv/ui/playback';
+import { VideoPlayer } from '@kiptv/shared/interfaces';
 import { GlobalFavoritesListComponent } from '../global-favorites-list/global-favorites-list.component';
 import { OpenInPlaylistChipComponent } from '../open-in-playlist-chip/open-in-playlist-chip.component';
 import {

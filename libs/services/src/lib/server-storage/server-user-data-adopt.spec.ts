@@ -518,14 +518,14 @@ describe('ServerUserDataStorage taking over other page loads', () => {
         first.close();
         // Its registry record is gone too: only this tab can find it.
         for (const key of local.keys()) {
-            if (key.startsWith('iptvnator-server:unconfirmed:')) {
+            if (key.startsWith('kiptv-server:unconfirmed:')) {
                 local.removeItem(key);
             }
         }
         // Storage is full: the reloads cannot save their own copies.
         const setItem = local.setItem;
         local.setItem = (key: string, value: string) => {
-            if (key.startsWith('iptvnator-server:unsent-writes:')) {
+            if (key.startsWith('kiptv-server:unsent-writes:')) {
                 throw new DOMException('full', 'QuotaExceededError');
             }
             setItem(key, value);
@@ -578,7 +578,7 @@ describe('ServerUserDataStorage taking over other page loads', () => {
         // The reload cannot save its copy: it keeps the first one's.
         const setItem = local.setItem;
         local.setItem = (key: string, value: string) => {
-            if (key.startsWith('iptvnator-server:unsent-writes:')) {
+            if (key.startsWith('kiptv-server:unsent-writes:')) {
                 throw new DOMException('full', 'QuotaExceededError');
             }
             setItem(key, value);
@@ -704,7 +704,7 @@ describe('ServerUserDataStorage taking over other page loads', () => {
             // Storage is full: the duplicate keeps both copies it adopts.
             const setItem = local.setItem;
             local.setItem = (key: string, value: string) => {
-                if (key.startsWith('iptvnator-server:unsent-writes:')) {
+                if (key.startsWith('kiptv-server:unsent-writes:')) {
                     throw new DOMException('full', 'QuotaExceededError');
                 }
                 setItem(key, value);

@@ -1,7 +1,7 @@
 import type {
     PlaybackPositionData,
     PlayerContentInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 export interface RemainingTimeLabel {
     readonly key: string;
     readonly params: Record<string, number>;

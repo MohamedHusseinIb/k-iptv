@@ -1,8 +1,8 @@
 import { signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import type { Playlist } from '@iptvnator/shared/interfaces';
-import { SourceSyncService } from '@iptvnator/services/source-sync';
+import type { Playlist } from '@kiptv/shared/interfaces';
+import { SourceSyncService } from '@kiptv/services/source-sync';
 import { SettingsServerSectionComponent } from './settings-server-section.component';
 
 const readLocalSourcesForImport = jest.fn();
@@ -155,11 +155,11 @@ describe('source server settings', () => {
             sourceSyncConfigure: configure,
         } as unknown as typeof window.electron;
         const component = fixture.componentInstance;
-        component.url = 'https://nas.test/iptvnator';
+        component.url = 'https://nas.test/kiptv';
         component.token = 'new-token';
         await component.connect();
         expect(configure).toHaveBeenCalledWith(
-            'https://nas.test/iptvnator/api',
+            'https://nas.test/kiptv/api',
             'new-token',
             true
         );

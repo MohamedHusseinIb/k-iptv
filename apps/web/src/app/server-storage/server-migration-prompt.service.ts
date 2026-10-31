@@ -2,12 +2,12 @@ import { inject, Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, take } from 'rxjs';
-import { ServerStorageStatusService } from '@iptvnator/services';
-import { dialogSize } from '@iptvnator/ui/components/dialog-size';
+import { ServerStorageStatusService } from '@kiptv/services';
+import { dialogSize } from '@kiptv/ui/components/dialog-size';
 import {
     ServerMigrationService,
     type ServerMigrationPlaylist,
-} from '@iptvnator/services/server-storage';
+} from '@kiptv/services/server-storage';
 
 /** Opens the migration dialog once, after the first navigation settles. */
 @Injectable({ providedIn: 'root' })

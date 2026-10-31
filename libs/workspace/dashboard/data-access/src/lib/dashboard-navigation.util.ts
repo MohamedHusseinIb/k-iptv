@@ -6,7 +6,7 @@ import {
     PortalFavoriteItem,
     PortalRecentItem,
     resolvePortalActivityWatchKind,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildStalkerDetailNavigationTarget,
     buildStalkerStateItem,
@@ -16,7 +16,7 @@ import {
     isPortalPlaybackWatched,
     WorkspaceNavigationTarget,
     type SeriesResumeTarget,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 /**
  * Pure navigation/link helpers for dashboard items.

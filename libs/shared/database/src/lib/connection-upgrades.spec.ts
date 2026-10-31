@@ -20,7 +20,7 @@ describe('database initialization across skipped releases (#1580)', () => {
     ])(
         'preserves %s data and indexes across upgrade and repeated startup',
         (version) => {
-            const dataDir = mkdtempSync(join(tmpdir(), 'iptvnator-upgrade-'));
+            const dataDir = mkdtempSync(join(tmpdir(), 'kiptv-upgrade-'));
             const electronPath = createRequire(__filename)(
                 'electron'
             ) as string;
@@ -53,7 +53,7 @@ describe('database initialization across skipped releases (#1580)', () => {
                         env: {
                             ...process.env,
                             ELECTRON_RUN_AS_NODE: '1',
-                            IPTVNATOR_E2E_DATA_DIR: dataDir,
+                            KIPTV_E2E_DATA_DIR: dataDir,
                             TSX_TSCONFIG_PATH: resolve(
                                 process.cwd(),
                                 'tsconfig.base.json'

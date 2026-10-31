@@ -3,7 +3,7 @@ import { signalStore, withComputed, withMethods } from '@ngrx/signals';
 import {
     XtreamSerieDetails,
     XtreamVodDetails,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 import { withFavorites } from '../with-favorites.feature';
 import { withRecentItems } from '../with-recent-items';
@@ -11,8 +11,8 @@ import { withRecentItems } from '../with-recent-items';
 import { XTREAM_DATA_SOURCE } from '../data-sources/xtream-data-source.interface';
 import { XtreamApiService } from '../services/xtream-api.service';
 
-import { TmdbEnrichmentService } from '@iptvnator/services';
-import { createLogger } from '@iptvnator/portal/shared/util/logger';
+import { TmdbEnrichmentService } from '@kiptv/services';
+import { createLogger } from '@kiptv/portal/shared/util/logger';
 import {
     withContent,
     withEpg,

@@ -1,4 +1,4 @@
-import type { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import type { PlaybackPositionData } from '@kiptv/shared/interfaces';
 
 type Positions = Record<string, PlaybackPositionData[]>;
 

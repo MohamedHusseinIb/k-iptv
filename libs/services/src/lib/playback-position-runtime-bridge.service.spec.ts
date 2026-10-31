@@ -3,7 +3,7 @@ import {
     Injector,
     runInInjectionContext,
 } from '@angular/core';
-import { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import { RuntimeCapabilitiesService } from './runtime-capabilities.service';
 import { PlaybackPositionRuntimeBridgeService } from './playback-position-runtime-bridge.service';
 

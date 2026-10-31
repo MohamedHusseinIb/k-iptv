@@ -1,4 +1,4 @@
-import { getPlaybackMediaExtensionFromUrl } from '@iptvnator/playback/util';
+import { getPlaybackMediaExtensionFromUrl } from '@kiptv/playback/util';
 
 /** Helpers for driving the native `<video>` element source list. */
 

@@ -22,7 +22,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import {
     EpgRuntimeBridgeService,
     EpgService,
-} from '@iptvnator/epg/data-access';
+} from '@kiptv/epg/data-access';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { debounceTime, from, Subject, switchMap } from 'rxjs';
 import { provideFormFieldDefaults } from '../../form-field-defaults/form-field-defaults';

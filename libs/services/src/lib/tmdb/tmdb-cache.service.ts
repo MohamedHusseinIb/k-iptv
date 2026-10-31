@@ -3,7 +3,7 @@ import {
     TmdbCacheEntry,
     TmdbCacheMediaType,
     TmdbCacheStats,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /** PWA in-memory cache ceiling — details payloads are a few KB each */
 const MEMORY_CACHE_MAX_ENTRIES = 300;

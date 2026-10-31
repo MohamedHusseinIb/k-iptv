@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Router } from '@angular/router';
-import { SettingsContextService } from '@iptvnator/workspace/shell/util/settings-context';
+import { SettingsContextService } from '@kiptv/workspace/shell/util/settings-context';
 import {
     SETTINGS_SEARCH_ENTRIES,
     SettingsSearchEntry,
     SettingsSearchService,
-} from '@iptvnator/workspace/shell/util/settings-search';
+} from '@kiptv/workspace/shell/util/settings-search';
 import { SettingsComponent } from './settings.component';
 import { SETTINGS_REVEALED_CLASS } from './settings-search.facade';
 import {

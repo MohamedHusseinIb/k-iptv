@@ -11,7 +11,7 @@ import {
     nextSourceExpiryChangeMs,
     SOURCE_EXPIRY_MAX_WAIT_MS,
     type SourceExpiryFacts,
-} from '@iptvnator/workspace/dashboard/data-access';
+} from '@kiptv/workspace/dashboard/data-access';
 
 /** A boundary timer can fire a hair early; land safely past it. */
 const BOUNDARY_SLACK_MS = 1_000;

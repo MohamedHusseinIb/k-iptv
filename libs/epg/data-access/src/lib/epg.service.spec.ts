@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
-import { LazySnackBar } from '@iptvnator/services/lazy-snack-bar';
+import { LazySnackBar } from '@kiptv/services/lazy-snack-bar';
 import { TranslateService } from '@ngx-translate/core';
 import { firstValueFrom, of, skip } from 'rxjs';
 import {
     EpgSourceSettingsService,
     PlaylistsService,
     SettingsStore,
-} from '@iptvnator/services';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { EpgRuntimeBridgeService } from './epg-runtime-bridge.service';
 import { EpgService } from './epg.service';
 

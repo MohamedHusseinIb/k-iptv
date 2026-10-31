@@ -2,8 +2,8 @@ import {
     matchesSourceQuery,
     matchesSourceType,
     SourcesTypeFilter,
-} from '@iptvnator/playlist/shared/util';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/playlist/shared/util';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 
 export const SWITCHER_TYPE_STORAGE_KEY = 'playlist-switcher:type:v2';
 /** The three checkboxes the segmented type filter replaced. */

@@ -11,7 +11,7 @@ import { filter } from 'rxjs';
 import {
     normalizeStalkerEntityId,
     StalkerItvChannel,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import { StalkerLiveAutoOpenState } from './stalker-live-auto-open-state';
 
 /** The slice of `StalkerStore` the auto-open flow reads and drives. */

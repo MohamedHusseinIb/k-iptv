@@ -8,7 +8,7 @@
 
 import { AddressInfo } from 'node:net';
 import { Server } from 'node:http';
-import { STALKER_MAG_USER_AGENT } from '@iptvnator/shared/interfaces';
+import { STALKER_MAG_USER_AGENT } from '@kiptv/shared/interfaces';
 import { createWebBackendApp, WebBackendHttpClient } from './web-backend-app';
 import {
     ProviderTransportOptions,

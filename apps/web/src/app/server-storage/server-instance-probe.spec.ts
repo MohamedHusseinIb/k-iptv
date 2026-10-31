@@ -1,8 +1,8 @@
-import { markSlowStart } from '@iptvnator/services';
+import { markSlowStart } from '@kiptv/services';
 import { probeServerInstance } from './server-instance-probe';
 
 const instance = {
-    service: 'iptvnator',
+    service: 'kiptv',
     apiVersion: 1,
     instanceId: 'i-1',
     storage: 'server',

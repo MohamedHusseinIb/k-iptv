@@ -1,4 +1,4 @@
-import type { ContentMetadataPatch } from '@iptvnator/shared/interfaces';
+import type { ContentMetadataPatch } from '@kiptv/shared/interfaces';
 import {
     collectionSnapshotMatchesContent,
     itemCollectionKey,

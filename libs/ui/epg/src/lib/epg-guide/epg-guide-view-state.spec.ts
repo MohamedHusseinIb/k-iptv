@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { getTodayEpgDateKey } from '../epg-date';
 import {
     EPG_GUIDE_DENSITY_KEY,

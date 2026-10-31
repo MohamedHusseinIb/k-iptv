@@ -4,7 +4,7 @@ import {
     PlaylistBackupManifestV1,
     PLAYLIST_BACKUP_KIND,
     PLAYLIST_BACKUP_VERSION,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { PlaylistBackupError } from './playlist-backup.service';
 import { createPlaylistBackupService } from './playlist-backup.service.test-helpers';
 
@@ -88,7 +88,7 @@ describe('PlaylistBackupService', () => {
 
         expect(backup.defaultFileName).toEqual(
             expect.stringMatching(
-                /^iptvnator-playlist-backup-\d{4}-\d{2}-\d{2}\.json$/
+                /^kiptv-playlist-backup-\d{4}-\d{2}-\d{2}\.json$/
             )
         );
         expect(backup.manifest.settings).toEqual({

@@ -10,7 +10,7 @@ import {
     CollectionScope,
     queryParamSignal,
     ScopeToggleService,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 export interface CollectionScopeState {
     /** The toggle's value, even where the toggle itself is not offered. */

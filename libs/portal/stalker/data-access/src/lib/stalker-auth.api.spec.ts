@@ -1,5 +1,5 @@
-import type { DataService } from '@iptvnator/services';
-import type { createLogger } from '@iptvnator/portal/shared/util';
+import type { DataService } from '@kiptv/services';
+import type { createLogger } from '@kiptv/portal/shared/util';
 import { StalkerAuthApi } from './stalker-auth.api';
 
 /**

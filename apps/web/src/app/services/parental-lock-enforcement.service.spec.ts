@@ -2,12 +2,12 @@ import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { StalkerStore } from '@iptvnator/portal/stalker/data-access';
+import { StalkerStore } from '@kiptv/portal/stalker/data-access';
 import {
     XTREAM_DATA_SOURCE,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { ParentalLockService } from '@iptvnator/services';
+} from '@kiptv/portal/xtream/data-access';
+import { ParentalLockService } from '@kiptv/services';
 import { ParentalLockEnforcementService } from './parental-lock-enforcement.service';
 import { PlaybackKeepAwakeService } from './playback-keep-awake.service';
 

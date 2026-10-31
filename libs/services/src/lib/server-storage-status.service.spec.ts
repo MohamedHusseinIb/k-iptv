@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import type { ServerInstanceInfo } from '@iptvnator/shared/interfaces';
+import type { ServerInstanceInfo } from '@kiptv/shared/interfaces';
 import {
     readServerAccessToken,
     SERVER_ACCESS_TOKEN_STORAGE_KEY,
@@ -8,7 +8,7 @@ import {
 import { ServerStorageStatusService } from './server-storage-status.service';
 
 const instance: ServerInstanceInfo = {
-    service: 'iptvnator',
+    service: 'kiptv',
     apiVersion: 1,
     instanceId: 'i-1',
     storage: 'server',

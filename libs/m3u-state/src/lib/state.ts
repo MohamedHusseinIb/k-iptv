@@ -1,7 +1,7 @@
-import { Channel } from '@iptvnator/shared/interfaces';
+import { Channel } from '@kiptv/shared/interfaces';
 import { initialPlaylistMetaState, PlaylistMetaState } from './playlists.state';
 
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 
 export interface PlaylistState {
     active: Channel | undefined;

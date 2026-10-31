@@ -16,28 +16,28 @@ import { UnifiedLiveTabComponent } from './unified-live-tab.component';
 import {
     AudioPlayerComponent,
     WebPlayerViewComponent,
-} from '@iptvnator/ui/playback';
+} from '@kiptv/ui/playback';
 import {
     EpgListViewComponent,
     EpgProgramActivationEvent,
     EpgTimelineComponent,
     getTodayEpgDateKey,
     shiftEpgDateKey,
-} from '@iptvnator/ui/epg';
+} from '@kiptv/ui/epg';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ResizableDirective } from '@iptvnator/ui/components';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
-import { EpgItem, EpgProgram, VideoPlayer } from '@iptvnator/shared/interfaces';
+import { ResizableDirective } from '@kiptv/ui/components';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
+import { EpgItem, EpgProgram, VideoPlayer } from '@kiptv/shared/interfaces';
 import {
     PORTAL_PLAYER,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     StreamResolverService,
     UnifiedRecentDataService,
-} from '@iptvnator/portal/shared/data-access';
-import { createPlaybackSessionKey as sessionKey } from '@iptvnator/playback/util';
+} from '@kiptv/portal/shared/data-access';
+import { createPlaybackSessionKey as sessionKey } from '@kiptv/playback/util';
 import {
     StubAudioPlayerComponent,
     StubEpgTimelineComponent,

@@ -1,4 +1,4 @@
-import { isStalkerSeriesFlag } from '@iptvnator/shared/interfaces';
+import { isStalkerSeriesFlag } from '@kiptv/shared/interfaces';
 
 /**
  * How the move to the server combines user data that two places hold for

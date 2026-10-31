@@ -1,8 +1,8 @@
 import type { WritableSignal } from '@angular/core';
 import type { MatSnackBar } from '@angular/material/snack-bar';
 import type { TranslateService } from '@ngx-translate/core';
-import type { Logger, PortalPlayer } from '@iptvnator/portal/shared/util';
-import type { ResolvedPortalPlayback } from '@iptvnator/shared/interfaces';
+import type { Logger, PortalPlayer } from '@kiptv/portal/shared/util';
+import type { ResolvedPortalPlayback } from '@kiptv/shared/interfaces';
 
 /** The detail page as the owner of its inline player: it tracks its own request ids. */
 interface StalkerCatalogVodPlaybackHost {

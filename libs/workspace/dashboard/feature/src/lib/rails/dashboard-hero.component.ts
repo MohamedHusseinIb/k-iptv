@@ -10,7 +10,7 @@ import {
 import { MatIcon } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { MetaChipComponent } from '@iptvnator/ui/components';
+import { MetaChipComponent } from '@kiptv/ui/components';
 import { DashboardHeroSlidesPresenter } from './dashboard-hero-slides.presenter';
 import { HERO_ROTATION_MS } from './dashboard-hero-slides.utils';
 import type { DashboardHeroSlide } from './dashboard-hero.utils';

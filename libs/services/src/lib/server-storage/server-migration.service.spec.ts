@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { NgxIndexedDBService } from 'ngx-indexed-db';
 import { of } from 'rxjs';
-import { getXtreamPendingRestoreStorageKey } from '@iptvnator/shared/interfaces';
+import { getXtreamPendingRestoreStorageKey } from '@kiptv/shared/interfaces';
 import { ParentalLockService } from '../parental-lock/parental-lock.service';
 import { SERVER_STORAGE_CONFIG } from './server-storage.config';
 import { ServerStorageSession } from './server-storage-session';

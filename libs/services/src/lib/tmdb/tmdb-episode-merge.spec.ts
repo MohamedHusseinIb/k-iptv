@@ -1,4 +1,4 @@
-import { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
+import { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
 import { mergeEpisodesWithTmdb } from './tmdb-episode-merge';
 import { TmdbEpisode } from './tmdb.types';
 

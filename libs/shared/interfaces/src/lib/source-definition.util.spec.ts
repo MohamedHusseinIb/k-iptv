@@ -215,12 +215,12 @@ describe('portable source definitions', () => {
                 password: 'changed',
             })
         );
-        expect(normalizeSourceServerUrl('https://nas.test/iptvnator/')).toBe(
-            'https://nas.test/iptvnator/api'
+        expect(normalizeSourceServerUrl('https://nas.test/kiptv/')).toBe(
+            'https://nas.test/kiptv/api'
         );
         expect(
-            normalizeSourceServerUrl('https://nas.test/iptvnator/api/')
-        ).toBe('https://nas.test/iptvnator/api');
+            normalizeSourceServerUrl('https://nas.test/kiptv/api/')
+        ).toBe('https://nas.test/kiptv/api');
         expect(normalizeSourceServerUrl('/api', 'https://nas.test/app')).toBe(
             'https://nas.test/api'
         );

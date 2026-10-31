@@ -1,5 +1,5 @@
 import { createReducer } from '@ngrx/store';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { EpgActions } from '../actions';
 import { initialState } from '../state';
 import { epgReducers } from './epg.reducers';

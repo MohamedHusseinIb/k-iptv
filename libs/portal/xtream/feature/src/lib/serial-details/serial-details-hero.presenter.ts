@@ -3,17 +3,17 @@ import { TranslateService } from '@ngx-translate/core';
 import {
     formatSeriesEpisodeCode,
     type SeriesQuickStartAction,
-} from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { SettingsStore, injectTranslationTick } from '@iptvnator/services';
-import type { CrossPortalSimilarItem } from '@iptvnator/services';
-import { youtubeEmbedUrl } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { SettingsStore, injectTranslationTick } from '@kiptv/services';
+import type { CrossPortalSimilarItem } from '@kiptv/services';
+import { youtubeEmbedUrl } from '@kiptv/shared/interfaces';
 import {
     createSeriesHeroState,
     TrailerDialogService,
     type SeriesHeroQuickStart,
     type SimilarRailItem,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import type { SimilarCatalogItem } from '../tmdb-similar.util';
 import type { XtreamSerieDetailsView } from './serial-details-playback.service';
 

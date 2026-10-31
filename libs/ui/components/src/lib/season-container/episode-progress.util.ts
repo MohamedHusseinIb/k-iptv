@@ -1,4 +1,4 @@
-import { parseDurationSeconds } from '@iptvnator/portal/shared/util';
+import { parseDurationSeconds } from '@kiptv/portal/shared/util';
 
 /** Pure helpers for episode duration parsing. */
 

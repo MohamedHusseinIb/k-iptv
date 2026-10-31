@@ -9,7 +9,7 @@ import { version as appVersion } from '@package';
  * it a syntactically valid absolute URL means `PwaService` keeps building its
  * request URLs exactly as it does for a self-hosted backend.
  */
-export const ANDROID_BACKEND_URL = 'https://provider-backend.iptvnator.invalid';
+export const ANDROID_BACKEND_URL = 'https://provider-backend.kiptv.invalid';
 
 export const AppConfig = {
     production: true,

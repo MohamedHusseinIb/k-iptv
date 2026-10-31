@@ -18,13 +18,13 @@ import {
     PlaylistsService,
     type RecordingItem,
     RecordingsService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     PORTAL_SHELL_ACTIONS,
     PortalCollectionContextService,
-} from '@iptvnator/portal/shared/util';
-import type { Playlist, XtreamCategory } from '@iptvnator/shared/interfaces';
-import { DialogService } from '@iptvnator/ui/components';
+} from '@kiptv/portal/shared/util';
+import type { Playlist, XtreamCategory } from '@kiptv/shared/interfaces';
+import { DialogService } from '@kiptv/ui/components';
 import { BehaviorSubject, type Observable, Subject } from 'rxjs';
 import { DownloadLibraryNavigationService } from './download-library-navigation.service';
 import type { DownloadActionResult } from './download-actions';
@@ -654,7 +654,7 @@ describe('DownloadsComponent', () => {
     it.each(['remove', 'clear'])(
         'shows a persistent recovery dialog with a copyable path on %s',
         async (action) => {
-            const recoveryPath = '/downloads/.iptvnator-cleanup-example/entry';
+            const recoveryPath = '/downloads/.kiptv-cleanup-example/entry';
             const result = { success: false, recoveryPath };
             downloadsService.removeDownload.mockResolvedValueOnce(result);
             downloadsService.clearCompleted.mockResolvedValueOnce(result);

@@ -12,11 +12,11 @@ import { TranslatePipe } from '@ngx-translate/core';
 import {
     PortalRailLink,
     PortalRailSection,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     type ServerConnectionState,
     ServerStorageStatusService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { WorkspaceShellRailLinksComponent } from '../workspace-shell-rail-links/workspace-shell-rail-links.component';
 
 @Component({

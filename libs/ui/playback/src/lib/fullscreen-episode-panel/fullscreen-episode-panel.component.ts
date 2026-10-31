@@ -14,7 +14,7 @@ import {
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TranslateModule } from '@ngx-translate/core';
-import { SeasonTabsComponent } from '@iptvnator/ui/components';
+import { SeasonTabsComponent } from '@kiptv/ui/components';
 import type {
     FullscreenEpisodePanelItem,
     FullscreenEpisodePanelSeason,

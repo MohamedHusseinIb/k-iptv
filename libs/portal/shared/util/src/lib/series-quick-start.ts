@@ -1,4 +1,4 @@
-import { PlaybackPositionData, XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
+import { PlaybackPositionData, XtreamSerieEpisode } from '@kiptv/shared/interfaces';
 import { isPortalPlaybackInProgress } from './portal-playback-positions';
 import {
     getSeriesNextUp,

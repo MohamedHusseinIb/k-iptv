@@ -1,4 +1,4 @@
-import type { StalkerAuthFailureBody } from '@iptvnator/shared/interfaces';
+import type { StalkerAuthFailureBody } from '@kiptv/shared/interfaces';
 
 /**
  * Why a Stalker portal refused the session.

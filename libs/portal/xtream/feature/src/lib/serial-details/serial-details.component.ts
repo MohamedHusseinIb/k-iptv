@@ -33,24 +33,24 @@ import {
     VodMoreMenuComponent,
     readSavedEpisodeViewMode,
     scrollToCastCrewRow,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     registerContentMetadataBackfill,
     xtreamDetailContentMetadata,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     buildUpNextRailItems,
     type PlaybackFallbackRequest,
     PortalInlinePlayerComponent,
     type UpNextRailItem,
-} from '@iptvnator/ui/playback';
+} from '@kiptv/ui/playback';
 import {
     TmdbEnrichedCastMember,
     XtreamSerieDetails,
     XtreamSerieEpisode,
     XtreamSerieInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { injectXtreamDetailNavigation } from '../xtream-detail-navigation';
 import {
     SerialDetailsPlaybackService,

@@ -16,9 +16,9 @@ import {
     createLogger,
     getSeriesQuickStartAction,
     inlineProgressPosition,
-} from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { PlaybackPositionRuntimeBridgeService } from '@iptvnator/services';
+} from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { PlaybackPositionRuntimeBridgeService } from '@kiptv/services';
 import {
     ExternalPlayerName,
     ExternalPlayerSession,
@@ -26,18 +26,18 @@ import {
     ResolvedPortalPlayback,
     XtreamSerieDetails,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     SeasonContainerPlaybackToggleRequest,
     SeasonContainerSeriesPlaybackToggleRequest,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     getSeriesEpisodeMetadata,
     getSeriesPlaybackNavigation,
     inlineSeriesEpisodeState,
     type PlaybackFallbackRequest,
     type SeriesPlaybackEpisodeState,
-} from '@iptvnator/ui/playback';
+} from '@kiptv/ui/playback';
 import {
     injectXtreamRecentHistory,
     xtreamPlayedDetail,

@@ -1,7 +1,7 @@
 import {
     sanitizeProviderOverview,
     XtreamSerieDetails,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Season descriptions keyed by season key: provider text from

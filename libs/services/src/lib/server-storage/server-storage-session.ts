@@ -5,7 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 import type {
     ServerInstanceInfo,
     ServerStorageStatusResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { PlaylistStorageBackend } from '../playlist-storage-backend';
 import {
     clearServerAccessToken,

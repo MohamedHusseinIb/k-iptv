@@ -1,8 +1,8 @@
 import {
     isFullStalkerPortalPlaylist,
     type Playlist,
-} from '@iptvnator/shared/interfaces';
-import type { createLogger } from '@iptvnator/portal/shared/util';
+} from '@kiptv/shared/interfaces';
+import type { createLogger } from '@kiptv/portal/shared/util';
 import { createBackgroundInterval } from './background-interval';
 
 /**

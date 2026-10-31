@@ -1,4 +1,4 @@
-import { normalizeParentalLockRelockMinutes } from '@iptvnator/shared/interfaces';
+import { normalizeParentalLockRelockMinutes } from '@kiptv/shared/interfaces';
 import { SettingsStore } from '../settings-store.service';
 import { mirrorParentalLockEnabledSetting } from './parental-lock-bridge';
 

@@ -1,6 +1,6 @@
 import { Injectable, type Signal, computed, signal } from '@angular/core';
-import { createLogger } from '@iptvnator/portal/shared/util';
-import { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
+import { createLogger } from '@kiptv/portal/shared/util';
+import { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
 import {
     type SeasonContainerSeasonPlaybackToggleRequest,
     type SeasonContainerSeriesPlaybackToggleRequest,

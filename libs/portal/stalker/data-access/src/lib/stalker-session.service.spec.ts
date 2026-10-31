@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { DataService, PlaylistsService } from '@iptvnator/services';
-import { Playlist } from '@iptvnator/shared/interfaces';
+import { DataService, PlaylistsService } from '@kiptv/services';
+import { Playlist } from '@kiptv/shared/interfaces';
 import { StalkerPortalError } from './stalker-portal-error';
 import { STALKER_WATCHDOG_DEFAULT_PERIOD_SECONDS } from './stalker-watchdog.controller';
 import { stalkerSessionFingerprint } from './stalker-session-store';

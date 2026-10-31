@@ -43,7 +43,7 @@ export const EXTERNAL_PLAYER_UNKNOWN_ERROR_KEY =
 export const EXTERNAL_PLAYER_LAUNCH_FAILED_KEY =
     'EXTERNAL_PLAYER.ERRORS.LAUNCH_FAILED';
 
-const EXTERNAL_PLAYER_ERROR_TAG = /\[iptvnator:external-player:([a-z-]+)\]/;
+const EXTERNAL_PLAYER_ERROR_TAG = /\[kiptv:external-player:([a-z-]+)\]/;
 
 /**
  * Prefixes an error message with its code. A rejected IPC call reaches the
@@ -53,7 +53,7 @@ export function tagExternalPlayerError(
     code: ExternalPlayerErrorCode,
     message: string
 ): string {
-    return `[iptvnator:external-player:${code}] ${message}`;
+    return `[kiptv:external-player:${code}] ${message}`;
 }
 
 /** Removes the code tag so the message can be shown or stored as detail. */

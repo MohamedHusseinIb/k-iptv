@@ -1,10 +1,10 @@
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { Playlist } from '@kiptv/shared/interfaces';
 
 export async function readLocalSourcesForImport(): Promise<Playlist[]> {
     if (window.electron?.sourceSyncLocalSources)
         return window.electron.sourceSyncLocalSources();
     return new Promise((resolve, reject) => {
-        const request = indexedDB.open('iptvnator');
+        const request = indexedDB.open('kiptv');
         request.onupgradeneeded = () => {
             request.transaction?.abort();
         };

@@ -4,11 +4,11 @@ import {
     DataService,
     RuntimeCapabilitiesService,
     injectTranslationTick,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     ELECTRON_BRIDGE_APP_UPDATE_STATUSES,
     ElectronBridgeAppUpdateStatus,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { TranslateService } from '@ngx-translate/core';
 import { take } from 'rxjs';
 import { AppUpdateInstallService } from '../services/app-update-install.service';

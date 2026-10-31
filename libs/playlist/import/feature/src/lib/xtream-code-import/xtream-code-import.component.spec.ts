@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { TranslateModule } from '@ngx-translate/core';
-import { PlaylistActions } from '@iptvnator/m3u-state';
-import { XtreamConnectionTestService } from '@iptvnator/services';
+import { PlaylistActions } from '@kiptv/m3u-state';
+import { XtreamConnectionTestService } from '@kiptv/services';
 import { XtreamCodeImportComponent } from './xtream-code-import.component';
 
 describe('XtreamCodeImportComponent', () => {

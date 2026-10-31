@@ -1,15 +1,15 @@
 import { computed, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { BehaviorSubject, EMPTY, of, Subject, throwError } from 'rxjs';
-import { EpgService } from '@iptvnator/epg/data-access';
+import { EpgService } from '@kiptv/epg/data-access';
 import {
     DEFAULT_DASHBOARD_RAILS_SETTINGS,
     type EpgProgram,
     type PlaylistMeta,
     type PortalActivityItem,
-} from '@iptvnator/shared/interfaces';
-import { SettingsStore } from '@iptvnator/services';
-import { DashboardDataService } from '@iptvnator/workspace/dashboard/data-access';
+} from '@kiptv/shared/interfaces';
+import { SettingsStore } from '@kiptv/services';
+import { DashboardDataService } from '@kiptv/workspace/dashboard/data-access';
 import { DashboardLiveEpgPresenter } from './dashboard-live-epg.presenter';
 import { DashboardPortalLiveEpgPresenter } from './dashboard-portal-live-epg.presenter';
 import { DashboardLiveEpgClock } from './dashboard-live-epg-clock';

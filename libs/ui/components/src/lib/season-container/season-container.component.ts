@@ -15,16 +15,16 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { type SeasonEpisodeDownloadAdapter } from '@iptvnator/portal/shared/data-access';
+import { type SeasonEpisodeDownloadAdapter } from '@kiptv/portal/shared/data-access';
 import {
     createLogger,
     isPortalPlaybackInProgress,
     isPortalPlaybackWatched,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     PlaybackPositionData,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { DetailSectionHeaderComponent } from '../detail-ui/detail-section-header.component';
 import { ExpandableTextComponent } from '../expandable-text/expandable-text.component';
 import {
@@ -61,7 +61,7 @@ import {
 } from './season-watch-toggle.util';
 import { dialogSize } from '../dialog-shell/dialog-size';
 
-const EPISODE_VIEW_MODE_KEY = 'iptvnator_episode_view_mode';
+const EPISODE_VIEW_MODE_KEY = 'kiptv_episode_view_mode';
 
 export type EpisodeViewMode = 'grid' | 'list';
 

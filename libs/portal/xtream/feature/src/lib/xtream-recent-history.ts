@@ -1,7 +1,7 @@
-import { normalizeContentMetadataPatch } from '@iptvnator/shared/interfaces';
+import { normalizeContentMetadataPatch } from '@kiptv/shared/interfaces';
 import { inject, Injector, signal } from '@angular/core';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
 import {
     type IXtreamDataSource,
     type XtreamPlayedContent,
@@ -9,7 +9,7 @@ import {
     xtreamDetailContentMetadata,
     XTREAM_DATA_SOURCE,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 
 export interface XtreamRecentItemRequest {
     readonly xtreamId: number | string;

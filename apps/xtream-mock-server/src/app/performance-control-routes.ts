@@ -19,7 +19,7 @@ import {
     PerformanceControlError,
 } from './performance-control-validation.js';
 
-const TOKEN_HEADER = 'x-iptvnator-performance-token';
+const TOKEN_HEADER = 'x-kiptv-performance-token';
 
 export function installPerformanceControlRoutes(
     app: express.Express,

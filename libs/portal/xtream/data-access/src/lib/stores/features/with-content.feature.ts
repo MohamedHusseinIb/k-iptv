@@ -11,12 +11,12 @@ import {
     XtreamLiveStream,
     XtreamSerieItem,
     XtreamVodStream,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     measureRendererPerformancePhase,
     RENDERER_PERFORMANCE_PHASE,
-} from '@iptvnator/shared/logging';
-import { createLogger } from '@iptvnator/portal/shared/util/logger';
+} from '@kiptv/shared/logging';
+import { createLogger } from '@kiptv/portal/shared/util/logger';
 import {
     DataService,
     DatabaseService,
@@ -26,7 +26,7 @@ import {
     SourceActivityService,
     XtreamPendingRestoreService,
     XtreamImportStatus,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     DbCategoryType,
     XTREAM_DATA_SOURCE,

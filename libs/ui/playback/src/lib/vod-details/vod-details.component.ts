@@ -11,7 +11,7 @@ import {
     PORTAL_EXTERNAL_PLAYBACK,
     createDiscoverFacetNavigation,
     createExternalPlaybackButtonState,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     AgeRatingChipComponent,
     CastCrewRowComponent,
@@ -28,7 +28,7 @@ import {
     VodMoreMenuComponent,
     scrollToCastCrewRow,
     type SimilarRailItem,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import { Router } from '@angular/router';
 import {
     ExternalPlayerName,
@@ -39,7 +39,7 @@ import {
     getVodNumericId,
     normalizeVodDetails,
     youtubeEmbedUrl,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     CrossPortalSimilarItem,
     CrossPortalSimilarService,
@@ -48,14 +48,14 @@ import {
     SettingsStore,
     TmdbEnrichmentService,
     injectTranslationTick,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { VOD_DETAILS_MENU_ACTION } from './vod-details-presentation';
 import { createVodDetailsHeroState } from './vod-details-hero.state';
 import {
     buildVodActorRoute,
     findSimilarByRailKey,
 } from './vod-details-navigation.util';
-import type { PlaybackFallbackRequest } from '@iptvnator/playback/util';
+import type { PlaybackFallbackRequest } from '@kiptv/playback/util';
 import { PortalInlinePlayerComponent } from '../portal-inline-player/portal-inline-player.component';
 import { createVodLocalDownloadState } from './vod-download-state.util';
 import { createVodSimilarInPortals } from './vod-similar-in-portals.state';

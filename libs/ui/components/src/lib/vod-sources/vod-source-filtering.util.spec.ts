@@ -1,4 +1,4 @@
-import type { VodSourceDescriptor } from '@iptvnator/shared/interfaces';
+import type { VodSourceDescriptor } from '@kiptv/shared/interfaces';
 import {
     collectLanguagePrefixes,
     EMPTY_VOD_SOURCE_FILTERS,

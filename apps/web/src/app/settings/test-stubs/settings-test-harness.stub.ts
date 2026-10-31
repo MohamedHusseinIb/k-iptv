@@ -26,17 +26,17 @@ import { RouterTestingModule } from '@angular/router/testing';
 import {
     EpgRuntimeBridgeService,
     EpgService,
-} from '@iptvnator/epg/data-access';
+} from '@kiptv/epg/data-access';
 import {
     selectAllPlaylistsMeta,
     selectIsEpgAvailable,
-} from '@iptvnator/m3u-state';
+} from '@kiptv/m3u-state';
 import {
     DatabaseService,
     DataService,
     PlaylistsService,
-} from '@iptvnator/services';
-import { PlaylistBackupService } from '@iptvnator/services/playlist-backup';
+} from '@kiptv/services';
+import { PlaylistBackupService } from '@kiptv/services/playlist-backup';
 import {
     ELECTRON_BRIDGE_APP_UPDATE_STATUSES,
     ElectronBridgeAppUpdateStatus,
@@ -46,15 +46,15 @@ import {
     StreamFormat,
     Theme,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
-import { DialogService } from '@iptvnator/ui/components';
+} from '@kiptv/shared/interfaces';
+import { DialogService } from '@kiptv/ui/components';
 import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { MockModule, MockProvider } from 'ng-mocks';
 import { NgxIndexedDBService } from 'ngx-indexed-db';
 import { BehaviorSubject, from, of } from 'rxjs';
 import { ElectronServiceStub } from '../../services/electron.service.stub';
-import { SettingsStorageFailure } from '@iptvnator/services';
+import { SettingsStorageFailure } from '@kiptv/services';
 import { SettingsStore } from '../../services/settings-store.service';
 import { SettingsService } from '../../services/settings.service';
 import { SettingsComponent } from '../settings.component';
@@ -129,7 +129,7 @@ export const DEFAULT_SETTINGS = {
 
 export const DEFAULT_APP_UPDATE_STATUS: ElectronBridgeAppUpdateStatus = {
     currentVersion: '0.22.0',
-    manualDownloadUrl: 'https://github.com/4gray/iptvnator/releases/latest',
+    manualDownloadUrl: 'https://github.com/MohamedHusseinIb/k-iptv/releases/latest',
     status: ELECTRON_BRIDGE_APP_UPDATE_STATUSES.Idle,
     supportedSelfUpdate: true,
     channel: 'stable',
@@ -320,10 +320,10 @@ export function createDialogRef(
 }
 
 export const BACKUP_EXPORT_RESULT = {
-    defaultFileName: 'iptvnator-playlist-backup-2026-04-21.json',
+    defaultFileName: 'kiptv-playlist-backup-2026-04-21.json',
     json: '{}',
     manifest: {
-        kind: 'iptvnator-playlist-backup',
+        kind: 'kiptv-playlist-backup',
         version: 1,
         exportedAt: PLAYLIST_IMPORT_DATE,
         includeSecrets: true,

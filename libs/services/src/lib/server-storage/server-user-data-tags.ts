@@ -1,4 +1,4 @@
-import type { ServerUserStateNamespace } from '@iptvnator/shared/interfaces';
+import type { ServerUserStateNamespace } from '@kiptv/shared/interfaces';
 import { idMap } from './server-user-data-entries';
 
 /** The server version tag of each user-state entry, by namespace. */

@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
 import { EpgRuntimeBridgeService } from './epg-runtime-bridge.service';
 
 /** Spec-only double: capability flags are read-only getters on the real class. */

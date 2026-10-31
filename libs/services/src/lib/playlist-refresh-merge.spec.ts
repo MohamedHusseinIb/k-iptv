@@ -1,4 +1,4 @@
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import { mergeRefreshedPlaylist } from './playlist-refresh-merge';
 
 describe('canonical playlist refresh merge', () => {

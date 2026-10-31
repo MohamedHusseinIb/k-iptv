@@ -1,4 +1,4 @@
-import { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
+import { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
 import { resolveEpisodeInfo } from './season-watch-toggle.util';
 
 /**

@@ -3,8 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { firstValueFrom, take } from 'rxjs';
-import { PlaylistActions, selectAllPlaylistsMeta } from '@iptvnator/m3u-state';
-import { dialogSize } from '@iptvnator/ui/components/dialog-size';
+import { PlaylistActions, selectAllPlaylistsMeta } from '@kiptv/m3u-state';
+import { dialogSize } from '@kiptv/ui/components/dialog-size';
 import {
     ParentalLockService,
     DatabaseService,
@@ -13,7 +13,7 @@ import {
     PlaylistStorageBackend,
     RuntimeCapabilitiesService,
     injectTranslationTick,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     SettingsDeleteAllPlaylistsDialogComponent,
     SettingsDeleteAllPlaylistsDialogData,

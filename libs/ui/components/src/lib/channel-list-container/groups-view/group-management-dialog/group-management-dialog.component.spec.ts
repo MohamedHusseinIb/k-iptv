@@ -2,7 +2,7 @@ import { signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
-import { ParentalLockService } from '@iptvnator/services';
+import { ParentalLockService } from '@kiptv/services';
 import {
     GroupManagementDialogComponent,
     GroupManagementDialogData,

@@ -1,4 +1,4 @@
-import { SERVER_USER_STATE_NAMESPACES } from '@iptvnator/shared/interfaces';
+import { SERVER_USER_STATE_NAMESPACES } from '@kiptv/shared/interfaces';
 import {
     createBrowserUserDataStorage,
     type UserDataStorage,
@@ -10,7 +10,7 @@ export function createSourceProfileUserDataStorage(
     instanceId?: string,
     local: UserDataStorage = createBrowserUserDataStorage()
 ): UserDataStorage {
-    const prefix = profile === 'iptvnator' ? '' : `${profile}:`;
+    const prefix = profile === 'kiptv' ? '' : `${profile}:`;
     const migratedKey = (key: string) =>
         `${prefix}legacy-cache-migrated:${key}`;
     const isLegacyNamespace = (key: string) =>
@@ -24,7 +24,7 @@ export function createSourceProfileUserDataStorage(
             ) {
                 if (local.getItem(`${prefix}${key}`) === null) {
                     const cached = local.getItem(
-                        `iptvnator-server:cache:${instanceId}:${key}`
+                        `kiptv-server:cache:${instanceId}:${key}`
                     );
                     if (cached !== null)
                         local.setItem(`${prefix}${key}`, cached);

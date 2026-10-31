@@ -1,6 +1,6 @@
 import { Injector, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { SettingsStore } from '@iptvnator/services';
+import { SettingsStore } from '@kiptv/services';
 import { CoverTitlesService } from './cover-titles.service';
 
 type ChangeListener = (event: { matches: boolean }) => void;

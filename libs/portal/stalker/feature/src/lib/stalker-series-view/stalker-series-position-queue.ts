@@ -1,4 +1,4 @@
-import type { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import type { PlaybackPositionData } from '@kiptv/shared/interfaces';
 
 /** The playlist and series one generation of position reads and writes belongs to. */
 export interface StalkerSeriesPositionContext {

@@ -1,8 +1,8 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { PlaylistsService, SettingsStore } from '@iptvnator/services';
-import { StartupBehavior } from '@iptvnator/shared/interfaces';
+import { PlaylistsService, SettingsStore } from '@kiptv/services';
+import { StartupBehavior } from '@kiptv/shared/interfaces';
 import { WorkspaceStartupPreferencesService } from './workspace-startup-preferences.service';
 
 describe('WorkspaceStartupPreferencesService', () => {

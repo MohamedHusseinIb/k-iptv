@@ -1,4 +1,4 @@
-import { TmdbEnrichedCastMember } from '@iptvnator/shared/interfaces';
+import { TmdbEnrichedCastMember } from '@kiptv/shared/interfaces';
 import { tmdbProfileUrl } from './tmdb-config';
 import { TmdbCastMember, TmdbCredits, TmdbTvDetails } from './tmdb.types';
 

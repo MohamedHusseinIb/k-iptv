@@ -133,7 +133,7 @@ export function normalizeDashboardRailsSettings(
 export interface Settings {
     player: VideoPlayer;
     /**
-     * Use IPTVnator's shared controls in HTML5, Video.js, and ArtPlayer.
+     * Use K-IPTV's shared controls in HTML5, Video.js, and ArtPlayer.
      * Default ON: a missing value means the user never chose, and gets the
      * shared controls; only an explicit false keeps the legacy vendor chrome.
      */

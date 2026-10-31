@@ -7,7 +7,7 @@ import {
 import { XtreamApiService } from '../../services/xtream-api.service';
 import { withPortal } from './with-portal.feature';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         error: jest.fn(),
     }),

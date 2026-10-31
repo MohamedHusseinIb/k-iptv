@@ -6,7 +6,7 @@ import {
     RouterStateSnapshot,
     UrlTree,
 } from '@angular/router';
-import { ParentalLockService } from '@iptvnator/services';
+import { ParentalLockService } from '@kiptv/services';
 import { parentalLockStalkerCategoryGuard } from './parental-lock-category.guard';
 
 function createRoute(playlistId: string, categoryId: string) {

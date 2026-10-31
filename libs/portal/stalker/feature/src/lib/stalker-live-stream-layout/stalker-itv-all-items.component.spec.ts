@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { StalkerItvChannel } from '@iptvnator/portal/stalker/data-access';
+import { StalkerItvChannel } from '@kiptv/portal/stalker/data-access';
 import { StalkerItvAllItemsComponent } from './stalker-itv-all-items.component';
 
 function buildChannels(count: number): StalkerItvChannel[] {

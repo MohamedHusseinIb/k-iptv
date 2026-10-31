@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { XtreamApiService } from '@iptvnator/portal/xtream/data-access';
-import type { XtreamSerieDetails } from '@iptvnator/shared/interfaces';
+import { XtreamApiService } from '@kiptv/portal/xtream/data-access';
+import type { XtreamSerieDetails } from '@kiptv/shared/interfaces';
 import {
     DASHBOARD_SERIES_EPISODES_MAX_AGE_MS,
     DASHBOARD_SERIES_EPISODES_RETRY_DELAY_MS,

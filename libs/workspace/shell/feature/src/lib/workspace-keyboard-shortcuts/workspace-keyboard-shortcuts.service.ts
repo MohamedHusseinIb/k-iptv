@@ -1,5 +1,5 @@
 import { DestroyRef, Injectable, inject } from '@angular/core';
-import { dialogSize } from '@iptvnator/ui/components';
+import { dialogSize } from '@kiptv/ui/components';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import {
@@ -8,8 +8,8 @@ import {
     isTypingInInput,
     isWorkspaceBackShortcut,
     resolveZoomShortcutAction,
-} from '@iptvnator/portal/shared/util';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
+} from '@kiptv/portal/shared/util';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
 import {
     WorkspaceBackGestureResult,
     WorkspaceBackGesturesService,
@@ -18,7 +18,7 @@ import {
     WorkspaceKeyboardShortcutsDialogComponent,
     WorkspaceKeyboardShortcutsDialogData,
 } from './workspace-keyboard-shortcuts-dialog.component';
-import { WorkspaceShellContextDrawerService } from '@iptvnator/workspace/shell/util';
+import { WorkspaceShellContextDrawerService } from '@kiptv/workspace/shell/util';
 
 @Injectable()
 export class WorkspaceKeyboardShortcutsService {

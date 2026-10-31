@@ -17,45 +17,45 @@ import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { map } from 'rxjs';
-import { PlaylistActions, selectAllPlaylistsMeta } from '@iptvnator/m3u-state';
-import { dialogSize } from '@iptvnator/ui/components';
+import { PlaylistActions, selectAllPlaylistsMeta } from '@kiptv/m3u-state';
+import { dialogSize } from '@kiptv/ui/components';
 import {
     SourceStatusService,
     sourceStatusBucket,
-} from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/portal/shared/data-access';
 import {
     isLiveExternalPlayerSession,
     PORTAL_EXTERNAL_PLAYBACK,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     PlaylistRefreshActionService,
     RecentPlaylistsComponent,
     SourceCleanupDialogComponent,
     SourceRemovalService,
-} from '@iptvnator/playlist/shared/ui';
+} from '@kiptv/playlist/shared/ui';
 import {
     filterSources,
     SourceBucketOf,
     SourcesViewStateService,
-} from '@iptvnator/playlist/shared/util';
+} from '@kiptv/playlist/shared/util';
 import {
     injectTranslationTick,
     RuntimeCapabilitiesService,
     SortService,
     SourceActivityService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     PlaylistUpdateState,
     sourceHealthType,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     MenuItemRadioCheckDirective,
     MenuItemRadioDirective,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     WORKSPACE_SHELL_ACTIONS,
     WorkspacePlaylistType,
-} from '@iptvnator/workspace/shell/util';
+} from '@kiptv/workspace/shell/util';
 import {
     isSortOptionActive,
     SOURCE_SORT_OPTIONS,

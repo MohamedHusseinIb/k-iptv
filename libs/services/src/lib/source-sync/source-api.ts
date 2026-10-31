@@ -5,7 +5,7 @@ import {
 import type {
     SourceServerRequest,
     SourceServerResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     sourceConnection,
     invalidateSourceVerification,
@@ -58,7 +58,7 @@ export async function requestSourceServer(
                     ? {}
                     : sourceAuthorization(url)),
                 'Content-Type': 'application/json',
-                'X-IPTVnator-Instance-Id': connection.instanceId,
+                'X-K-IPTV-Instance-Id': connection.instanceId,
                 ...(request.operation === 'create'
                     ? { 'If-None-Match': '*' }
                     : {}),

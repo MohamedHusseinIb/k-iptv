@@ -3,7 +3,7 @@ import type {
     ExternalPlayerSession,
     PlaybackPositionData,
     VodDetailsItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { createStalkerVodDetailActions } from './stalker-vod-detail-actions';
 
 const MOVIE = {

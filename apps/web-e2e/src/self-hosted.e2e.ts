@@ -24,7 +24,7 @@ async function installRuntimeConfig(page: Page): Promise<void> {
     await page.route('**/assets/app-config.js', async (route) => {
         await route.fulfill({
             contentType: 'application/javascript',
-            body: `window.__IPTVNATOR_CONFIG__ = { BACKEND_URL: ${JSON.stringify(WEB_BACKEND_URL)} };\n`,
+            body: `window.__KIPTV_CONFIG__ = { BACKEND_URL: ${JSON.stringify(WEB_BACKEND_URL)} };\n`,
         });
     });
 }
@@ -133,7 +133,7 @@ test('@self-hosted runtime config points PWA calls at the monorepo backend', asy
 }) => {
     await expect
         .poll(() =>
-            page.evaluate(() => window.__IPTVNATOR_CONFIG__?.BACKEND_URL)
+            page.evaluate(() => window.__KIPTV_CONFIG__?.BACKEND_URL)
         )
         .toBe(WEB_BACKEND_URL);
 
@@ -148,13 +148,13 @@ for (const failure of ['invalid-json', 'storage-denied']) {
     }) => {
         if (failure === 'invalid-json') {
             await page.evaluate(() =>
-                localStorage.setItem('iptvnator:source-server', '{broken')
+                localStorage.setItem('kiptv:source-server', '{broken')
             );
         } else {
             await page.addInitScript(() => {
                 const getItem = Storage.prototype.getItem;
                 Storage.prototype.getItem = function (key: string) {
-                    if (key === 'iptvnator:source-server')
+                    if (key === 'kiptv:source-server')
                         throw new DOMException('Denied', 'SecurityError');
                     return getItem.call(this, key);
                 };
@@ -200,7 +200,7 @@ for (const legacy of [false, true]) {
                 page.evaluate(
                     () =>
                         JSON.parse(
-                            localStorage.getItem('iptvnator:source-server') ??
+                            localStorage.getItem('kiptv:source-server') ??
                                 'null'
                         )?.instanceId
                 )
@@ -215,12 +215,12 @@ for (const legacy of [false, true]) {
         await expect(sourceRowByTitle(page, 'Self-hosted M3U')).toBeVisible();
         expect(
             await page.evaluate(() =>
-                localStorage.getItem('iptvnator:source-server')
+                localStorage.getItem('kiptv:source-server')
             )
         ).toBeNull();
         expect(
             await page.evaluate(() =>
-                localStorage.getItem('iptvnator:source-server-disabled')
+                localStorage.getItem('kiptv:source-server-disabled')
             )
         ).toBeNull();
     });
@@ -243,7 +243,7 @@ test('@self-hosted keeps the original library with a legacy proxy lacking discov
     await expect(page.getByTestId('source-sync-status')).toHaveCount(0);
     expect(
         await page.evaluate(() =>
-            localStorage.getItem('iptvnator:source-server')
+            localStorage.getItem('kiptv:source-server')
         )
     ).toBeNull();
 });
@@ -314,7 +314,7 @@ test('@self-hosted Stalker portal loads through web-backend proxy', async ({
 test('@self-hosted M3U User-Agent reaches the provider on import and refresh', async ({
     page,
 }) => {
-    const userAgent = 'IPTVnator-Test/1.0';
+    const userAgent = 'K-IPTV-Test/1.0';
     const received: (string | undefined)[] = [];
     let channel = 'Initial UA Channel';
     const server = createServer((req, res) => {

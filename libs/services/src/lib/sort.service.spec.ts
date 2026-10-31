@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { SortBy, SortOrder, SortService } from './sort.service';
 
 const playlist = (
@@ -98,7 +98,7 @@ describe('SortService', () => {
 
     it('falls back to newest first for an unknown saved sort', async () => {
         localStorage.setItem(
-            'iptvnator-sort-options',
+            'kiptv-sort-options',
             JSON.stringify({ by: 'size', order: 'asc' })
         );
         expect(await firstValueFrom(create().getSortOptions())).toEqual({

@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import type { DownloadItem } from '@iptvnator/services';
+import type { DownloadItem } from '@kiptv/services';
 import type { DownloadSeriesCardViewModel } from './download-library.viewmodel';
 import { DownloadedSeriesDialogComponent } from './downloaded-series-dialog.component';
 

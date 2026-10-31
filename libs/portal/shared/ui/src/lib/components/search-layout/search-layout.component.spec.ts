@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { MockPipe } from 'ng-mocks';
-import { WorkspaceBackNavigationService } from '@iptvnator/portal/shared/data-access';
+import { WorkspaceBackNavigationService } from '@kiptv/portal/shared/data-access';
 import { SearchLayoutComponent } from './search-layout.component';
 
 describe('SearchLayoutComponent', () => {

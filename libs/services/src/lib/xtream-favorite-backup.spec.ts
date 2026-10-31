@@ -1,4 +1,4 @@
-import type { ElectronBridgeXtreamFavorite } from '@iptvnator/shared/interfaces';
+import type { ElectronBridgeXtreamFavorite } from '@kiptv/shared/interfaces';
 import { toXtreamBackupFavorite } from './xtream-favorite-backup';
 
 describe('Electron favorite conflict evidence in portable backups', () => {

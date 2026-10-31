@@ -2,7 +2,7 @@
 import 'zone.js';
 import 'zone.js/testing';
 import { setupZonelessTestEnv } from 'jest-preset-angular/setup-env/zoneless/index.mjs';
-import { installDuplicateVideoJsQualityLevelsWarnFilter } from '@iptvnator/shared/testing';
+import { installDuplicateVideoJsQualityLevelsWarnFilter } from '@kiptv/shared/testing';
 
 Object.defineProperty(globalThis, 'jest', {
     configurable: true,

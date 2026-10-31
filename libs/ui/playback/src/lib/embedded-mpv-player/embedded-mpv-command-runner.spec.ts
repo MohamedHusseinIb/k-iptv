@@ -1,5 +1,5 @@
 import { signal } from '@angular/core';
-import { EmbeddedMpvSession } from '@iptvnator/shared/interfaces';
+import { EmbeddedMpvSession } from '@kiptv/shared/interfaces';
 import { EmbeddedMpvCommandRunner } from './embedded-mpv-command-runner';
 
 function createSession(

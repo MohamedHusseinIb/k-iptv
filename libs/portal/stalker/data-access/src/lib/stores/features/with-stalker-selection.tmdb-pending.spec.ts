@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { signalStore } from '@ngrx/signals';
-import { TmdbEnrichmentService } from '@iptvnator/services';
+import { TmdbEnrichmentService } from '@kiptv/services';
 import { enrichStalkerSelectionWithTmdb } from '../stalker-tmdb-enrichment';
 import { withStalkerSelection } from './with-stalker-selection.feature';
 

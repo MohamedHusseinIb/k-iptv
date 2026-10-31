@@ -2,7 +2,7 @@ import type {
     EmbeddedMpvSession,
     RecordingStartMetadata,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     RECORDING_FEEDBACK,
     RECORDING_TRANSLATION,

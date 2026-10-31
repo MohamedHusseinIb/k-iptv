@@ -1,7 +1,7 @@
 import {
     normalizeContentMetadataPatch,
     type ContentMetadataPatch,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     collectionSnapshotMatchesContent,
     collectionKey,

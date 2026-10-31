@@ -20,8 +20,8 @@ import { of } from 'rxjs';
 import {
     type ResolvedPortalPlayback,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
 import type { WebPlayerViewComponent as WebPlayerViewComponentInstance } from './web-player-view.component';
 import { WEB_PLAYER_SHARED_CONTROLS } from '../player-controls';
 import {
@@ -35,7 +35,7 @@ import {
     type PlaybackDiagnostic,
     PlaybackDiagnosticCode,
     PlaybackDiagnosticSource,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import { PlaybackDiagnosticPanelComponent } from '../playback-diagnostic-panel/playback-diagnostic-panel.component';
 
 jest.unstable_mockModule('video.js', () => ({

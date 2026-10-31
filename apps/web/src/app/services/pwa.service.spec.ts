@@ -1,13 +1,13 @@
 import {
     sourceAuthorization,
     verifySourceInstance,
-} from '@iptvnator/services/source-sync/authorization';
+} from '@kiptv/services/source-sync/authorization';
 import {
     HttpClientTestingModule,
     HttpTestingController,
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { LazySnackBar } from '@iptvnator/services/lazy-snack-bar';
+import { LazySnackBar } from '@kiptv/services/lazy-snack-bar';
 import { SwUpdate } from '@angular/service-worker';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
@@ -20,21 +20,21 @@ import {
     type Playlist,
     STALKER_REQUEST,
     XTREAM_REQUEST,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     getStalkerRequestErrorStatus,
     isStalkerProbeTimeout,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import {
     clearServerAccessToken,
     ServerStorageStatusService,
     writeServerAccessToken,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { PwaService } from './pwa.service';
 import {
     prepareSourceConnection,
     tokenKey,
-} from '@iptvnator/services/source-sync/connection';
+} from '@kiptv/services/source-sync/connection';
 
 describe('PwaService', () => {
     let http: HttpTestingController;
@@ -186,7 +186,7 @@ describe('PwaService', () => {
             service.sendIpcEvent(event, {
                 id: 'playlist-1',
                 url: 'https://provider.example/list.m3u',
-                userAgent: '  IPTVnator-Test/1.0  ',
+                userAgent: '  K-IPTV-Test/1.0  ',
             });
             http.expectOne((req) =>
                 req.url.endsWith('/provider-targets')
@@ -194,14 +194,14 @@ describe('PwaService', () => {
             await new Promise((resolve) => setTimeout(resolve));
             const parse = http.expectOne((req) => req.url.endsWith('/parse'));
             expect(parse.request.params.get('userAgent')).toBe(
-                'IPTVnator-Test/1.0'
+                'K-IPTV-Test/1.0'
             );
             expect(parse.request.headers.has('User-Agent')).toBe(false);
-            parse.flush({ _id: 'playlist-1', userAgent: 'IPTVnator-Test/1.0' });
+            parse.flush({ _id: 'playlist-1', userAgent: 'K-IPTV-Test/1.0' });
             expect(TestBed.inject(Store).dispatch).toHaveBeenCalledWith(
                 expect.objectContaining({
                     playlist: expect.objectContaining({
-                        userAgent: 'IPTVnator-Test/1.0',
+                        userAgent: 'K-IPTV-Test/1.0',
                     }),
                 })
             );
@@ -440,7 +440,7 @@ describe('PwaService', () => {
 
             TestBed.inject(ServerStorageStatusService).activate(
                 {
-                    service: 'iptvnator',
+                    service: 'kiptv',
                     apiVersion: 1,
                     instanceId: 'i',
                     storage: 'server',
@@ -462,7 +462,7 @@ describe('PwaService', () => {
         const status = TestBed.inject(ServerStorageStatusService);
         status.activate(
             {
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 instanceId: 'i',
                 storage: 'server',
@@ -476,7 +476,7 @@ describe('PwaService', () => {
             status: 401,
             statusText: 'Unauthorized',
             headers: new Headers({
-                'WWW-Authenticate': 'Bearer realm="iptvnator"',
+                'WWW-Authenticate': 'Bearer realm="kiptv"',
             }),
             json: async () => ({ code: 'unauthorized' }),
         } as unknown as Response) as unknown as typeof fetch;
@@ -693,7 +693,7 @@ describe('PwaService', () => {
         writeServerAccessToken('kept-token', 'i');
         TestBed.inject(ServerStorageStatusService).activate(
             {
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 instanceId: 'i',
                 storage: 'server',
@@ -701,9 +701,9 @@ describe('PwaService', () => {
             },
             () => undefined
         );
-        window.__IPTVNATOR_CONFIG__ = { BACKEND_URL: '/' };
+        window.__KIPTV_CONFIG__ = { BACKEND_URL: '/' };
         const atRoot = TestBed.runInInjectionContext(() => new PwaService());
-        delete window.__IPTVNATOR_CONFIG__;
+        delete window.__KIPTV_CONFIG__;
         const originalFetch = globalThis.fetch;
         const fetchMock = jest.fn().mockResolvedValue({
             ok: true,
@@ -748,7 +748,7 @@ describe('PwaService', () => {
                 instanceId: 'nas',
             };
             const instance = {
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 storage: 'server',
                 instanceId: 'nas',
@@ -761,7 +761,7 @@ describe('PwaService', () => {
             try {
                 Reflect.deleteProperty(window, 'electron');
                 localStorage.setItem(
-                    'iptvnator:source-server',
+                    'kiptv:source-server',
                     JSON.stringify(connection)
                 );
                 sessionStorage.setItem(tokenKey(connection), 'nas-secret');
@@ -816,7 +816,7 @@ describe('PwaService', () => {
         const activate = () =>
             status.activate(
                 {
-                    service: 'iptvnator',
+                    service: 'kiptv',
                     apiVersion: 1,
                     instanceId: 'i',
                     storage: 'server',

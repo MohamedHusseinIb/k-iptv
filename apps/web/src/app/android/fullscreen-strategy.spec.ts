@@ -1,7 +1,7 @@
 import {
     getFullscreenStrategy,
     resetFullscreenStrategy,
-} from '@iptvnator/ui/playback/fullscreen-strategy';
+} from '@kiptv/ui/playback/fullscreen-strategy';
 
 type FullscreenModule = typeof import('./fullscreen-strategy');
 

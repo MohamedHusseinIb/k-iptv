@@ -1,4 +1,4 @@
-import { Channel, EpgProgram } from '@iptvnator/shared/interfaces';
+import { Channel, EpgProgram } from '@kiptv/shared/interfaces';
 
 const XMLTV_TIMESTAMP_PATTERN =
     /^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})\s*([+-]\d{2})(\d{2})$/;

@@ -5,7 +5,7 @@ import type { UserDataStorage } from '../user-data-storage';
  * kept on reload): a reload finds the writes the page loads before it
  * saved.
  */
-export const PAGE_KEY = 'iptvnator-server:page';
+export const PAGE_KEY = 'kiptv-server:page';
 
 /**
  * Records `page` as the tab's current page load and returns the ones

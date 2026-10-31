@@ -8,14 +8,14 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
-import { PortalRailSection } from '@iptvnator/portal/shared/util';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
+import { PortalRailSection } from '@kiptv/portal/shared/util';
 import {
     XtreamCachedContentScope,
     PortalStatusType,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { SourceActivityService } from '@iptvnator/services';
+} from '@kiptv/portal/xtream/data-access';
+import { SourceActivityService } from '@kiptv/services';
 import {
     toXtreamPlaylistData,
     shouldBootstrapXtreamPlaylist,

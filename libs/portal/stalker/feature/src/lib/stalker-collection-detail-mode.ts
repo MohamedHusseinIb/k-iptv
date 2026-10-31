@@ -2,9 +2,9 @@ import {
     buildStalkerStateItem,
     toStalkerCategoryId,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
-import { isStalkerSeriesFlag } from '@iptvnator/portal/stalker/data-access';
-import { StalkerPortalItem } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import { isStalkerSeriesFlag } from '@kiptv/portal/stalker/data-access';
+import { StalkerPortalItem } from '@kiptv/shared/interfaces';
 
 /** Catalog section a collection item is rendered as. */
 export type StalkerDetailCategory = 'vod' | 'series';
@@ -42,7 +42,7 @@ export function resolveStalkerCollectionItem(
  * snapshots and lazy Ministra VOD `is_series` rows report as series but live
  * in the VOD catalog, so only a portal `/series` row is a regular series.
  *
- * `getUnifiedCollectionDetailNavigation()` in `@iptvnator/portal/shared/util`
+ * `getUnifiedCollectionDetailNavigation()` in `@kiptv/portal/shared/util`
  * mirrors this rule — keep the two in sync.
  */
 export function resolveStalkerCollectionDetailMode(

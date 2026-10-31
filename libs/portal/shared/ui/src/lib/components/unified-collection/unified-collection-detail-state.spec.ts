@@ -6,7 +6,7 @@ import {
     OPEN_COLLECTION_DETAIL_STATE_KEY,
     ScopeToggleService,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import { of } from 'rxjs';
 import { createCollectionDetailState } from './unified-collection-detail-state';
 import { CollectionViewStateHistory } from './unified-collection-history';

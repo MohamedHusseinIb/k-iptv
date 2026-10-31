@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { of, throwError } from 'rxjs';
-import { PlaylistsService, PortalStatusService } from '@iptvnator/services';
-import type { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistsService, PortalStatusService } from '@kiptv/services';
+import type { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { DashboardSourceExpiryService } from './dashboard-source-expiry.service';
 import {
     SOURCE_EXPIRY_WARNING_DAYS,

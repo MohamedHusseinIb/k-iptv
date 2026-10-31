@@ -10,7 +10,7 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { PlaylistFileImportService } from '@iptvnator/playlist/shared/util';
+import { PlaylistFileImportService } from '@kiptv/playlist/shared/util';
 import { fromEvent, merge } from 'rxjs';
 import type { PlaylistDropOverlayState } from './playlist-drop-overlay.component';
 

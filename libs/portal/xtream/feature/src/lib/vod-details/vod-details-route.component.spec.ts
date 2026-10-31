@@ -5,20 +5,20 @@ import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NEVER, of } from 'rxjs';
 import { Location } from '@angular/common';
-import { ContentHeroComponent } from '@iptvnator/ui/components';
+import { ContentHeroComponent } from '@kiptv/ui/components';
 import {
     PORTAL_EXTERNAL_PLAYBACK,
     PORTAL_PLAYBACK_POSITIONS,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import {
     VideoPlayer,
     XtreamCategory,
     XtreamVodDetails,
     XtreamVodStream,
-} from '@iptvnator/shared/interfaces';
-import { DownloadsService, SettingsStore } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import { DownloadsService, SettingsStore } from '@kiptv/services';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { VodDetailsRouteComponent } from './vod-details-route.component';
 

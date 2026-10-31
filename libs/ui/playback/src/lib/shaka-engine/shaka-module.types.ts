@@ -48,7 +48,7 @@ export interface ShakaVariantTrackLike {
     mimeType?: string | null;
 }
 
-export type { ShakaErrorLike } from '@iptvnator/playback/util';
+export type { ShakaErrorLike } from '@kiptv/playback/util';
 
 export type ShakaResponseFilter = (
     type: number,

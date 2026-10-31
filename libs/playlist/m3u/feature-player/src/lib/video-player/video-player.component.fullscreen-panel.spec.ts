@@ -11,24 +11,24 @@ import {
     selectChannels,
     selectChannelsLoading,
     selectCurrentEpgProgram,
-} from '@iptvnator/m3u-state';
-import { EpgService } from '@iptvnator/epg/data-access';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
-import { PORTAL_EXTERNAL_PLAYBACK } from '@iptvnator/portal/shared/util';
+} from '@kiptv/m3u-state';
+import { EpgService } from '@kiptv/epg/data-access';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
+import { PORTAL_EXTERNAL_PLAYBACK } from '@kiptv/portal/shared/util';
 import {
     DataService,
     PlaylistsService,
     RuntimeCapabilitiesService,
     SettingsStore,
     TmdbEnrichmentService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     Channel,
     EpgProgram,
     ExternalPlayerSession,
     PlaylistMeta,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { VideoPlayerComponent as VideoPlayerComponentInstance } from './video-player.component';
 import { translateServiceProvider } from './video-player.spec-harness';
 

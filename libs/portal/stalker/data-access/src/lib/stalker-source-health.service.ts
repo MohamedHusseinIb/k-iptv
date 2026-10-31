@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { DataService, withSourceProbe } from '@iptvnator/services';
+import { DataService, withSourceProbe } from '@kiptv/services';
 import {
     accountHealth,
     isFullStalkerPortalPlaylist,
@@ -8,8 +8,8 @@ import {
     SourceProbeContext,
     sourceHealthUnknown,
     isStalkerAuthFailureResponse,
-} from '@iptvnator/shared/interfaces';
-import { createLogger } from '@iptvnator/portal/shared/util';
+} from '@kiptv/shared/interfaces';
+import { createLogger } from '@kiptv/portal/shared/util';
 import {
     StalkerSessionService,
     getStalkerPortalIdentityFromPlaylist,

@@ -1,18 +1,18 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
-import { DataService, ParentalLockService } from '@iptvnator/services';
+import { DataService, ParentalLockService } from '@kiptv/services';
 import {
     CONNECTIVITY_GUARD_RESET,
     PlaylistMeta,
     StalkerPortalActions,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerItvChannel } from '../../models';
 import { StalkerItvCacheService } from '../../stalker-itv-cache.service';
 import { StalkerSessionService } from '../../stalker-session.service';
 import { withStalkerContent } from './with-stalker-content.feature';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),

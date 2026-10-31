@@ -333,7 +333,7 @@
         "SERVER_IMPORT_BROWSER_COUNT": "{{count}} playlists are stored only in this browser.",
         "SERVER_ACCESS": "Access",
         "SERVER_ACCESS_DESCRIPTION": "Who can open this server's library.",
-        "SERVER_ACCESS_OPEN": "Anyone who can reach this address can use it. Set IPTVNATOR_ACCESS_TOKEN on the server to require a token.",
+        "SERVER_ACCESS_OPEN": "Anyone who can reach this address can use it. Set KIPTV_ACCESS_TOKEN on the server to require a token.",
         "SERVER_ACCESS_TOKEN": "This server requires an access token.",
         "SERVER_SIGN_OUT": "Sign out",
         "NAV_ABOUT": "About",
@@ -496,12 +496,7 @@
         "EMBEDDED_MPV_NOTICE_DESCRIPTION": "Desktop builds can include bundled libmpv and FFmpeg libraries for the experimental Embedded MPV player. Users do not need to install the MPV app separately; external MPV and VLC remain available as fallback players.",
         "COMMUNITY": "Project & community",
         "COMMUNITY_DESCRIPTION": "Star the repository, read the blog or join the Telegram group for updates and help.",
-        "LINK_BLOG": "Blog",
         "LINK_GITHUB_DESCRIPTION": "Star the repo, open an issue or contribute",
-        "LINK_BLOG_DESCRIPTION": "Release notes, tips and project updates",
-        "LINK_TELEGRAM_DESCRIPTION": "Announcements, community and support",
-        "SUPPORT_TITLE": "Support the project",
-        "SUPPORT_DESCRIPTION": "K-IPTV is free and open source, built in the open. If it is part of your daily routine, a small contribution helps keep the project alive and shape what comes next — thank you.",
         "SUPPORT_SPONSORS_HINT": "Recurring or one-time",
         "SUPPORT_KOFI_HINT": "Buy me a coffee",
         "EPG_NOTE": "Currently EPG is available only in the electron-based version of K-IPTV.",
@@ -680,7 +675,7 @@
         "SIGN_IN_TITLE": "Access token required",
         "SIGN_IN_DESCRIPTION": "This K-IPTV server asks for an access token before it shows your playlists.",
         "SIGN_IN_TOKEN_LABEL": "Access token",
-        "SIGN_IN_HINT": "Find it in the server's IPTVNATOR_ACCESS_TOKEN setting.",
+        "SIGN_IN_HINT": "Find it in the server's KIPTV_ACCESS_TOKEN setting.",
         "SIGN_IN_REJECTED": "Token rejected. Check it and try again.",
         "SIGN_IN_UNREACHABLE": "Cannot reach the server. Check the connection and try again.",
         "SIGN_IN_STORAGE": "This browser does not let K-IPTV keep the token. Allow site data for this page and try again.",
@@ -1734,8 +1729,8 @@
             "TOGGLE_MUTE": "Failed to toggle mute",
             "STATUS": "Failed to fetch remote status"
         },
-        "HEADER": "IPTVNator Remote Control",
-        "FOOTER": "IPTVNator Remote Control"
+        "HEADER": "K-IPTV Remote Control",
+        "FOOTER": "K-IPTV Remote Control"
     },
     "WORKSPACE": {
         "FAVORITES_ONLY": "Favorites only",

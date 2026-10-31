@@ -1,4 +1,4 @@
-import type { ServerUserStateNamespace } from '@iptvnator/shared/interfaces';
+import type { ServerUserStateNamespace } from '@kiptv/shared/interfaces';
 import { type AnsweredWrites, applyAnswer } from './server-user-data-answer';
 import {
     entryKey,

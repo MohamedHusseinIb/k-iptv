@@ -6,8 +6,8 @@ import {
 } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { createStalkerVodItem } from '@iptvnator/shared/interfaces';
-import { VodDetailsComponent } from '@iptvnator/ui/playback';
+import { createStalkerVodItem } from '@kiptv/shared/interfaces';
+import { VodDetailsComponent } from '@kiptv/ui/playback';
 import { StalkerSeriesViewComponent } from '../stalker-series-view/stalker-series-view.component';
 import { StalkerInlineDetailComponent } from './stalker-inline-detail.component';
 

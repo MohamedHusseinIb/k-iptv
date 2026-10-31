@@ -1,4 +1,4 @@
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import type { PlaylistDocumentStore } from '../playlist-storage-backend';
 import { SourceCleanupQueue } from './source-cleanup-queue';
 

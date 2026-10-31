@@ -3,12 +3,12 @@ import {
     type SourceDefinition,
     type SourceServerRequest,
     type SourceServerResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     applySourceDefinition,
     sameSource,
     sourceFromPlaylist,
-} from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces/source-definition';
 import {
     PlaylistWriteConflict,
     type PlaylistDocumentStore,
@@ -50,7 +50,7 @@ export class SyncedPlaylistStore implements PlaylistDocumentStore {
             const locks = globalThis.navigator?.locks;
             return locks
                 ? locks.request(
-                      `iptvnator:source-sync:${this.instanceId}`,
+                      `kiptv:source-sync:${this.instanceId}`,
                       operation
                   )
                 : operation();

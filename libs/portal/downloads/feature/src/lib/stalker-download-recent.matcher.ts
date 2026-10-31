@@ -1,7 +1,7 @@
 import {
     extractStalkerItemType,
     type StalkerPortalItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 type DownloadContentType = 'vod' | 'episode';
 

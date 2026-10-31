@@ -11,8 +11,8 @@ import { TranslatePipe } from '@ngx-translate/core';
 import {
     Channel,
     PlaylistRecentlyViewedItem,
-} from '@iptvnator/shared/interfaces';
-import { ChannelListContainerComponent } from '@iptvnator/ui/components';
+} from '@kiptv/shared/interfaces';
+import { ChannelListContainerComponent } from '@kiptv/ui/components';
 
 export type M3uFullscreenChannelView =
     'all' | 'groups' | 'favorites' | 'recent';

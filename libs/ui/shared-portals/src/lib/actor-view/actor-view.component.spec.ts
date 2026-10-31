@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { WorkspaceBackNavigationService } from '@iptvnator/portal/shared/data-access';
+import { WorkspaceBackNavigationService } from '@kiptv/portal/shared/data-access';
 import { ActorViewComponent } from './actor-view.component';
 
 describe('ActorViewComponent', () => {

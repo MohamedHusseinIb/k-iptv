@@ -2,7 +2,7 @@ import {
     VodSourceDescriptor,
     VodSourceField,
     VodSourcePortalType,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Presentation helpers for the VOD multi-source row.

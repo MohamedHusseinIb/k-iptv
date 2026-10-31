@@ -31,7 +31,7 @@
  * "unreachable right now".
  */
 
-import { buildHostConnectivityFastFailMessage } from '@iptvnator/shared/interfaces';
+import { buildHostConnectivityFastFailMessage } from '@kiptv/shared/interfaces';
 
 /** Consecutive connection failures that trip the breaker. */
 const FAILURE_THRESHOLD = 2;
@@ -51,7 +51,7 @@ const MAX_TRACKED_HOSTS = 256;
 /** Idle records are forgotten; they hold nothing worth remembering. */
 const IDLE_TTL_MS = 600_000;
 
-const GUARD_DISABLED_ENV = 'IPTVNATOR_DISABLE_CONNECTIVITY_GUARD';
+const GUARD_DISABLED_ENV = 'KIPTV_DISABLE_CONNECTIVITY_GUARD';
 
 /**
  * Error codes that prove the host itself did not answer.
@@ -145,7 +145,7 @@ export interface HostConnectivityGuardOptions {
 
 /**
  * Whether the guard is switched off. Read at call time, not at module load, so
- * a debugging session can toggle it (matches `IPTVNATOR_ALLOW_INSECURE_TLS`).
+ * a debugging session can toggle it (matches `KIPTV_ALLOW_INSECURE_TLS`).
  */
 export function isHostConnectivityGuardDisabled(): boolean {
     const value = process.env[GUARD_DISABLED_ENV]?.trim().toLowerCase();

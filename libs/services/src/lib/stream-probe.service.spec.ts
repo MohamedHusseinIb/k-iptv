@@ -1,5 +1,5 @@
 import { Injector, runInInjectionContext } from '@angular/core';
-import type { StreamProbeHeaders } from '@iptvnator/shared/interfaces';
+import type { StreamProbeHeaders } from '@kiptv/shared/interfaces';
 import { StreamProbeService } from './stream-probe.service';
 
 type ProbeFn = jest.Mock<

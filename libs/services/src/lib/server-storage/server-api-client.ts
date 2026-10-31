@@ -2,7 +2,7 @@ import type {
     ServerStorageErrorBody,
     ServerUserStateCurrent,
     ServerUserStateWriteResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { ServerStorageStatusService } from '../server-storage-status.service';
 
 const REQUEST_TIMEOUT_MS = 20_000;

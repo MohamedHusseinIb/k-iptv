@@ -8,7 +8,7 @@ import {
     signal,
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { WorkspaceBackTarget } from '@iptvnator/portal/shared/util';
+import { WorkspaceBackTarget } from '@kiptv/portal/shared/util';
 import { trackRouterHistoryDepth } from './router-history-depth';
 
 /** The parts of the browser's Navigation API the history fallback reads. */

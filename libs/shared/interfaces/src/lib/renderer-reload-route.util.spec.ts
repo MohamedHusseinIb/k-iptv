@@ -3,7 +3,7 @@ import {
     resolveRestoredRendererRoute,
 } from './renderer-reload-route.util';
 
-const rendererRoot = 'file:///Applications/IPTVnator.app/Contents/web/';
+const rendererRoot = 'file:///Applications/K-IPTV.app/Contents/web/';
 const packagedIndex = `${rendererRoot}index.html`;
 
 function reloadedIndex(route: string): string {

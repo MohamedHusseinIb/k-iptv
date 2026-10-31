@@ -6,12 +6,12 @@ import {
 import {
     IXtreamDataSource,
     XTREAM_DATA_SOURCE,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     PlaybackPositionRuntimeBridgeService,
     RuntimeCapabilitiesService,
-} from '@iptvnator/services';
-import type { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import type { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import { AppPortalPlaybackPositionsService } from './portal-playback-positions.service';
 
 interface PersistenceMocks {

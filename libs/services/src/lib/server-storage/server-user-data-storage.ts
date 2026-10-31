@@ -2,7 +2,7 @@ import {
     isServerUserStateNamespace,
     type ServerUserStateNamespace,
     type ServerUserStateResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { UserDataStorage } from '../user-data-storage';
 import type { ServerApiClient } from './server-api-client';
 import { addStep, parseMap, splitEditKey } from './server-user-data-entries';

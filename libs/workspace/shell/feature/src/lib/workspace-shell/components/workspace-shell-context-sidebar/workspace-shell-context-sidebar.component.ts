@@ -10,19 +10,19 @@ import {
 } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ResizableDirective } from '@iptvnator/ui/components';
+import { ResizableDirective } from '@kiptv/ui/components';
 import {
     focusIfFocusLost,
     LiveLayoutSidebarStateService,
     PortalRailSection,
-} from '@iptvnator/portal/shared/util';
-import { StalkerStore } from '@iptvnator/portal/stalker/data-access';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/shared/util';
+import { StalkerStore } from '@kiptv/portal/stalker/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import {
     WorkspaceShellContextDrawerService,
     WorkspacePortalContext,
     WorkspaceShellContextPanel,
-} from '@iptvnator/workspace/shell/util';
+} from '@kiptv/workspace/shell/util';
 import { WorkspaceCollectionContextPanelComponent } from '../../../workspace-context-panel/workspace-collection-context-panel.component';
 import { WorkspaceContextPanelComponent } from '../../../workspace-context-panel/workspace-context-panel.component';
 import { WorkspaceSettingsContextPanelComponent } from '../../../workspace-context-panel/workspace-settings-context-panel.component';

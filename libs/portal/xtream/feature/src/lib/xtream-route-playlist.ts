@@ -1,5 +1,5 @@
-import type { XtreamPlaylistData } from '@iptvnator/portal/xtream/data-access';
-import type { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import type { XtreamPlaylistData } from '@kiptv/portal/xtream/data-access';
+import type { PlaylistMeta } from '@kiptv/shared/interfaces';
 
 function normalizeOptionalConnectionValue(
     value: string | null | undefined

@@ -5,12 +5,12 @@ import {
     provideAppInitializer,
     Provider,
 } from '@angular/core';
-import { USER_DATA_STORAGE } from '@iptvnator/services';
+import { USER_DATA_STORAGE } from '@kiptv/services';
 import {
     SERVER_STORAGE_CONFIG,
     ServerAccessTokenInterceptor,
     ServerStorageSession,
-} from '@iptvnator/services/server-storage';
+} from '@kiptv/services/server-storage';
 import { ServerMigrationPrompt } from './server-migration-prompt.service';
 import type { ServerStorageStart } from './server-storage-start';
 

@@ -1,6 +1,6 @@
 import { effect, inject, Injectable, Injector, signal } from '@angular/core';
-import type { DownloadItem } from '@iptvnator/services';
-import type { WorkspaceNavigationTarget } from '@iptvnator/portal/shared/util';
+import type { DownloadItem } from '@kiptv/services';
+import type { WorkspaceNavigationTarget } from '@kiptv/portal/shared/util';
 import { DownloadLibraryNavigationService } from '../download-library-navigation.service';
 import type { OfflineDetailRouteContext } from './download-offline-file-coordinator.service';
 import type { OfflineDetailItem } from './download-offline-detail.presentation';

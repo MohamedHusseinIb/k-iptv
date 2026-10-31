@@ -94,8 +94,8 @@ test('every file outside a project that Tier A code refers to keeps the suite ru
         readProjectJson
     );
     // The scan must see the known cross-project reads, or it proves nothing.
-    assert.ok(references.has('.github/workflows/build-and-make.yaml'));
-    assert.ok(references.has('tools/embedded-mpv/runtime-probe-contract.cjs'));
+    assert.ok(references.has('package.json'));
+    assert.ok(references.has('tsconfig.base.json'));
     const skippable = [...references.keys()].filter(
         (file) => !decideUnitCoverageScope([file], { declaredInputs }).run
     );
@@ -106,18 +106,21 @@ test('every file outside a project that Tier A code refers to keeps the suite ru
     );
 });
 
-test('Tier A test targets declare their workspace inputs and they always block', () => {
+test('declared workspace inputs always block', () => {
+    // Every Tier A project.json must still be readable, even when none of them
+    // declares a workspace-root input today.
     const declaredInputs = declaredWorkspaceInputs(
         policy.unitCoverage.tierA,
         readProjectJson
     );
-    assert.ok(declaredInputs.includes('tools/embedded-mpv/runtime-probe-contract.cjs'));
-    assert.equal(
-        decideUnitCoverageScope(['tools/embedded-mpv/runtime-probe-contract.cjs'], {
-            declaredInputs,
-        }).run,
-        true
-    );
+    assert.ok(Array.isArray(declaredInputs));
+    for (const declared of declaredInputs) {
+        assert.equal(
+            decideUnitCoverageScope([declared], { declaredInputs }).run,
+            true,
+            declared
+        );
+    }
     assert.deepEqual(
         decideUnitCoverageScope(['tools/release/a.mjs', 'tools/foo/sub/b.ts'], {
             declaredInputs: ['tools/foo/**/*.ts'],

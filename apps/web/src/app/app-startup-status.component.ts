@@ -16,8 +16,8 @@ import {
     PlaylistActions,
     selectPlaylistsLoadFailed,
     selectPlaylistsLoadingFlag,
-} from '@iptvnator/m3u-state';
-import { SERVER_SIGN_IN_PATH } from '@iptvnator/services';
+} from '@kiptv/m3u-state';
+import { SERVER_SIGN_IN_PATH } from '@kiptv/services';
 
 /** The first route also waits for settings and XMLTV source reconciliation. */
 @Component({

@@ -11,13 +11,13 @@ import {
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
-import { injectTranslationTick } from '@iptvnator/services';
-import { SettingsContextService } from '@iptvnator/workspace/shell/util/settings-context';
+import { injectTranslationTick } from '@kiptv/services';
+import { SettingsContextService } from '@kiptv/workspace/shell/util/settings-context';
 import {
     SettingsRevealRequest,
     SettingsSearchEntry,
     SettingsSearchService,
-} from '@iptvnator/workspace/shell/util/settings-search';
+} from '@kiptv/workspace/shell/util/settings-search';
 import { map } from 'rxjs';
 
 /** How long a revealed row keeps its highlight. */

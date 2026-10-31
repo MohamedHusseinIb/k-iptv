@@ -1,5 +1,5 @@
 import { Injector, runInInjectionContext } from '@angular/core';
-import { CatalogTitleMatch } from '@iptvnator/shared/interfaces';
+import { CatalogTitleMatch } from '@kiptv/shared/interfaces';
 import { CatalogTitleMatchService } from './catalog-title-match.service';
 import { CrossPortalSimilarService } from './cross-portal-similar.service';
 

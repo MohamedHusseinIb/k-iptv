@@ -1,7 +1,7 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { StorageMap } from '@ngx-pwa/local-storage';
 import { firstValueFrom } from 'rxjs';
-import { STORE_KEY } from '@iptvnator/shared/interfaces';
+import { STORE_KEY } from '@kiptv/shared/interfaces';
 
 export interface RecentCommandEntry {
     id: string;

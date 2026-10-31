@@ -14,12 +14,12 @@ import {
     createInlinePlaybackPositionWriter,
     createLogger,
     createPendingPlaybackStart,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     resolveXtreamVodPlaybackSource,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { PlaybackPositionRuntimeBridgeService } from '@iptvnator/services';
+} from '@kiptv/portal/xtream/data-access';
+import { PlaybackPositionRuntimeBridgeService } from '@kiptv/services';
 import {
     ExternalPlayerName,
     ExternalPlayerSession,
@@ -28,8 +28,8 @@ import {
     ResolvedPortalPlayback,
     XtreamVodDetails,
     XtreamVodInfo,
-} from '@iptvnator/shared/interfaces';
-import type { PlaybackFallbackRequest } from '@iptvnator/ui/playback';
+} from '@kiptv/shared/interfaces';
+import type { PlaybackFallbackRequest } from '@kiptv/ui/playback';
 import {
     closeRunningExternalSession,
     runningExternalSession,

@@ -3,8 +3,8 @@ import {
     EpgImportProgress,
     EpgRuntimeBridgeService,
 } from './epg-runtime-bridge.service';
-import { SettingsStore, EpgSourceSettingsService } from '@iptvnator/services';
-import { ELECTRON_BRIDGE_SECURITY_ERROR_CODES } from '@iptvnator/shared/interfaces';
+import { SettingsStore, EpgSourceSettingsService } from '@kiptv/services';
+import { ELECTRON_BRIDGE_SECURITY_ERROR_CODES } from '@kiptv/shared/interfaces';
 import { EpgProgressService } from './epg-progress.service';
 
 /** Spec-only double: capability flags are read-only getters on the real class. */

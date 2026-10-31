@@ -1,4 +1,4 @@
-import { extractTmdbCertifications } from '@iptvnator/shared/tmdb/certifications';
+import { extractTmdbCertifications } from '@kiptv/shared/tmdb/certifications';
 
 import {
     Component,
@@ -12,19 +12,19 @@ import {
     ChangeDetectionStrategy,
 } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import type { PlaybackFallbackRequest } from '@iptvnator/playback/util';
+import type { PlaybackFallbackRequest } from '@kiptv/playback/util';
 import {
     enrichedCast,
     tmdbBackdropUrl,
     tmdbPosterUrl,
     topCast,
     injectTranslationTick,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     Channel,
     ResolvedPortalPlayback,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     AgeRatingChipComponent,
     CastCrewRowComponent,
@@ -36,9 +36,9 @@ import {
     MetaChipComponent,
     PortalDetailShellComponent,
     castMembersFromNames,
-} from '@iptvnator/ui/components';
-import { formatDurationLabel } from '@iptvnator/portal/shared/util';
-import { PortalInlinePlayerComponent } from '@iptvnator/ui/playback';
+} from '@kiptv/ui/components';
+import { formatDurationLabel } from '@kiptv/portal/shared/util';
+import { PortalInlinePlayerComponent } from '@kiptv/ui/playback';
 import {
     M3uVodMetadataService,
     m3uVodEntryKey,

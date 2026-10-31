@@ -15,7 +15,7 @@ import {
     RecordingStartMetadata,
     ResolvedPortalPlayback,
     watchEmbeddedMpvSupport,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { TranslateService } from '@ngx-translate/core';
 import { EmbeddedMpvCommandRunner } from './embedded-mpv-command-runner';
 import { measureBounds } from './embedded-mpv-format.utils';

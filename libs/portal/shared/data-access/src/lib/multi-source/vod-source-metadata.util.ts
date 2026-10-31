@@ -1,7 +1,7 @@
 import type {
     VodSourceCandidate,
     VodSourceField,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Metadata extraction for VOD multi-source rows.

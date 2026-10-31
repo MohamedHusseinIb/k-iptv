@@ -5,19 +5,19 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslateModule } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
-import { PlaylistActions } from '@iptvnator/m3u-state';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
+import { PlaylistActions } from '@kiptv/m3u-state';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
 import {
     DatabaseService,
     PlaylistDeleteActionService,
     RuntimeCapabilitiesService,
     SourceActivityService,
-} from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import {
     RENDERER_PERFORMANCE_PHASE_HOOK_KEY,
     type RendererPerformancePhaseEvent,
-} from '@iptvnator/shared/logging';
+} from '@kiptv/shared/logging';
 import {
     SOURCE_REMOVAL_UNDO_MS,
     SourceRemovalService,

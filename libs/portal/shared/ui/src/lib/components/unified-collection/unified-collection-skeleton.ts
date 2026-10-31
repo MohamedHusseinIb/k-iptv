@@ -1,4 +1,4 @@
-import { CollectionScope } from '@iptvnator/portal/shared/util';
+import { CollectionScope } from '@kiptv/portal/shared/util';
 
 /** The guides this runtime offers; see `RuntimeCapabilitiesService`. */
 export interface CollectionGuideSupport {

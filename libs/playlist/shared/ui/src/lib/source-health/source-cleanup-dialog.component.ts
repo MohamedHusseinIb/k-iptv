@@ -19,12 +19,12 @@ import { TranslatePipe } from '@ngx-translate/core';
 import {
     SourceCleanupContext,
     SourceCleanupService,
-} from '@iptvnator/portal/shared/data-access';
-import { PlaylistMeta, sourceHealthType } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/data-access';
+import { PlaylistMeta, sourceHealthType } from '@kiptv/shared/interfaces';
 import {
     DialogFooterDirective,
     DialogShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 export interface SourceCleanupDialogData extends SourceCleanupContext {
     playlists: readonly PlaylistMeta[];

@@ -4,9 +4,9 @@ import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
-import { PlaylistActions } from '@iptvnator/m3u-state';
-import { PlaylistsService } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistActions } from '@kiptv/m3u-state';
+import { PlaylistsService } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { StalkerContentType } from '../stalker-store.contracts';
 import { withStalkerFavorites } from './with-stalker-favorites.feature';
 

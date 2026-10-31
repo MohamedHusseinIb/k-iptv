@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
-import { WorkspaceResolvedCommandItem } from '@iptvnator/portal/shared/util';
+import { WorkspaceResolvedCommandItem } from '@kiptv/portal/shared/util';
 import { WorkspaceCommandPaletteComponent } from './workspace-command-palette.component';
 
 describe('WorkspaceCommandPaletteComponent', () => {

@@ -5,14 +5,14 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     ResolvedLiveCollectionDetail,
     StreamResolverService,
-} from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/portal/shared/data-access';
 import {
     PORTAL_PLAYER,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
-import { SettingsStore } from '@iptvnator/services';
-import { Channel, EpgItem, EpgProgram } from '@iptvnator/shared/interfaces';
-import { EpgArchiveCopyService } from '@iptvnator/ui/epg';
+} from '@kiptv/portal/shared/util';
+import { SettingsStore } from '@kiptv/services';
+import { Channel, EpgItem, EpgProgram } from '@kiptv/shared/interfaces';
+import { EpgArchiveCopyService } from '@kiptv/ui/epg';
 import {
     createUnifiedLiveCatchup,
     UnifiedLiveTimeshift,

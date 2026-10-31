@@ -1,4 +1,4 @@
-import { ElectronBridgeRemoteControlStatus } from '@iptvnator/shared/interfaces';
+import { ElectronBridgeRemoteControlStatus } from '@kiptv/shared/interfaces';
 
 export type RemoteChannelDirection = 'up' | 'down';
 

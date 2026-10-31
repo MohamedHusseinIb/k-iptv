@@ -5,14 +5,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { TranslateService } from '@ngx-translate/core';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
 import {
     PlaylistActions,
     selectAllPlaylistsMeta,
     selectPlaylistsLoadingFlag,
-} from '@iptvnator/m3u-state';
+} from '@kiptv/m3u-state';
 import { of } from 'rxjs';
-import { DialogService } from '@iptvnator/ui/components';
+import { DialogService } from '@kiptv/ui/components';
 import {
     DatabaseService,
     DataService,
@@ -25,16 +25,16 @@ import {
     SortOrder,
     SortService,
     SourceActivityService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     CONNECTIVITY_GUARD_RESET,
     PLAYLIST_UPDATE,
     PlaylistMeta,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     RENDERER_PERFORMANCE_PHASE_HOOK_KEY,
     type RendererPerformancePhaseEvent,
-} from '@iptvnator/shared/logging';
+} from '@kiptv/shared/logging';
 import { SourceListRefreshService } from './source-list-refresh.service';
 
 const performanceHookSymbol = Symbol.for(RENDERER_PERFORMANCE_PHASE_HOOK_KEY);
@@ -481,7 +481,7 @@ describe('SourceListRefreshService', () => {
             password: undefined,
             filePath: undefined,
             url: 'https://example.com/test.m3u',
-            userAgent: 'IPTVnator-Test/1.0',
+            userAgent: 'K-IPTV-Test/1.0',
         });
 
         component.refresh(item);
@@ -561,7 +561,7 @@ describe('SourceListRefreshService', () => {
             username: undefined,
             password: undefined,
             filePath: '/tmp/test.m3u',
-            userAgent: 'IPTVnator-Test/1.0',
+            userAgent: 'K-IPTV-Test/1.0',
         });
 
         lateComponent.refresh(item);

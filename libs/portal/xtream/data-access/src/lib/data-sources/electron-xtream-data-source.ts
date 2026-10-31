@@ -6,7 +6,7 @@ import {
     XtreamPendingRestoreService,
     XtreamImportStatus,
     VodSourcePinService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     ContentMetadataPatch,
     PlaybackPositionData,
@@ -16,7 +16,7 @@ import {
     XtreamLiveStream,
     XtreamSerieItem,
     XtreamVodStream,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     CategoryType,
     StreamType,

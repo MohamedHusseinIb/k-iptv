@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ServerStorageStatusService } from '@iptvnator/services';
+import { ServerStorageStatusService } from '@kiptv/services';
 import { WorkspaceShellRailComponent } from './workspace-shell-rail.component';
 
 @Component({
@@ -97,7 +97,7 @@ describe('WorkspaceShellRailComponent', () => {
 
     describe('server status', () => {
         const instance = {
-            service: 'iptvnator',
+            service: 'kiptv',
             apiVersion: 1,
             instanceId: 'i',
             storage: 'server',

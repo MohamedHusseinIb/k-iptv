@@ -2,32 +2,32 @@ import { computed, DestroyRef, inject, Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { WorkspaceBackNavigationService } from '@iptvnator/portal/shared/data-access';
+import { WorkspaceBackNavigationService } from '@kiptv/portal/shared/data-access';
 import {
     PORTAL_EXTERNAL_PLAYBACK,
     WorkspaceHeaderContextService,
     WorkspaceResolvedCommandItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     DownloadsService,
     ParentalLockService,
     RuntimeCapabilitiesService,
     SettingsStore,
     injectTranslationTick,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     CommandBuilderActions,
     CommandBuilderContext,
 } from './helpers/workspace-shell-command-builders';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { isWorkspaceGlobalSearchablePlaylist } from './helpers/workspace-shell-searchable-playlists';
 import { WorkspaceShellCommandPaletteService } from './workspace-shell-command-palette.service';
 import { WorkspaceShellHeaderService } from './workspace-shell-header.service';
 import { WorkspaceShellRouteStateService } from './workspace-shell-route-state.service';
 import { WorkspaceShellSearchService } from './workspace-shell-search.service';
 import { WorkspaceShellXtreamImportService } from './workspace-shell-xtream-import.service';
-import { WorkspaceShellContextDrawerService } from '@iptvnator/workspace/shell/util';
-import { PlaylistSwitcherOpenService } from '@iptvnator/playlist/shared/ui';
+import { WorkspaceShellContextDrawerService } from '@kiptv/workspace/shell/util';
+import { PlaylistSwitcherOpenService } from '@kiptv/playlist/shared/ui';
 
 @Injectable()
 export class WorkspaceShellFacade {

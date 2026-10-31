@@ -1,9 +1,9 @@
 import {
     getXtreamPendingRestoreStorageKey,
     normalizeXtreamPendingRestoreState,
-} from '@iptvnator/shared/interfaces/xtream-restore-state';
+} from '@kiptv/shared/interfaces/xtream-restore-state';
 import { sourceProfileStorageKey } from './source-sync/source-profile-storage';
-import type { ElectronBridgeApi } from '@iptvnator/shared/interfaces';
+import type { ElectronBridgeApi } from '@kiptv/shared/interfaces';
 
 type FavoriteRestoreSupport = Partial<
     Pick<ElectronBridgeApi, 'dbReplaceAllPlaybackPositions'>

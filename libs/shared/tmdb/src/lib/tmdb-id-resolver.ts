@@ -1,4 +1,4 @@
-import { TmdbMediaType } from '@iptvnator/shared/interfaces';
+import { TmdbMediaType } from '@kiptv/shared/interfaces';
 import { TmdbApiClient } from './tmdb-api-client';
 import { TmdbClientCache, TmdbClientRuntime } from './tmdb-client-contracts';
 import {

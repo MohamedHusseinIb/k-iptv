@@ -15,26 +15,26 @@ import { MatIcon } from '@angular/material/icon';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { DatabaseService } from '@iptvnator/services';
-import { ContentCardComponent } from '@iptvnator/portal/shared/ui';
-import { SearchLayoutComponent } from '@iptvnator/portal/shared/ui';
-import { WorkspaceBackNavigationService } from '@iptvnator/portal/shared/data-access';
+import { DatabaseService } from '@kiptv/services';
+import { ContentCardComponent } from '@kiptv/portal/shared/ui';
+import { SearchLayoutComponent } from '@kiptv/portal/shared/ui';
+import { WorkspaceBackNavigationService } from '@kiptv/portal/shared/data-access';
 import {
     buildXtreamNavigationTarget,
     queryParamSignal,
     workspacePortalCommands,
-} from '@iptvnator/portal/shared/util';
-import { createLogger } from '@iptvnator/portal/shared/util';
-import { SearchFilters } from '@iptvnator/portal/xtream/data-access';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/shared/util';
+import { createLogger } from '@kiptv/portal/shared/util';
+import { SearchFilters } from '@kiptv/portal/xtream/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import {
     ContentType,
     XtreamSearchResultItem,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     GlobalSearchResult,
     isM3uGlobalSearchResult,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 interface GlobalSearchResultGroup {
     playlistId: string;

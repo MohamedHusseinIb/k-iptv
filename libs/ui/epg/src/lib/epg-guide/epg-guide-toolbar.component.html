@@ -49,7 +49,7 @@
         </mat-icon>
     </button>
     <!-- Single-choice rows, as `appMenuItemRadio` renders them in
-         @iptvnator/ui/components, which depends on this library. -->
+         @kiptv/ui/components, which depends on this library. -->
     <mat-menu #scopeMenu="matMenu">
         @for (scope of scopes(); track scope.id) {
             @let checked = scope.id === scopeId();

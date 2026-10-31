@@ -2,13 +2,13 @@ import express, { Router, type Request, type Response } from 'express';
 import {
     type Playlist,
     type SourceDefinition,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     applySourceDefinition,
     sourceFromPlaylist,
     sourceFingerprint,
     validateSource,
-} from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces/source-definition';
 import { matchesEtag } from './etag-match';
 import {
     deleteAllPlaylistsWithState,
@@ -24,7 +24,7 @@ export function createSourcesRouter(
     const router = Router();
     const { playlists, revisions } = storage;
     router.use('/sources', (req, _res, next) => {
-        const expected = req.get('x-iptvnator-instance-id');
+        const expected = req.get('x-kiptv-instance-id');
         if (expected && expected !== storage.database.instanceId)
             throw new StorageRequestError(
                 409,

@@ -1,4 +1,4 @@
-import { getXtreamPendingRestoreStorageKey } from '@iptvnator/shared/interfaces';
+import { getXtreamPendingRestoreStorageKey } from '@kiptv/shared/interfaces';
 import {
     XtreamPendingRestoreService,
     XtreamPendingRestoreSnapshot,

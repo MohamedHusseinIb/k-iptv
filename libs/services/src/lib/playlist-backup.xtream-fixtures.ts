@@ -6,7 +6,7 @@ import {
     PLAYLIST_BACKUP_VERSION,
     XtreamPendingRestoreState,
     XtreamPlaylistBackupEntry,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { XtreamPendingRestoreSnapshot } from './xtream-pending-restore.service';
 
 /**

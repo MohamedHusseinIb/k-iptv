@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DownloadsService } from '@iptvnator/services';
+import { DownloadsService } from '@kiptv/services';
 import { TranslateService } from '@ngx-translate/core';
 import { EpgArchiveDownloadService } from './epg-archive-download.service';
 

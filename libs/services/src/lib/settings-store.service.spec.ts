@@ -11,7 +11,7 @@ import {
     StreamFormat,
     Theme,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { SettingsStore } from './settings-store.service';
 
 const expectedDashboardRails = (

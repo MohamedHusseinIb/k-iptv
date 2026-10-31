@@ -49,21 +49,21 @@ FROM node:${NODE_VERSION}-alpine
 
 RUN apk add --no-cache gettext nginx
 
-WORKDIR /opt/iptvnator
+WORKDIR /opt/kiptv
 
 ENV PORT=3000
 ENV BACKEND_URL=/api
 ENV CLIENT_URL=http://localhost:4333
-ENV IPTVNATOR_STORAGE=server
-ENV IPTVNATOR_DATA_DIR=/data
+ENV KIPTV_STORAGE=server
+ENV KIPTV_DATA_DIR=/data
 
 COPY --from=build /usr/src/app/dist/apps/web /usr/share/nginx/html
 COPY --from=build /usr/src/app/dist/apps/web-backend ./web-backend
 COPY --from=native /opt/native/node_modules ./web-backend/node_modules
 COPY docker/nginx.conf /etc/nginx/http.d/default.conf.template
-COPY docker/docker-entrypoint.sh /usr/local/bin/iptvnator-entrypoint
+COPY docker/docker-entrypoint.sh /usr/local/bin/kiptv-entrypoint
 
-RUN chmod +x /usr/local/bin/iptvnator-entrypoint && mkdir -p /data
+RUN chmod +x /usr/local/bin/kiptv-entrypoint && mkdir -p /data
 
 VOLUME ["/data"]
 
@@ -72,4 +72,4 @@ EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
     CMD wget -qO- http://127.0.0.1/api/health >/dev/null || exit 1
 
-CMD ["iptvnator-entrypoint"]
+CMD ["kiptv-entrypoint"]

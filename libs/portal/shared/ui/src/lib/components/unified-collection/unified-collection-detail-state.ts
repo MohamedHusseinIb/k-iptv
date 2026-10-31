@@ -1,4 +1,4 @@
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
 import {
     computed,
     effect,
@@ -16,8 +16,8 @@ import {
     OPEN_COLLECTION_DETAIL_STATE_KEY,
     SeriesResumeTarget,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
-import { CollectionMode } from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/portal/shared/util';
+import { CollectionMode } from '@kiptv/portal/shared/data-access';
 import {
     buildCollectionDetailNavigation,
     canRenderCollectionDetailOnRoute,

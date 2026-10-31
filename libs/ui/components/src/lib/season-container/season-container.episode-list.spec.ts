@@ -4,12 +4,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
-import { SeasonDownloadCoordinator } from '@iptvnator/portal/shared/data-access';
+import { SeasonDownloadCoordinator } from '@kiptv/portal/shared/data-access';
 import {
     PlaybackPositionData,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
-import { DownloadsService } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import { DownloadsService } from '@kiptv/services';
 import { SeasonContainerComponent } from './season-container.component';
 
 // The episode list of the selected season: the "now playing / continue"
@@ -46,7 +46,7 @@ describe('SeasonContainerComponent episode list', () => {
     };
 
     beforeEach(async () => {
-        localStorage.removeItem('iptvnator_episode_view_mode');
+        localStorage.removeItem('kiptv_episode_view_mode');
         await TestBed.configureTestingModule({
             imports: [
                 NoopAnimationsModule,
@@ -74,7 +74,7 @@ describe('SeasonContainerComponent episode list', () => {
     });
 
     afterEach(() => {
-        localStorage.removeItem('iptvnator_episode_view_mode');
+        localStorage.removeItem('kiptv_episode_view_mode');
     });
 
     it('defaults to the list view', () => {

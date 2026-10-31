@@ -1,6 +1,6 @@
 import { MonoTypeOperatorFunction, Observable, from, of } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
-import { EpgChannelMetadata } from '@iptvnator/shared/interfaces';
+import { EpgChannelMetadata } from '@kiptv/shared/interfaces';
 import { EpgRuntimeBridgeService } from './epg-runtime-bridge.service';
 
 /**

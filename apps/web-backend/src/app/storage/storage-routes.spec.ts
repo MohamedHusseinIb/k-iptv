@@ -9,7 +9,7 @@ import type {
     ServerInstanceInfo,
     ServerStorageStatusResponse,
     ServerUserStateResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { ServerStorage } from './server-storage';
 
 function app(
@@ -39,7 +39,7 @@ describe('server storage routes', () => {
         withServer(app(null), async (baseUrl) => {
             const response = await fetch(`${baseUrl}/v1/instance`);
             await expect(response.json()).resolves.toEqual({
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 instanceId: null,
                 storage: 'none',

@@ -2,7 +2,7 @@ import {
     PlaybackRuntimeSupport,
     SHAKA_ERROR_CODE,
     type PlaybackDiagnostic,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 
 /** Read evidence only from the engine that owns this diagnostic. */
 export function getDiagnosticEvidence(issue: PlaybackDiagnostic) {

@@ -1,4 +1,4 @@
-import { InlinePlaybackPlayer } from '@iptvnator/playback/util';
+import { InlinePlaybackPlayer } from '@kiptv/playback/util';
 import {
     createFakeShakaEnvironment,
     flushShakaMicrotasks as flush,

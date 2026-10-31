@@ -1,4 +1,4 @@
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import { planServerMigration, sourceIdentity } from './server-migration-plan';
 
 const playlist = (fields: Partial<Playlist> & { _id: string }) =>

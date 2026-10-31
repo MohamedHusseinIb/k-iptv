@@ -1,14 +1,14 @@
 import { inject, Injectable } from '@angular/core';
-import { LazySnackBar } from '@iptvnator/services/lazy-snack-bar';
+import { LazySnackBar } from '@kiptv/services/lazy-snack-bar';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { PlaylistActions } from '@iptvnator/m3u-state';
-import { DialogService } from '@iptvnator/ui/components/confirm-dialog';
+import { PlaylistActions } from '@kiptv/m3u-state';
+import { DialogService } from '@kiptv/ui/components/confirm-dialog';
 import {
     DataService,
     SettingsStore,
     SourceActivityService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     AUTO_UPDATE_PLAYLISTS,
     AutoUpdatePlaylistsResult,
@@ -33,18 +33,18 @@ import {
     XTREAM_RESPONSE,
     XtreamCodeActions,
     SourceProbeContext,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     measureRendererPerformancePhase,
     RENDERER_PERFORMANCE_PHASE,
-} from '@iptvnator/shared/logging';
+} from '@kiptv/shared/logging';
 import { AppConfig } from '../../environments/environment';
 import { buildAutoUpdatePlaylistsFeedback } from './auto-update-playlists-feedback';
 import {
     createLogger,
     createPortalDebugRequestContext,
     logPortalDebugEvent,
-} from '@iptvnator/portal/shared/util/logger';
+} from '@kiptv/portal/shared/util/logger';
 
 interface PlayerLaunchPayload {
     readonly headers?: Record<string, string>;

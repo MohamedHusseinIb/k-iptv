@@ -2,12 +2,12 @@ import { Injector, runInInjectionContext } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actions } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
-import { EpgService } from '@iptvnator/epg/data-access';
+import { EpgService } from '@kiptv/epg/data-access';
 import {
     EpgSourceSettingsService,
     PlaylistsService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { EMPTY, of, Subject, throwError } from 'rxjs';
 import { PlaylistActions } from './actions';
 import { PlaylistEffects } from './effects';

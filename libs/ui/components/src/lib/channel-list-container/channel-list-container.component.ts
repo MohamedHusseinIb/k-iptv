@@ -20,9 +20,9 @@ import { Store } from '@ngrx/store';
 import { StorageMap } from '@ngx-pwa/local-storage';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { EpgService } from '@iptvnator/epg/data-access';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
-import { queryParamSignal } from '@iptvnator/portal/shared/util';
+import { EpgService } from '@kiptv/epg/data-access';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
+import { queryParamSignal } from '@kiptv/portal/shared/util';
 import {
     ChannelActions,
     FavoritesActions,
@@ -30,7 +30,7 @@ import {
     resolveChannelEpgLookupKey,
     selectActive,
     selectFavorites,
-} from '@iptvnator/m3u-state';
+} from '@kiptv/m3u-state';
 import {
     BehaviorSubject,
     combineLatest,
@@ -46,7 +46,7 @@ import {
     PlaylistsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     ALL_CATEGORIES_WITHHELD,
     foldSearchText,
@@ -58,8 +58,8 @@ import {
     PlaylistRecentlyViewedItem,
     Settings,
     STORE_KEY,
-} from '@iptvnator/shared/interfaces';
-import { normalizeEpgUrls } from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/interfaces';
+import { normalizeEpgUrls } from '@kiptv/shared/m3u-utils';
 import { AllChannelsViewComponent } from './all-channels-view/all-channels-view.component';
 import { FavoritesViewComponent } from './favorites-view/favorites-view.component';
 import { GroupsViewComponent } from './groups-view/groups-view.component';

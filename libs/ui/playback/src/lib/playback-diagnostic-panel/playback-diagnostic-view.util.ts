@@ -2,7 +2,7 @@ import {
     type PlaybackDiagnostic,
     PlaybackDiagnosticCode,
     getLikelyBrowserUnsupportedCodecLabels,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import { getDiagnosticSummaryKey } from './playback-diagnostic-summary.util';
 import { getDiagnosticEvidenceDetails } from './playback-diagnostic-evidence-view.util';
 

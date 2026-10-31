@@ -4,12 +4,12 @@ import {
     CollectionContentType,
     UnifiedCollectionItem,
     WorkspaceViewCommandService,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     CollectionMode,
     UnifiedCollectionDataService,
-} from '@iptvnator/portal/shared/data-access';
-import { DialogService } from '@iptvnator/ui/components';
+} from '@kiptv/portal/shared/data-access';
+import { DialogService } from '@kiptv/ui/components';
 import { resolveClearCollectionDialogKeys } from './unified-collection-labels';
 
 export interface ClearCollectionAction {

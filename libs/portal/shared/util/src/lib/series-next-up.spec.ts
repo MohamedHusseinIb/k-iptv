@@ -1,7 +1,7 @@
 import type {
     PlaybackPositionData,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     getSeriesNextUp,
     isExtrasSeason,

@@ -3,7 +3,7 @@ import http from 'http';
 import { join } from 'node:path';
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import { buildStalkerIdentityRequestContext } from '@iptvnator/shared/interfaces';
+import { buildStalkerIdentityRequestContext } from '@kiptv/shared/interfaces';
 import portalRouter, { createPortalRouter } from './app/routes/portal.route.js';
 import dispatchPortalAction from './app/routes/dispatch.js';
 import {
@@ -13,7 +13,7 @@ import {
 } from './app/auth-store.js';
 import { resetWatchdogPings } from './app/handlers/get-events.handler.js';
 import { resetAll, resetMac } from './app/data-store.js';
-import { renderMarketingLogoSvg } from '@iptvnator/shared/marketing-fixtures';
+import { renderMarketingLogoSvg } from '@kiptv/shared/marketing-fixtures';
 import { SCENARIOS } from './app/scenarios.js';
 import {
     buildRequestOrigin,
@@ -141,7 +141,7 @@ app.use('/ministra/server/load.php', createPortalRouter(true));
 
 /**
  * Which proxied portal URLs this mock enforces the token on. It mirrors
- * `isFullStalkerPortalUrl()` in `@iptvnator/shared/interfaces` — the union of
+ * `isFullStalkerPortalUrl()` in `@kiptv/shared/interfaces` — the union of
  * the three predicates that used to diverge in the app before endpoint
  * discovery unified them.
  *
@@ -156,11 +156,11 @@ function isFullPortalUrlShape(url: string): boolean {
 }
 
 /**
- * CORS proxy compatibility endpoint — mirrors the IPTVnator backend API shape:
+ * CORS proxy compatibility endpoint — mirrors the K-IPTV backend API shape:
  *   GET /stalker?url=<portal_url>&macAddress=<mac>&action=<action>&...
  *   → { payload: <stalker_response> }
  *
- * The IPTVnator PWA sends Stalker requests to AppConfig.BACKEND_URL/stalker.
+ * The K-IPTV PWA sends Stalker requests to AppConfig.BACKEND_URL/stalker.
  * Playwright tests redirect those calls to this endpoint using page.route(),
  * so no app code changes are required.
  */

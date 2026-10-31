@@ -3,23 +3,23 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { PortalEmptyStateComponent } from '@iptvnator/portal/shared/ui';
-import type { PlaybackFallbackRequest } from '@iptvnator/playback/util';
+import { PortalEmptyStateComponent } from '@kiptv/portal/shared/ui';
+import type { PlaybackFallbackRequest } from '@kiptv/playback/util';
 import {
     LIVE_EPG_PANEL_STATE_STORAGE_KEY,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     ACTIVE_EPG_FALLBACK_SIZE,
     StalkerStore,
-} from '@iptvnator/portal/stalker/data-access';
-import { EpgListViewComponent, EpgTimelineComponent } from '@iptvnator/ui/epg';
-import { AudioPlayerComponent } from '@iptvnator/ui/playback';
+} from '@kiptv/portal/stalker/data-access';
+import { EpgListViewComponent, EpgTimelineComponent } from '@kiptv/ui/epg';
+import { AudioPlayerComponent } from '@kiptv/ui/playback';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import {
     ChannelListItemComponent,
     ResizableDirective,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import { MockPipe } from 'ng-mocks';
 import { of } from 'rxjs';
 import {
@@ -27,16 +27,16 @@ import {
     PlaylistsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     ElectronBridgeApi,
     EpgItem,
     EpgProgram,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { MatDialog } from '@angular/material/dialog';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
-import { WebPlayerViewComponent } from '@iptvnator/ui/playback';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
+import { WebPlayerViewComponent } from '@kiptv/ui/playback';
 import { StalkerLiveStreamLayoutComponent } from './stalker-live-stream-layout.component';
 import {
     StubAudioPlayerComponent,

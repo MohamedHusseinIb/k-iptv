@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 
 export enum SortBy {
     DATE_ADDED = 'date',
@@ -29,7 +29,7 @@ export interface SortOptions {
 
 const SORT_BY_VALUES = new Set<string>(Object.values(SortBy));
 
-const SORT_OPTIONS_STORAGE_KEY = 'iptvnator-sort-options';
+const SORT_OPTIONS_STORAGE_KEY = 'kiptv-sort-options';
 
 function updatedAt(playlist: PlaylistMeta): number {
     const time = playlist.updateDate ?? new Date(playlist.importDate).getTime();

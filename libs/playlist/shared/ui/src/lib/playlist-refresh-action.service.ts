@@ -2,7 +2,7 @@ import { inject, Injectable, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DialogService } from '@iptvnator/ui/components';
+import { DialogService } from '@kiptv/ui/components';
 import {
     DataService,
     DatabaseService,
@@ -12,16 +12,16 @@ import {
     RuntimeCapabilitiesService,
     SettingsStore,
     SourceActivityService,
-} from '@iptvnator/services';
-import { ChannelActions, PlaylistActions } from '@iptvnator/m3u-state';
+} from '@kiptv/services';
+import { ChannelActions, PlaylistActions } from '@kiptv/m3u-state';
 import {
     ELECTRON_BRIDGE_SECURITY_ERROR_CODES,
     normalizeHost,
     parseSecurityPolicyError,
     PLAYLIST_UPDATE,
     PlaylistMeta,
-} from '@iptvnator/shared/interfaces';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
+} from '@kiptv/shared/interfaces';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
 import {
     XtreamRefreshFlowService,
     type XtreamRefreshProgressReporter,

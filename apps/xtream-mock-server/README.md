@@ -32,13 +32,13 @@ address. Use a dedicated port; do not reuse the normal E2E server on `3211`.
 ```bash
 HOST=127.0.0.1 \
 PORT=3221 \
-IPTVNATOR_XTREAM_MOCK_CONTROL=1 \
-IPTVNATOR_XTREAM_MOCK_CONTROL_TOKEN=local-benchmark-token \
+KIPTV_XTREAM_MOCK_CONTROL=1 \
+KIPTV_XTREAM_MOCK_CONTROL_TOKEN=local-benchmark-token \
 pnpm nx run xtream-mock-server:serve
 ```
 
 When enabled, every `/__control/*` request requires the exact
-`x-iptvnator-performance-token` header, including `OPTIONS` preflight
+`x-kiptv-performance-token` header, including `OPTIONS` preflight
 requests. The server refuses non-loopback binds and an empty token. The control
 routes do not exist when the flag is absent or is any value other than `1`.
 The Nx serve targets preserve an explicit shell `PORT`; when it is omitted, the
@@ -51,7 +51,7 @@ Prepare the fixed synthetic fixture before starting a capture:
 ```bash
 curl -X POST http://127.0.0.1:3221/__control/prepare \
   -H 'content-type: application/json' \
-  -H 'x-iptvnator-performance-token: local-benchmark-token' \
+  -H 'x-kiptv-performance-token: local-benchmark-token' \
   -d '{"scenario":"performance-100k"}'
 ```
 
@@ -164,7 +164,7 @@ needs — the same movie present in two different playlists.
 
 ### PWA CORS Proxy Endpoint
 
-IPTVnator's PWA routes Xtream calls through a backend proxy:
+K-IPTV's PWA routes Xtream calls through a backend proxy:
 
 ```
 GET /xtream?url=<serverUrl>&action=<action>&username=<u>&password=<p>

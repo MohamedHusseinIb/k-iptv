@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
-import { DialogService } from '@iptvnator/ui/components';
+import { DialogService } from '@kiptv/ui/components';
 import {
     DataService,
     DatabaseService,
@@ -15,8 +15,8 @@ import {
     RuntimeCapabilitiesService,
     SettingsStore,
     SourceActivityService,
-} from '@iptvnator/services';
-import { ChannelActions, PlaylistActions } from '@iptvnator/m3u-state';
+} from '@kiptv/services';
+import { ChannelActions, PlaylistActions } from '@kiptv/m3u-state';
 import {
     CONNECTIVITY_GUARD_RESET,
     ELECTRON_BRIDGE_SECURITY_ERROR_CODES,
@@ -24,12 +24,12 @@ import {
     Playlist,
     PlaylistMeta,
     SECURITY_ERROR_PREFIX,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     RENDERER_PERFORMANCE_PHASE_HOOK_KEY,
     type RendererPerformancePhaseEvent,
-} from '@iptvnator/shared/logging';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
+} from '@kiptv/shared/logging';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
 import { PlaylistRefreshActionService } from './playlist-refresh-action.service';
 
 const performanceHookSymbol = Symbol.for(RENDERER_PERFORMANCE_PHASE_HOOK_KEY);
@@ -328,7 +328,7 @@ describe('PlaylistRefreshActionService', () => {
             username: undefined,
             password: undefined,
             url: 'https://example.com/playlist.m3u',
-            userAgent: 'IPTVnator-Test/1.0',
+            userAgent: 'K-IPTV-Test/1.0',
         });
 
         service.refresh(playlist);
@@ -337,7 +337,7 @@ describe('PlaylistRefreshActionService', () => {
             id: 'playlist-url',
             title: 'URL playlist',
             url: 'https://example.com/playlist.m3u',
-            userAgent: 'IPTVnator-Test/1.0',
+            userAgent: 'K-IPTV-Test/1.0',
         });
         expect(playlistRefreshService.refreshPlaylist).not.toHaveBeenCalled();
         // Busy, and held for removal and other refreshes, until it answers.
@@ -396,7 +396,7 @@ describe('PlaylistRefreshActionService', () => {
             username: undefined,
             password: undefined,
             url: 'https://playlist.local/list.m3u',
-            userAgent: 'IPTVnator-Test/1.0',
+            userAgent: 'K-IPTV-Test/1.0',
         });
         playlistRefreshService.refreshPlaylist.mockResolvedValue({
             _id: playlist._id,
@@ -409,7 +409,7 @@ describe('PlaylistRefreshActionService', () => {
         expect(playlistRefreshService.refreshPlaylist).toHaveBeenCalledWith(
             expect.objectContaining({
                 url: 'https://playlist.local/list.m3u',
-                userAgent: 'IPTVnator-Test/1.0',
+                userAgent: 'K-IPTV-Test/1.0',
                 trustedInsecureTlsHosts: ['playlist.local'],
             })
         );

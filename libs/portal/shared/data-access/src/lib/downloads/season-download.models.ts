@@ -1,6 +1,6 @@
-import type { DownloadStartInput } from '@iptvnator/services';
-import type { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
-import type { EpisodeDownloadIdentity } from '@iptvnator/portal/shared/util';
+import type { DownloadStartInput } from '@kiptv/services';
+import type { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
+import type { EpisodeDownloadIdentity } from '@kiptv/portal/shared/util';
 
 export const EPISODE_DOWNLOAD_SUBMISSIONS = {
     Added: 'added',

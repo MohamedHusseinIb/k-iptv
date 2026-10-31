@@ -6,21 +6,21 @@ import {
     shortCountryList,
     shortCountryName,
     type RemainingTimeLabel,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import type {
     NormalizedVodMeta,
     TmdbCountryFacet,
     TmdbEnrichedCastMember,
     TmdbGenreFacet,
-} from '@iptvnator/shared/interfaces';
-import type { CrossPortalSimilarItem } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import type { CrossPortalSimilarItem } from '@kiptv/services';
 import {
     castMembersFromNames,
     splitPeopleNames,
     type DetailActionButtonState,
     type SimilarRailItem,
     type VodMoreMenuSection,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 /** Pure view-model helpers of the shared VOD details page. */
 

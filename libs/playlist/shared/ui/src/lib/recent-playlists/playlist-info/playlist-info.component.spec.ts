@@ -4,15 +4,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { of, Subject } from 'rxjs';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
-import { PlaylistActions } from '@iptvnator/m3u-state';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
+import { PlaylistActions } from '@kiptv/m3u-state';
 import {
     DatabaseService,
     PlaylistsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
-import { Playlist, PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { Playlist, PlaylistMeta } from '@kiptv/shared/interfaces';
 import { PlaylistInfoComponent } from './playlist-info.component';
 import {
     STALKER_PLAYLIST_CONNECTION_EDITOR,

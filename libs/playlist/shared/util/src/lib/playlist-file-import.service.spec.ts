@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
-import { PlaylistActions } from '@iptvnator/m3u-state';
-import { Playlist } from '@iptvnator/shared/interfaces';
+import { PlaylistActions } from '@kiptv/m3u-state';
+import { Playlist } from '@kiptv/shared/interfaces';
 import { PlaylistFileImportService } from './playlist-file-import.service';
 
 describe('PlaylistFileImportService', () => {

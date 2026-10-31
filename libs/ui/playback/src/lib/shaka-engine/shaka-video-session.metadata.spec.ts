@@ -1,7 +1,7 @@
 import {
     InlinePlaybackPlayer,
     type PlaybackDiagnostic,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import {
     createFakeShakaEnvironment,
     flushShakaMicrotasks as flush,

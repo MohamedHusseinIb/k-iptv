@@ -72,7 +72,7 @@ describe('Xtream performance control request boundary', () => {
         });
         const state = await requestJson(running.origin, '/__control/state', {
             headers: {
-                'x-iptvnator-performance-token': TOKEN,
+                'x-kiptv-performance-token': TOKEN,
             },
         });
 
@@ -120,10 +120,10 @@ function controlOptions(
         headers: {
             origin: ORIGIN,
             'access-control-request-method': 'GET',
-            'access-control-request-headers': 'x-iptvnator-performance-token',
+            'access-control-request-headers': 'x-kiptv-performance-token',
             ...(token === undefined
                 ? {}
-                : { 'x-iptvnator-performance-token': token }),
+                : { 'x-kiptv-performance-token': token }),
         },
     });
 }

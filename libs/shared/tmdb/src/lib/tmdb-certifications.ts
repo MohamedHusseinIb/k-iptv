@@ -1,5 +1,5 @@
-import { normalizeAgeRatingCountry, readCertificationValue } from '@iptvnator/shared/interfaces/age-rating';
-import { type ContentCertification, type TmdbMediaType } from '@iptvnator/shared/interfaces';
+import { normalizeAgeRatingCountry, readCertificationValue } from '@kiptv/shared/interfaces/age-rating';
+import { type ContentCertification, type TmdbMediaType } from '@kiptv/shared/interfaces';
 import type {
     TmdbDetails,
     TmdbMovieDetails,

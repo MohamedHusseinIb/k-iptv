@@ -1,4 +1,4 @@
-import { extractTmdbCertifications } from '@iptvnator/shared/tmdb/certifications';
+import { extractTmdbCertifications } from '@kiptv/shared/tmdb/certifications';
 
 import {
     normalizeSeriesStatus,
@@ -9,7 +9,7 @@ import {
     TmdbRecommendation,
     XtreamSerieInfo,
     XtreamVodInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { tmdbBackdropUrl, tmdbPosterUrl } from './tmdb-config';
 import {
     castNames,

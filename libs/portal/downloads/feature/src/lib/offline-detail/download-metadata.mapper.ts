@@ -2,16 +2,16 @@ import {
     mergeSerieInfoWithTmdb,
     mergeStalkerInfoWithTmdb,
     mergeVodInfoWithTmdb,
-} from '@iptvnator/services/tmdb-merge';
+} from '@kiptv/services/tmdb-merge';
 import {
     createMovieDownloadSnapshot,
     createSeriesEpisodeDownloadSnapshot,
-} from '@iptvnator/portal/shared/util';
-import { type TmdbMovieDetails, type TmdbTvDetails } from '@iptvnator/services';
+} from '@kiptv/portal/shared/util';
+import { type TmdbMovieDetails, type TmdbTvDetails } from '@kiptv/services';
 import type {
     DownloadMetadataPerson,
     DownloadMetadataSnapshot,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     movieSeed,
     seriesSeed,

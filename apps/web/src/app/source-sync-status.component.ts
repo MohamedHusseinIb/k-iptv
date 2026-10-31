@@ -4,7 +4,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import {
     sourceConnection,
     sourceConnectionReadFailed,
-} from '@iptvnator/services/source-sync/connection';
+} from '@kiptv/services/source-sync/connection';
 import { SourceSyncStatusViewComponent } from './source-sync-status-view.component';
 
 /** Keep server controls and Material off the standalone startup path. */

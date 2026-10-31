@@ -1,4 +1,4 @@
-import type { EmbeddedMpvSession } from '@iptvnator/shared/interfaces';
+import type { EmbeddedMpvSession } from '@kiptv/shared/interfaces';
 import { buildChapterTimelineSegments } from '../player-controls/chapter-timeline-segments';
 import type { PlayerTimelineSegment } from '../player-controls/player-controls.model';
 

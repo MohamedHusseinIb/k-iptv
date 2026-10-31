@@ -1,5 +1,5 @@
 {
-    "name": "@iptvnator/shared/interfaces",
+    "name": "@kiptv/shared/interfaces",
     "version": "0.0.1",
     "private": true,
     "type": "commonjs",

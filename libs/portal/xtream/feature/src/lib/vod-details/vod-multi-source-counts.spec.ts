@@ -1,5 +1,5 @@
 import { signal } from '@angular/core';
-import type { VodSourceDescriptor } from '@iptvnator/shared/interfaces';
+import type { VodSourceDescriptor } from '@kiptv/shared/interfaces';
 import { createVodSourceCounts } from './vod-multi-source-counts';
 
 function source(

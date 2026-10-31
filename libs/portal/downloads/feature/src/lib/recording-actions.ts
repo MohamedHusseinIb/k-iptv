@@ -1,4 +1,4 @@
-import type { RecordingItem } from '@iptvnator/services';
+import type { RecordingItem } from '@kiptv/services';
 
 export type RecordingItemActionType =
     | 'open-detail'

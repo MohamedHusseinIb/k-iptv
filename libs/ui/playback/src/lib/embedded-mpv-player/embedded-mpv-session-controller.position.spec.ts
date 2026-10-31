@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import {
     EmbeddedMpvSession,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { TranslateModule } from '@ngx-translate/core';
 import { EmbeddedMpvSessionController } from './embedded-mpv-session-controller';
 

@@ -1,4 +1,4 @@
-import type { VodSourceCandidate } from '@iptvnator/shared/interfaces';
+import type { VodSourceCandidate } from '@kiptv/shared/interfaces';
 import { VodMultiSourceController } from './vod-multi-source.controller';
 
 function source(

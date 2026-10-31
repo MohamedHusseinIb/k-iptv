@@ -1,4 +1,4 @@
-import type { DownloadMetadataSnapshot } from '@iptvnator/shared/interfaces';
+import type { DownloadMetadataSnapshot } from '@kiptv/shared/interfaces';
 
 interface DownloadMetadataHost {
     isAvailable(): boolean;

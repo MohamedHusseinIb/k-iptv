@@ -5,16 +5,16 @@ import {
     withMethods,
     withState,
 } from '@ngrx/signals';
-import { GlobalSearchResult } from '@iptvnator/shared/interfaces';
+import { GlobalSearchResult } from '@kiptv/shared/interfaces';
 import {
     measureRendererPerformancePhase,
     RENDERER_PERFORMANCE_PHASE,
-} from '@iptvnator/shared/logging';
+} from '@kiptv/shared/logging';
 import {
     XTREAM_DATA_SOURCE,
     XtreamContentItem,
 } from '../../data-sources/xtream-data-source.interface';
-import { createLogger } from '@iptvnator/portal/shared/util/logger';
+import { createLogger } from '@kiptv/portal/shared/util/logger';
 import { XtreamSearchResultItem } from '../../xtream-state';
 
 /**

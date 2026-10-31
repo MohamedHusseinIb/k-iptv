@@ -4,19 +4,19 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { MockPipe } from 'ng-mocks';
-import { SeasonContainerComponent } from '@iptvnator/ui/components';
+import { SeasonContainerComponent } from '@kiptv/ui/components';
 import {
     PORTAL_EXTERNAL_PLAYBACK,
     PORTAL_PLAYBACK_POSITIONS,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     StalkerStore,
     StalkerEpisodeResolver,
     StalkerVodSource,
-} from '@iptvnator/portal/stalker/data-access';
-import { PortalInlinePlayerComponent } from '@iptvnator/ui/playback';
-import { TmdbEnrichmentService } from '@iptvnator/services';
+} from '@kiptv/portal/stalker/data-access';
+import { PortalInlinePlayerComponent } from '@kiptv/ui/playback';
+import { TmdbEnrichmentService } from '@kiptv/services';
 import { EMPTY, of } from 'rxjs';
 import { FavoritesButtonComponent } from '../stalker-favorites-button/stalker-favorites-button.component';
 import { StalkerSeriesViewComponent } from './stalker-series-view.component';

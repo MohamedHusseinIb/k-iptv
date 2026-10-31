@@ -13,7 +13,7 @@ import {
     ParentalLockPlaylistLocks,
     ParentalLockStalkerCategoryType,
     ParentalLockXtreamCategoryType,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { RuntimeCapabilitiesService } from '../runtime-capabilities.service';
 import { SettingsStore } from '../settings-store.service';
 import { ParentalLockIdleTimer } from './parental-lock-idle-timer';

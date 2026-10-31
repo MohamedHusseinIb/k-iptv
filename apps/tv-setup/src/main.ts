@@ -1,5 +1,5 @@
 import { settingsForm } from './settings-form';
-import type { PhoneSettingsDefaults } from '@iptvnator/tv/util';
+import type { PhoneSettingsDefaults } from '@kiptv/tv/util';
 import './theme.css';
 /** Phone-only setup UI; the capability stays in this page’s memory. */
 export function phoneClient() {

@@ -16,9 +16,9 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
-import { normalizeDateLocale } from '@iptvnator/pipes';
-import { injectTranslationTick } from '@iptvnator/services';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { normalizeDateLocale } from '@kiptv/pipes';
+import { injectTranslationTick } from '@kiptv/services';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import {
     EpgDateNavigationDirection,

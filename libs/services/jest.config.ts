@@ -1,5 +1,5 @@
 export default {
-    displayName: '@iptvnator/services',
+    displayName: '@kiptv/services',
     preset: '../../jest.preset.js',
     setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
     coverageDirectory: '../../coverage/libs/services',

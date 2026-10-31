@@ -1,4 +1,4 @@
-import { MARKETING_LIVE_CHANNELS } from '@iptvnator/shared/marketing-fixtures';
+import { MARKETING_LIVE_CHANNELS } from '@kiptv/shared/marketing-fixtures';
 
 /**
  * `/demo/guide.xml`: an XMLTV guide for the marketing live channels, so the
@@ -18,7 +18,7 @@ export function renderDemoXmltv(origin: string, now = new Date()): string {
     const lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<!DOCTYPE tv SYSTEM "xmltv.dtd">',
-        '<tv generator-info-name="iptvnator-xtream-mock-server">',
+        '<tv generator-info-name="kiptv-xtream-mock-server">',
     ];
 
     for (const channel of channels) {
@@ -37,7 +37,7 @@ export function renderDemoXmltv(origin: string, now = new Date()): string {
             lines.push(
                 `  <programme start="${formatXmltvDate(start)}" stop="${formatXmltvDate(start + slotMs)}" channel="${escapeXml(channel.id)}">`,
                 `    <title>${escapeXml(title)}</title>`,
-                `    <desc>${escapeXml(`${title} on ${channel.name}, part of the fictional IPTVnator demo schedule.`)}</desc>`,
+                `    <desc>${escapeXml(`${title} on ${channel.name}, part of the fictional K-IPTV demo schedule.`)}</desc>`,
                 '  </programme>'
             );
         }

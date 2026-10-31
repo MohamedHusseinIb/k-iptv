@@ -1,4 +1,4 @@
-import { Channel } from '@iptvnator/shared/interfaces';
+import { Channel } from '@kiptv/shared/interfaces';
 import { getPlaybackMediaExtensionFromUrl } from './playback-media-extension.util';
 
 /**

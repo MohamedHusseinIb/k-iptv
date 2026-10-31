@@ -4,7 +4,7 @@
  * time it out again and reload forever: the reloaded page's probe waits as
  * long as requests do, once.
  */
-const SLOW_START_KEY = 'iptvnator-server:slow-start';
+const SLOW_START_KEY = 'kiptv-server:slow-start';
 
 export function markSlowStart(): void {
     try {

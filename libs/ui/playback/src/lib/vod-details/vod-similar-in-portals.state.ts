@@ -8,8 +8,8 @@ import {
 import type {
     CrossPortalSimilarItem,
     CrossPortalSimilarService,
-} from '@iptvnator/services';
-import type { NormalizedVodMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import type { NormalizedVodMeta } from '@kiptv/shared/interfaces';
 
 /**
  * TMDB recommendations found in the user's OTHER portals (batched DB

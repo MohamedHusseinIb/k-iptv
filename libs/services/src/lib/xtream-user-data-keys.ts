@@ -16,7 +16,7 @@ export const XTREAM_USER_DATA_KEYS = {
 } as const;
 
 /** Internal metadata is outside playlist arrays and never appears in backup manifests. */
-export const XTREAM_RESTORE_RECEIPTS = '__iptvnator_xtream_restore_receipts__';
+export const XTREAM_RESTORE_RECEIPTS = '__kiptv_xtream_restore_receipts__';
 
 /** Preserve atomic restore receipts when normalizers project only playlist lists. */
 export function writeXtreamUserDataMap(

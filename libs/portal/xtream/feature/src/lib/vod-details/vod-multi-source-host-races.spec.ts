@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import type { VodSourceCandidate } from '@iptvnator/shared/interfaces';
+import type { VodSourceCandidate } from '@kiptv/shared/interfaces';
 import {
     ALT_THREE,
     ALT_TWO,

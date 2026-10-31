@@ -2,7 +2,7 @@
 import 'zone.js';
 import 'zone.js/testing';
 import { setupZonelessTestEnv } from 'jest-preset-angular/setup-env/zoneless';
-import { installDuplicateVideoJsQualityLevelsWarnFilter } from '@iptvnator/shared/testing';
+import { installDuplicateVideoJsQualityLevelsWarnFilter } from '@kiptv/shared/testing';
 
 installDuplicateVideoJsQualityLevelsWarnFilter();
 

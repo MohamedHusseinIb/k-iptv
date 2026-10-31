@@ -1,5 +1,5 @@
 export default {
-  displayName: '@iptvnator/ui/shared-portals',
+  displayName: '@kiptv/ui/shared-portals',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../coverage/libs/ui/shared-portals',

@@ -10,11 +10,11 @@ import { By } from '@angular/platform-browser';
 import { MatIcon } from '@angular/material/icon';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
-import { LiveLayoutSidebarStateService } from '@iptvnator/portal/shared/util';
-import { StalkerStore } from '@iptvnator/portal/stalker/data-access';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+import { LiveLayoutSidebarStateService } from '@kiptv/portal/shared/util';
+import { StalkerStore } from '@kiptv/portal/stalker/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import { WorkspaceShellContextSidebarComponent } from './workspace-shell-context-sidebar.component';
-import { WorkspaceShellContextDrawerService } from '@iptvnator/workspace/shell/util';
+import { WorkspaceShellContextDrawerService } from '@kiptv/workspace/shell/util';
 
 @Directive({
     selector: '[appResizable]',

@@ -1,4 +1,4 @@
-import { VodDetailsItem } from '@iptvnator/shared/interfaces';
+import { VodDetailsItem } from '@kiptv/shared/interfaces';
 import { StalkerFavoriteItem } from './models';
 import {
     buildStalkerFavoritePayload,

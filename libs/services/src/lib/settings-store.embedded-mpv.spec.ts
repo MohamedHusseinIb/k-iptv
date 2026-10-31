@@ -7,7 +7,7 @@ import {
     Settings,
     STORE_KEY,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { EpgSourceSettingsService } from './epg-source-settings.service';
 import { SettingsStore } from './settings-store.service';
 

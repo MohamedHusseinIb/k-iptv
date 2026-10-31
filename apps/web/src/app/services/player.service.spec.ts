@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { MatDialog } from '@angular/material/dialog';
-import { DataService } from '@iptvnator/services';
+import { DataService } from '@kiptv/services';
 import {
     ExternalPlayerSession,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { SettingsStore } from './settings-store.service';
 import { PlayerService } from './player.service';
 
@@ -164,7 +164,7 @@ describe('PlayerService', () => {
             {
                 streamUrl: 'https://example.com/live.m3u8',
                 title: 'Example Live',
-                userAgent: 'IPTVnator Test',
+                userAgent: 'K-IPTV Test',
                 referer: 'https://referrer.example.com',
                 origin: 'https://origin.example.com',
             },
@@ -176,7 +176,7 @@ describe('PlayerService', () => {
             expect.objectContaining({
                 url: 'https://example.com/live.m3u8',
                 title: 'Example Live',
-                'user-agent': 'IPTVnator Test',
+                'user-agent': 'K-IPTV Test',
                 referer: 'https://referrer.example.com',
                 origin: 'https://origin.example.com',
             })

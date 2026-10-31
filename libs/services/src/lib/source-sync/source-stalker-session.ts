@@ -1,8 +1,8 @@
 import {
     isFullStalkerPortalPlaylist,
     type Playlist,
-} from '@iptvnator/shared/interfaces';
-import { stalkerSessionFingerprint } from '@iptvnator/shared/interfaces/stalker-session';
+} from '@kiptv/shared/interfaces';
+import { stalkerSessionFingerprint } from '@kiptv/shared/interfaces/stalker-session';
 
 /** Keep a confirmed local Edit session only for its accepted connection. */
 export function invalidateObsoleteSourceSession(next: Playlist): Playlist {

@@ -5,7 +5,7 @@ import {
     output,
     signal,
 } from '@angular/core';
-import type { SeasonEpisodeDownloadAdapter } from '@iptvnator/portal/shared/data-access';
+import type { SeasonEpisodeDownloadAdapter } from '@kiptv/portal/shared/data-access';
 
 /** Stand-ins for the heavy children of the series-details page in specs. */
 

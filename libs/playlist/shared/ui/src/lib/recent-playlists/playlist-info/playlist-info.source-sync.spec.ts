@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
 import {
     DatabaseService,
     PlaylistsService,
@@ -11,8 +11,8 @@ import {
     RuntimeCapabilitiesService,
     SettingsStore,
     XtreamConnectionTestService,
-} from '@iptvnator/services';
-import type { Playlist } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import { EMPTY, Subject, of } from 'rxjs';
 import { PlaylistInfoComponent } from './playlist-info.component';
 import { STALKER_PLAYLIST_CONNECTION_EDITOR } from './stalker-playlist-connection-editor.token';

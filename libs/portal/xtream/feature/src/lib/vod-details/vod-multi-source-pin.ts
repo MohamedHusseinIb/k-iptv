@@ -1,5 +1,5 @@
-import type { VodMultiSourceController } from '@iptvnator/portal/shared/data-access';
-import type { VodSourcePinService } from '@iptvnator/services';
+import type { VodMultiSourceController } from '@kiptv/portal/shared/data-access';
+import type { VodSourcePinService } from '@kiptv/services';
 import {
     buildVodSourceMatchKey,
     buildVodSourceMatchKeyCandidates,
@@ -7,7 +7,7 @@ import {
     type VodSourceCandidate,
     type VodSourceDescriptor,
     type VodSourcePin,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Reading and writing the per-movie pinned source.

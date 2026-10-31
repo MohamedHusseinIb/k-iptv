@@ -56,7 +56,7 @@ export async function postJson(
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-            'x-iptvnator-performance-token': token,
+            'x-kiptv-performance-token': token,
         },
         ...(body === undefined ? {} : { body: JSON.stringify(body) }),
     });

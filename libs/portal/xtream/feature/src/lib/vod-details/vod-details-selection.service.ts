@@ -1,18 +1,18 @@
 import { Injectable, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
-import { isProviderOnlyDetailState } from '@iptvnator/portal/shared/util';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
+import { isProviderOnlyDetailState } from '@kiptv/portal/shared/util';
 import {
     resolveXtreamVodPlaybackSource,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     getXtreamVodInfo,
     XtreamCategory,
     XtreamVodDetails,
     XtreamVodStream,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildXtreamVodFallbackViewModel,
     hasUsableXtreamVodMetadata,

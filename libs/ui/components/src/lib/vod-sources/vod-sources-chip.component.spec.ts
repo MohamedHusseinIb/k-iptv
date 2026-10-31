@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { VodSourceDescriptor } from '@iptvnator/shared/interfaces';
+import { VodSourceDescriptor } from '@kiptv/shared/interfaces';
 import { VodSourcesChipComponent } from './vod-sources-chip.component';
 
 function createSource(

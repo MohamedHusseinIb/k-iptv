@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
-import { ServerMigrationService } from '@iptvnator/services/server-storage';
+import { ServerMigrationService } from '@kiptv/services/server-storage';
 import { ServerMigrationDialogComponent } from './server-migration-dialog.component';
 
 describe('ServerMigrationDialogComponent', () => {

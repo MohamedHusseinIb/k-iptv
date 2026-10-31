@@ -3,7 +3,7 @@ import {
     classifyNativePlaybackIssue,
     classifyVhsPlaybackIssue,
     createPlaybackSourceMetadata,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import {
     getVideoJsPlaybackCodecs,
     hasActiveVhsSourceHandler,

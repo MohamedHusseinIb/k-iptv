@@ -6,4 +6,4 @@
  * statically, which @nx/enforce-module-boundaries forbids for a library the
  * project also loads dynamically.
  */
-export { ExternalPlayerInfoDialogComponent } from '@iptvnator/ui/playback/external-player-info-dialog';
+export { ExternalPlayerInfoDialogComponent } from '@kiptv/ui/playback/external-player-info-dialog';

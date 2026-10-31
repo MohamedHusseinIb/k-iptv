@@ -1,7 +1,7 @@
 import type {
     PlaybackDiagnostic,
     PlaybackDrmSystem,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import type { PlaybackDiagnosticDetail } from './playback-diagnostic-view.util';
 
 const DRM_LABELS: Record<PlaybackDrmSystem, string> = {

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
-import { DataService } from '@iptvnator/services';
+import { DataService } from '@kiptv/services';
 import {
     CONNECTIVITY_GUARD_RESET,
     PlaylistMeta,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerItvCacheService } from './stalker-itv-cache.service';
 import { StalkerSessionService } from './stalker-session.service';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),

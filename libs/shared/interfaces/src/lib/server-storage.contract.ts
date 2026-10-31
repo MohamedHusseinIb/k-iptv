@@ -29,7 +29,7 @@ export const SERVER_PAYLOAD_FIELDS = ['playlist', 'items', 'header', 'sourceRawM
 
 export interface ServerInstanceInfo {
     readonly capabilities?: readonly string[];
-    readonly service: 'iptvnator';
+    readonly service: 'kiptv';
     readonly apiVersion: number;
     /** Stable per database; `null` without server storage. */
     readonly instanceId: string | null;
@@ -41,7 +41,7 @@ export interface ServerInstanceInfo {
  * `WWW-Authenticate` value of the access guard's 401. A provider error the
  * proxy passes on never carries it, so a client can tell the two apart.
  */
-export const SERVER_ACCESS_CHALLENGE = 'Bearer realm="iptvnator"';
+export const SERVER_ACCESS_CHALLENGE = 'Bearer realm="kiptv"';
 
 /**
  * Sent with every `PUT /v1/playlists/:id`: the document's ETag before that

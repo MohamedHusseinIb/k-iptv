@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import { PlaybackPositionRuntimeBridgeService } from './playback-position-runtime-bridge.service';
 
 @Injectable({

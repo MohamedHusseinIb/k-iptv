@@ -1,8 +1,8 @@
 import {
     PlaylistUpdateState,
     type SourceDefinition,
-} from '@iptvnator/shared/interfaces';
-import { applySourceDefinition } from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces';
+import { applySourceDefinition } from '@kiptv/shared/interfaces/source-definition';
 import type { DataService } from '../data.service';
 import { materializeSource } from './source-materializer';
 

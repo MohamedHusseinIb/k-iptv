@@ -1,4 +1,4 @@
-import type { SourceServerConnection } from '@iptvnator/shared/interfaces';
+import type { SourceServerConnection } from '@kiptv/shared/interfaces';
 import {
     CONNECTION_KEY,
     DISABLED_KEY,

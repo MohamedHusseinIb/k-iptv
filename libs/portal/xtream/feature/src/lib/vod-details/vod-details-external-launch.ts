@@ -2,7 +2,7 @@ import { signal } from '@angular/core';
 import type {
     ExternalPlayerSession,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { ExternalLaunchOwner } from './vod-details-external-launch-owner';
 
 interface OwnedExternalLaunchOptions {

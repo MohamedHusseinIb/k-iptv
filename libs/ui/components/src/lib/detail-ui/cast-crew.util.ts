@@ -1,4 +1,4 @@
-import type { TmdbEnrichedCastMember } from '@iptvnator/shared/interfaces';
+import type { TmdbEnrichedCastMember } from '@kiptv/shared/interfaces';
 
 /** One avatar of the "Cast & crew" row. */
 export interface CastCrewEntry {

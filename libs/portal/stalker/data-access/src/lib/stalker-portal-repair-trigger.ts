@@ -1,4 +1,4 @@
-import type { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import type { PlaylistMeta } from '@kiptv/shared/interfaces';
 import {
     getStalkerRequestErrorStatus,
     isStalkerAuthFailureMessage,

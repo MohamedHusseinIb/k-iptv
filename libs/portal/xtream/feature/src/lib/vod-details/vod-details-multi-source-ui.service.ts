@@ -1,8 +1,8 @@
 import { Injectable, Signal, computed, inject, signal } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { PORTAL_PLAYBACK_POSITIONS } from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { SettingsStore } from '@iptvnator/services';
+import { PORTAL_PLAYBACK_POSITIONS } from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { SettingsStore } from '@kiptv/services';
 import {
     PlaybackPositionData,
     PlayerContentInfo,
@@ -10,7 +10,7 @@ import {
     reportsPlaybackFailures,
     type VodSourceCandidate,
     type VodSourceDescriptor,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { TranslateService } from '@ngx-translate/core';
 import { VodDetailsPlaybackService } from './vod-details-playback.service';
 import type { VodResetTarget } from './vod-details-reset-target';

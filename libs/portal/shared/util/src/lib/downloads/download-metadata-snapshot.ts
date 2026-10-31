@@ -2,7 +2,7 @@ import type {
     DownloadEpisodeMetadata,
     DownloadMetadataPerson,
     DownloadMetadataSnapshot,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 const MAX_PEOPLE = 30;
 const MAX_GENRES = 20;

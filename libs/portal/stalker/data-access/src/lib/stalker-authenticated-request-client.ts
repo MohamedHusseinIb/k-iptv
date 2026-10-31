@@ -4,8 +4,8 @@ import {
     isFullStalkerPortalPlaylist,
     type Playlist,
     STALKER_REQUEST,
-} from '@iptvnator/shared/interfaces';
-import type { DataService } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import type { DataService } from '@kiptv/services';
 import { StalkerPortalError } from './stalker-portal-error';
 import { isStalkerAuthorizationFailure } from './stalker-response-classification';
 import { stalkerSessionFingerprint } from './stalker-session-store';

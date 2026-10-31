@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { signalStore, withState } from '@ngrx/signals';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
 import {
     CATALOG_INITIAL_WINDOW,
     CATALOG_WINDOW_CHUNK,

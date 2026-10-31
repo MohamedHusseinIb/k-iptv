@@ -3,13 +3,13 @@ import {
     PortalStatus,
     PortalStatusService,
     RuntimeCapabilitiesService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     PlaylistMeta,
     SourceHealthReason,
     sourceHealthType,
     SourceStatus,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { sourceHealthFingerprint } from './source-health-identity';
 import { SourceHealthHistoryService } from './source-health-history.service';
 import { SourceHealthService } from './source-health.service';

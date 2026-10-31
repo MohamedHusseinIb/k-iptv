@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 import { TranslateService } from '@ngx-translate/core';
-import { DataService, ParentalLockService } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { DataService, ParentalLockService } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { StalkerItvCacheService } from '../../stalker-itv-cache.service';
 import { StalkerSessionService } from '../../stalker-session.service';
 import { StalkerContentType } from '../stalker-store.contracts';
 import { withStalkerContent } from './with-stalker-content.feature';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({ warn: jest.fn(), error: jest.fn() }),
 }));
 

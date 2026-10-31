@@ -1,5 +1,5 @@
 import type { Signal } from '@angular/core';
-import type { PlayerSubtitleStyle } from '@iptvnator/shared/interfaces';
+import type { PlayerSubtitleStyle } from '@kiptv/shared/interfaces';
 import type { PlayerStreamStatsSource } from './player-stream-stats.model';
 
 export type PlayerStatus =
@@ -29,7 +29,7 @@ export interface PlayerControlsCapabilities {
     streamStats: boolean;
 }
 
-// Canonical shape lives in @iptvnator/shared/interfaces so the Electron main
+// Canonical shape lives in @kiptv/shared/interfaces so the Electron main
 // process validates IPC payloads against the identical contract.
 export type { PlayerSubtitleStyle };
 

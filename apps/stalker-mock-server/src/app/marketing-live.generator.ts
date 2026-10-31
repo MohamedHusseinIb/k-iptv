@@ -4,7 +4,7 @@ import {
     MARKETING_LOGO_ASSET_PATH,
     MarketingLiveCategoryKey,
     marketingSlug,
-} from '@iptvnator/shared/marketing-fixtures';
+} from '@kiptv/shared/marketing-fixtures';
 import type { RawCategory, RawChannel, RawEpgProgram } from './data-generator.js';
 
 /**
@@ -82,7 +82,7 @@ export function generateMarketingEpg(
             stop: stop.toISOString(),
             start_timestamp: Math.floor(start.getTime() / 1000),
             stop_timestamp: Math.floor(stop.getTime() / 1000),
-            descr: `${title} on ${channelName}, part of the fictional IPTVnator demo schedule.`,
+            descr: `${title} on ${channelName}, part of the fictional K-IPTV demo schedule.`,
             category: 'Fictional',
         };
     });

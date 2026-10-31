@@ -3,7 +3,7 @@ import { parse } from 'iptv-playlist-parser';
 /**
  * Contract tests for the 4gray/iptv-playlist-parser fork (jest maps the
  * module to the real parser source via test-stubs/iptv-playlist-parser.mjs).
- * Guards the fork-specific behaviors iptvnator depends on:
+ * Guards the fork-specific behaviors kiptv depends on:
  * - no URL length/format validation (issue #1189: Pluto JWT URLs > 2084 chars)
  * - '#' comments never become URLs and never shift the item index
  * - the fork-only `radio` attribute survives upstream syncs

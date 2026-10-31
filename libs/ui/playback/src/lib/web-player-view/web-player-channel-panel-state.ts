@@ -1,5 +1,5 @@
 import { linkedSignal } from '@angular/core';
-import type { EmbeddedMpvSupport } from '@iptvnator/shared/interfaces';
+import type { EmbeddedMpvSupport } from '@kiptv/shared/interfaces';
 
 /**
  * The fullscreen channel panel is DOM content over the video. Embedded

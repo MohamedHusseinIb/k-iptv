@@ -7,13 +7,13 @@ import {
 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { ChannelActions, selectActive } from '@iptvnator/m3u-state';
+import { ChannelActions, selectActive } from '@kiptv/m3u-state';
 import {
     XTREAM_DATA_SOURCE,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { ParentalLockService } from '@iptvnator/services';
-import { toParentalLockXtreamCategoryType } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/xtream/data-access';
+import { ParentalLockService } from '@kiptv/services';
+import { toParentalLockXtreamCategoryType } from '@kiptv/shared/interfaces';
 import { PlaybackKeepAwakeService } from './playback-keep-awake.service';
 
 const XTREAM_ROUTE =

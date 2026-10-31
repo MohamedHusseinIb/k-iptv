@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DialogService } from '@iptvnator/ui/components';
+import { DialogService } from '@kiptv/ui/components';
 import {
     DataService,
     DatabaseService,
@@ -13,13 +13,13 @@ import {
     resetHostConnectivityGuard,
     SourceActivityService,
     XtreamPendingRestoreService,
-} from '@iptvnator/services';
-import { PlaylistActions } from '@iptvnator/m3u-state';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { PlaylistActions } from '@kiptv/m3u-state';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import {
     measureRendererPerformancePhase,
     RENDERER_PERFORMANCE_PHASE,
-} from '@iptvnator/shared/logging';
+} from '@kiptv/shared/logging';
 
 /** Identifies one confirmed run, so a reporter can scope its own state to it. */
 export interface XtreamRefreshRun {

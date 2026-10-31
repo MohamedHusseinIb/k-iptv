@@ -1,13 +1,13 @@
 import {
     providerVodMetadataOf,
     type ProviderVodMetadata,
-} from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/portal/shared/data-access';
 import {
     extractYear,
     releaseTagYear,
     type XtreamVodInfo,
     type XtreamVodStream,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Who the movie on screen is, in the portal-agnostic terms multi-source needs.

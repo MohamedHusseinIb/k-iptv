@@ -1,4 +1,4 @@
-import { PortalRailSection } from '@iptvnator/portal/shared/util';
+import { PortalRailSection } from '@kiptv/portal/shared/util';
 
 /**
  * The one debounce between a keystroke in the header search box and the

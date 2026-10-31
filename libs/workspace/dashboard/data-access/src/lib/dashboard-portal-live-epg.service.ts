@@ -2,13 +2,13 @@ import { inject, Injectable, OnDestroy, signal } from '@angular/core';
 import {
     epgProviderClockMs,
     type EpgProgram,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     EpgSourceSettingsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
-import { StreamResolverService } from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/services';
+import { StreamResolverService } from '@kiptv/portal/shared/data-access';
 import {
     dashboardPortalLiveEpgProgramStopMs,
     resolveDashboardPortalLiveEpgProgram,

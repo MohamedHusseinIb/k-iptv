@@ -2,14 +2,14 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
-import { selectAllPlaylistsMeta } from '@iptvnator/m3u-state';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
+import { selectAllPlaylistsMeta } from '@kiptv/m3u-state';
 import {
     EmbeddedMpvSupport,
     PlaylistMeta,
     Theme,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { MockStore } from '@ngrx/store/testing';
 import { SettingsComponent } from './settings.component';
 import {

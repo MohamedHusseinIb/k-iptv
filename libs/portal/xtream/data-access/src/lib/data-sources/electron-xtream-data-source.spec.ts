@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { ParentalLockService } from '@iptvnator/services';
+import { ParentalLockService } from '@kiptv/services';
 import {
     credentials,
     ElectronXtreamDataSourceHarness,

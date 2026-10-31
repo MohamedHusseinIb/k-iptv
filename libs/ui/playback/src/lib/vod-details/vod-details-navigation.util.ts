@@ -1,8 +1,8 @@
-import type { CrossPortalSimilarItem } from '@iptvnator/services';
+import type { CrossPortalSimilarItem } from '@kiptv/services';
 import type {
     TmdbEnrichedCastMember,
     VodDetailsItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Pure helpers resolving where the VOD details page's extras rows (cast &

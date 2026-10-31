@@ -2,7 +2,7 @@ import type { WritableSignal } from '@angular/core';
 import {
     getVodSeriesSeasonKey,
     type VodSeriesSeasonVm,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 
 /** What the loader needs from the page that shows the seasons. */
 export interface StalkerVodSeasonEpisodeLoaderHost {

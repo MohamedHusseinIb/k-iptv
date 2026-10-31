@@ -1,7 +1,7 @@
 import type {
     Playlist,
     SourceServerResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { prepareSourceInventory } from './source-inventory-reconciliation';
 import type { SyncedPlaylistStore } from './synced-playlist-store';
 

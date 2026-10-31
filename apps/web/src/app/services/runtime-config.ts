@@ -1,12 +1,12 @@
 import { AppConfig } from '../../environments/environment';
-import { sourceConnection } from '@iptvnator/services/source-sync/connection';
+import { sourceConnection } from '@kiptv/services/source-sync/connection';
 
-export interface IptvnatorRuntimeConfig {
+export interface KiptvRuntimeConfig {
     readonly BACKEND_URL?: string;
 }
 
 export function resolveBackendUrl(
-    runtimeConfig: IptvnatorRuntimeConfig | undefined,
+    runtimeConfig: KiptvRuntimeConfig | undefined,
     fallbackUrl: string
 ): string {
     const runtimeUrl = runtimeConfig?.BACKEND_URL?.trim();
@@ -16,7 +16,7 @@ export function resolveBackendUrl(
 export function getRuntimeBackendUrl(): string {
     if (sourceConnection() && !globalThis.window?.electron) return sourceConnection()!.apiUrl;
     return resolveBackendUrl(
-        globalThis.window?.__IPTVNATOR_CONFIG__,
+        globalThis.window?.__KIPTV_CONFIG__,
         AppConfig.BACKEND_URL
     );
 }

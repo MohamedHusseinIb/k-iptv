@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import {
     PARENTAL_LOCK_STORE_KEY,
     PARENTAL_LOCK_PIN_KEY,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { DatabaseService } from '../database-electron.service';
 import { RuntimeCapabilitiesService } from '../runtime-capabilities.service';
 import { ParentalLockStorageService } from './parental-lock-storage';
@@ -40,7 +40,7 @@ describe('ParentalLockStorageService.readLocks', () => {
         await expect(service.readLocks()).resolves.toEqual({});
     });
     it('adopts the previous browser PIN and locks before reading a source profile', async () => {
-        mockProfilePrefix = 'iptvnator-server:nas:';
+        mockProfilePrefix = 'kiptv-server:nas:';
         const locks = { p: { xtream: [], stalker: [], m3u: ['Adult'] } };
         localStorage.setItem(PARENTAL_LOCK_PIN_KEY, 'existing-pin-hash');
         localStorage.setItem(PARENTAL_LOCK_STORE_KEY, JSON.stringify(locks));
@@ -58,7 +58,7 @@ describe('ParentalLockStorageService.readLocks', () => {
         );
     });
     it('keeps newer profile protection and fails closed on a partial migration', async () => {
-        mockProfilePrefix = 'iptvnator-server:nas:';
+        mockProfilePrefix = 'kiptv-server:nas:';
         localStorage.setItem(PARENTAL_LOCK_PIN_KEY, 'old');
         localStorage.setItem(
             `${mockProfilePrefix}${PARENTAL_LOCK_PIN_KEY}`,

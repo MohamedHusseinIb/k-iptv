@@ -1,4 +1,4 @@
-import type { ChannelDrm } from '@iptvnator/shared/interfaces';
+import type { ChannelDrm } from '@kiptv/shared/interfaces';
 import {
     ShakaPlaybackDisposition as ShakaDisposition,
     asShakaError,
@@ -11,7 +11,7 @@ import {
     type InlinePlaybackPlayer,
     type PlaybackDiagnostic,
     type PlaybackSourceMetadata,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import { ShakaTextTrackSuppression } from './shaka-text-track-suppression';
 import { ShakaManifestMetadata } from './shaka-manifest-metadata';
 import {

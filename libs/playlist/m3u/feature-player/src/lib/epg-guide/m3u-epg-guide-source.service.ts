@@ -1,19 +1,19 @@
 import { computed, inject, Injectable, Signal, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
-import { resolveChannelEpgLookupKey } from '@iptvnator/m3u-state';
-import { SettingsStore, injectTranslationTick } from '@iptvnator/services';
-import { applyChannelNameStrip } from '@iptvnator/shared/m3u-utils';
-import { Channel } from '@iptvnator/shared/interfaces';
-import type { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
+import { resolveChannelEpgLookupKey } from '@kiptv/m3u-state';
+import { SettingsStore, injectTranslationTick } from '@kiptv/services';
+import { applyChannelNameStrip } from '@kiptv/shared/m3u-utils';
+import { Channel } from '@kiptv/shared/interfaces';
+import type { EpgProgram } from '@kiptv/shared/interfaces';
 import {
     EpgGuideChannel,
     EpgGuideScope,
     EpgGuideSearchHit,
     EpgGuideSource,
     EpgGuideWindow,
-} from '@iptvnator/ui/epg';
+} from '@kiptv/ui/epg';
 import { createM3uChannelPlaybackRequest } from '../video-player/m3u-channel-playback-actions';
 import { isSameChannelEntry } from './channel-entry-identity.util';
 

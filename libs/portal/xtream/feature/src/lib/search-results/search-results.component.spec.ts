@@ -2,16 +2,16 @@ import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
 import { BehaviorSubject, of } from 'rxjs';
-import { DatabaseService } from '@iptvnator/services';
+import { DatabaseService } from '@kiptv/services';
 import { SearchResultsComponent } from './search-results.component';
 import {
     SearchFilters,
     XtreamContentItem,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { GlobalSearchResult } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/xtream/data-access';
+import { GlobalSearchResult } from '@kiptv/shared/interfaces';
 
-jest.mock('@iptvnator/portal/shared/ui', () => ({
+jest.mock('@kiptv/portal/shared/ui', () => ({
     ContentCardComponent: class {},
     SearchLayoutComponent: class {},
 }));

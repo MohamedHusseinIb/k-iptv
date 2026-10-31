@@ -29,7 +29,7 @@ function makeProjectFixture({
     const ownsWorkspace = workspaceRoot === undefined;
     const fixtureRoot =
         workspaceRoot ??
-        mkdtempSync(path.join(tmpdir(), 'iptvnator-coverage-integrity-'));
+        mkdtempSync(path.join(tmpdir(), 'kiptv-coverage-integrity-'));
     if (ownsWorkspace) {
         temporaryRoots.push(fixtureRoot);
     }

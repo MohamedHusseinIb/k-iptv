@@ -2,7 +2,7 @@ import { getExtensionFromUrl } from './playlist.utils';
 
 /**
  * Normalized media-extension detection for playback URLs. Shared between the
- * player engines (engine selection in `@iptvnator/ui/playback`) and M3U
+ * player engines (engine selection in `@kiptv/ui/playback`) and M3U
  * routing (`isDashChannel`), so both always agree on what a URL is.
  */
 
@@ -98,7 +98,7 @@ function getMediaExtensionFromQuery(
     queryKeys: readonly string[]
 ): string {
     try {
-        const parsedUrl = new URL(url, 'http://iptvnator.local');
+        const parsedUrl = new URL(url, 'http://kiptv.local');
         for (const key of queryKeys) {
             const declaredExtension = normalizeDeclaredMediaExtension(
                 parsedUrl.searchParams.get(key) ?? undefined

@@ -1,4 +1,4 @@
-import { DbStores, type Playlist } from '@iptvnator/shared/interfaces';
+import { DbStores, type Playlist } from '@kiptv/shared/interfaces';
 
 /** Commit against the current row in one transaction, including without Web Locks. */
 export function mutateIndexedDbPlaylist(

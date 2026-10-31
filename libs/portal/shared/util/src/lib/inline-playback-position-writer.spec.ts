@@ -1,5 +1,5 @@
 import { signal } from '@angular/core';
-import type { ResolvedPortalPlayback } from '@iptvnator/shared/interfaces';
+import type { ResolvedPortalPlayback } from '@kiptv/shared/interfaces';
 import { createInlinePlaybackPositionWriter } from './inline-playback-position-writer';
 
 function playbackWithInfo(): ResolvedPortalPlayback {

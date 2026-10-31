@@ -5,14 +5,14 @@ import {
     PlaylistActions,
     selectAllPlaylistsMeta,
     selectIsEpgAvailable,
-} from '@iptvnator/m3u-state';
+} from '@kiptv/m3u-state';
 import {
     ParentalLockService,
     DatabaseService,
     PlaylistsService,
     PlaylistStorageBackend,
-} from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';

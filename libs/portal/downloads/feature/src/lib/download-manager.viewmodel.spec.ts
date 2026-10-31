@@ -1,5 +1,5 @@
-import type { DownloadItem } from '@iptvnator/services';
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { DownloadItem } from '@kiptv/services';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import {
     buildDownloadManagerViewModel,
     normalizeDownloadFilter,

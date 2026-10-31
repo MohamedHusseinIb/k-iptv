@@ -4,9 +4,9 @@ import {
     TmdbEnrichmentService,
     groupTitleMatchesByKey,
     pickTitleMatch,
-} from '@iptvnator/services';
-import { CatalogTitleMatch } from '@iptvnator/shared/interfaces';
-import type { TmdbTrendingEntry } from '@iptvnator/services';
+} from '@kiptv/services';
+import { CatalogTitleMatch } from '@kiptv/shared/interfaces';
+import type { TmdbTrendingEntry } from '@kiptv/services';
 
 /** One trending card: TMDB entry + optional library match for navigation */
 export interface DashboardTrendingItem extends TmdbTrendingEntry {

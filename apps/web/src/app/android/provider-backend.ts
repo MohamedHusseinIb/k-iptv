@@ -24,8 +24,8 @@ import {
     buildStalkerRequestUrl,
     describeXtreamConnectionFailure,
     normalizeXtreamServerUrl,
-} from '@iptvnator/shared/interfaces';
-import { extractDrmFromRaw } from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/interfaces';
+import { extractDrmFromRaw } from '@kiptv/shared/m3u-utils';
 import {
     NativeHttpError,
     nativeHttpGet,
@@ -80,7 +80,7 @@ export async function handleProviderBackendRequest(
     if (method === 'GET' && path === '/health') {
         return {
             status: 200,
-            body: { status: 'ok', service: 'iptvnator-android-backend' },
+            body: { status: 'ok', service: 'kiptv-android-backend' },
         };
     }
 
@@ -481,7 +481,7 @@ function createPlaylistObject(options: {
             ...options.playlist,
             items: options.playlist.items.map((item) => {
                 // Kept aligned with the shared createPlaylistObject() in
-                // @iptvnator/shared/m3u-utils: KODIPROP ClearKey DRM must
+                // @kiptv/shared/m3u-utils: KODIPROP ClearKey DRM must
                 // survive the URL-import path too.
                 const drm = extractDrmFromRaw(
                     typeof item['raw'] === 'string' ? item['raw'] : undefined

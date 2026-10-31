@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker';
 import {
     MarketingMovieCategoryKey,
     POSTER_SHOWCASE_MOVIES,
-} from '@iptvnator/shared/marketing-fixtures';
+} from '@kiptv/shared/marketing-fixtures';
 import {
     generateMarketingChannels,
     generateMarketingEpg,

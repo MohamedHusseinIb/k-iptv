@@ -3,7 +3,7 @@ import { PlaylistActions } from '../actions';
 import { playlistsAdapter } from '../playlists.state';
 import { initialState } from '../state';
 import { playlistReducers } from './playlist.reducers';
-import { Channel, Playlist, PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { Channel, Playlist, PlaylistMeta } from '@kiptv/shared/interfaces';
 
 const reducer = createReducer(initialState, ...playlistReducers);
 
@@ -397,7 +397,7 @@ describe('playlistReducers', () => {
         (userAgent) => {
             const existing = {
                 _id: 'playlist-1',
-                userAgent: 'IPTVnator-Test/1.0',
+                userAgent: 'K-IPTV-Test/1.0',
             } as PlaylistMeta;
             const state = {
                 ...initialState,

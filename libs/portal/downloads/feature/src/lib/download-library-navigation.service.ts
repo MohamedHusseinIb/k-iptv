@@ -5,13 +5,13 @@ import {
     DatabaseService,
     type DownloadItem,
     PlaylistsService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     buildStalkerDetailNavigationTarget,
     PROVIDER_ONLY_DETAIL_PRESENTATION,
     PROVIDER_ONLY_DETAIL_PRESENTATION_STATE_KEY,
     type WorkspaceNavigationTarget,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import { findMatchingStalkerDownloadRecent } from './stalker-download-recent.matcher';
 
 type PortalSource = 'xtream' | 'stalker';

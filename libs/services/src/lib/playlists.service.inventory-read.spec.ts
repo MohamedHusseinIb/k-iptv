@@ -1,5 +1,5 @@
 import { firstValueFrom, of } from 'rxjs';
-import { Playlist } from '@iptvnator/shared/interfaces';
+import { Playlist } from '@kiptv/shared/interfaces';
 import { PlaylistsService } from './playlists.service';
 
 // Performance journey J1: the playlist effect and the XMLTV source

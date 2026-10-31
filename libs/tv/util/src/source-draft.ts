@@ -1,4 +1,4 @@
-import { normalizeStalkerMacAddress } from '@iptvnator/shared/interfaces';
+import { normalizeStalkerMacAddress } from '@kiptv/shared/interfaces';
 import { httpUrl, Source } from './index';
 export type SourceDraft = Omit<Source, 'id' | 'endpoint' | 'full' | 'token'>;
 /** Narrow incoming phone data; transport/session fields never cross this boundary. */

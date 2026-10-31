@@ -1,4 +1,4 @@
-import type { DownloadItem } from '@iptvnator/services';
+import type { DownloadItem } from '@kiptv/services';
 import {
     buildDownloadLibrary,
     compareDownloadIds,

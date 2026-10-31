@@ -8,8 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 import {
     UnifiedCollectionDetailDirective,
     UnifiedCollectionPageComponent,
-} from '@iptvnator/portal/shared/ui';
-import { routeParamSignal } from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/ui';
+import { routeParamSignal } from '@kiptv/portal/shared/util';
 import { StalkerCollectionDetailComponent } from './stalker-collection-detail.component';
 
 @Component({

@@ -8,15 +8,15 @@ import {
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
 import { TranslateService } from '@ngx-translate/core';
-import { normalizeDateLocale } from '@iptvnator/pipes';
-import { injectTranslationTick } from '@iptvnator/services';
+import { normalizeDateLocale } from '@kiptv/pipes';
+import { injectTranslationTick } from '@kiptv/services';
 import {
     getPlaylistSourceIcon,
     PlaylistMeta,
     resolvePlaylistSourceKind,
     SourceReachability,
     SourceStatus,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * The health reason shown for each reachability when the check left no

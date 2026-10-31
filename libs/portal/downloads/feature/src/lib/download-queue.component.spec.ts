@@ -5,7 +5,7 @@ import { MatProgressBarHarness } from '@angular/material/progress-bar/testing';
 import { MatTooltipHarness } from '@angular/material/tooltip/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import type { DownloadItem } from '@iptvnator/services';
+import type { DownloadItem } from '@kiptv/services';
 import type { DownloadItemAction } from './download-actions';
 import type { DownloadListItemViewModel } from './download-manager.viewmodel';
 import {

@@ -11,7 +11,7 @@ import {
     createFavoritesPlaylist,
     createPlaylistObject,
     resolvePlaylistEpgSourceState,
-} from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/m3u-utils';
 import { DBMode, NgxIndexedDBService } from 'ngx-indexed-db';
 import {
     combineLatest,
@@ -38,7 +38,7 @@ import {
     StalkerPortalItem,
     normalizeStalkerDate,
     withExplicitStalkerPortalFlag,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { PLAYLIST_DELETE_CLEANUP } from './playlist-delete-cleanup.token';
 import {
     runWithPlaylistAuthorityMutation,

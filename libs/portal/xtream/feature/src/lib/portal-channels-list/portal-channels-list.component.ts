@@ -1,7 +1,7 @@
 import {
     ChannelContextMenuComponent,
     ChannelScrollFocusDirective,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     CdkVirtualScrollViewport,
     ScrollingModule,
@@ -37,27 +37,27 @@ import {
     epgProviderClockMs,
     XtreamCategory,
     XtreamItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     ChannelListItemComponent,
     ChannelListSkeletonComponent,
     EpgMappingDialogComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     createLogger,
     getXtreamCatchupDays,
     isXtreamCatchupAvailable,
     PortalChannelSortMode,
     sortPortalChannelItems,
-} from '@iptvnator/portal/shared/util';
-import { EpgQueueService } from '@iptvnator/portal/xtream/data-access';
-import { FavoritesService } from '@iptvnator/portal/xtream/data-access';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/shared/util';
+import { EpgQueueService } from '@kiptv/portal/xtream/data-access';
+import { FavoritesService } from '@kiptv/portal/xtream/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import {
     EpgSourceSettingsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     epgProgramProgressPercent,
     hasEpgProgramEnded,

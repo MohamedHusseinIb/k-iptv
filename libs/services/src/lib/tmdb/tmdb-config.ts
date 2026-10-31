@@ -19,4 +19,4 @@ export {
     tmdbProfileUrl,
     tmdbStillUrl,
     tmdbSeasonPosterUrl,
-} from '@iptvnator/shared/tmdb';
+} from '@kiptv/shared/tmdb';

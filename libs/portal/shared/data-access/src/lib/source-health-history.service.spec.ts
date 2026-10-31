@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { SourceHealthEvidenceService } from '@iptvnator/services';
+import { SourceHealthEvidenceService } from '@kiptv/services';
 import {
     SOURCE_HEALTH_HISTORY_STORAGE_KEY,
     SourceHealthHistoryService,

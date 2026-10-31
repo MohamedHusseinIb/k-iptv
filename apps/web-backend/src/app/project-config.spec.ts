@@ -56,7 +56,7 @@ describe('Playwright web-backend launch', () => {
                     second,
                     source.indexOf('url:', second)
                 );
-                expect(storageEntry).toContain(`IPTVNATOR_STORAGE: 'server'`);
+                expect(storageEntry).toContain(`KIPTV_STORAGE: 'server'`);
                 expect(storageEntry).toContain('PORT: storageBackendPort,');
                 expect(
                     source.indexOf(
@@ -99,8 +99,8 @@ describe('Playwright web-backend launch', () => {
         }
         expect(source).toContain('PORT: String(tvPorts.library)');
         expect(source).toContain('url: `${tvOrigins.library}/health`');
-        expect(source).toContain("IPTVNATOR_STORAGE: 'server'");
-        expect(source).toContain("IPTVNATOR_ACCESS_TOKEN: 'tv-library-test'");
+        expect(source).toContain("KIPTV_STORAGE: 'server'");
+        expect(source).toContain("KIPTV_ACCESS_TOKEN: 'tv-library-test'");
         expect(source).not.toMatch(/\bnx\b[^'"`\n]*web-backend/);
         expect(source).toContain('PORT: String(tvPorts.backend)');
         expect(source).toContain('url: `${tvOrigins.backend}/health`');

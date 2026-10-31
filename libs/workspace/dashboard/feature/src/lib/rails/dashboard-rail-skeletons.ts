@@ -1,5 +1,5 @@
 import type { Signal } from '@angular/core';
-import type { DashboardRailsSettings } from '@iptvnator/shared/interfaces';
+import type { DashboardRailsSettings } from '@kiptv/shared/interfaces';
 import { createRailSkeletonGates } from './dashboard-skeleton-grace';
 
 type Count = () => { readonly length: number };

@@ -1,5 +1,5 @@
 import { signal } from '@angular/core';
-import { EmbeddedMpvSession } from '@iptvnator/shared/interfaces';
+import { EmbeddedMpvSession } from '@kiptv/shared/interfaces';
 
 const STALLED_TIMEOUT_MS = 30_000;
 

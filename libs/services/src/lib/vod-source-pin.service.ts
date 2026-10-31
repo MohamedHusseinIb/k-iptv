@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import type { VodSourcePin } from '@iptvnator/shared/interfaces';
-import { redactSensitiveData } from '@iptvnator/shared/logging';
+import type { VodSourcePin } from '@kiptv/shared/interfaces';
+import { redactSensitiveData } from '@kiptv/shared/logging';
 
 /**
  * Persistence for the per-movie pinned source ("play this film from here").

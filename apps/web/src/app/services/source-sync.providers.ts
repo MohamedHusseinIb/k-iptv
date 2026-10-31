@@ -5,8 +5,8 @@ import {
     provideAppInitializer,
     runInInjectionContext,
 } from '@angular/core';
-import { dbConfig } from '@iptvnator/shared/interfaces';
-import { USER_DATA_STORAGE, type UserDataStorage } from '@iptvnator/services';
+import { dbConfig } from '@kiptv/shared/interfaces';
+import { USER_DATA_STORAGE, type UserDataStorage } from '@kiptv/services';
 import { from, switchMap } from 'rxjs';
 import { CONFIG_TOKEN } from 'ngx-indexed-db';
 import {
@@ -14,8 +14,8 @@ import {
     sourceProfileName,
     sourceConnection,
     sourceConnectionReadFailed,
-} from '@iptvnator/services/source-sync/connection';
-import { createSourceProfileUserDataStorage } from '@iptvnator/services/source-sync/profile-user-data';
+} from '@kiptv/services/source-sync/connection';
+import { createSourceProfileUserDataStorage } from '@kiptv/services/source-sync/profile-user-data';
 
 export const sourceAuthInterceptor: HttpInterceptorFn = (request, next) => {
     if (!isSourceBackendRequest(request.url)) return next(request);

@@ -2,11 +2,11 @@ import { registerLocaleData } from '@angular/common';
 import localeEn from '@angular/common/locales/en';
 import { inject, Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { normalizeDateLocale } from '@iptvnator/pipes/date-format';
+import { normalizeDateLocale } from '@kiptv/pipes/date-format';
 import {
     createDevLogger,
     normalizeAppLanguage,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { rememberLanguage } from './app-language-preference';
 
 type LocaleDataModule = { default: unknown };

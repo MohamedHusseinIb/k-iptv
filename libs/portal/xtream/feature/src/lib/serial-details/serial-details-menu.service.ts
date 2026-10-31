@@ -7,12 +7,12 @@ import {
     formatSeriesEpisodeCode,
     getSeriesNextUp,
     type SeriesQuickStartAction,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     XTREAM_DATA_SOURCE,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
+} from '@kiptv/portal/xtream/data-access';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
 import {
     VideoPlayer,
     type ExternalPlayerName,
@@ -21,13 +21,13 @@ import {
     type ResolvedPortalPlayback,
     type XtreamCategory,
     type XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildSeriesMenuSections,
     SERIES_MENU_ACTION,
     type SeasonContainerComponent,
     type VodMoreMenuSection,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import type { XtreamSerieDetailsView } from './serial-details-playback.service';
 
 interface SerialDetailsMenuBindings {

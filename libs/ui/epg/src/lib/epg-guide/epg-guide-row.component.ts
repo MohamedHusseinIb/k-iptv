@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TimelineRenderBlock } from '../epg-timeline/epg-timeline-render.util';
 import {

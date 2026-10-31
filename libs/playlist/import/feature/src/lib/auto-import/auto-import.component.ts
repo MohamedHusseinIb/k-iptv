@@ -18,9 +18,9 @@ import {
     type ProviderImportCandidate,
     type ProviderImportConfidence,
     type ProviderImportKind,
-} from '@iptvnator/shared/interfaces/provider-import';
-import { SOURCE_TYPE_ICONS } from '@iptvnator/shared/interfaces';
-import { provideFormFieldDefaults } from '@iptvnator/ui/components/form-field-defaults';
+} from '@kiptv/shared/interfaces/provider-import';
+import { SOURCE_TYPE_ICONS } from '@kiptv/shared/interfaces';
+import { provideFormFieldDefaults } from '@kiptv/ui/components/form-field-defaults';
 
 interface CandidateSummaryRow {
     labelKey: string;

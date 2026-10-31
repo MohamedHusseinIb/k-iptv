@@ -2,11 +2,11 @@ import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslatePipe } from '@ngx-translate/core';
-import { KeyboardShortcutDisplayGroup } from '@iptvnator/portal/shared/util';
+import { KeyboardShortcutDisplayGroup } from '@kiptv/portal/shared/util';
 import {
     DialogHeaderEndDirective,
     DialogShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 export interface WorkspaceKeyboardShortcutsDialogData {
     groups: readonly KeyboardShortcutDisplayGroup[];

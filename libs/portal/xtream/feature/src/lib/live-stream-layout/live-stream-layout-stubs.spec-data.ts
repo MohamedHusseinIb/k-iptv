@@ -9,12 +9,12 @@ import {
     EpgProgram,
     RecordingStartMetadata,
     RecordingStoppedEvent,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     EpgProgramActivationEvent,
     EpgTimelineSummary,
-} from '@iptvnator/ui/epg';
-import { PlaybackFallbackRequest } from '@iptvnator/ui/playback';
+} from '@kiptv/ui/epg';
+import { PlaybackFallbackRequest } from '@kiptv/ui/playback';
 
 @Component({
     changeDetection: ChangeDetectionStrategy.Eager,

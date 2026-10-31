@@ -2,15 +2,15 @@ import { Injectable, inject } from '@angular/core';
 import {
     PORTAL_PLAYBACK_POSITIONS,
     PortalPlaybackPositions,
-} from '@iptvnator/portal/shared/util/tokens';
+} from '@kiptv/portal/shared/util/tokens';
 import {
     PlaybackPositionRuntimeBridgeService,
     RuntimeCapabilitiesService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     PlaybackPositionData,
     XTREAM_DATA_SOURCE,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 
 @Injectable({
     providedIn: 'root',

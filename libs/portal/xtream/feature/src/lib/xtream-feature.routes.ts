@@ -6,12 +6,12 @@ import { provideXtreamWorkspaceRouteSession } from './xtream-workspace-route-ses
 type ComponentLoader = NonNullable<Route['loadComponent']>;
 
 const loadDownloadsComponent: ComponentLoader = () =>
-    import('@iptvnator/portal/downloads/feature').then(
+    import('@kiptv/portal/downloads/feature').then(
         (c) => c.DownloadsComponent
     );
 
 const loadDownloadOfflineDetailComponent: ComponentLoader = () =>
-    import('@iptvnator/portal/downloads/feature').then(
+    import('@kiptv/portal/downloads/feature').then(
         (c) => c.DownloadOfflineDetailComponent
     );
 
@@ -26,7 +26,7 @@ const loadLiveStreamLayoutComponent: ComponentLoader = () =>
     );
 
 const loadCategoryContentViewComponent: ComponentLoader = () =>
-    import('@iptvnator/portal/catalog/feature').then(
+    import('@kiptv/portal/catalog/feature').then(
         (c) => c.CategoryContentViewComponent
     );
 

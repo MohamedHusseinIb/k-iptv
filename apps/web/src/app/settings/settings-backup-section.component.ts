@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TranslateModule } from '@ngx-translate/core';
-import { SOURCE_TYPE_ICONS } from '@iptvnator/shared/interfaces';
+import { SOURCE_TYPE_ICONS } from '@kiptv/shared/interfaces';
 import { SettingsPlaylistDeleteSummary } from './settings.models';
 
 /**

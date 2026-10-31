@@ -1,11 +1,11 @@
-import { extractYear } from '@iptvnator/services';
+import { extractYear } from '@kiptv/services';
 import {
     ContentMetadataPatch,
     PortalActivityItem,
     TmdbMediaType,
     extractStalkerItemTmdbHints,
     normalizeContentMetadataPatch,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /** Everything a dashboard TMDB lookup reads off an activity row */
 export type DashboardTmdbLookupItem = Pick<

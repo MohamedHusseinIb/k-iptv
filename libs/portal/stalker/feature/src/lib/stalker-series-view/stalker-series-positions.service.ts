@@ -3,15 +3,15 @@ import {
     createLogger,
     PORTAL_PLAYBACK_POSITIONS,
     stampPlaybackPositionNow,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     StalkerStore,
     type StalkerSelectedVodItem,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import type {
     PlaybackPositionData,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { toStalkerSeriesId } from './stalker-series-id';
 import {
     clearStalkerSeriesPosition,

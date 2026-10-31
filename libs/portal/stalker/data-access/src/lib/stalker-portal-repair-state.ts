@@ -1,7 +1,7 @@
 import {
     isFullStalkerPortalPlaylist,
     type PlaylistMeta,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { stalkerIdentityFingerprint } from './stalker-identity.utils';
 
 /** What a probe of one source configuration concluded this session. */

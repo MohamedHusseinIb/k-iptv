@@ -18,7 +18,7 @@ jest.mock('@faker-js/faker', () => ({
 
 const TOKEN = 'shutdown-token';
 const AUTH_HEADERS = {
-    'x-iptvnator-performance-token': TOKEN,
+    'x-kiptv-performance-token': TOKEN,
 };
 
 describe('Xtream mock HTTP shutdown', () => {

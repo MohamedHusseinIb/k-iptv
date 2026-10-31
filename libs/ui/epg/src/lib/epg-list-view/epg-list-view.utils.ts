@@ -1,4 +1,4 @@
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { addDays } from 'date-fns';
 import { parseEpgDateKey } from '../epg-date';
 import {

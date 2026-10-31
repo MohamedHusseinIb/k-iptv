@@ -1,6 +1,6 @@
-import { SERVER_ACCESS_CHALLENGE } from '@iptvnator/shared/interfaces';
+import { SERVER_ACCESS_CHALLENGE } from '@kiptv/shared/interfaces';
 
-export const SERVER_ACCESS_TOKEN_STORAGE_KEY = 'iptvnator-server:access-token';
+export const SERVER_ACCESS_TOKEN_STORAGE_KEY = 'kiptv-server:access-token';
 
 /**
  * A gateway's answer for a backend that is down (nginx's 502/503/504 page),
@@ -26,7 +26,7 @@ export function isServerAccessChallenge(
 
 /** The instance the stored token was given for. */
 export const SERVER_ACCESS_TOKEN_OWNER_KEY =
-    'iptvnator-server:access-token-instance';
+    'kiptv-server:access-token-instance';
 
 /**
  * The stored token; with `instanceId`, only when it was given for that

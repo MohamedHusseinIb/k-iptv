@@ -7,12 +7,12 @@ import {
     type PlaybackRecommendation,
     type PlaybackRecommendationContext,
     type PlaybackRecommendationTarget,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import {
     VideoPlayer,
     type ExternalPlayerName,
     type ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { PlaybackBinding } from './playback-recovery-session';
 import type { ExternalRecoveryStates } from './external-playback-recovery';
 

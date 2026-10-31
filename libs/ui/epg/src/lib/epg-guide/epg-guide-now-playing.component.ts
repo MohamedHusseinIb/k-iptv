@@ -10,7 +10,7 @@ import {
     signal,
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { TranslatePipe } from '@ngx-translate/core';
 import { getProgramTimeMs } from '../epg-program.utils';
 

@@ -1,4 +1,4 @@
-import type { DownloadItem } from '@iptvnator/services';
+import type { DownloadItem } from '@kiptv/services';
 
 export interface DownloadLibraryRow {
     readonly item: DownloadItem;

@@ -1,6 +1,6 @@
-import { RuntimeCapabilitiesService, takeSlowStart } from '@iptvnator/services';
-import type { ServerInstanceInfo } from '@iptvnator/shared/interfaces';
-import type { IptvnatorRuntimeConfig } from '../services/runtime-config';
+import { RuntimeCapabilitiesService, takeSlowStart } from '@kiptv/services';
+import type { ServerInstanceInfo } from '@kiptv/shared/interfaces';
+import type { KiptvRuntimeConfig } from '../services/runtime-config';
 
 const PROBE_TIMEOUT_MS = 2_500;
 /** After a reload for a server that answered later: as long as requests. */
@@ -18,7 +18,7 @@ export type ServerInstanceProbe =
     | { readonly kind: 'server'; readonly instance: ServerInstanceInfo };
 
 export interface ServerInstanceProbeOptions {
-    readonly runtimeConfig?: IptvnatorRuntimeConfig;
+    readonly runtimeConfig?: KiptvRuntimeConfig;
     readonly isElectron?: boolean;
     readonly fetchFn?: typeof fetch;
 }
@@ -32,7 +32,7 @@ export async function probeServerInstance(
     options: ServerInstanceProbeOptions = {}
 ): Promise<ServerInstanceProbe> {
     const runtimeConfig =
-        options.runtimeConfig ?? globalThis.window?.__IPTVNATOR_CONFIG__;
+        options.runtimeConfig ?? globalThis.window?.__KIPTV_CONFIG__;
     // The capability service has no dependencies, so it works before
     // bootstrap and keeps one definition of the desktop runtime.
     const isElectron =
@@ -83,7 +83,7 @@ function isServerInstance(value: unknown): value is ServerInstanceInfo {
     const record = value as Partial<ServerInstanceInfo> | null;
     return (
         !!record &&
-        record.service === 'iptvnator' &&
+        record.service === 'kiptv' &&
         typeof record.apiVersion === 'number' &&
         typeof record.instanceId === 'string' &&
         (record.storage === 'server' || record.storage === 'none') &&

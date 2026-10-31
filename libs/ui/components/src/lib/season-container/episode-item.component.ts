@@ -16,11 +16,11 @@ import {
     getPortalPlaybackProgressPercent,
     isPortalPlaybackInProgress,
     isPortalPlaybackWatched,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     PlaybackPositionData,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { episodeTimeLabel, formatEpisodeAirDate } from './episode-meta.util';
 import { SeasonDownloadPresenter } from './season-download-presenter';
 import { resolveEpisodeInfo } from './season-watch-toggle.util';

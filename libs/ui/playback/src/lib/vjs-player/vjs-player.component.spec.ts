@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { TranslateModule } from '@ngx-translate/core';
-import type { NativePlaybackErrorInput } from '@iptvnator/playback/util';
-import type { PlaybackDiagnostic } from '@iptvnator/playback/util';
+import type { NativePlaybackErrorInput } from '@kiptv/playback/util';
+import type { PlaybackDiagnostic } from '@kiptv/playback/util';
 import { WEB_PLAYER_SHARED_CONTROLS } from '../player-controls/web-player-controls.flag';
 import type { VjsPlayerComponent as VjsPlayerComponentInstance } from './vjs-player.component';
 import type { VideoJsPlayer } from './vjs-player.types';

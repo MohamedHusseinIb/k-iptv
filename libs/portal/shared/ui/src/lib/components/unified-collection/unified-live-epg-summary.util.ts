@@ -1,10 +1,10 @@
-import { ResolvedLiveCollectionDetail } from '@iptvnator/portal/shared/data-access';
+import { ResolvedLiveCollectionDetail } from '@kiptv/portal/shared/data-access';
 import {
     epgDisplayTimeMs,
     EpgItem,
     EpgProgram,
-} from '@iptvnator/shared/interfaces';
-import { LiveEpgPanelSummary } from '@iptvnator/ui/shared-portals';
+} from '@kiptv/shared/interfaces';
+import { LiveEpgPanelSummary } from '@kiptv/ui/shared-portals';
 
 /**
  * Pure helpers for the unified live tab's collapsed EPG summary: pick the

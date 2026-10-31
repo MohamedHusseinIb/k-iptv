@@ -1,6 +1,6 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import type { XtreamSerieDetailsView } from './serial-details-playback.service';
 import { SerialDetailsSeasonsService } from './serial-details-seasons.service';
 

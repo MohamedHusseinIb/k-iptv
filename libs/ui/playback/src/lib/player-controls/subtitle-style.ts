@@ -3,12 +3,12 @@ import {
     type PlayerSubtitleStyle,
     isDefaultSubtitleStyle,
     normalizeSubtitleStyle,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { PlayerPreset } from './player-controls.model';
 
 /**
  * UI-side subtitle presentation preferences. The canonical shape and the
- * clamp/normalize rules live in `@iptvnator/shared/interfaces`
+ * clamp/normalize rules live in `@kiptv/shared/interfaces`
  * (`subtitle-style.util.ts`) so the Electron main process re-validates IPC
  * input with the exact same implementation; this file adds only what the
  * controls UI needs — presets, the delay step, persistence, and labels.
@@ -28,7 +28,7 @@ export {
     clampSubtitleDelay,
     isDefaultSubtitleStyle,
     normalizeSubtitleStyle,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export const SUBTITLE_STYLE_STORAGE_KEY = 'subtitleStyle';
 

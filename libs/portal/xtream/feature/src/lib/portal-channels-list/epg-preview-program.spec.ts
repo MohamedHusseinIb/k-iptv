@@ -1,4 +1,4 @@
-import { EpgItem, EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgItem, EpgProgram } from '@kiptv/shared/interfaces';
 import {
     epgProgramProgressPercent,
     hasEpgProgramEnded,

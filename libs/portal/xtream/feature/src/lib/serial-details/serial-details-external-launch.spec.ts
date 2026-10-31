@@ -2,7 +2,7 @@ import { signal } from '@angular/core';
 import type {
     ExternalPlayerSession,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     externalEpisodeSessionIds,
     isEpisodeLaunchPending,

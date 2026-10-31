@@ -1,9 +1,9 @@
 import { TestBed } from '@angular/core/testing';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
 import {
     EMBEDDED_MPV_SUPPORT_RECHECK_MS,
     EmbeddedMpvSupport,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { SettingsEmbeddedMpvFacade } from './settings-embedded-mpv.facade';
 
 const SUPPORTED: EmbeddedMpvSupport = { supported: true, platform: 'linux' };

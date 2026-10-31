@@ -1,4 +1,4 @@
-import { PortalCatalogSortMode } from '@iptvnator/portal/shared/util';
+import { PortalCatalogSortMode } from '@kiptv/portal/shared/util';
 
 /** A content sort choice of the refine menu and its active-sort chip. */
 export interface CatalogSortOption {

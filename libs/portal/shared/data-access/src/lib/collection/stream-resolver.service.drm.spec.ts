@@ -1,18 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
-import { StalkerSessionService } from '@iptvnator/portal/stalker/data-access';
-import { UnifiedCollectionItem } from '@iptvnator/portal/shared/util';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
+import { StalkerSessionService } from '@kiptv/portal/stalker/data-access';
+import { UnifiedCollectionItem } from '@kiptv/portal/shared/util';
 import {
     XtreamApiService,
     XtreamUrlService,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     DataService,
     PlaylistsService,
     SettingsStore,
-} from '@iptvnator/services';
-import { Channel, ChannelDrm } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { Channel, ChannelDrm } from '@kiptv/shared/interfaces';
 import { StreamResolverService } from './stream-resolver.service';
 
 // The main resolver spec is at the test line cap.

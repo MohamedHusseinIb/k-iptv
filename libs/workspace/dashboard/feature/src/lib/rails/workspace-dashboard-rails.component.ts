@@ -12,30 +12,30 @@ import {
     isXtreamAccountPlaylist,
     normalizeDashboardRailsSettings,
     playlistDisplayLabel,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { isPortalPlaybackWatched } from '@iptvnator/portal/shared/util';
+import { isPortalPlaybackWatched } from '@kiptv/portal/shared/util';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import {
     EmptyStateComponent,
     PlaylistInfoComponent,
     PlaylistRefreshActionService,
-} from '@iptvnator/playlist/shared/ui';
+} from '@kiptv/playlist/shared/ui';
 import {
     WORKSPACE_SHELL_ACTIONS,
     WorkspacePlaylistType,
-} from '@iptvnator/workspace/shell/util';
-import { DialogService } from '@iptvnator/ui/components';
-import { PlaylistActions } from '@iptvnator/m3u-state';
+} from '@kiptv/workspace/shell/util';
+import { DialogService } from '@kiptv/ui/components';
+import { PlaylistActions } from '@kiptv/m3u-state';
 import {
     PlaylistDeleteActionService,
     RuntimeCapabilitiesService,
     SettingsStore,
     injectTranslationTick,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     DashboardDataService,
     DashboardFavoriteItem,
@@ -48,7 +48,7 @@ import {
     DashboardTrendingService,
     GlobalRecentItem,
     resolveSourceExpiryBadge,
-} from '@iptvnator/workspace/dashboard/data-access';
+} from '@kiptv/workspace/dashboard/data-access';
 import { createDashboardRailSkeletons } from './dashboard-rail-skeletons';
 import { connectDashboardTmdbRails } from './dashboard-tmdb-rails';
 import { DashboardRailComponent } from './dashboard-rail.component';
@@ -57,7 +57,7 @@ import type {
     DashboardRailCard,
     DashboardRailActionSelection,
 } from './dashboard-rail.component';
-import type { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import type { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { DashboardPortalLiveEpgPresenter } from './dashboard-portal-live-epg.presenter';
 import { DashboardHeroComponent } from './dashboard-hero.component';
 import { buildLiveEpgCardsForEnabledRails } from './dashboard-live-epg.utils';

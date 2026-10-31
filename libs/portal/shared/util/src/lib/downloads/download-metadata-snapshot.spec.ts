@@ -1,4 +1,4 @@
-import type { DownloadMetadataPerson } from '@iptvnator/shared/interfaces';
+import type { DownloadMetadataPerson } from '@kiptv/shared/interfaces';
 import {
     createMovieDownloadSnapshot,
     createSeriesEpisodeDownloadSnapshot,

@@ -1,20 +1,20 @@
 import { computed, inject, Signal, WritableSignal } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { resolveM3uCatchupUrl } from '@iptvnator/shared/m3u-utils';
+import { resolveM3uCatchupUrl } from '@kiptv/shared/m3u-utils';
 import {
     ResolvedLiveCollectionDetail,
     StreamResolverService,
-} from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/portal/shared/data-access';
 import {
     PORTAL_PLAYER,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     EpgArchiveCopyService,
     EpgProgramActivationEvent,
-} from '@iptvnator/ui/epg';
-import { Channel, EpgProgram } from '@iptvnator/shared/interfaces';
+} from '@kiptv/ui/epg';
+import { Channel, EpgProgram } from '@kiptv/shared/interfaces';
 import { toEpochSeconds } from './unified-live-epg-summary.util';
 import { UnifiedLiveSelectionGeneration } from './unified-live-selection-generation';
 

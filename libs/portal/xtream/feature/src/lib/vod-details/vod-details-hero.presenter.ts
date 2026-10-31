@@ -9,8 +9,8 @@ import {
     shortCountryList,
     shortCountryName,
     type RemainingTimeLabel,
-} from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import {
     youtubeEmbedUrl,
     type PlaybackPositionData,
@@ -18,16 +18,16 @@ import {
     type TmdbEnrichedCastMember,
     type TmdbGenreFacet,
     type XtreamVodInfo,
-} from '@iptvnator/shared/interfaces';
-import { SettingsStore, injectTranslationTick } from '@iptvnator/services';
-import type { CrossPortalSimilarItem } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import { SettingsStore, injectTranslationTick } from '@kiptv/services';
+import type { CrossPortalSimilarItem } from '@kiptv/services';
 import {
     castMembersFromNames,
     splitPeopleNames,
     TrailerDialogService,
     type DetailActionButtonState,
     type SimilarRailItem,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import type { SimilarCatalogItem } from '../tmdb-similar.util';
 
 export interface VodHeroGenreChip {

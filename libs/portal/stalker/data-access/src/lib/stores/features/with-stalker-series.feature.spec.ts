@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
-import { DataService, TmdbEnrichmentService } from '@iptvnator/services';
+import { DataService, TmdbEnrichmentService } from '@kiptv/services';
 import {
     PlaylistMeta,
     StalkerPortalActions,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerSessionService } from '../../stalker-session.service';
 import { withStalkerSelection } from './with-stalker-selection.feature';
 import { withStalkerSeries } from './with-stalker-series.feature';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),

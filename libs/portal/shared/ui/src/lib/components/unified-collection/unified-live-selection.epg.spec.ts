@@ -1,17 +1,17 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { PlaybackHistoryGate } from '@iptvnator/playback/data-access';
+import { PlaybackHistoryGate } from '@kiptv/playback/data-access';
 import {
     ResolvedLiveCollectionDetail,
     StreamResolverService,
     UnifiedRecentDataService,
-} from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/portal/shared/data-access';
 import {
     PORTAL_PLAYER,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
-import { ElectronStreamHeadersService } from '@iptvnator/ui/playback';
-import { EpgItem } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import { ElectronStreamHeadersService } from '@kiptv/ui/playback';
+import { EpgItem } from '@kiptv/shared/interfaces';
 import { createUnifiedLiveSelection } from './unified-live-selection';
 import { createUnifiedLiveSelectionGeneration } from './unified-live-selection-generation';
 import {

@@ -7,7 +7,7 @@ import {
 } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
-import { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
+import { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
 import { DialogShellComponent } from '../dialog-shell/dialog-shell.component';
 import { DialogFooterDirective } from '../dialog-shell/dialog-shell.directives';
 

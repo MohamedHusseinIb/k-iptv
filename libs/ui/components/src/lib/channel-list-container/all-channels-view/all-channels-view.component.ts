@@ -17,15 +17,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslatePipe } from '@ngx-translate/core';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
-import { SettingsStore } from '@iptvnator/services';
-import { resolveChannelEpgLookupKey } from '@iptvnator/m3u-state';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
+import { SettingsStore } from '@kiptv/services';
+import { resolveChannelEpgLookupKey } from '@kiptv/m3u-state';
 import {
     foldSearchText,
     Channel,
     EpgProgram,
     epgProviderClockMs,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { ChannelContextMenuComponent } from '../channel-context-menu/channel-context-menu.component';
 import {
     PlaylistChannelSortMode,

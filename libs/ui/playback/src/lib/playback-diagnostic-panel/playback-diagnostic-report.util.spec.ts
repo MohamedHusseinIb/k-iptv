@@ -1,4 +1,4 @@
-import { type PlaybackDiagnostic } from '@iptvnator/playback/util';
+import { type PlaybackDiagnostic } from '@kiptv/playback/util';
 import { createDiagnosticReport } from './playback-diagnostic-report.util';
 
 const issue: PlaybackDiagnostic = {

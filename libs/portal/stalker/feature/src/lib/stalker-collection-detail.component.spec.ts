@@ -13,29 +13,29 @@ import { TranslateService } from '@ngx-translate/core';
 import {
     ContentHeroComponent,
     VIEW_IN_PORTAL_HANDOFF,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     PORTAL_EXTERNAL_PLAYBACK,
     PORTAL_PLAYBACK_POSITIONS,
     PORTAL_PLAYER,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
-import { StalkerStore } from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/shared/util';
+import { StalkerStore } from '@kiptv/portal/stalker/data-access';
 import {
     PlaybackPositionRuntimeBridgeService,
     PlaylistsService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     PlaybackPositionData,
     Playlist,
     ResolvedPortalPlayback,
     VodDetailsItem,
     createStalkerVodItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { of, Subject } from 'rxjs';
 import { StalkerCollectionDetailComponent } from './stalker-collection-detail.component';
 import { StalkerInlineDetailComponent } from './stalker-inline-detail/stalker-inline-detail.component';
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
 
 @Component({
     selector: 'app-content-hero',

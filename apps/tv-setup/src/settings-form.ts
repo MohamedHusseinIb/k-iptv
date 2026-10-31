@@ -1,10 +1,10 @@
-import type { PhoneSettingsDefaults } from '@iptvnator/tv/util';
+import type { PhoneSettingsDefaults } from '@kiptv/tv/util';
 /** No saved key enters the phone DOM; an empty replacement preserves the TV key. */
 export function settingsForm(
     form: HTMLFormElement,
     defaults: PhoneSettingsDefaults
 ) {
-    document.title = 'TV settings · IPTVnator';
+    document.title = 'TV settings · K-IPTV';
     document.querySelector('h1')!.textContent = 'Your TV. Your preferences.';
     document.querySelector('.intro')!.textContent =
         'Adjust settings here, then confirm on your television.';

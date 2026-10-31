@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { DataService } from '@iptvnator/services';
+import { DataService } from '@kiptv/services';
 import {
     ExternalPlayerSession,
     OPEN_MPV_PLAYER,
@@ -7,10 +7,10 @@ import {
     PlayerContentInfo,
     ResolvedPortalPlayback,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
-import type { ExternalPlayerName } from '@iptvnator/shared/interfaces';
-import { LazyMatDialog } from '@iptvnator/ui/components/lazy-dialog';
-import { dialogSize } from '@iptvnator/ui/components/dialog-size';
+} from '@kiptv/shared/interfaces';
+import type { ExternalPlayerName } from '@kiptv/shared/interfaces';
+import { LazyMatDialog } from '@kiptv/ui/components/lazy-dialog';
+import { dialogSize } from '@kiptv/ui/components/dialog-size';
 import { SettingsStore } from './settings-store.service';
 
 @Injectable({

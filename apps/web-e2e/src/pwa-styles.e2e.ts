@@ -2,7 +2,7 @@ import { expect, test } from './fixtures';
 
 // eslint-disable-next-line playwright/no-skipped-test -- Static PWA assertions require the built service worker artifact.
 test.skip(
-    process.env['IPTVNATOR_E2E_STATIC_PWA'] !== '1',
+    process.env['KIPTV_E2E_STATIC_PWA'] !== '1',
     'Static PWA stylesheet regression test only runs against the built PWA output.'
 );
 

@@ -10,7 +10,7 @@
  * proxy URL deliberately is not.
  */
 
-import { registerPlatformDiagnostics } from '@iptvnator/playback/util';
+import { registerPlatformDiagnostics } from '@kiptv/playback/util';
 import { isAndroidNativeRuntime } from './android-runtime';
 import {
     getLastUpstreamSummary,

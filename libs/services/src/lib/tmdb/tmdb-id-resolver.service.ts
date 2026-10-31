@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { TmdbIdResolver } from '@iptvnator/shared/tmdb';
+import { TmdbIdResolver } from '@kiptv/shared/tmdb';
 import { TmdbApiService } from './tmdb-api.service';
 import { TmdbCacheService } from './tmdb-cache.service';
 import { TmdbRuntimeService } from './tmdb-runtime.service';

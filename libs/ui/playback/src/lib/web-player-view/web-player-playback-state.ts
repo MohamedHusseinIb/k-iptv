@@ -1,8 +1,8 @@
-import { getPlaybackMediaExtensionFromUrl } from '@iptvnator/playback/util';
+import { getPlaybackMediaExtensionFromUrl } from '@kiptv/playback/util';
 import type {
     Channel,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { PlayerMediaTitle } from '../player-controls';
 
 export function resolveWebPlayerPlayback(options: {

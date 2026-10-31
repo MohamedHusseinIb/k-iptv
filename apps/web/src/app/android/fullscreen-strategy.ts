@@ -20,7 +20,7 @@ import { StatusBar } from '@capacitor/status-bar';
 import {
     registerFullscreenStrategy,
     type FullscreenStrategy,
-} from '@iptvnator/ui/playback/fullscreen-strategy';
+} from '@kiptv/ui/playback/fullscreen-strategy';
 import { isAndroidNativeRuntime } from './android-runtime';
 
 /**

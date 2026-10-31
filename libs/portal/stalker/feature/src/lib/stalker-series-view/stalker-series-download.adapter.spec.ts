@@ -1,4 +1,4 @@
-import type { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
+import type { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
 import { createStalkerSeriesDownloadAdapter } from './stalker-series-download.adapter';
 
 const EPISODE_POSTER_URL = 'https://images.example.test/stills/the-call.jpg';

@@ -1,4 +1,4 @@
-import type { EmbeddedMpvSession } from '@iptvnator/shared/interfaces';
+import type { EmbeddedMpvSession } from '@kiptv/shared/interfaces';
 import {
     hasStreamStatsData,
     type PlayerStreamStats,

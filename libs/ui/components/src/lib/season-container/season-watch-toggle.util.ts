@@ -2,7 +2,7 @@ import {
     PlaybackPositionData,
     XtreamSerieEpisode,
     XtreamSerieEpisodeInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { parseDuration } from './episode-progress.util';
 
 export interface SeasonContainerPlaybackToggleRequest {

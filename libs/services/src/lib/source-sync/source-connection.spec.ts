@@ -35,11 +35,11 @@ describe('source server selection and authorization', () => {
     ])(
         'keeps bootstrap available when saved configuration is invalid: %s',
         async (raw) => {
-            localStorage.setItem('iptvnator:source-server', raw);
+            localStorage.setItem('kiptv:source-server', raw);
             await expect(prepareSourceConnection()).resolves.toBeUndefined();
             expect(sourceConnection()).toBeNull();
             expect(sourceConnectionReadFailed()).toBe(true);
-            expect(localStorage.getItem('iptvnator:source-server')).toBe(raw);
+            expect(localStorage.getItem('kiptv:source-server')).toBe(raw);
         }
     );
     it('keeps standalone bootstrap available when browser storage is denied', async () => {
@@ -65,7 +65,7 @@ describe('source server selection and authorization', () => {
         } as never;
         await prepareSourceConnection();
         expect(sourceConnectionReadFailed()).toBe(true);
-        expect(sourceProfileName()).toBe('iptvnator-recovery');
+        expect(sourceProfileName()).toBe('kiptv-recovery');
     });
 
     it('does not accept an identity proof started before a newer outage', async () => {
@@ -81,7 +81,7 @@ describe('source server selection and authorization', () => {
         globalThis.fetch = jest.fn(async () => ({
             ok: true,
             json: async () => ({
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 storage: 'server',
                 instanceId: 'nas',
@@ -90,12 +90,12 @@ describe('source server selection and authorization', () => {
         })) as unknown as typeof fetch;
         await prepareSourceConnection('https://nas.test/backend');
         expect(sourceConnection()?.apiUrl).toBe('https://nas.test/backend');
-        expect(sourceProfileName()).toBe('iptvnator-server:nas');
+        expect(sourceProfileName()).toBe('kiptv-server:nas');
         expect(sourceAuthorization('https://nas.test/backend/xtream')).toEqual(
             {}
         );
         verifySourceInstance({
-            service: 'iptvnator',
+            service: 'kiptv',
             apiVersion: 1,
             storage: 'server',
             instanceId: 'nas',
@@ -120,7 +120,7 @@ describe('source server selection and authorization', () => {
     });
     it('keeps a known server selected when it is offline instead of switching to the local library', async () => {
         localStorage.setItem(
-            'iptvnator:source-server',
+            'kiptv:source-server',
             JSON.stringify({
                 apiUrl: 'https://nas.test/api',
                 instanceId: 'saved',
@@ -140,12 +140,12 @@ describe('source server selection and authorization', () => {
             .mockResolvedValue({ status: 404, ok: false });
         await prepareSourceConnection('https://proxy.test');
         expect(sourceConnection()).toBeNull();
-        expect(sourceProfileName()).toBe('iptvnator');
-        expect(localStorage.getItem('iptvnator:source-server')).toBeNull();
+        expect(sourceProfileName()).toBe('kiptv');
+        expect(localStorage.getItem('kiptv:source-server')).toBeNull();
     });
     it('authorizes a bare backend root and leaves a confirmed stateless backend in standalone mode', async () => {
         localStorage.setItem(
-            'iptvnator:source-server',
+            'kiptv:source-server',
             JSON.stringify({ apiUrl: 'https://nas.test', instanceId: 'nas' })
         );
         await prepareSourceConnection();
@@ -155,7 +155,7 @@ describe('source server selection and authorization', () => {
         );
         expect(sourceAuthorization('https://nas.test/v1/sources')).toEqual({});
         verifySourceInstance({
-            service: 'iptvnator',
+            service: 'kiptv',
             apiVersion: 1,
             storage: 'server',
             instanceId: 'nas',
@@ -168,14 +168,14 @@ describe('source server selection and authorization', () => {
         globalThis.fetch = jest.fn(async () => ({
             ok: true,
             json: async () => ({
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 storage: 'none',
             }),
         })) as unknown as typeof fetch;
         await prepareSourceConnection('https://nas.test');
         expect(sourceConnection()).toBeNull();
-        expect(sourceProfileName()).toBe('iptvnator');
+        expect(sourceProfileName()).toBe('kiptv');
     });
     it('blocks source and provider secrets before verification and after an instance replacement', async () => {
         const connection = {
@@ -183,7 +183,7 @@ describe('source server selection and authorization', () => {
             instanceId: 'nas',
         };
         localStorage.setItem(
-            'iptvnator:source-server',
+            'kiptv:source-server',
             JSON.stringify(connection)
         );
         sessionStorage.setItem(tokenKey(connection), 'saved-secret');
@@ -197,7 +197,7 @@ describe('source server selection and authorization', () => {
             assertSourceRequestAllowed('https://provider.test/stream')
         ).not.toThrow();
         const instance = {
-            service: 'iptvnator',
+            service: 'kiptv',
             apiVersion: 1,
             storage: 'server',
             instanceId: 'nas',
@@ -226,7 +226,7 @@ describe('source server selection and authorization', () => {
             instanceId: 'original',
         };
         const info = {
-            service: 'iptvnator',
+            service: 'kiptv',
             apiVersion: 1,
             storage: 'server',
             capabilities: ['sources-v1'],
@@ -240,7 +240,7 @@ describe('source server selection and authorization', () => {
         });
         const replacement = { ...original, instanceId: 'replacement' };
         localStorage.setItem(
-            'iptvnator:source-server',
+            'kiptv:source-server',
             JSON.stringify(replacement)
         );
         await prepareSourceConnection();
@@ -263,18 +263,18 @@ describe('source server selection and authorization', () => {
             const newer = { apiUrl: 'https://new.test/api', instanceId: 'new' };
             if (action === 'connect')
                 saveBrowserSourceConnection(newer, 'new-token');
-            else localStorage.setItem('iptvnator:source-server-disabled', '1');
-            const before = localStorage.getItem('iptvnator:source-server');
+            else localStorage.setItem('kiptv:source-server-disabled', '1');
+            const before = localStorage.getItem('kiptv:source-server');
             saveBrowserSourceConnection(
                 { ...pending, instanceId: 'resolved-old' },
                 'old-token',
                 pending
             );
-            expect(localStorage.getItem('iptvnator:source-server')).toBe(
+            expect(localStorage.getItem('kiptv:source-server')).toBe(
                 before
             );
             expect(
-                localStorage.getItem('iptvnator:source-server-disabled')
+                localStorage.getItem('kiptv:source-server-disabled')
             ).toBe(action === 'disconnect' ? '1' : null);
             expect(sessionStorage.getItem(tokenKey(pending))).toBeNull();
         }
@@ -285,7 +285,7 @@ describe('source server selection and authorization', () => {
             instanceId: 'pending:https://old.test/api',
         };
         localStorage.setItem(
-            'iptvnator:source-server',
+            'kiptv:source-server',
             JSON.stringify(pending)
         );
         saveBrowserSourceConnection(
@@ -294,7 +294,7 @@ describe('source server selection and authorization', () => {
             pending
         );
         expect(
-            JSON.parse(localStorage.getItem('iptvnator:source-server')!)
+            JSON.parse(localStorage.getItem('kiptv:source-server')!)
         ).toEqual({ ...pending, instanceId: 'resolved' });
     });
     it.each(['connect', 'disconnect'])(
@@ -308,7 +308,7 @@ describe('source server selection and authorization', () => {
                             resolve({
                                 ok: true,
                                 json: async () => ({
-                                    service: 'iptvnator',
+                                    service: 'kiptv',
                                     apiVersion: 1,
                                     storage: 'server',
                                     instanceId: 'old',
@@ -321,14 +321,14 @@ describe('source server selection and authorization', () => {
             const newer = { apiUrl: 'https://new.test/api', instanceId: 'new' };
             if (action === 'connect')
                 saveBrowserSourceConnection(newer, 'new-token');
-            else localStorage.setItem('iptvnator:source-server-disabled', '1');
+            else localStorage.setItem('kiptv:source-server-disabled', '1');
             release();
             await probing;
             expect(sourceConnection()).toEqual(
                 action === 'connect' ? newer : null
             );
             expect(
-                localStorage.getItem('iptvnator:source-server-disabled')
+                localStorage.getItem('kiptv:source-server-disabled')
             ).toBe(action === 'disconnect' ? '1' : null);
             expect(sourceAuthorization('https://old.test/api/xtream')).toEqual(
                 {}
@@ -342,7 +342,7 @@ describe('source server selection and authorization', () => {
             'pending:https://nas.test/api'
         );
         expect(
-            JSON.parse(localStorage.getItem('iptvnator:source-server')!)
+            JSON.parse(localStorage.getItem('kiptv:source-server')!)
         ).toEqual(sourceConnection());
     });
 });

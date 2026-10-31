@@ -12,4 +12,4 @@ export {
     pickConfidentMatch,
     extractYear,
     normalizeTitle,
-} from '@iptvnator/shared/tmdb';
+} from '@kiptv/shared/tmdb';

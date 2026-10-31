@@ -1,8 +1,8 @@
 import type {
     ExternalPlayerSession,
     PlayerContentInfo,
-} from '@iptvnator/shared/interfaces';
-import { isLiveExternalPlayerSession } from '@iptvnator/portal/shared/util';
+} from '@kiptv/shared/interfaces';
+import { isLiveExternalPlayerSession } from '@kiptv/portal/shared/util';
 
 /**
  * Which external player process, and which position rows, belong to this page.

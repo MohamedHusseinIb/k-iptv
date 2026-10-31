@@ -1,7 +1,7 @@
 import { computed, inject, Injectable, Signal, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import type { SeasonEpisodeDownloadAdapter } from '@iptvnator/portal/shared/data-access';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+import type { SeasonEpisodeDownloadAdapter } from '@kiptv/portal/shared/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import { createXtreamSeriesDownloadMetadataContext } from './serial-download-metadata';
 import { createXtreamSeriesDownloadAdapter } from './xtream-series-download.adapter';
 import type { XtreamSerieDetailsView } from './serial-details-playback.service';

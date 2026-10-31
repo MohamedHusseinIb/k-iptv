@@ -1,14 +1,14 @@
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
 import { inject, Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { extractDrmFromRaw } from '@iptvnator/shared/m3u-utils';
+import { extractDrmFromRaw } from '@kiptv/shared/m3u-utils';
 import {
     DataService,
     PlaylistsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
+} from '@kiptv/services';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
 import {
     buildStalkerEpgMappingKey,
     buildXtreamEpgMappingKey,
@@ -24,11 +24,11 @@ import {
     STALKER_REQUEST,
     StalkerPortalActions,
     windowEpgItemsAtProviderClock,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     XtreamApiService,
     XtreamUrlService,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     buildStalkerExternalPlaybackHeaders,
     ensureStalkerSession,
@@ -41,12 +41,12 @@ import {
     StalkerPortalRepairService,
     StalkerSessionService,
     type StalkerLinkFlagSource,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import {
     UnifiedCollectionItem,
     collectionEpgKey,
     createLogger,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 type PlaylistWithChannels = Playlist & {
     readonly playlist?: { readonly items?: Channel[] };

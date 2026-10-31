@@ -2,7 +2,7 @@ import { computed, signal, type Signal } from '@angular/core';
 import type {
     ExternalPlayerName,
     ExternalPlayerSession,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export const EXTERNAL_RECOVERY_LAUNCH_TIMEOUT_MS = 10_000;
 

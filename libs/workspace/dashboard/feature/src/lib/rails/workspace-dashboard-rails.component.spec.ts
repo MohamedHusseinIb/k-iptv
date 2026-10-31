@@ -1,7 +1,7 @@
 import { WorkspaceDashboardRailsComponent } from './workspace-dashboard-rails.component';
-import type { GlobalRecentItem } from '@iptvnator/workspace/dashboard/data-access';
-import type { EpgProgram, PlaylistMeta } from '@iptvnator/shared/interfaces';
-import { DEFAULT_DASHBOARD_RAILS_SETTINGS } from '@iptvnator/shared/interfaces';
+import type { GlobalRecentItem } from '@kiptv/workspace/dashboard/data-access';
+import type { EpgProgram, PlaylistMeta } from '@kiptv/shared/interfaces';
+import { DEFAULT_DASHBOARD_RAILS_SETTINGS } from '@kiptv/shared/interfaces';
 import {
     buildDashboardCollectionViewState,
     buildDashboardContinueWatchingActions,
@@ -30,7 +30,7 @@ import {
 } from './dashboard-playback.utils';
 import { resolveDashboardHeroArtwork } from './dashboard-hero.utils';
 import type { DashboardRailCard } from './dashboard-rail.component';
-import { COLLECTION_VIEW_STATE_KEY } from '@iptvnator/portal/shared/util';
+import { COLLECTION_VIEW_STATE_KEY } from '@kiptv/portal/shared/util';
 
 describe('buildDashboardSourceActions', () => {
     const basePlaylist = {

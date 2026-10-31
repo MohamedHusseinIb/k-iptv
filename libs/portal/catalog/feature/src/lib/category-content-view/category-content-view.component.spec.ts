@@ -16,16 +16,16 @@ import { MatTooltip } from '@angular/material/tooltip';
 import { ActivatedRoute, convertToParamMap, Router } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { EMPTY, ReplaySubject, of } from 'rxjs';
-import { InfiniteScrollDirective } from '@iptvnator/portal/shared/ui';
+import { InfiniteScrollDirective } from '@kiptv/portal/shared/ui';
 import {
     MenuItemRadioCheckDirective,
     MenuItemRadioDirective,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     PORTAL_CATALOG_DETAIL_COMPONENT,
     PORTAL_CATALOG_FACADE,
     PortalCatalogSortMode,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import { CategoryContentViewComponent } from './category-content-view.component';
 
 @Component({

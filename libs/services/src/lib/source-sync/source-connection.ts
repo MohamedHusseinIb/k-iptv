@@ -2,10 +2,10 @@ import {
     SOURCE_SYNC_CAPABILITY,
     type SourceServerConnection,
     type ServerInstanceInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
-export const CONNECTION_KEY = 'iptvnator:source-server';
-export const DISABLED_KEY = 'iptvnator:source-server-disabled';
+export const CONNECTION_KEY = 'kiptv:source-server';
+export const DISABLED_KEY = 'kiptv:source-server-disabled';
 const INCOMPATIBLE = 'SOURCE_SYNC.INCOMPATIBLE';
 const OFFLINE = 'SOURCE_SYNC.OFFLINE';
 let selected: SourceServerConnection | null = null;
@@ -20,19 +20,19 @@ export function markSourceConnectionReadFailed(): void {
 export const sourceVerificationEpoch = () => verificationEpoch;
 export const sourceProfileName = () =>
     selected
-        ? `iptvnator-server:${selected.instanceId}`
+        ? `kiptv-server:${selected.instanceId}`
         : readFailed
-          ? 'iptvnator-recovery'
-          : 'iptvnator';
+          ? 'kiptv-recovery'
+          : 'kiptv';
 export const tokenKey = ({ apiUrl, instanceId }: SourceServerConnection) =>
-    `iptvnator:server-token:${JSON.stringify([apiUrl, instanceId])}`;
+    `kiptv:server-token:${JSON.stringify([apiUrl, instanceId])}`;
 
 export function assertSourceInstance(
     value: unknown
 ): asserts value is ServerInstanceInfo {
     const info = value as ServerInstanceInfo;
     if (
-        info?.service !== 'iptvnator' ||
+        info?.service !== 'kiptv' ||
         info.apiVersion !== 1 ||
         info.storage !== 'server' ||
         typeof info.instanceId !== 'string' ||

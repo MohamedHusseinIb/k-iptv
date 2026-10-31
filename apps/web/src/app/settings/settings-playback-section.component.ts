@@ -19,10 +19,10 @@ import {
     StreamFormat,
     VideoPlayer,
     reportsPlaybackFailures,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { SettingsPlayerOption } from './settings.models';
 import { markSectionForCheckOnFormEvents } from './settings-section-form-render';
-import { provideFormFieldDefaults } from '@iptvnator/ui/components/form-field-defaults';
+import { provideFormFieldDefaults } from '@kiptv/ui/components/form-field-defaults';
 
 @Component({
     selector: 'app-settings-playback-section',

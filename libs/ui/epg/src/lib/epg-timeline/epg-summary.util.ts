@@ -1,4 +1,4 @@
-import { epgDisplayTimeMs } from '@iptvnator/shared/interfaces';
+import { epgDisplayTimeMs } from '@kiptv/shared/interfaces';
 
 /**
  * Collapsed-summary payload (the current / archive programme shown when the

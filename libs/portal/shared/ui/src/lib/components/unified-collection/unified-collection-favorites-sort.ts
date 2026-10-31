@@ -4,7 +4,7 @@ import {
     getFavoritesChannelSortModeTranslationKey,
     persistFavoritesChannelSortMode,
     restoreFavoritesChannelSortMode,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 export interface FavoritesSortOption {
     readonly mode: FavoritesChannelSortMode;

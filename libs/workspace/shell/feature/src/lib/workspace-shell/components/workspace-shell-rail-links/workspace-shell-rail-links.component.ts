@@ -10,7 +10,7 @@ import {
 import {
     PortalRailLink,
     PortalRailSection,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 @Component({
     selector: 'app-workspace-shell-rail-links',

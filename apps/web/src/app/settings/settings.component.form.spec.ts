@@ -1,15 +1,15 @@
 import { FormArray, FormControl } from '@angular/forms';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
 import {
     Language,
     StartupBehavior,
     Theme,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { TranslateService } from '@ngx-translate/core';
-import { SettingsContextService } from '@iptvnator/workspace/shell/util/settings-context';
+import { SettingsContextService } from '@kiptv/workspace/shell/util/settings-context';
 import { SettingsStore } from '../services/settings-store.service';
 import { SettingsComponent } from './settings.component';
 import {

@@ -1,4 +1,4 @@
-import { normalizeEpgUrls } from '@iptvnator/shared/m3u-utils';
+import { normalizeEpgUrls } from '@kiptv/shared/m3u-utils';
 import { EpgLookupOptions } from './epg-runtime-bridge.service';
 
 /** Trimmed, de-duplicated, non-empty channel ids, in request order. */

@@ -1,7 +1,7 @@
 import type {
     ElectronBridgeXtreamFavorite,
     XtreamFavoriteRemovalRef,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 /**
  * Database service for Electron renderer process
  * Communicates with the main process database via IPC
@@ -9,7 +9,7 @@ import type {
 
 import { inject, Injectable } from '@angular/core';
 import { PlaylistStorageBackend } from './playlist-storage-backend';
-import { normalizeContentMetadataPatch } from '@iptvnator/shared/interfaces';
+import { normalizeContentMetadataPatch } from '@kiptv/shared/interfaces';
 import type {
     ContentMetadataPatch,
     GlobalSearchPaginationOptions,
@@ -20,7 +20,7 @@ import type {
     XtreamBackupHiddenCategory,
     XtreamBackupRecentlyViewedItem,
     XtreamCategory,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export interface XCategoryFromDb {
     id: number;
@@ -42,7 +42,7 @@ export interface XtreamContent {
     poster_url: string;
     backdrop_url?: string | null;
     // Identity a detail view recorded on the row; absent until one has been
-    // opened. See ContentMetadataPatch in @iptvnator/shared/interfaces.
+    // opened. See ContentMetadataPatch in @kiptv/shared/interfaces.
     tmdb_id?: number | null;
     release_year?: number | null;
     original_title?: string | null;

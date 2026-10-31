@@ -4,11 +4,11 @@ import { of } from 'rxjs';
 import {
     WorkspaceBackNavigationService,
     WorkspaceBackParent,
-} from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/portal/shared/data-access';
 import {
     CatalogTitleMatchService,
     TmdbEnrichmentService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { StalkerActorRouteComponent } from './stalker-actor-route.component';
 import { StalkerDiscoverRouteComponent } from './stalker-discover-route.component';
 import { StalkerSearchComponent } from './stalker-search/stalker-search.component';

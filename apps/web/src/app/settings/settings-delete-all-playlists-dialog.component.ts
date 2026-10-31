@@ -9,10 +9,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
-import { ServerStorageStatusService } from '@iptvnator/services';
-import { DialogFooterDirective, DialogShellComponent } from '@iptvnator/ui/components';
-import { SOURCE_TYPE_ICONS } from '@iptvnator/shared/interfaces';
-import { PlaylistStorageBackend } from '@iptvnator/services';
+import { ServerStorageStatusService } from '@kiptv/services';
+import { DialogFooterDirective, DialogShellComponent } from '@kiptv/ui/components';
+import { SOURCE_TYPE_ICONS } from '@kiptv/shared/interfaces';
+import { PlaylistStorageBackend } from '@kiptv/services';
 
 export interface SettingsDeleteAllPlaylistsDialogData {
     summary: {

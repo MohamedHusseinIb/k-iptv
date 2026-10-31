@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslatePipe } from '@ngx-translate/core';
-import { PlaylistFileImportService } from '@iptvnator/playlist/shared/util';
+import { PlaylistFileImportService } from '@kiptv/playlist/shared/util';
 import { DragDropFileUploadDirective } from './drag-drop-file-upload.directive';
 
 const MB = 1024 * 1024;

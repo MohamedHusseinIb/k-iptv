@@ -13,10 +13,10 @@ import {
     ChangeDetectionStrategy,
 } from '@angular/core';
 import Artplayer from 'artplayer';
-import { Channel, createDevLogger } from '@iptvnator/shared/interfaces';
+import { Channel, createDevLogger } from '@kiptv/shared/interfaces';
 import { releaseVideoPictureInPicture } from '../player-controls/web-video-picture-in-picture-lifecycle';
 import { PLAYER_PROGRESS_COLOR } from '../player-controls/player-palette';
-import type { PlaybackDiagnostic } from '@iptvnator/playback/util';
+import type { PlaybackDiagnostic } from '@kiptv/playback/util';
 import {
     type LegacyPlayerShortcuts,
     PlayerControlsComponent,

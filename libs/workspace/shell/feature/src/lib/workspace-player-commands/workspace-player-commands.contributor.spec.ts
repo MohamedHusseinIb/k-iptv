@@ -6,9 +6,9 @@ import { Observable, of } from 'rxjs';
 import {
     WorkspaceCommandContribution,
     WorkspaceViewCommandService,
-} from '@iptvnator/portal/shared/util';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
-import { VideoPlayer } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
+import { VideoPlayer } from '@kiptv/shared/interfaces';
 import { WorkspacePlayerCommandsContributor } from './workspace-player-commands.contributor';
 
 interface ViewCommandsMock {

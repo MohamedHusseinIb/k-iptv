@@ -11,11 +11,11 @@ import {
     type PlaybackDiagnostic,
     type PlaybackRecommendation,
     type PlaybackRecommendationTarget,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import type {
     ResolvedPortalPlayback,
     VodSourceDescriptor,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { PlaybackDiagnosticPanelComponent } from './playback-diagnostic-panel.component';
 import type { ExternalRecoveryStates } from '../web-player-view/external-playback-recovery';
 

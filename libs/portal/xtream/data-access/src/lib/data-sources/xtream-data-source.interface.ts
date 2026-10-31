@@ -1,4 +1,4 @@
-import type { XtreamFavoriteCatalogStatus } from '@iptvnator/shared/interfaces';
+import type { XtreamFavoriteCatalogStatus } from '@kiptv/shared/interfaces';
 import { InjectionToken } from '@angular/core';
 import {
     ContentMetadataPatch,
@@ -8,8 +8,8 @@ import {
     XtreamLiveStream,
     XtreamSerieItem,
     XtreamVodStream,
-} from '@iptvnator/shared/interfaces';
-import type { DbOperationEvent } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import type { DbOperationEvent } from '@kiptv/services';
 import {
     CategoryType,
     StreamType,

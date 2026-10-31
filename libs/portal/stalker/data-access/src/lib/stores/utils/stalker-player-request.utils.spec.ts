@@ -1,4 +1,4 @@
-import { PlaylistMeta, StalkerPortalActions } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta, StalkerPortalActions } from '@kiptv/shared/interfaces';
 import { StalkerSessionService } from '../../stalker-session.service';
 import { shouldResolveMovieFileId } from './stalker-playback-command.utils';
 import {

@@ -1,7 +1,7 @@
 import { DestroyRef, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { NavigationEnd, Router } from '@angular/router';
-import { StalkerItvChannel } from '@iptvnator/portal/stalker/data-access';
+import { StalkerItvChannel } from '@kiptv/portal/stalker/data-access';
 import { Subject } from 'rxjs';
 import { StalkerLiveAutoOpen } from './stalker-live-auto-open';
 

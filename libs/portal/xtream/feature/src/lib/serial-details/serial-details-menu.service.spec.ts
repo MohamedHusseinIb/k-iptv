@@ -3,20 +3,20 @@ import { TestBed } from '@angular/core/testing';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import type { SeriesQuickStartAction } from '@iptvnator/portal/shared/util';
+import type { SeriesQuickStartAction } from '@kiptv/portal/shared/util';
 import {
     XTREAM_DATA_SOURCE,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
+} from '@kiptv/portal/xtream/data-access';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
 import {
     VideoPlayer,
     type PlaybackPositionData,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     SERIES_MENU_ACTION,
     type SeasonContainerComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import { SerialDetailsMenuService } from './serial-details-menu.service';
 
 function quickStart(

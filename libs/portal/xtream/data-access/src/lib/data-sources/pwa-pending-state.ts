@@ -1,7 +1,7 @@
 import type {
     PlaybackPositionData,
     XtreamPendingRestoreState,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     type CollectionKey,
     normalizeStoredBackdrop,

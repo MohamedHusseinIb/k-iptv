@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { ParentalLockService, PlaylistsService } from '@iptvnator/services';
+import { ParentalLockService, PlaylistsService } from '@kiptv/services';
 import { of } from 'rxjs';
 import { XtreamApiService } from '../services/xtream-api.service';
 import { PwaXtreamDataSource } from './pwa-xtream-data-source';

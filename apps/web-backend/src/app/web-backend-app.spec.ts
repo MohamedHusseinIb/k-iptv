@@ -43,7 +43,7 @@ describe('web backend app', () => {
 
             await expect(response.json()).resolves.toEqual({
                 status: 'ok',
-                service: 'iptvnator-web-backend',
+                service: 'kiptv-web-backend',
             });
         });
     });
@@ -60,7 +60,7 @@ describe('web backend app', () => {
                 expect(response.headers.get('content-type')).toContain(
                     'application/javascript'
                 );
-                expect(body).toContain('window.__IPTVNATOR_CONFIG__');
+                expect(body).toContain('window.__KIPTV_CONFIG__');
                 expect(body).toContain('"BACKEND_URL":"/api"');
             }
         );
@@ -128,7 +128,7 @@ https://stream.example/news.m3u8`);
         );
     });
 
-    it.each(['  IPTVnator-Test/1.0  ', '', '   '])(
+    it.each(['  K-IPTV-Test/1.0  ', '', '   '])(
         'forwards and persists the optional playlist User-Agent: %s',
         async (userAgent) => {
             const httpClient = new StubHttpClient();

@@ -10,7 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     ELECTRON_BRIDGE_APP_UPDATE_STATUSES,
     ElectronBridgeAppUpdateStatus,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { AppUpdateNotificationCardComponent } from './app-update-notification-card.component';
 import { AppUpdateNotificationPanelComponent } from './app-update-notification-panel.component';
 import { AppUpdateReleaseNotesDialogComponent } from './settings/app-update-release-notes-dialog.component';
@@ -18,7 +18,7 @@ import { AppUpdateReleaseNotesDialogComponent } from './settings/app-update-rele
 const availableStatus: ElectronBridgeAppUpdateStatus = {
     currentVersion: '0.22.0',
     latestVersion: '0.23.0',
-    manualDownloadUrl: 'https://github.com/4gray/iptvnator/releases/latest',
+    manualDownloadUrl: 'https://github.com/MohamedHusseinIb/k-iptv/releases/latest',
     status: ELECTRON_BRIDGE_APP_UPDATE_STATUSES.Available,
     supportedSelfUpdate: true,
     channel: 'stable',

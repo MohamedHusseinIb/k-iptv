@@ -1,6 +1,6 @@
 import { computed, Signal } from '@angular/core';
-import { DownloadsService } from '@iptvnator/services';
-import { getVodNumericId, VodDetailsItem } from '@iptvnator/shared/interfaces';
+import { DownloadsService } from '@kiptv/services';
+import { getVodNumericId, VodDetailsItem } from '@kiptv/shared/interfaces';
 
 /**
  * Download-state signals for a VOD detail view. Reading

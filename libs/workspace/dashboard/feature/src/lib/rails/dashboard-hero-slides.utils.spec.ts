@@ -2,7 +2,7 @@ import type {
     PortalAddedItem,
     PortalFavoriteItem,
     PortalRecentItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     dashboardHeroItemKey,
     HERO_SLIDE_LIMIT,

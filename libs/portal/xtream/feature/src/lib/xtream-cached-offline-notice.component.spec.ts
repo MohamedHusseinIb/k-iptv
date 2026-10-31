@@ -6,9 +6,9 @@ import {
     XtreamContentInitBlockReason,
     XtreamPlaylistData,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { DataService } from '@iptvnator/services';
-import { CONNECTIVITY_GUARD_RESET } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/xtream/data-access';
+import { DataService } from '@kiptv/services';
+import { CONNECTIVITY_GUARD_RESET } from '@kiptv/shared/interfaces';
 import { XtreamCachedOfflineNoticeComponent } from './xtream-cached-offline-notice.component';
 
 describe('Xtream cached catalog status strip', () => {

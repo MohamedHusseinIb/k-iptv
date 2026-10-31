@@ -14,7 +14,7 @@
  * sources of track state that disagree.
  */
 
-import { registerPlayerTechOverrides } from '@iptvnator/playback/util';
+import { registerPlayerTechOverrides } from '@kiptv/playback/util';
 import { isAndroidNativeRuntime } from './android-runtime';
 
 export function installPlayerTechOverrides(): void {

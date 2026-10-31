@@ -2,7 +2,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { ServerStorageStatusService } from '@iptvnator/services';
+import { ServerStorageStatusService } from '@kiptv/services';
 import { SettingsDeleteAllPlaylistsDialogComponent } from './settings-delete-all-playlists-dialog.component';
 
 describe('SettingsDeleteAllPlaylistsDialogComponent', () => {
@@ -114,7 +114,7 @@ describe('SettingsDeleteAllPlaylistsDialogComponent', () => {
 
         TestBed.inject(ServerStorageStatusService).activate(
             {
-                service: 'iptvnator',
+                service: 'kiptv',
                 apiVersion: 1,
                 instanceId: 'i',
                 storage: 'server',

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { VideoPlayer } from '@iptvnator/shared/interfaces';
+import { VideoPlayer } from '@kiptv/shared/interfaces';
 import { VodDetailsRouteComponent } from './vod-details-route.component';
 import {
     configureVodDetailsRouteTestBed,

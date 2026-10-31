@@ -5,7 +5,7 @@ import {
     PlaylistBackupManifestV1,
     XtreamPlaylistBackupEntry,
     XtreamPendingRestoreState,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     createPlaylistBackupService,
     createPwaXtreamBackupState,
@@ -106,7 +106,7 @@ describe('PlaylistBackupService Xtream user state in the PWA', () => {
     function read(key: string, storage: UserDataStorage = localStorage) {
         const parsed = JSON.parse(storage.getItem(key) ?? 'null');
         if (parsed && typeof parsed === 'object')
-            delete parsed['__iptvnator_xtream_restore_receipts__'];
+            delete parsed['__kiptv_xtream_restore_receipts__'];
         return parsed;
     }
 

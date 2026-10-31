@@ -1,4 +1,4 @@
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
 import {
     computed,
     DestroyRef,
@@ -10,15 +10,15 @@ import {
     untracked,
 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { injectTranslationTick } from '@iptvnator/services';
-import { splitSeasonSuffix } from '@iptvnator/portal/shared/util';
+import { injectTranslationTick } from '@kiptv/services';
+import { splitSeasonSuffix } from '@kiptv/portal/shared/util';
 import {
     playlistDisplayLabel,
     resolvePortalActivityWatchKind,
     type PlaybackPositionData,
     type PortalActivityItem,
-} from '@iptvnator/shared/interfaces';
-import { DashboardDataService } from '@iptvnator/workspace/dashboard/data-access';
+} from '@kiptv/shared/interfaces';
+import { DashboardDataService } from '@kiptv/workspace/dashboard/data-access';
 import {
     DashboardHeroTmdbService,
     type DashboardHeroTmdbExtras,

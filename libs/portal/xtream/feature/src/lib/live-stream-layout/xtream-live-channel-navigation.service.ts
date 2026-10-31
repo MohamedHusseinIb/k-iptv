@@ -9,15 +9,15 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
-import { LiveChannelPlaybackQueue } from '@iptvnator/portal/shared/data-access';
+import { LiveChannelPlaybackQueue } from '@kiptv/portal/shared/data-access';
 import {
     LiveLayoutSidebarStateService,
     PortalChannelSortMode,
     queryParamSignal,
     sortPortalChannelItems,
-} from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { foldSearchText } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { foldSearchText } from '@kiptv/shared/interfaces';
 
 export interface XtreamLiveChannelItem {
     readonly added?: string;

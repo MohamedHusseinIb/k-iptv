@@ -2,7 +2,7 @@ import { effect, inject, Signal, signal } from '@angular/core';
 import {
     WorkspaceBackPhoneSlot,
     WorkspaceBackTarget,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import { WorkspaceBackNavigationService } from './workspace-back-navigation.service';
 
 export interface WorkspaceBackRegistration {

@@ -7,7 +7,7 @@ import type { UserDataStorage } from '../user-data-storage';
  * record. A live tab renews it; one older than `UNCONFIRMED_TTL_MS`
  * belongs to a tab that is gone.
  */
-export const UNCONFIRMED_KEY = 'iptvnator-server:unconfirmed';
+export const UNCONFIRMED_KEY = 'kiptv-server:unconfirmed';
 export const UNCONFIRMED_TTL_MS = 10 * 60 * 1000;
 const recordKey = (instanceId: string, page: string) =>
     `${UNCONFIRMED_KEY}:${instanceId}:${page}`;

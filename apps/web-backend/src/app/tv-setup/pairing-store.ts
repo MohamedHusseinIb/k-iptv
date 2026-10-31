@@ -6,7 +6,7 @@ import {
     SettingsDraft,
     SetupPurpose,
     PhoneSettingsDefaults,
-} from '@iptvnator/tv/util';
+} from '@kiptv/tv/util';
 type Status = 'waiting' | 'pending' | 'saved' | 'rejected' | 'cancelled';
 interface Session {
     id: string;

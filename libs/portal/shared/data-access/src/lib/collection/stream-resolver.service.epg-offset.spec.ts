@@ -3,17 +3,17 @@ import { of } from 'rxjs';
 import {
     XtreamApiService,
     XtreamUrlService,
-} from '@iptvnator/portal/xtream/data-access';
-import { StalkerSessionService } from '@iptvnator/portal/stalker/data-access';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
+} from '@kiptv/portal/xtream/data-access';
+import { StalkerSessionService } from '@kiptv/portal/stalker/data-access';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
 import {
     DataService,
     PlaylistsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
-import { Playlist } from '@iptvnator/shared/interfaces';
-import { UnifiedCollectionItem } from '@iptvnator/portal/shared/util';
+} from '@kiptv/services';
+import { Playlist } from '@kiptv/shared/interfaces';
+import { UnifiedCollectionItem } from '@kiptv/portal/shared/util';
 import { StreamResolverService } from './stream-resolver.service';
 
 /**

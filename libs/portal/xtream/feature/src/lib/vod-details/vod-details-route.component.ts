@@ -28,25 +28,25 @@ import {
     type SimilarRailItem,
     VodMoreMenuComponent,
     scrollToCastCrewRow,
-} from '@iptvnator/ui/components';
-import { createLogger } from '@iptvnator/portal/shared/util';
+} from '@kiptv/ui/components';
+import { createLogger } from '@kiptv/portal/shared/util';
 import {
     registerContentMetadataBackfill,
     xtreamDetailContentMetadata,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     type PlaybackFallbackRequest,
     PortalInlinePlayerComponent,
-} from '@iptvnator/ui/playback';
-import { DownloadsService, SettingsStore } from '@iptvnator/services';
+} from '@kiptv/ui/playback';
+import { DownloadsService, SettingsStore } from '@kiptv/services';
 import {
     normalizeXtreamVod,
     TmdbEnrichedCastMember,
     XtreamVodDetails,
     XtreamVodInfo,
     type ExternalPlayerName,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { injectXtreamDetailNavigation } from '../xtream-detail-navigation';
 import { VodDetailsPlaybackService } from './vod-details-playback.service';
 import { VodDetailsMultiSourceUiService } from './vod-details-multi-source-ui.service';

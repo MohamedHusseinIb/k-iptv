@@ -1,9 +1,9 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { resolveRestoredRendererRoute } from '@iptvnator/shared/interfaces';
+import { resolveRestoredRendererRoute } from '@kiptv/shared/interfaces';
 import { registerAppDateLocale } from './app/app-date-locales';
 import { AppComponent } from './app/app.component';
 import { appConfig, getInitialLanguage } from './app/app.config';
-import { prepareSourceConnection } from '@iptvnator/services/source-sync/connection';
+import { prepareSourceConnection } from '@kiptv/services/source-sync/connection';
 
 // A reloaded packaged renderer arrives on index.html with the route it was
 // on carried in the query string (the Electron main process recovers the
@@ -23,7 +23,7 @@ if (restoredHref !== null) {
 // (the default) resolves immediately.
 Promise.all([
     registerAppDateLocale(getInitialLanguage()),
-    prepareSourceConnection(window.__IPTVNATOR_CONFIG__?.BACKEND_URL),
+    prepareSourceConnection(window.__KIPTV_CONFIG__?.BACKEND_URL),
 ])
     .then(() => bootstrapApplication(AppComponent, appConfig))
     .then(() => {

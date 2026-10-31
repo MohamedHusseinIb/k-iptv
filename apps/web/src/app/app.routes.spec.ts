@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { ParentalLockService, SettingsStore } from '@iptvnator/services';
+import { ParentalLockService, SettingsStore } from '@kiptv/services';
 
 type AppRoutesModule = typeof import('./app.routes');
 
@@ -18,7 +18,7 @@ describe('app routes', () => {
 
     beforeAll(async () => {
         jest.unstable_mockModule(
-            '@iptvnator/playlist/m3u/feature-player',
+            '@kiptv/playlist/m3u/feature-player',
             () => ({
                 createM3uWorkspaceRoutes: () => [
                     {

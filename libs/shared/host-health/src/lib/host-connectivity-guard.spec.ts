@@ -1,7 +1,7 @@
 import {
     buildHostConnectivityFastFailMessage,
     isHostConnectivityFastFailMessage,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     HostConnectivityGuard,
     HostConnectivityGuardError,
@@ -12,7 +12,7 @@ import {
 } from './host-connectivity-guard';
 
 const HOST = 'http://portal.example.com:8080';
-const GUARD_DISABLED_ENV = 'IPTVNATOR_DISABLE_CONNECTIVITY_GUARD';
+const GUARD_DISABLED_ENV = 'KIPTV_DISABLE_CONNECTIVITY_GUARD';
 const OPEN_DURATION_MS = 30_000;
 const FAILURE_WINDOW_MS = 120_000;
 

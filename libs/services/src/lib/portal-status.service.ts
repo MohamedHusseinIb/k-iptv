@@ -2,14 +2,14 @@ import { SourceHealthEvidenceService } from './source-health-evidence.service';
 import {
     accountHealth,
     sourceHealthUnknown,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { Injectable, inject } from '@angular/core';
 import {
     normalizeXtreamServerUrl,
     resolveXtreamPortalExpiration,
     resolveXtreamPortalStatus,
     XtreamPortalStatusResponseLike,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { DataService } from './data.service';
 import { resetHostConnectivityGuard } from './host-connectivity-reset';
 

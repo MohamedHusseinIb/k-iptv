@@ -1,4 +1,4 @@
-import { StalkerVodInfo } from '@iptvnator/shared/interfaces';
+import { StalkerVodInfo } from '@kiptv/shared/interfaces';
 import { mergeStalkerInfoWithTmdb } from './tmdb-merge';
 import { TmdbMovieDetails, TmdbTvDetails } from './tmdb.types';
 

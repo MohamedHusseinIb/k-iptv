@@ -1,10 +1,10 @@
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
 import type {
     PortalActivityItem,
     PortalAddedItem,
     PortalFavoriteItem,
     PortalRecentItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /** Slides the cinematic hero rotates through, at most. */
 export const HERO_SLIDE_LIMIT = 4;

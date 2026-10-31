@@ -21,20 +21,20 @@ import {
     PortalDetailShellComponent,
     SimilarRailComponent,
     VodMoreMenuComponent,
-} from '@iptvnator/ui/components';
-import { PORTAL_EXTERNAL_PLAYBACK } from '@iptvnator/portal/shared/util';
+} from '@kiptv/ui/components';
+import { PORTAL_EXTERNAL_PLAYBACK } from '@kiptv/portal/shared/util';
 import {
     CrossPortalSimilarService,
     DownloadItem,
     DownloadsService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     ExternalPlayerSession,
     VideoPlayer,
     VodDetailsItem,
     createStalkerVodItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { VodDetailsComponent as VodDetailsComponentInstance } from './vod-details.component';
 
 jest.unstable_mockModule('video.js', () => ({

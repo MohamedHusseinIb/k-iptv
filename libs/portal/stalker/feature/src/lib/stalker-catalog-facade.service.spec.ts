@@ -4,10 +4,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import {
     type StalkerCategoryLabel,
     StalkerStore,
-} from '@iptvnator/portal/stalker/data-access';
-import { PORTAL_PLAYBACK_POSITIONS } from '@iptvnator/portal/shared/util';
-import { PlaybackPositionRuntimeBridgeService } from '@iptvnator/services';
-import { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/stalker/data-access';
+import { PORTAL_PLAYBACK_POSITIONS } from '@kiptv/portal/shared/util';
+import { PlaybackPositionRuntimeBridgeService } from '@kiptv/services';
+import { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import { StalkerCatalogFacadeService } from './stalker-catalog-facade.service';
 import { StalkerWorkspaceRouteSession } from './stalker-workspace-route-session.service';
 

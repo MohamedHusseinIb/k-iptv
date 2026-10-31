@@ -1,7 +1,7 @@
 ---
 services:
-  iptvnator:
-    image: 4gray/iptvnator:latest
+  kiptv:
+    image: k-iptv:latest
     build:
       context: ..
       dockerfile: docker/Dockerfile
@@ -12,14 +12,14 @@ services:
       BACKEND_URL: /api
       CLIENT_URL: http://localhost:4333
       PORT: "3000"
-      IPTVNATOR_PROXY_ALLOW_PRIVATE_NETWORKS: "0"
+      KIPTV_PROXY_ALLOW_PRIVATE_NETWORKS: "0"
       # Server storage database on the /data volume. Set to "none" to keep
       # the backend stateless.
-      IPTVNATOR_STORAGE: server
+      KIPTV_STORAGE: server
       # Ask every browser for this token once before it shows the library.
-      # IPTVNATOR_ACCESS_TOKEN: change-me
+      # KIPTV_ACCESS_TOKEN: change-me
     volumes:
-      - iptvnator-data:/data
+      - kiptv-data:/data
     healthcheck:
       test: ["CMD-SHELL", "wget -qO- http://127.0.0.1/api/health >/dev/null || exit 1"]
       interval: 30s
@@ -28,4 +28,4 @@ services:
       start_period: 10s
 
 volumes:
-  iptvnator-data: {}
+  kiptv-data: {}

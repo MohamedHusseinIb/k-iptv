@@ -1,7 +1,7 @@
 import {
     SERVER_USER_STATE_NAMESPACES,
     type ServerUserStateResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { extendUnsent } from './server-user-data-adopt';
 import type { UserDataCache } from './server-user-data-cache';
 import { type DeferredEdit, refreshedNamespace } from './server-user-data-edit';

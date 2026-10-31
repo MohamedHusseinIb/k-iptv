@@ -17,21 +17,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SettingsContextService } from '@iptvnator/workspace/shell/util/settings-context';
+import { SettingsContextService } from '@kiptv/workspace/shell/util/settings-context';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import {
     EpgSourceReconciliationError,
     RuntimeCapabilitiesService,
     ServerStorageStatusService,
     injectTranslationTick,
-} from '@iptvnator/services';
-import { VodSourceDiscoveryService } from '@iptvnator/portal/shared/data-access';
-import { dialogSize } from '@iptvnator/ui/components/dialog-size';
+} from '@kiptv/services';
+import { VodSourceDiscoveryService } from '@kiptv/portal/shared/data-access';
+import { dialogSize } from '@kiptv/ui/components/dialog-size';
 import {
     ELECTRON_BRIDGE_APP_UPDATE_STATUSES,
     Language,
     StreamFormat,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { firstValueFrom, map } from 'rxjs';
 import { BUILD_COMMIT } from '../../environments/build-commit';
 import { SettingsAboutSectionComponent } from './settings-about-section.component';

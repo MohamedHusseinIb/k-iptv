@@ -1,5 +1,5 @@
 import { effect, inject, Injectable, Injector, signal } from '@angular/core';
-import type { DownloadItem } from '@iptvnator/services';
+import type { DownloadItem } from '@kiptv/services';
 import type { DownloadOfflineDetail } from './download-offline-detail.viewmodel';
 import type { OfflineDetailItem } from './download-offline-detail.presentation';
 import { DownloadManagerActionsService } from '../download-manager-actions.service';

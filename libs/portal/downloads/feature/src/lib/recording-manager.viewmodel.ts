@@ -1,6 +1,6 @@
-import type { RecordingItem } from '@iptvnator/services';
+import type { RecordingItem } from '@kiptv/services';
 import { normalizeDownloadFilter } from './download-manager.viewmodel';
-import { foldSearchText } from '@iptvnator/shared/interfaces';
+import { foldSearchText } from '@kiptv/shared/interfaces';
 
 export type RecordingAttentionReason = 'file-missing' | 'failed';
 

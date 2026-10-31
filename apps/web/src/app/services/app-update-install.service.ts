@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {
     ELECTRON_BRIDGE_APP_UPDATE_STATUSES,
     ElectronBridgeAppUpdateStatus,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /** What an unload guard must offer to survive an updater-driven quit. */
 export interface AppQuitUnloadGuardHooks {

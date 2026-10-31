@@ -8,14 +8,14 @@ import {
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
 import { TranslatePipe } from '@ngx-translate/core';
-import { VodSourceDescriptor } from '@iptvnator/shared/interfaces';
+import { VodSourceDescriptor } from '@kiptv/shared/interfaces';
 import {
     buildVodSourceTags,
     sourceMonogram,
     sourceNeedsCheck,
 } from './vod-source-tags';
 import { VodSourceTagListComponent } from './vod-source-tag-list.component';
-import { playlistDisplayLabel } from '@iptvnator/shared/interfaces';
+import { playlistDisplayLabel } from '@kiptv/shared/interfaces';
 
 /**
  * One alternative source for the movie being viewed.

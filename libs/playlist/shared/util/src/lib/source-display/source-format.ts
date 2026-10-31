@@ -2,7 +2,7 @@ import {
     PlaylistMeta,
     resolvePlaylistSourceKind,
     SourceStatus,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { SourceDisplayFields, sourceDisplayUrl } from './source-display';
 
 /** `TranslateService.instant` or a test double. */

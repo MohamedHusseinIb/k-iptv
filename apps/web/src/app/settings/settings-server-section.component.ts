@@ -10,12 +10,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TranslateModule } from '@ngx-translate/core';
-import { provideFormFieldDefaults } from '@iptvnator/ui/components/form-field-defaults';
-import { createRandomId, type Playlist } from '@iptvnator/shared/interfaces';
+import { provideFormFieldDefaults } from '@kiptv/ui/components/form-field-defaults';
+import { createRandomId, type Playlist } from '@kiptv/shared/interfaces';
 import {
     normalizeSourceServerUrl,
     sourceFromPlaylist,
-} from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces/source-definition';
 import {
     SourceSyncService,
     assertSourceInstance,
@@ -23,7 +23,7 @@ import {
     disconnectBrowserSourceConnection,
     readLocalSourcesForImport,
     requestSourceServer,
-} from '@iptvnator/services/source-sync';
+} from '@kiptv/services/source-sync';
 
 @Component({
     selector: 'app-settings-server-section',

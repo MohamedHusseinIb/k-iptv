@@ -1,7 +1,7 @@
 import {
     PlaylistMeta,
     PlaylistUpdateState,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     STALKER_MAG_USER_AGENT,
     STALKER_STREAM_USER_AGENT,

@@ -4,7 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { Store } from '@ngrx/store';
 import { TranslateModule } from '@ngx-translate/core';
-import { DataService, RuntimeCapabilitiesService } from '@iptvnator/services';
+import { DataService, RuntimeCapabilitiesService } from '@kiptv/services';
 import { AddPlaylistDialogComponent } from './add-playlist-dialog.component';
 
 /**

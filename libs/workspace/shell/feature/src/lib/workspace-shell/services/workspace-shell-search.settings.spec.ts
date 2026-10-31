@@ -3,14 +3,14 @@ import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { EMPTY, of } from 'rxjs';
-import { StalkerStore } from '@iptvnator/portal/stalker/data-access';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
-import { parseWorkspaceShellRoute } from '@iptvnator/workspace/shell/util';
+import { StalkerStore } from '@kiptv/portal/stalker/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
+import { parseWorkspaceShellRoute } from '@kiptv/workspace/shell/util';
 import {
     SettingsSearchEntry,
     SettingsSearchService,
-} from '@iptvnator/workspace/shell/util/settings-search';
+} from '@kiptv/workspace/shell/util/settings-search';
 import { SEARCH_SETTINGS_PLACEHOLDER } from './helpers/workspace-shell-constants';
 import { WorkspaceShellRouteStateService } from './workspace-shell-route-state.service';
 import { WorkspaceShellSearchSyncService } from './workspace-shell-search-sync.service';

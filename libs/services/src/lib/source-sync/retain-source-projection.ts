@@ -1,6 +1,6 @@
-import { type Playlist } from '@iptvnator/shared/interfaces';
-import { applySourceDefinition } from '@iptvnator/shared/interfaces/source-definition';
-import { resolvePlaylistEpgSourceState } from '@iptvnator/shared/m3u-utils';
+import { type Playlist } from '@kiptv/shared/interfaces';
+import { applySourceDefinition } from '@kiptv/shared/interfaces/source-definition';
+import { resolvePlaylistEpgSourceState } from '@kiptv/shared/m3u-utils';
 
 /** Merge delayed device activity without restoring an obsolete parsed source or session. */
 export function retainSourceProjection(

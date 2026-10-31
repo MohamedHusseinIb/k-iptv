@@ -1,4 +1,4 @@
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { Playlist } from '@kiptv/shared/interfaces';
 
 type RefreshSource = Partial<Pick<Playlist, 'url' | 'filePath' | 'userAgent'>>;
 

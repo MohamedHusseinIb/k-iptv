@@ -5,11 +5,11 @@ import {
     withMethods,
     withState,
 } from '@ngrx/signals';
-import { PORTAL_PLAYER } from '@iptvnator/portal/shared/util/tokens';
+import { PORTAL_PLAYER } from '@kiptv/portal/shared/util/tokens';
 import {
     XtreamSerieEpisode,
     XtreamVodDetails,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { XtreamCredentials } from '../../services/xtream-api.service';
 import { XtreamUrlService } from '../../services/xtream-url.service';
 

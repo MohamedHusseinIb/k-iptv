@@ -1,11 +1,11 @@
 import {
     isExtrasSeason,
     isPortalPlaybackInProgress,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     PlaybackPositionData,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export interface AutoSeasonContext {
     /** Season keys in display order. */

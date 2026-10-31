@@ -6,7 +6,7 @@ import {
     TranslateService,
 } from '@ngx-translate/core';
 import { Observable, of } from 'rxjs';
-import { VodSourceDescriptor } from '@iptvnator/shared/interfaces';
+import { VodSourceDescriptor } from '@kiptv/shared/interfaces';
 import { VodSourcesMenuComponent } from './vod-sources-menu.component';
 
 class FakeTranslateLoader implements TranslateLoader {

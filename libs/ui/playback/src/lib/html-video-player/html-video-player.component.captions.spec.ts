@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { DataService } from '@iptvnator/services';
-import { Channel } from '@iptvnator/shared/interfaces';
+import { DataService } from '@kiptv/services';
+import { Channel } from '@kiptv/shared/interfaces';
 import { WEB_PLAYER_SHARED_CONTROLS } from '../player-controls';
 import {
     createTextTrack,

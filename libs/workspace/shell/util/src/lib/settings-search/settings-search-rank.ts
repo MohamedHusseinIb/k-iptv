@@ -1,4 +1,4 @@
-import { foldSearchText } from '@iptvnator/shared/interfaces';
+import { foldSearchText } from '@kiptv/shared/interfaces';
 
 /**
  * Texts of one searchable item, by how strongly a hit counts: the visible

@@ -23,7 +23,7 @@ import {
     playlistDisplayLabel,
     VodSourceDescriptor,
     VodSourceMatchKind,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { VodSourceCopyRowComponent } from './vod-source-copy-row.component';
 import {
     collectLanguagePrefixes,

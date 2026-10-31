@@ -2,8 +2,8 @@ import type {
     ExternalPlayerSession,
     PlaybackPositionData,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
-import { getSeriesQuickStartAction } from '@iptvnator/portal/shared/util';
+} from '@kiptv/shared/interfaces';
+import { getSeriesQuickStartAction } from '@kiptv/portal/shared/util';
 import { SerialDetailsPlaybackPositionState } from './serial-details-playback-position-state';
 import type { XtreamSerieDetailsView } from './serial-details-playback.service';
 

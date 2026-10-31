@@ -35,7 +35,7 @@ export function mountTvSetup(
     });
     router.get('/connection', (_req, res) =>
         res.set('Access-Control-Allow-Origin', '*').json({
-            service: 'iptvnator',
+            service: 'kiptv',
             protocol: 1,
             pairing: true,
             auth: accessToken ? 'token' : 'none',
@@ -43,7 +43,7 @@ export function mountTvSetup(
     );
     router.options('/connection/check', cors);
     router.get('/connection/check', cors, guard, (_req, res) =>
-        res.json({ service: 'iptvnator', connected: true })
+        res.json({ service: 'kiptv', connected: true })
     );
     const setupAssetsLimit = rateLimit({
         windowMs: 60_000,

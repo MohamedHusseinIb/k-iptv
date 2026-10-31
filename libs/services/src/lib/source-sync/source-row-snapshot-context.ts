@@ -1,4 +1,4 @@
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { Playlist } from '@kiptv/shared/interfaces';
 
 // Enumerable symbols survive object spreads in renderer mutations, but never
 // JSON/structured-clone persistence, backups or source-definition requests.

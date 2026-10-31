@@ -38,7 +38,7 @@ describe('source synchronization API', () => {
                                 `${url}/wrong-instance`,
                                 body('PUT', source('wrong-instance'), {
                                     'If-None-Match': '*',
-                                    'X-IPTVnator-Instance-Id': 'another-nas',
+                                    'X-K-IPTV-Instance-Id': 'another-nas',
                                 })
                             )
                         ).status

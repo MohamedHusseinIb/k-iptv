@@ -1,4 +1,4 @@
-import { XtreamVodDetails, XtreamVodStream } from '@iptvnator/shared/interfaces';
+import { XtreamVodDetails, XtreamVodStream } from '@kiptv/shared/interfaces';
 import {
     buildXtreamVodFallbackViewModel,
     hasUsableXtreamVodMetadata,

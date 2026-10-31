@@ -2,7 +2,7 @@ import {
     normalizeStalkerPortalIdentity as normalizeSharedStalkerPortalIdentity,
     type Playlist,
     type StalkerPortalIdentity,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export {
     buildStalkerSerialCfduid,
@@ -11,9 +11,9 @@ export {
     normalizeStalkerPortalIdentity,
     normalizeStalkerSerialNumber,
     type StalkerPortalIdentity,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
-export { stalkerIdentityFingerprint } from '@iptvnator/shared/interfaces/stalker-session';
+export { stalkerIdentityFingerprint } from '@kiptv/shared/interfaces/stalker-session';
 
 export function getStalkerPortalIdentityFromPlaylist(
     playlist: Pick<

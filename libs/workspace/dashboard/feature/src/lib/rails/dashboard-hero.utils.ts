@@ -1,4 +1,4 @@
-import type { CollectionContentType } from '@iptvnator/portal/shared/util';
+import type { CollectionContentType } from '@kiptv/portal/shared/util';
 import type { DashboardRemainingLabel } from './dashboard-playback.utils';
 import type { DashboardHeroSlideKind } from './dashboard-hero-slides.utils';
 

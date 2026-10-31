@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { LazySnackBar } from '@iptvnator/services/lazy-snack-bar';
+import { LazySnackBar } from '@kiptv/services/lazy-snack-bar';
 import { SwUpdate } from '@angular/service-worker';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { PlaylistActions } from '@iptvnator/m3u-state';
+import { PlaylistActions } from '@kiptv/m3u-state';
 import {
     catchError,
     firstValueFrom,
@@ -19,7 +19,7 @@ import {
     isGatewayOutage,
     isServerAccessChallenge,
     ServerStorageStatusService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     CONNECTIVITY_GUARD_RESET,
     ERROR,
@@ -31,7 +31,7 @@ import {
     XtreamCodeActions,
     XTREAM_REQUEST,
     XTREAM_RESPONSE,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { AppConfig } from '../../environments/environment';
 import {
     createPortalDebugErrorEvent,
@@ -40,9 +40,9 @@ import {
     logPortalDebugEvent,
     logPortalDebugRequest,
     createLogger,
-} from '@iptvnator/portal/shared/util/logger';
+} from '@kiptv/portal/shared/util/logger';
 import { getRuntimeBackendUrl } from './runtime-config';
-import { isSourceBackendRequest } from '@iptvnator/services/source-sync/connection';
+import { isSourceBackendRequest } from '@kiptv/services/source-sync/connection';
 
 /**
  * How long to wait for the backend to forget a host before giving up.

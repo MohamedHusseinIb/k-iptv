@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { of, Subject, throwError } from 'rxjs';
-import { DataService, PlaylistsService } from '@iptvnator/services';
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import { DataService, PlaylistsService } from '@kiptv/services';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import { StalkerEditedSessionCoordinator } from './stalker-edited-session-coordinator';
 import { StalkerSessionService } from './stalker-session.service';
 import { stalkerSessionFingerprint } from './stalker-session-store';
@@ -172,7 +172,7 @@ describe('Stalker edited-session coordination', () => {
         finishRepairDrain();
         const fence = await fencePromise;
         expect(request).toHaveBeenCalledWith(
-            'iptvnator:playlist-authority',
+            'kiptv:playlist-authority',
             { mode: 'shared' },
             expect.any(Function)
         );
@@ -266,7 +266,7 @@ describe('Stalker edited-session coordination', () => {
                 options: LockOptions,
                 callback: (lock: Lock | null) => Promise<void>
             ) => {
-                if (name === 'iptvnator:playlist-authority') {
+                if (name === 'kiptv:playlist-authority') {
                     await callback({
                         name,
                         mode: 'shared',
@@ -311,12 +311,12 @@ describe('Stalker edited-session coordination', () => {
             /already in progress/i
         );
         expect(request).toHaveBeenCalledWith(
-            'iptvnator:playlist-authority',
+            'kiptv:playlist-authority',
             { mode: 'shared' },
             expect.any(Function)
         );
         expect(request).toHaveBeenCalledWith(
-            `iptvnator:playlist-authority:${oldPlaylist._id}`,
+            `kiptv:playlist-authority:${oldPlaylist._id}`,
             { ifAvailable: true, mode: 'exclusive' },
             expect.any(Function)
         );

@@ -21,16 +21,16 @@ import { MatIcon } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { Store } from '@ngrx/store';
 import { TranslatePipe } from '@ngx-translate/core';
-import { PlaylistActions } from '@iptvnator/m3u-state';
-import { createXtreamConnectionTestState } from '@iptvnator/services';
-import { PasswordVisibilityToggleDirective } from '@iptvnator/ui/components/password-visibility-toggle';
+import { PlaylistActions } from '@kiptv/m3u-state';
+import { createXtreamConnectionTestState } from '@kiptv/services';
+import { PasswordVisibilityToggleDirective } from '@kiptv/ui/components/password-visibility-toggle';
 import {
     createRandomId,
     extractXtreamCredentialsFromUrl,
     normalizeXtreamServerUrl,
     Playlist,
-} from '@iptvnator/shared/interfaces';
-import { provideFormFieldDefaults } from '@iptvnator/ui/components/form-field-defaults';
+} from '@kiptv/shared/interfaces';
+import { provideFormFieldDefaults } from '@kiptv/ui/components/form-field-defaults';
 
 function xtreamServerUrlValidator(
     control: AbstractControl

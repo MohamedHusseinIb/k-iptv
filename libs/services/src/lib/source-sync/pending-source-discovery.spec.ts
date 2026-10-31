@@ -11,14 +11,14 @@ describe('temporary source-server discovery recovery', () => {
         apiUrl: 'https://nas.test/api',
         instanceId: 'pending:https://nas.test/api',
     };
-    const stateless = { service: 'iptvnator', apiVersion: 1, storage: 'none' };
+    const stateless = { service: 'kiptv', apiVersion: 1, storage: 'none' };
     const electron = window.electron;
     beforeEach(async () => {
         Reflect.deleteProperty(window, 'electron');
         localStorage.clear();
         sessionStorage.clear();
         localStorage.setItem(
-            'iptvnator:source-server',
+            'kiptv:source-server',
             JSON.stringify(connection)
         );
         await prepareSourceConnection();
@@ -34,14 +34,14 @@ describe('temporary source-server discovery recovery', () => {
             recoverPendingStatelessBackend(connection, stateless, reload)
         ).toBe(true);
         expect(reload).toHaveBeenCalledTimes(1);
-        expect(localStorage.getItem('iptvnator:source-server')).toBeNull();
+        expect(localStorage.getItem('kiptv:source-server')).toBeNull();
         expect(
-            localStorage.getItem('iptvnator:source-server-disabled')
+            localStorage.getItem('kiptv:source-server-disabled')
         ).toBeNull();
         expect(sessionStorage.getItem(tokenKey(connection))).toBeNull();
         expect(sourceConnection()).toEqual(connection);
         await prepareSourceConnection();
-        expect(sourceProfileName()).toBe('iptvnator');
+        expect(sourceProfileName()).toBe('kiptv');
     });
     it.each([
         { ...stateless, service: 'other' },
@@ -57,7 +57,7 @@ describe('temporary source-server discovery recovery', () => {
             ).toBe(false);
             expect(reload).not.toHaveBeenCalled();
             expect(
-                localStorage.getItem('iptvnator:source-server')
+                localStorage.getItem('kiptv:source-server')
             ).not.toBeNull();
         }
     );
@@ -66,14 +66,14 @@ describe('temporary source-server discovery recovery', () => {
             apiUrl: 'https://new-nas.test/api',
             instanceId: 'confirmed-nas',
         };
-        localStorage.setItem('iptvnator:source-server', JSON.stringify(newer));
+        localStorage.setItem('kiptv:source-server', JSON.stringify(newer));
         const reload = jest.fn();
         expect(
             recoverPendingStatelessBackend(connection, stateless, reload)
         ).toBe(true);
         expect(reload).toHaveBeenCalledTimes(1);
         expect(
-            JSON.parse(localStorage.getItem('iptvnator:source-server')!)
+            JSON.parse(localStorage.getItem('kiptv:source-server')!)
         ).toEqual(newer);
         await prepareSourceConnection();
         expect(sourceConnection()).toEqual(newer);
@@ -103,7 +103,7 @@ describe('temporary source-server discovery recovery', () => {
             recoverPendingStatelessBackend(connection, undefined, reload, 404)
         ).toBe(true);
         expect(reload).toHaveBeenCalledTimes(1);
-        expect(localStorage.getItem('iptvnator:source-server')).toBeNull();
+        expect(localStorage.getItem('kiptv:source-server')).toBeNull();
     });
     it('does not loop on reload if the saved connection cannot be removed', () => {
         const denied = jest

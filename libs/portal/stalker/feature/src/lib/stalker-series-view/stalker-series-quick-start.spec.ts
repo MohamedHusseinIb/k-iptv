@@ -1,8 +1,8 @@
-import type { VodSeriesSeasonVm } from '@iptvnator/portal/stalker/data-access';
+import type { VodSeriesSeasonVm } from '@kiptv/portal/stalker/data-access';
 import type {
     PlaybackPositionData,
     XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { getStalkerSeriesQuickStartButton } from './stalker-series-quick-start';
 
 function season(

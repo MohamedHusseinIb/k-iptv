@@ -14,19 +14,19 @@
 import { inject, Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { selectAllPlaylistsMeta } from '@iptvnator/m3u-state';
+import { selectAllPlaylistsMeta } from '@kiptv/m3u-state';
 import { firstValueFrom, map } from 'rxjs';
-import { DatabaseService, PlaylistsService } from '@iptvnator/services';
+import { DatabaseService, PlaylistsService } from '@kiptv/services';
 import {
     Channel,
     Playlist,
     PlaylistMeta,
     StalkerPortalItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildFavoriteUid,
     UnifiedFavoriteChannel,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 const GLOBAL_FAVORITES_ORDER_KEY = 'global-favorites-channel-order-v1';
 

@@ -1,4 +1,4 @@
-import { TMDB_DETAILS_CACHE_TTL_MS } from '@iptvnator/services';
+import { TMDB_DETAILS_CACHE_TTL_MS } from '@kiptv/services';
 import {
     COMPLETED_METADATA_REFRESH_MAX_ENTRIES,
     CompletedMetadataRefreshThrottle,

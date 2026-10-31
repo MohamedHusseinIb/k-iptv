@@ -1,4 +1,4 @@
-import type { XtreamSerieSeason } from '@iptvnator/shared/interfaces';
+import type { XtreamSerieSeason } from '@kiptv/shared/interfaces';
 import { buildSeasonPosters } from './season-posters.util';
 
 const SHOW_POSTER = 'https://cdn.example.com/show.jpg';

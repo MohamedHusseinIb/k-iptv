@@ -6,13 +6,13 @@ import {
 import {
     SERVER_USER_STATE_NAMESPACES,
     type ServerUserStateNamespace,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { UserDataStorage } from '../user-data-storage';
 import { changedEntries } from './server-user-data-edit';
 import { parseMap } from './server-user-data-entries';
 
 /** Server-mode cache keys; the legacy unprefixed keys are never touched. */
-export const SERVER_CACHE_PREFIX = 'iptvnator-server:cache';
+export const SERVER_CACHE_PREFIX = 'kiptv-server:cache';
 
 /**
  * One namespace's cache of one server instance: a tab still open on

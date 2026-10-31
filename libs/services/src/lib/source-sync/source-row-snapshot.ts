@@ -1,6 +1,6 @@
-import type { Playlist } from '@iptvnator/shared/interfaces';
+import type { Playlist } from '@kiptv/shared/interfaces';
 import { PlaylistWriteConflict } from '../playlist-storage-backend';
-import { resolvePlaylistEpgSourceState } from '@iptvnator/shared/m3u-utils';
+import { resolvePlaylistEpgSourceState } from '@kiptv/shared/m3u-utils';
 
 import {
     READ_SNAPSHOT,

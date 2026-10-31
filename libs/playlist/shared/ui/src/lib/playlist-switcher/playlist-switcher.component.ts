@@ -17,15 +17,15 @@ import {
 } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { TranslateService } from '@ngx-translate/core';
-import { normalizeDateLocale } from '@iptvnator/pipes';
-import { SourceStatusService } from '@iptvnator/portal/shared/data-access';
+import { normalizeDateLocale } from '@kiptv/pipes';
+import { SourceStatusService } from '@kiptv/portal/shared/data-access';
 import {
     PlaylistContextFacade,
     sourceDisplayName,
     sourceMetaParts,
-} from '@iptvnator/playlist/shared/util';
-import { injectTranslationTick } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/playlist/shared/util';
+import { injectTranslationTick } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { SourceTileComponent } from '../source-row/source-tile.component';
 import { PlaylistSwitcherOpenService } from './playlist-switcher-open.service';
 import { PlaylistSwitcherPanelComponent } from './playlist-switcher-panel.component';

@@ -1,10 +1,10 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { PortalCatalogSortMode } from '@iptvnator/portal/shared/util';
+import { PortalCatalogSortMode } from '@kiptv/portal/shared/util';
 import {
     XtreamPlaylistData,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import { XtreamCatalogFacadeService } from './xtream-catalog-facade.service';
 
 const PLAYLIST_ONE: XtreamPlaylistData = {

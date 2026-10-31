@@ -1,9 +1,9 @@
-import type { DownloadItem } from '@iptvnator/services';
+import type { DownloadItem } from '@kiptv/services';
 import type {
     DownloadMetadataPerson,
     DownloadMetadataSnapshot,
     TmdbEnrichedCastMember,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type {
     DeepReadonly,
     DownloadOfflineDetail,

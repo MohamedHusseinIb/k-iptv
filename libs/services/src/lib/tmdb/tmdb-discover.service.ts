@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { TmdbMediaType } from '@iptvnator/shared/interfaces';
+import { TmdbMediaType } from '@kiptv/shared/interfaces';
 import { TmdbApiService } from './tmdb-api.service';
 import { DiscoverTitle, mapDiscoverResults } from './tmdb-discover';
 import { TmdbRuntimeService } from './tmdb-runtime.service';

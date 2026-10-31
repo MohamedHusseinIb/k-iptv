@@ -2,12 +2,12 @@ import {
     type Playlist,
     type SourceDefinition,
     type SourceServerRequest,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     applySourceDefinition,
     sourceFromPlaylist,
     validateSource,
-} from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces/source-definition';
 import { FormControl, FormGroup } from '@angular/forms';
 import { firstValueFrom } from 'rxjs';
 import { PlaylistsService } from '../playlists.service';

@@ -2,7 +2,7 @@ import { computed, inject, Injectable, OnDestroy, signal } from '@angular/core';
 import type {
     ElectronBridgeErrorResult,
     RecordingProgramSnapshot,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { DownloadListLoadState } from './download-list-load-state';
 import type { RecordingItem } from './recordings.models';
 import { RuntimeCapabilitiesService } from './runtime-capabilities.service';

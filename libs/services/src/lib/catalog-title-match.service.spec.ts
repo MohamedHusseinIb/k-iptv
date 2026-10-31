@@ -1,6 +1,6 @@
 import { computed, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { CatalogTitleMatch } from '@iptvnator/shared/interfaces';
+import { CatalogTitleMatch } from '@kiptv/shared/interfaces';
 import {
     CatalogTitleMatchService,
     TITLE_MATCH_LOCK_ATTEMPTS,

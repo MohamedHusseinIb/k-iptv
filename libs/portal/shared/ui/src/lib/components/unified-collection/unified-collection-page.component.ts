@@ -1,7 +1,7 @@
 import {
     isCatalogUnavailable,
     XTREAM_FAVORITE_IDENTITY_CONFLICT,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { NgTemplateOutlet } from '@angular/common';
 import {
     AfterContentInit,
@@ -30,7 +30,7 @@ import {
     MenuItemRadioCheckDirective,
     MenuItemRadioDirective,
     PortalDetailShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     clearNavigationStateKeys,
     CollectionContentType,
@@ -43,14 +43,14 @@ import {
     queryParamSignal,
     routeParamSignal,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     CollectionLoadRequest,
     CollectionMode,
     UnifiedCollectionDataService,
-} from '@iptvnator/portal/shared/data-access';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
-import { EmptyStateComponent } from '@iptvnator/playlist/shared/ui';
+} from '@kiptv/portal/shared/data-access';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
+import { EmptyStateComponent } from '@kiptv/playlist/shared/ui';
 import { UnifiedLiveTabComponent } from './unified-live-tab.component';
 import { UnifiedGridTabComponent } from './unified-grid-tab.component';
 import {

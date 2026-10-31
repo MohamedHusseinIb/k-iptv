@@ -3,13 +3,13 @@ import {
     TmdbEnrichmentService,
     extractYear,
     tmdbBackdropUrl,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     DashboardTmdbAttempt,
     DashboardTmdbLookupItem,
     buildDashboardTmdbAttempts,
     dashboardTmdbLookupKey,
-} from '@iptvnator/workspace/dashboard/data-access';
+} from '@kiptv/workspace/dashboard/data-access';
 
 /** TMDB extras for the dashboard hero, patched in after first paint */
 export interface DashboardHeroTmdbExtras {

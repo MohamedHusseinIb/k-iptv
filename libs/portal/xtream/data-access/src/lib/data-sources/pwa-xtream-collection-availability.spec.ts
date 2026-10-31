@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { ParentalLockService, PlaylistsService } from '@iptvnator/services';
-import { PwaXtreamBackupStorage } from '@iptvnator/services/pwa-xtream-backup-storage';
+import { ParentalLockService, PlaylistsService } from '@kiptv/services';
+import { PwaXtreamBackupStorage } from '@kiptv/services/pwa-xtream-backup-storage';
 import {
     normalizeXtreamPendingRestoreState,
     XtreamPlaylistBackupEntry,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { of } from 'rxjs';
 import { XtreamApiService } from '../services/xtream-api.service';
 import { PwaXtreamDataSource } from './pwa-xtream-data-source';

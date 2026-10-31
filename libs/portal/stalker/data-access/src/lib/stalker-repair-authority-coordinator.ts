@@ -1,5 +1,5 @@
-import { reservePlaylistAuthority } from '@iptvnator/services';
-import type { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { reservePlaylistAuthority } from '@kiptv/services';
+import type { PlaylistMeta } from '@kiptv/shared/interfaces';
 
 /** Shares one repair locally and reserves its source across PWA tabs. */
 export class StalkerRepairAuthorityCoordinator {

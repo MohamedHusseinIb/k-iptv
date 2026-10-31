@@ -12,13 +12,13 @@ import {
     SeasonDownloadCoordinator,
     type EpisodeDownloadCandidate,
     type SeasonEpisodeDownloadAdapter,
-} from '@iptvnator/portal/shared/data-access';
-import { XtreamSerieEpisode } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/data-access';
+import { XtreamSerieEpisode } from '@kiptv/shared/interfaces';
 import {
     DownloadsService,
     type DownloadItem,
     type DownloadStartInput,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { of } from 'rxjs';
@@ -192,7 +192,7 @@ describe('SeasonContainerComponent', () => {
     };
 
     beforeEach(async () => {
-        localStorage.removeItem('iptvnator_episode_view_mode');
+        localStorage.removeItem('kiptv_episode_view_mode');
         downloadsServiceStub = {
             isAvailable: signal(false),
             hasAuthoritativeDownloadList: signal(false),
@@ -244,7 +244,7 @@ describe('SeasonContainerComponent', () => {
     });
 
     afterEach(() => {
-        localStorage.removeItem('iptvnator_episode_view_mode');
+        localStorage.removeItem('kiptv_episode_view_mode');
     });
 
     it('renders the series-level placeholder when no seasons are available', () => {

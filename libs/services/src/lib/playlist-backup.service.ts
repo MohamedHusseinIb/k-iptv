@@ -40,7 +40,7 @@ import {
     ParentalLockPlaylistLocks,
     StalkerBackupLockedCategory,
     XtreamBackupHiddenCategory,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export interface PlaylistBackupExportPayload {
     defaultFileName: string;
@@ -113,7 +113,7 @@ export class PlaylistBackupService {
         };
 
         return {
-            defaultFileName: `iptvnator-playlist-backup-${exportedAt.slice(
+            defaultFileName: `kiptv-playlist-backup-${exportedAt.slice(
                 0,
                 10
             )}.json`,

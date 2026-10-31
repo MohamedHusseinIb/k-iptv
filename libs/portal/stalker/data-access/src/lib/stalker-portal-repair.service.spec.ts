@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { of, Subject, throwError } from 'rxjs';
-import type { Playlist } from '@iptvnator/shared/interfaces';
-import { PlaylistsService } from '@iptvnator/services';
+import type { Playlist } from '@kiptv/shared/interfaces';
+import { PlaylistsService } from '@kiptv/services';
 import {
     PlaylistMeta,
     buildHostConnectivityFastFailMessage,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerPortalDiscoveryService } from './stalker-portal-discovery.service';
 import { StalkerPortalRepairService } from './stalker-portal-repair.service';
 import { StalkerSessionService } from './stalker-session.service';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),
@@ -276,7 +276,7 @@ describe('StalkerPortalRepairService', () => {
                     options: LockOptions,
                     callback: (lock: Lock | null) => Promise<T>
                 ) => {
-                    if (name === 'iptvnator:playlist-authority') {
+                    if (name === 'kiptv:playlist-authority') {
                         return callback({
                             name,
                             mode: options.mode ?? 'shared',
@@ -316,7 +316,7 @@ describe('StalkerPortalRepairService', () => {
                     options: LockOptions,
                     callback: (lock: Lock | null) => Promise<T>
                 ) => {
-                    if (name === 'iptvnator:playlist-authority') {
+                    if (name === 'kiptv:playlist-authority') {
                         return callback({ name, mode: 'shared' } as Lock);
                     }
                     rowAuthorityHeld = true;
@@ -375,12 +375,12 @@ describe('StalkerPortalRepairService', () => {
 
             expect(rowAuthorityHeld).toBe(false);
             expect(request).toHaveBeenCalledWith(
-                'iptvnator:playlist-authority',
+                'kiptv:playlist-authority',
                 { mode: 'shared' },
                 expect.any(Function)
             );
             expect(request).toHaveBeenCalledWith(
-                `iptvnator:playlist-authority:${MISCLASSIFIED._id}`,
+                `kiptv:playlist-authority:${MISCLASSIFIED._id}`,
                 { ifAvailable: true, mode: 'exclusive' },
                 expect.any(Function)
             );

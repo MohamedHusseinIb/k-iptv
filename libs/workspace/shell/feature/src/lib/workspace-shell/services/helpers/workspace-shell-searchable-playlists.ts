@@ -1,4 +1,4 @@
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 
 type SearchablePlaylistMeta = Pick<
     PlaylistMeta,

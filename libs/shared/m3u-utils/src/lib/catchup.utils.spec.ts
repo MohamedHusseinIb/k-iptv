@@ -1,4 +1,4 @@
-import { Channel, EpgProgram } from '@iptvnator/shared/interfaces';
+import { Channel, EpgProgram } from '@kiptv/shared/interfaces';
 import {
     getM3uArchiveDays,
     getM3uCatchupWindowEndSeconds,

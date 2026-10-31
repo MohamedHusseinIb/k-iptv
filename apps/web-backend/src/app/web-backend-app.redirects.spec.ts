@@ -1,8 +1,8 @@
 import {
     HostConnectivityGuard,
     OPEN_DURATION_MS,
-} from '@iptvnator/shared/host-health';
-import { isHostConnectivityFastFailMessage } from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/host-health';
+import { isHostConnectivityFastFailMessage } from '@kiptv/shared/interfaces';
 import axios from 'axios';
 import express from 'express';
 import { createWebBackendApp, WebBackendHttpClient } from './web-backend-app';

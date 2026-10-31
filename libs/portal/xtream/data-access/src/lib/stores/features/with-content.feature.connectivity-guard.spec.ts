@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { CONNECTIVITY_GUARD_RESET } from '@iptvnator/shared/interfaces';
+import { CONNECTIVITY_GUARD_RESET } from '@kiptv/shared/interfaces';
 import { PortalStatusType } from '../../xtream-state';
 import {
     createContentTestProviders,
@@ -8,7 +8,7 @@ import {
     TEST_PLAYLIST,
 } from './with-content.feature.spec-helpers';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),

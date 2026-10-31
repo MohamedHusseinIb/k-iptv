@@ -8,7 +8,7 @@ export async function withIndexedDbCleanupOwnership<T>(
     profile: string,
     operation: () => Promise<T>
 ): Promise<T> {
-    const name = `iptvnator-source-cleanup:${profile}`;
+    const name = `kiptv-source-cleanup:${profile}`;
     let version: number | undefined;
     for (;;) {
         const claim = await new Promise<{

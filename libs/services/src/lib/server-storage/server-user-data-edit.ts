@@ -3,7 +3,7 @@ import {
     SERVER_USER_STATE_NAMESPACES,
     type ServerUserStateNamespace,
     type ServerUserStateResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     isViewHistory,
     itemKey,

@@ -1,4 +1,4 @@
-import { SERVER_PAYLOAD_FIELDS } from '@iptvnator/shared/interfaces';
+import { SERVER_PAYLOAD_FIELDS } from '@kiptv/shared/interfaces';
 import { sql, type SQL, type SQLWrapper } from 'drizzle-orm';
 import { sqliteTable, text } from 'drizzle-orm/sqlite-core';
 

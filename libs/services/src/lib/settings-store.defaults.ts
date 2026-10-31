@@ -9,7 +9,7 @@ import {
     Theme,
     VideoPlayer,
     watchEmbeddedMpvSupport,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /** Defaults and boot-time helpers of `SettingsStore`, split out for size. */
 export const DEFAULT_SETTINGS: Settings = {

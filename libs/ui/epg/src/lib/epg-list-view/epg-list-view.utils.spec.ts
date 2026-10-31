@@ -1,4 +1,4 @@
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { buildEpgListRows } from './epg-list-view.utils';
 
 // Anchor "now" at local noon so ±3h fixtures stay inside the same local day,

@@ -1,7 +1,7 @@
 import {
     ChannelContextMenuComponent,
     ChannelScrollFocusDirective,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import { NgTemplateOutlet } from '@angular/common';
 import {
     DestroyRef,
@@ -37,7 +37,7 @@ import {
     ChannelListSkeletonComponent,
     EpgMappingDialogComponent,
     ResizableDirective,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     ParentalLockService,
     PlaylistsService,
@@ -45,7 +45,7 @@ import {
     RuntimeCapabilitiesService,
     SettingsStore,
     injectTranslationTick,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { isStalkerPlaybackRequestLockCurrent } from './stalker-live-lock-guard';
 import {
     foldSearchText,
@@ -62,14 +62,14 @@ import {
     shortEpgWindowSize,
     StalkerPortalItem,
     toRecordingProgramSnapshot,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     EpgDateNavigationDirection,
     EpgListViewComponent,
     EpgTimelineComponent,
     getTodayEpgDateKey,
     shiftEpgDateKey,
-} from '@iptvnator/ui/epg';
+} from '@kiptv/ui/epg';
 import {
     AudioPlayerComponent,
     ElectronStreamHeadersService,
@@ -78,9 +78,9 @@ import {
     type FullscreenChannelPanelHost,
     type PlaybackFallbackRequest,
     WebPlayerViewComponent,
-} from '@iptvnator/ui/playback';
-import { LiveEpgPanelSummary } from '@iptvnator/ui/shared-portals';
-import { EpgRuntimeBridgeService } from '@iptvnator/epg/data-access';
+} from '@kiptv/ui/playback';
+import { LiveEpgPanelSummary } from '@kiptv/ui/shared-portals';
+import { EpgRuntimeBridgeService } from '@kiptv/epg/data-access';
 import {
     createLivePanelsController,
     LiveLayoutSidebarStateService,
@@ -91,11 +91,11 @@ import {
     persistLiveEpgPanelState,
     REMOTE_CONTROL_RESET_STATUS,
     restoreLiveEpgPanelState,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     ChannelListHiddenStateComponent,
     PortalEmptyStateComponent,
-} from '@iptvnator/portal/shared/ui';
+} from '@kiptv/portal/shared/ui';
 import {
     ACTIVE_EPG_FALLBACK_SIZE,
     StalkerFavoriteItem,
@@ -103,7 +103,7 @@ import {
     StalkerStore,
     normalizeStalkerEntityId,
     stalkerCategoryLabelText,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import {
     PanelSearchWindow,
     resolvePanelSearchScroll,
@@ -115,7 +115,7 @@ import {
     StalkerEpgPreviewQueue,
     mergeEpgProgramLists,
 } from './stalker-live-epg-preview';
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
 
 type StalkerPlayableChannel = StalkerPortalItem & {
     cmd?: string;

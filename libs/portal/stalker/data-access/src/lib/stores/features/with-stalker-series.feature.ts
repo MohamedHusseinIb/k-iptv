@@ -7,9 +7,9 @@ import {
     withProps,
     withState,
 } from '@ngrx/signals';
-import { createLogger } from '@iptvnator/portal/shared/util';
-import { DataService } from '@iptvnator/services';
-import { StalkerPortalActions } from '@iptvnator/shared/interfaces';
+import { createLogger } from '@kiptv/portal/shared/util';
+import { DataService } from '@kiptv/services';
+import { StalkerPortalActions } from '@kiptv/shared/interfaces';
 import {
     StalkerSeason,
     StalkerVodSeriesEpisode,

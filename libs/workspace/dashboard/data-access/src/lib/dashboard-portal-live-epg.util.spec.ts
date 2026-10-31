@@ -1,7 +1,7 @@
 import type {
     EpgProgram,
     PortalActivityItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildDashboardPortalLiveEpgEntry,
     buildDashboardPortalLiveEpgKey,

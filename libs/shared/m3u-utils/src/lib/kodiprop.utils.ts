@@ -1,4 +1,4 @@
-import { ChannelDrm, ChannelDrmClearKeys } from '@iptvnator/shared/interfaces';
+import { ChannelDrm, ChannelDrmClearKeys } from '@kiptv/shared/interfaces';
 
 /**
  * `#KODIPROP:` DRM extraction.

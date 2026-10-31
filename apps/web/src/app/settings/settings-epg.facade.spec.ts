@@ -4,8 +4,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import {
     EpgRuntimeBridgeService,
     EpgService,
-} from '@iptvnator/epg/data-access';
-import { DialogService } from '@iptvnator/ui/components';
+} from '@kiptv/epg/data-access';
+import { DialogService } from '@kiptv/ui/components';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MockProvider } from 'ng-mocks';
 import { SettingsStore } from '../services/settings-store.service';

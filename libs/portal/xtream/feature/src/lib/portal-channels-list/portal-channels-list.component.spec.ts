@@ -1,4 +1,4 @@
-import { EpgSourceSettingsService } from '@iptvnator/services';
+import { EpgSourceSettingsService } from '@kiptv/services';
 import { CdkFixedSizeVirtualScroll } from '@angular/cdk/scrolling';
 import { signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
@@ -12,9 +12,9 @@ import {
     EpgQueueService,
     FavoritesService,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
-import { ChannelListItemComponent } from '@iptvnator/ui/components';
+} from '@kiptv/portal/xtream/data-access';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
+import { ChannelListItemComponent } from '@kiptv/ui/components';
 import { PortalChannelsListComponent } from './portal-channels-list.component';
 import { XtreamFavoriteMarksService } from './xtream-favorite-marks.service';
 

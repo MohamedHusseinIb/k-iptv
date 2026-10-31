@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ElectronBridgeWindowState } from '@iptvnator/shared/interfaces';
+import { ElectronBridgeWindowState } from '@kiptv/shared/interfaces';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { WindowControlsComponent } from './window-controls.component';
 

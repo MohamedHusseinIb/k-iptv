@@ -7,12 +7,12 @@ import {
     SettingsStore,
     TmdbEnrichmentService,
     type DownloadItem,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     createMovieDownloadSnapshot,
     createSeriesEpisodeDownloadSnapshot,
-} from '@iptvnator/portal/shared/util';
-import type { DownloadMetadataSnapshot } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/shared/util';
+import type { DownloadMetadataSnapshot } from '@kiptv/shared/interfaces';
 import {
     mapProviderToDownloadSnapshot,
     mergeSnapshotWithTmdb,

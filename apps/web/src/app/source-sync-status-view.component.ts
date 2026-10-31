@@ -12,7 +12,7 @@ import {
     SourceSyncService,
     tokenKey,
     disconnectBrowserSourceConnection,
-} from '@iptvnator/services/source-sync';
+} from '@kiptv/services/source-sync';
 
 /** Available even when a first inventory read prevents workspace startup. */
 @Component({

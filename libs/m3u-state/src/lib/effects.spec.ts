@@ -1,4 +1,4 @@
-import { Channel, EpgProgram, VideoPlayer } from '@iptvnator/shared/interfaces';
+import { Channel, EpgProgram, VideoPlayer } from '@kiptv/shared/interfaces';
 import { EpgActions } from './actions';
 import {
     buildExternalPlayerPayload,

@@ -4,7 +4,7 @@ import {
     input,
     ChangeDetectionStrategy,
 } from '@angular/core';
-import { PORTAL_WATCHED_PROGRESS_PERCENT } from '@iptvnator/portal/shared/util';
+import { PORTAL_WATCHED_PROGRESS_PERCENT } from '@kiptv/portal/shared/util';
 
 @Component({
     selector: 'app-progress-capsule',

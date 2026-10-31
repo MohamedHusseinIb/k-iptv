@@ -1,4 +1,4 @@
-import { type Playlist } from '@iptvnator/shared/interfaces';
+import { type Playlist } from '@kiptv/shared/interfaces';
 import { of } from 'rxjs';
 import { PlaylistActions } from './actions';
 import { persistPlaylistUpdate } from './playlist-update.effect-handler';

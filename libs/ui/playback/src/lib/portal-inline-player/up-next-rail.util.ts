@@ -1,5 +1,5 @@
-import { getPortalPlaybackProgressPercent } from '@iptvnator/portal/shared/util';
-import type { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import { getPortalPlaybackProgressPercent } from '@kiptv/portal/shared/util';
+import type { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import {
     formatSeriesEpisodeLabel,
     type SeriesPlaybackEpisodeLike,

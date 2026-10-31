@@ -28,13 +28,13 @@ import {
     ElectronBridgeAppUpdateReleaseNotesDirection,
     ElectronBridgeAppUpdateReleaseNotesRequest,
     isAppUpdateReleaseNotesNotFoundMessage,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     DialogFooterDirective,
     DialogFooterStartDirective,
     DialogShellComponent,
     dialogSize,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 const RELEASE_NOTES_IMAGE_CLASS = 'release-notes-dialog__image';
 

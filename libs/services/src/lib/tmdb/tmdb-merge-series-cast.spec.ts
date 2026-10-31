@@ -1,4 +1,4 @@
-import { XtreamSerieInfo } from '@iptvnator/shared/interfaces';
+import { XtreamSerieInfo } from '@kiptv/shared/interfaces';
 import { mergeSerieInfoWithTmdb } from './tmdb-merge';
 import { TmdbTvDetails } from './tmdb.types';
 

@@ -1,4 +1,4 @@
-import { CONNECTIVITY_GUARD_RESET } from '@iptvnator/shared/interfaces';
+import { CONNECTIVITY_GUARD_RESET } from '@kiptv/shared/interfaces';
 import { resetHostConnectivityGuard } from './host-connectivity-reset';
 
 describe('resetHostConnectivityGuard', () => {

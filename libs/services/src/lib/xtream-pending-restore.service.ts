@@ -3,7 +3,7 @@ import { sourcePendingRestoreStorageKey } from './source-sync/source-pending-res
 import {
     normalizeXtreamPendingRestoreState,
     XtreamPendingRestoreState,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export interface XtreamPendingRestoreSnapshot {
     readonly playlistId: string;

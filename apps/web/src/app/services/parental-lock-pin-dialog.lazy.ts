@@ -5,4 +5,4 @@
  * boundary is a local file backed by a file-level alias, like the other
  * root-shell lazy dialogs (see docs/architecture/nx-workspace-boundaries.md).
  */
-export { ParentalLockPinDialogComponent } from '@iptvnator/ui/components/parental-lock-pin-dialog';
+export { ParentalLockPinDialogComponent } from '@kiptv/ui/components/parental-lock-pin-dialog';

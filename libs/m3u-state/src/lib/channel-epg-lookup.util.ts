@@ -1,4 +1,4 @@
-import { Channel } from '@iptvnator/shared/interfaces';
+import { Channel } from '@kiptv/shared/interfaces';
 
 export function resolveChannelEpgLookupKey(
     channel: Channel | null | undefined

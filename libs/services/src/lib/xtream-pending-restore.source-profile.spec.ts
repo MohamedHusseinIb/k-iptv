@@ -1,4 +1,4 @@
-import { getXtreamPendingRestoreStorageKey } from '@iptvnator/shared/interfaces';
+import { getXtreamPendingRestoreStorageKey } from '@kiptv/shared/interfaces';
 import { XtreamPendingRestoreService } from './xtream-pending-restore.service';
 import { prepareSourceConnection } from './source-sync/source-connection';
 import { materializePendingXtreamFavorites } from './xtream-pending-favorites';
@@ -17,7 +17,7 @@ describe('legacy pending restores in a source-server profile', () => {
         Reflect.deleteProperty(window, 'electron');
         localStorage.clear();
         localStorage.setItem(
-            'iptvnator:source-server',
+            'kiptv:source-server',
             JSON.stringify({
                 apiUrl: 'https://nas.test/api',
                 instanceId: 'nas',
@@ -33,7 +33,7 @@ describe('legacy pending restores in a source-server profile', () => {
     });
 
     it('adopts a verified legacy snapshot and does not resurrect it after consumption', async () => {
-        localStorage.setItem('iptvnator-server:cache-owner', 'nas');
+        localStorage.setItem('kiptv-server:cache-owner', 'nas');
         const service = new XtreamPendingRestoreService();
         const snapshot = service.getSnapshotOrThrow('old-source');
         expect(snapshot?.state).toMatchObject(state);
@@ -47,7 +47,7 @@ describe('legacy pending restores in a source-server profile', () => {
         ).toBeNull();
     });
     it('does not copy another server or the standalone profile without legacy evidence', () => {
-        localStorage.setItem('iptvnator-server:cache-owner', 'another-nas');
+        localStorage.setItem('kiptv-server:cache-owner', 'another-nas');
         expect(
             new XtreamPendingRestoreService().getOrThrow('old-source')
         ).toBeNull();
@@ -56,7 +56,7 @@ describe('legacy pending restores in a source-server profile', () => {
     it.each(['', JSON.stringify({ ...state, favorites: [] })])(
         'preserves a newer profile value or tombstone: %s',
         (value) => {
-            localStorage.setItem('iptvnator-server:cache-owner', 'nas');
+            localStorage.setItem('kiptv-server:cache-owner', 'nas');
             localStorage.setItem(sourceProfileStorageKey(key), value);
             const restored = new XtreamPendingRestoreService().getOrThrow(
                 'old-source'
@@ -68,7 +68,7 @@ describe('legacy pending restores in a source-server profile', () => {
         }
     );
     it('keeps native-profile restores isolated from the original desktop archive', () => {
-        localStorage.setItem('iptvnator-server:cache-owner', 'nas');
+        localStorage.setItem('kiptv-server:cache-owner', 'nas');
         window.electron = {
             sourceSyncConnection: () => ({
                 apiUrl: 'https://nas.test/api',
@@ -122,7 +122,7 @@ describe('legacy pending restores in a source-server profile', () => {
                 JSON.stringify(profile)
             );
             localStorage.setItem(
-                `iptvnator-server:other:${key}`,
+                `kiptv-server:other:${key}`,
                 JSON.stringify({
                     ...state,
                     favorites: [{ xtreamId: 999, contentType: 'movie' }],
@@ -150,7 +150,7 @@ describe('legacy pending restores in a source-server profile', () => {
     it.each(['snapshot', 'receipt'])(
         'rejects a migration when writing its %s silently does nothing',
         (part) => {
-            localStorage.setItem('iptvnator-server:cache-owner', 'nas');
+            localStorage.setItem('kiptv-server:cache-owner', 'nas');
             const target = sourceProfileStorageKey(key);
             const failing =
                 part === 'snapshot' ? target : `${target}:legacy-migrated`;
@@ -169,7 +169,7 @@ describe('legacy pending restores in a source-server profile', () => {
         }
     );
     it('fails strict reads until a failed migration copy can be retried', () => {
-        localStorage.setItem('iptvnator-server:cache-owner', 'nas');
+        localStorage.setItem('kiptv-server:cache-owner', 'nas');
         const write = jest
             .spyOn(Storage.prototype, 'setItem')
             .mockImplementation(() => {

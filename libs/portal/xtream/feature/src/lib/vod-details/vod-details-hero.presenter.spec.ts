@@ -1,9 +1,9 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
-import { SettingsStore } from '@iptvnator/services';
-import { TrailerDialogService } from '@iptvnator/ui/components';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
+import { SettingsStore } from '@kiptv/services';
+import { TrailerDialogService } from '@kiptv/ui/components';
 import { VodDetailsHeroPresenter } from './vod-details-hero.presenter';
 
 describe('VodDetailsHeroPresenter', () => {

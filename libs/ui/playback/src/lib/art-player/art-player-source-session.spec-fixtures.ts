@@ -1,6 +1,6 @@
 import type Artplayer from 'artplayer';
-import type { ChannelDrm } from '@iptvnator/shared/interfaces';
-import type { PlaybackDiagnostic } from '@iptvnator/playback/util';
+import type { ChannelDrm } from '@kiptv/shared/interfaces';
+import type { PlaybackDiagnostic } from '@kiptv/playback/util';
 import { WebVideoControlsAdapter } from '../player-controls';
 import type { ShakaModuleLoader } from '../shaka-engine/shaka-module.types';
 import type { ArtPlayerSourceSession as ArtPlayerSourceSessionInstance } from './art-player-source-session';

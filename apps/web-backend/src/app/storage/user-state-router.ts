@@ -2,7 +2,7 @@ import express, { Router, type Request, type Response } from 'express';
 import {
     isServerUserStateNamespace,
     type ServerUserStateNamespace,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { ExpectedTag } from './server-user-state-repository';
 import type { ServerStorage } from './server-storage';
 import { StorageRequestError } from './storage-route-errors';

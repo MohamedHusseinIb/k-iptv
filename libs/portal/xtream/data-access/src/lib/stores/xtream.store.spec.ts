@@ -10,9 +10,9 @@ import {
     SettingsStore,
     TmdbEnrichmentService,
     XtreamPendingRestoreService,
-} from '@iptvnator/services';
-import { PORTAL_PLAYER } from '@iptvnator/portal/shared/util';
-import { XtreamVodStream } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { PORTAL_PLAYER } from '@kiptv/portal/shared/util';
+import { XtreamVodStream } from '@kiptv/shared/interfaces';
 import {
     XTREAM_DATA_SOURCE,
     XtreamPlaylistData,

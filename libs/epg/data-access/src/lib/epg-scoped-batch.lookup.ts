@@ -8,7 +8,7 @@ import {
     tap,
     timeout,
 } from 'rxjs/operators';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { normalizeLookupChannelIds } from './epg-lookup-normalization.util';
 import type { EpgLookupContext } from './epg-lookup-context';
 

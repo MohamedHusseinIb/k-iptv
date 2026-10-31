@@ -1,5 +1,5 @@
-import { EpgArchiveDownloadService } from '@iptvnator/ui/epg';
-import { EpgArchiveCopyService } from '@iptvnator/ui/epg';
+import { EpgArchiveDownloadService } from '@kiptv/ui/epg';
+import { EpgArchiveCopyService } from '@kiptv/ui/epg';
 import {
     Component,
     input,
@@ -18,19 +18,19 @@ import {
     LiveLayoutSidebarStateService,
     liveSidebarStateStorageKey,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     ChannelListHiddenStateComponent,
     GridListComponent,
-} from '@iptvnator/portal/shared/ui';
+} from '@kiptv/portal/shared/ui';
 import {
     FavoritesService,
     XtreamStore,
     XtreamUrlService,
-} from '@iptvnator/portal/xtream/data-access';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
-import { EpgListViewComponent, EpgTimelineComponent } from '@iptvnator/ui/epg';
-import { WebPlayerViewComponent } from '@iptvnator/ui/playback';
+} from '@kiptv/portal/xtream/data-access';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
+import { EpgListViewComponent, EpgTimelineComponent } from '@kiptv/ui/epg';
+import { WebPlayerViewComponent } from '@kiptv/ui/playback';
 import { PortalChannelsListComponent } from '../portal-channels-list/portal-channels-list.component';
 import { LiveStreamLayoutComponent } from './live-stream-layout.component';
 

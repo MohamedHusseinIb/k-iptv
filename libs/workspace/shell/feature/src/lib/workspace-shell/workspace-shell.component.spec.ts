@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { of, Subject } from 'rxjs';
-import { EmbeddedMpvOverlayVisibilityService } from '@iptvnator/ui/playback';
+import { EmbeddedMpvOverlayVisibilityService } from '@kiptv/ui/playback';
 import { TestBed } from '@angular/core/testing';
 import { RouterOutlet, provideRouter } from '@angular/router';
 import { By } from '@angular/platform-browser';
@@ -17,7 +17,7 @@ import {
     WorkspaceShellContextDrawerService,
     WorkspacePortalContext,
     WorkspaceShellContextPanel,
-} from '@iptvnator/workspace/shell/util';
+} from '@kiptv/workspace/shell/util';
 import { LayoutSlideDirective } from './layout-slide.directive';
 import { TrafficLightsClearanceDirective } from './traffic-lights-clearance.directive';
 import { WorkspaceShellComponent } from './workspace-shell.component';

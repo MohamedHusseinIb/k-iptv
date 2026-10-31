@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
-import { DatabaseService, PlaylistsService } from '@iptvnator/services';
-import { UnifiedFavoriteChannel } from '@iptvnator/portal/shared/util';
+import { DatabaseService, PlaylistsService } from '@kiptv/services';
+import { UnifiedFavoriteChannel } from '@kiptv/portal/shared/util';
 import { GlobalFavoritesService } from './global-favorites.service';
 import { of } from 'rxjs';
 

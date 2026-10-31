@@ -23,27 +23,27 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import {
     StalkerStore,
     asStalkerPortalError,
-} from '@iptvnator/portal/stalker/data-access';
+} from '@kiptv/portal/stalker/data-access';
 import {
     LiveLayoutSidebarStateService,
     PortalCategorySortMode,
     PortalCategorySortStateService,
     sortPortalCategoryItems,
-} from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import {
     ParentalLockService,
     injectTranslationTick,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     toParentalLockStalkerCategoryType,
     toParentalLockXtreamCategoryType,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     CategoryLockMenuComponent,
     MenuItemRadioCheckDirective,
     MenuItemRadioDirective,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import {
     WorkspaceCategoryViewItem,
     WorkspaceContextCategoryViewComponent,
@@ -54,9 +54,9 @@ import {
 } from './workspace-category-lock-action.service';
 import { WorkspaceContextErrorViewComponent } from './components/workspace-context-error-view.component';
 import { hasActiveLiveCategoryRoute } from './workspace-context-panel-route.utils';
-import { WorkspaceShellContextDrawerService } from '@iptvnator/workspace/shell/util';
-import { foldSearchText } from '@iptvnator/shared/interfaces';
-import { dialogSize } from '@iptvnator/ui/components/dialog-size';
+import { WorkspaceShellContextDrawerService } from '@kiptv/workspace/shell/util';
+import { foldSearchText } from '@kiptv/shared/interfaces';
+import { dialogSize } from '@kiptv/ui/components/dialog-size';
 
 type WorkspaceProvider = 'xtreams' | 'stalker' | 'playlists';
 
@@ -602,13 +602,13 @@ export class WorkspaceContextPanelComponent {
 
     /** The dynamic import; a field so specs can substitute it. */
     loadStalkerLockDialog = (): Promise<Type<unknown>> =>
-        import('@iptvnator/portal/stalker/feature').then(
+        import('@kiptv/portal/stalker/feature').then(
             (module) => module.StalkerCategoryLockDialogComponent
         );
 
     /** The dynamic import; a field so specs can substitute it. */
     loadXtreamCategoryDialog = (): Promise<Type<unknown>> =>
-        import('@iptvnator/portal/xtream/feature').then(
+        import('@kiptv/portal/xtream/feature').then(
             (module) => module.CategoryManagementDialogComponent
         );
 

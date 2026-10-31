@@ -1,16 +1,16 @@
 import { inject, Injectable, Provider } from '@angular/core';
 import type { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { PORTAL_SHELL_ACTIONS } from '@iptvnator/portal/shared/util/tokens';
-import { LazyMatDialog } from '@iptvnator/ui/components/lazy-dialog';
-import { dialogSize } from '@iptvnator/ui/components/dialog-size';
+import { PORTAL_SHELL_ACTIONS } from '@kiptv/portal/shared/util/tokens';
+import { LazyMatDialog } from '@kiptv/ui/components/lazy-dialog';
+import { dialogSize } from '@kiptv/ui/components/dialog-size';
 import {
     WORKSPACE_SHELL_ACTIONS,
     WorkspaceAccountInfoData,
     WorkspacePlaylistType,
     WorkspaceShellActions,
     WorkspaceStalkerAccountInfoData,
-} from '@iptvnator/workspace/shell/util';
+} from '@kiptv/workspace/shell/util';
 
 /**
  * Created with the app (the shell's keyboard shortcuts reach it from the
@@ -24,7 +24,7 @@ export class AppWorkspaceShellActionsService implements WorkspaceShellActions {
 
     openAddPlaylistDialog(type?: WorkspacePlaylistType): void {
         this.openDialog(
-            import('@iptvnator/playlist/import/feature'),
+            import('@kiptv/playlist/import/feature'),
             (dialog, { AddPlaylistDialogComponent }) => {
                 dialog.open(AddPlaylistDialogComponent, {
                     // The method-card grid collapses through its own
@@ -49,7 +49,7 @@ export class AppWorkspaceShellActionsService implements WorkspaceShellActions {
 
     openAccountInfo(data: WorkspaceAccountInfoData): void {
         this.openDialog(
-            import('@iptvnator/portal/xtream/feature'),
+            import('@kiptv/portal/xtream/feature'),
             (dialog, { AccountInfoComponent }) => {
                 dialog.open(AccountInfoComponent, {
                     width: '80%',
@@ -63,7 +63,7 @@ export class AppWorkspaceShellActionsService implements WorkspaceShellActions {
 
     openStalkerAccountInfo(data: WorkspaceStalkerAccountInfoData): void {
         this.openDialog(
-            import('@iptvnator/portal/stalker/feature'),
+            import('@kiptv/portal/stalker/feature'),
             (dialog, { StalkerAccountInfoComponent }) => {
                 dialog.open(StalkerAccountInfoComponent, {
                     width: '80%',

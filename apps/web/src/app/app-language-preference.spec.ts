@@ -1,4 +1,4 @@
-import { Language } from '@iptvnator/shared/interfaces';
+import { Language } from '@kiptv/shared/interfaces';
 import {
     getInitialLanguage,
     PREFERRED_LANGUAGE_STORAGE_KEY,

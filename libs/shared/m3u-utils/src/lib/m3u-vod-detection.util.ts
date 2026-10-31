@@ -1,7 +1,7 @@
 import {
     Channel,
     SEASON_WORD_ALTERNATIVES,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { isDashStreamUrl } from './dash.utils';
 import { getPlaybackMediaExtensionFromUrl } from './playback-media-extension.util';
 
@@ -95,7 +95,7 @@ export function hasEpisodeMarker(name: string | null | undefined): boolean {
 
 function pathSegmentsOf(url: string): string[] {
     try {
-        return new URL(url, 'http://iptvnator.local').pathname
+        return new URL(url, 'http://kiptv.local').pathname
             .split('/')
             .filter((segment) => segment !== '')
             .map((segment) => segment.toLowerCase());

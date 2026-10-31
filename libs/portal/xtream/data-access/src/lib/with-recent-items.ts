@@ -11,15 +11,15 @@ import {
     DatabaseService,
     PlaylistsService,
     RuntimeCapabilitiesService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     buildPlaylistRecentItems,
     ContentMetadataPatch,
     normalizeContentMetadataPatch,
     Playlist,
     PortalRecentItem,
-} from '@iptvnator/shared/interfaces';
-import { createLogger } from '@iptvnator/portal/shared/util/logger';
+} from '@kiptv/shared/interfaces';
+import { createLogger } from '@kiptv/portal/shared/util/logger';
 import {
     XTREAM_DATA_SOURCE,
     type XtreamPlayedContent,

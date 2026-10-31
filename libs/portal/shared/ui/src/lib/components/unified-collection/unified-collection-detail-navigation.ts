@@ -5,7 +5,7 @@ import {
     STALKER_RETURN_TO_STATE_KEY,
     UnifiedCollectionItem,
     WorkspaceNavigationTarget,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 /**
  * Whether the route on screen may host this item's detail inline. A portal's

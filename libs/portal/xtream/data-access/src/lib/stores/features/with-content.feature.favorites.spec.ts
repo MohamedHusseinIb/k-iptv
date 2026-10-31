@@ -7,7 +7,7 @@ import {
     TEST_PLAYLIST as PLAYLIST,
 } from './with-content.feature.spec-helpers';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),

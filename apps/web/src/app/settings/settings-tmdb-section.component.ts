@@ -1,4 +1,4 @@
-import { AgeRatingPresentationService } from '@iptvnator/services/age-rating';
+import { AgeRatingPresentationService } from '@kiptv/services/age-rating';
 import {
     Component,
     inject,
@@ -16,10 +16,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { TranslateModule } from '@ngx-translate/core';
-import { TmdbApiService, TmdbCacheService } from '@iptvnator/services';
-import type { TmdbCacheStats } from '@iptvnator/shared/interfaces';
+import { TmdbApiService, TmdbCacheService } from '@kiptv/services';
+import type { TmdbCacheStats } from '@kiptv/shared/interfaces';
 import { markSectionForCheckOnFormEvents } from './settings-section-form-render';
-import { provideFormFieldDefaults } from '@iptvnator/ui/components/form-field-defaults';
+import { provideFormFieldDefaults } from '@kiptv/ui/components/form-field-defaults';
 
 type TmdbKeyTestState = 'idle' | 'testing' | 'success' | 'error';
 

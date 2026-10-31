@@ -2,7 +2,7 @@ import {
     normalizeXtreamServerUrl,
     resolveXtreamPortalStatus,
     resolveXtreamServerTimezone,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { XtreamEpgNormalizer } from './lib/xtream-epg-normalizer';
 export { resolveXtreamVodPlaybackSource } from './lib/services/xtream-vod-playback-source';
 export interface XtreamConnection {

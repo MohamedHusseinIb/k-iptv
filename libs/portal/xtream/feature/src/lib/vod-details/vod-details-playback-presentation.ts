@@ -1,7 +1,7 @@
 import {
     getXtreamVodInfo,
     XtreamVodDetails,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 type XtreamVodPresentationItem = XtreamVodDetails & {
     readonly name?: string;

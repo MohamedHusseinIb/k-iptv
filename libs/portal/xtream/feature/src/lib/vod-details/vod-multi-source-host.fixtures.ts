@@ -3,13 +3,13 @@ import { TestBed } from '@angular/core/testing';
 import {
     VodSourceDiscoveryService,
     VodSourceResolverService,
-} from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/portal/shared/data-access';
 import {
     ParentalLockService,
     SettingsStore,
     StreamProbeService,
     VodSourcePinService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { VodMultiSourceHostService } from './vod-multi-source-host.service';
 /**
  * Shared fixtures for the multi-source host specs, extracted so the
@@ -19,7 +19,7 @@ import type {
     ResolvedPortalPlayback,
     VodSourceCandidate,
     VodSourceField,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { VodMultiSourceMovie } from './vod-multi-source-identity';
 
 export const MOVIE_A: VodMultiSourceMovie = {

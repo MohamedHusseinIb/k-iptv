@@ -1,6 +1,6 @@
 import type videoJs from 'video.js';
-import type { NativePlaybackErrorInput } from '@iptvnator/playback/util';
-import { collectPlaybackCodecs } from '@iptvnator/playback/util';
+import type { NativePlaybackErrorInput } from '@kiptv/playback/util';
+import { collectPlaybackCodecs } from '@kiptv/playback/util';
 
 export type VideoPlayerSource = {
     src: string;

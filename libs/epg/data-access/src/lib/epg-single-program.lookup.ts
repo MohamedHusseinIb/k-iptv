@@ -1,6 +1,6 @@
 import { Observable, from, of } from 'rxjs';
 import { catchError, map, switchMap, timeout } from 'rxjs/operators';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { EpgLookupOptions } from './epg-runtime-bridge.service';
 import { normalizeEpgPrograms } from './epg-program-normalization.util';
 import { normalizeLookupSourceUrls } from './epg-lookup-normalization.util';

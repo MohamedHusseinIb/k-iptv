@@ -1,11 +1,11 @@
 import {
     createLogger,
     type PortalPlaybackPositions,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import type {
     SeasonContainerPlaybackToggleRequest,
     SeasonContainerSeriesPlaybackToggleRequest,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 import type { SerialDetailsPlaybackPositionState } from './serial-details-playback-position-state';
 import type {
     SerialDetailsSeasonWatchService,

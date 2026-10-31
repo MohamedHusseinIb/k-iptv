@@ -5,11 +5,11 @@ import {
     input,
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UnifiedCollectionPageComponent } from '@iptvnator/portal/shared/ui';
+import { UnifiedCollectionPageComponent } from '@kiptv/portal/shared/ui';
 import {
     CollectionScope,
     routeParamSignal,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 @Component({
     selector: 'app-m3u-collection-route',

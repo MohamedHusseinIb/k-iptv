@@ -569,8 +569,8 @@ describe('Xtream mock environment parsing', () => {
         });
         expect(
             parseXtreamMockServerEnvironment({
-                IPTVNATOR_XTREAM_MOCK_CONTROL: '1',
-                IPTVNATOR_XTREAM_MOCK_CONTROL_TOKEN: 'secret-token',
+                KIPTV_XTREAM_MOCK_CONTROL: '1',
+                KIPTV_XTREAM_MOCK_CONTROL_TOKEN: 'secret-token',
             })
         ).toEqual({
             control: { enabled: true, token: 'secret-token' },
@@ -581,8 +581,8 @@ describe('Xtream mock environment parsing', () => {
             parseXtreamMockServerEnvironment({
                 HOST: '::1',
                 PORT: '4321',
-                IPTVNATOR_XTREAM_MOCK_CONTROL: '1',
-                IPTVNATOR_XTREAM_MOCK_CONTROL_TOKEN: 'secret-token',
+                KIPTV_XTREAM_MOCK_CONTROL: '1',
+                KIPTV_XTREAM_MOCK_CONTROL_TOKEN: 'secret-token',
             })
         ).toEqual({
             control: { enabled: true, token: 'secret-token' },
@@ -591,8 +591,8 @@ describe('Xtream mock environment parsing', () => {
         });
         expect(
             parseXtreamMockServerEnvironment({
-                IPTVNATOR_XTREAM_MOCK_CONTROL: 'true',
-                IPTVNATOR_XTREAM_MOCK_CONTROL_TOKEN: 'ignored',
+                KIPTV_XTREAM_MOCK_CONTROL: 'true',
+                KIPTV_XTREAM_MOCK_CONTROL_TOKEN: 'ignored',
             })
         ).toEqual({ host: '127.0.0.1', port: 3211 });
     });
@@ -616,12 +616,12 @@ describe('Xtream mock environment parsing', () => {
         [{ PORT: '-1' }, /port/i],
         [{ PORT: '12x' }, /port/i],
         [{ PORT: '65536' }, /port/i],
-        [{ IPTVNATOR_XTREAM_MOCK_CONTROL: '1' }, /token/i],
+        [{ KIPTV_XTREAM_MOCK_CONTROL: '1' }, /token/i],
         [
             {
                 HOST: '192.0.2.1',
-                IPTVNATOR_XTREAM_MOCK_CONTROL: '1',
-                IPTVNATOR_XTREAM_MOCK_CONTROL_TOKEN: 'secret-token',
+                KIPTV_XTREAM_MOCK_CONTROL: '1',
+                KIPTV_XTREAM_MOCK_CONTROL_TOKEN: 'secret-token',
             },
             /loopback/i,
         ],

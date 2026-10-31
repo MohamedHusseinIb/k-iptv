@@ -1,4 +1,4 @@
-import { PlaylistMeta, STALKER_REQUEST } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta, STALKER_REQUEST } from '@kiptv/shared/interfaces';
 import {
     executeStalkerRequest,
     type StalkerPortalRepairApi,

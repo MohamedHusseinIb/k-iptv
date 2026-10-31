@@ -1,8 +1,8 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { type RecordingItem, RecordingsService } from '@iptvnator/services';
-import { DialogService } from '@iptvnator/ui/components';
+import { type RecordingItem, RecordingsService } from '@kiptv/services';
+import { DialogService } from '@kiptv/ui/components';
 import type {
     RecordingActionResult,
     RecordingItemAction,

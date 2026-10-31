@@ -1,6 +1,6 @@
 import { createHash, timingSafeEqual } from 'node:crypto';
 import type { RequestHandler } from 'express';
-import { SERVER_ACCESS_CHALLENGE } from '@iptvnator/shared/interfaces';
+import { SERVER_ACCESS_CHALLENGE } from '@kiptv/shared/interfaces';
 
 /** Routes a browser must reach before it has a token. */
 const PUBLIC_PATHS = new Set(['/', '/health', '/config.js', '/v1/instance']);
@@ -29,7 +29,7 @@ export function createAccessGuard(token: string): RequestHandler {
             .set('WWW-Authenticate', SERVER_ACCESS_CHALLENGE)
             .set('Access-Control-Expose-Headers', 'WWW-Authenticate')
             .json({
-                message: 'This IPTVnator server requires an access token.',
+                message: 'This K-IPTV server requires an access token.',
                 status: 401,
                 code: 'unauthorized',
             });

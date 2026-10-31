@@ -1,14 +1,14 @@
 import {
     UNSUPPORTED_CONTAINER_EXTENSIONS,
     getPlaybackMediaExtensionFromUrl,
-} from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/m3u-utils';
 
 import type {
     PlaybackSourceMetadata,
     PlaybackSourceMetadataInput,
 } from './playback-diagnostics.model';
 
-// Media-extension normalization lives in @iptvnator/shared/m3u-utils so M3U
+// Media-extension normalization lives in @kiptv/shared/m3u-utils so M3U
 // routing (isDashChannel) and engine selection always agree; re-exported here
 // to keep the playback-lib import surface stable.
 export { getPlaybackMediaExtensionFromUrl };

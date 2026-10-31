@@ -3,7 +3,7 @@ import {
     EmbeddedMpvSession,
     EmbeddedMpvSubtitleStyle,
     RecordingStartMetadata,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 type ElectronBridge = Window['electron'];
 

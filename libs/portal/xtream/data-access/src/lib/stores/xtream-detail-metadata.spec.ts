@@ -1,4 +1,4 @@
-import { XtreamSerieInfo, XtreamVodInfo } from '@iptvnator/shared/interfaces';
+import { XtreamSerieInfo, XtreamVodInfo } from '@kiptv/shared/interfaces';
 import {
     stripXtreamSerieInfoPlaceholders,
     stripXtreamVodInfoPlaceholders,

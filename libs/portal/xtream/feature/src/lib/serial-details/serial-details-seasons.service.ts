@@ -7,7 +7,7 @@ import {
     signal,
     untracked,
 } from '@angular/core';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import { buildSeasonDescriptions } from './season-descriptions.util';
 import { buildSeasonPosters } from './season-posters.util';
 import type { XtreamSerieDetailsView } from './serial-details-playback.service';

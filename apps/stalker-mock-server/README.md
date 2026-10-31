@@ -1,6 +1,6 @@
 # Stalker Mock Server
 
-A local mock implementation of the Stalker/Ministra portal API for development and end-to-end testing of IPTVnator.
+A local mock implementation of the Stalker/Ministra portal API for development and end-to-end testing of K-IPTV.
 
 ## Overview
 
@@ -23,7 +23,7 @@ nx run stalker-mock-server:serve-with-watch
 nx run-many --targets=serve --projects=stalker-mock-server,web
 ```
 
-Then in IPTVnator, add a new Stalker portal:
+Then in K-IPTV, add a new Stalker portal:
 
 - **Portal URL**: `http://localhost:3210/portal.php` (tolerant panel-style endpoint)
   or `http://localhost:3210/stalker_portal/server/load.php` (canonical Ministra
@@ -112,10 +112,10 @@ Besides the portal paths above, `src/main.ts` mounts:
 
 | Endpoint | Method | Description |
 |---|---|---|
-| `/stalker?url=<portal_url>&macAddress=<mac>&action=<action>&…` | `GET` | CORS-proxy mirror of the IPTVnator web-backend `/stalker` endpoint, used by PWA/Playwright runs. `macAddress`, `token` and `serialNumber` are control params turned into headers and stripped from the portal query (except `handshake`'s candidate token); the response is wrapped as `{ payload }`. Strictness follows the proxied `url`'s shape |
+| `/stalker?url=<portal_url>&macAddress=<mac>&action=<action>&…` | `GET` | CORS-proxy mirror of the K-IPTV web-backend `/stalker` endpoint, used by PWA/Playwright runs. `macAddress`, `token` and `serialNumber` are control params turned into headers and stripped from the portal query (except `handshake`'s candidate token); the response is wrapped as `{ payload }`. Strictness follows the proxied `url`'s shape |
 | `/stream/gated/:file` | `GET` | `video.mp4` / `audio.mp4` fixtures for the `gated-stream` scenario — 403 without the mac cookie **and** the MAC's current Bearer token |
 | `/assets/marketing/poster/<slug>.png` | `GET` | The committed screenshot-safe poster catalog shared with the Xtream mock, served from this process so `marketing-demo` needs no second server |
-| `/assets/marketing/logo/<slug>.svg[?size=WxH]` | `GET` | Generated channel logo (initials on a gradient) for the `marketing-demo` live channels and radio stations, rendered by `@iptvnator/shared/marketing-fixtures` |
+| `/assets/marketing/logo/<slug>.svg[?size=WxH]` | `GET` | Generated channel logo (initials on a gradient) for the `marketing-demo` live channels and radio stations, rendered by `@kiptv/shared/marketing-fixtures` |
 | `/health` | `GET` | Health check — returns `{ status: "ok" }` |
 | `/reset[?macAddress=<mac>&macAddress=…]` | `POST` | Clear generated data, favorites, session/auth state (including pinned device IDs) and watchdog counters. **Pass the MACs you own**: state is per-MAC and parallel spec files share this process, so a bare `/reset` wipes their state mid-test. Repeated params clear several MACs in one request |
 | `/invalidate-session?macAddress=<mac>` | `POST` | Drop that MAC's tokens so the next portal call fails with `Authorization failed.` — lets tests assert the client re-handshakes and retries. Pinned device identity survives, as on a real portal |

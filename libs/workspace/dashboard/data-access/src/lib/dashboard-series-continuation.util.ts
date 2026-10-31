@@ -3,14 +3,14 @@ import {
     isPortalPlaybackWatched,
     type SeriesEpisodeEntry,
     type SeriesNextUp,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     resolvePortalActivityWatchKind,
     isCatalogUnavailable,
     type PlaybackPositionData,
     type PortalRecentItem,
     type XtreamSerieEpisode,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import type { DashboardSeriesEpisodes } from './dashboard-series-episodes.service';
 
 /**

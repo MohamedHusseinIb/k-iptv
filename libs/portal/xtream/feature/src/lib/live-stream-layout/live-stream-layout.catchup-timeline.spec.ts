@@ -9,27 +9,27 @@ import { Subject, of } from 'rxjs';
 import {
     LiveLayoutSidebarStateService,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     FavoritesService,
     XtreamStore,
     XtreamUrlService,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     EpgArchiveCopyService,
     EpgArchiveDownloadService,
     EpgListViewComponent,
     EpgTimelineComponent,
-} from '@iptvnator/ui/epg';
-import { WebPlayerViewComponent } from '@iptvnator/ui/playback';
-import { GridListComponent } from '@iptvnator/portal/shared/ui';
+} from '@kiptv/ui/epg';
+import { WebPlayerViewComponent } from '@kiptv/ui/playback';
+import { GridListComponent } from '@kiptv/portal/shared/ui';
 import {
     DatabaseService,
     ParentalLockService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
-import { EpgItem, EpgProgram } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { EpgItem, EpgProgram } from '@kiptv/shared/interfaces';
 import { PortalChannelsListComponent } from '../portal-channels-list/portal-channels-list.component';
 import { LiveStreamLayoutComponent } from './live-stream-layout.component';
 import {

@@ -2,8 +2,8 @@ import {
     TmdbEnrichmentService,
     extractYear,
     loadTmdbMergers,
-} from '@iptvnator/services';
-import { StalkerVodInfo, TmdbMediaType } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { StalkerVodInfo, TmdbMediaType } from '@kiptv/shared/interfaces';
 import { StalkerVodSource } from '../models';
 import {
     firstNonBlankStalkerIdText,

@@ -9,13 +9,13 @@ import { existsSync, mkdtempSync, rmSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';
 import {
-    IPTVNATOR_DATA_DIR_ENV,
-    IPTVNATOR_E2E_DATA_DIR_ENV,
+    KIPTV_DATA_DIR_ENV,
+    KIPTV_E2E_DATA_DIR_ENV,
     getElectronConfigDirectory,
     getElectronUserDataPath,
-    getIptvnatorDataRoot,
-    getIptvnatorDatabaseDirectory,
-    getIptvnatorDatabasePath,
+    getKiptvDataRoot,
+    getKiptvDatabaseDirectory,
+    getKiptvDatabasePath,
 } from './path-utils';
 
 describe('path-utils', () => {
@@ -24,98 +24,98 @@ describe('path-utils', () => {
     let originalDataDirValue: string | undefined;
 
     beforeEach(() => {
-        tempRoot = mkdtempSync(join(tmpdir(), 'iptvnator-path-utils-'));
+        tempRoot = mkdtempSync(join(tmpdir(), 'kiptv-path-utils-'));
         homedirMock.mockReturnValue(join(tempRoot, 'home'));
-        originalEnvValue = process.env[IPTVNATOR_E2E_DATA_DIR_ENV];
-        delete process.env[IPTVNATOR_E2E_DATA_DIR_ENV];
-        originalDataDirValue = process.env[IPTVNATOR_DATA_DIR_ENV];
-        delete process.env[IPTVNATOR_DATA_DIR_ENV];
+        originalEnvValue = process.env[KIPTV_E2E_DATA_DIR_ENV];
+        delete process.env[KIPTV_E2E_DATA_DIR_ENV];
+        originalDataDirValue = process.env[KIPTV_DATA_DIR_ENV];
+        delete process.env[KIPTV_DATA_DIR_ENV];
     });
 
     afterEach(() => {
         if (originalEnvValue === undefined) {
-            delete process.env[IPTVNATOR_E2E_DATA_DIR_ENV];
+            delete process.env[KIPTV_E2E_DATA_DIR_ENV];
         } else {
-            process.env[IPTVNATOR_E2E_DATA_DIR_ENV] = originalEnvValue;
+            process.env[KIPTV_E2E_DATA_DIR_ENV] = originalEnvValue;
         }
         if (originalDataDirValue === undefined) {
-            delete process.env[IPTVNATOR_DATA_DIR_ENV];
+            delete process.env[KIPTV_DATA_DIR_ENV];
         } else {
-            process.env[IPTVNATOR_DATA_DIR_ENV] = originalDataDirValue;
+            process.env[KIPTV_DATA_DIR_ENV] = originalDataDirValue;
         }
         rmSync(tempRoot, { force: true, recursive: true });
     });
 
-    it('uses and creates IPTVNATOR_DATA_DIR as the data root', () => {
+    it('uses and creates KIPTV_DATA_DIR as the data root', () => {
         const dataDir = join(tempRoot, 'volume');
-        process.env[IPTVNATOR_DATA_DIR_ENV] = ` ${dataDir} `;
+        process.env[KIPTV_DATA_DIR_ENV] = ` ${dataDir} `;
 
-        expect(getIptvnatorDataRoot()).toBe(dataDir);
+        expect(getKiptvDataRoot()).toBe(dataDir);
         expect(existsSync(dataDir)).toBe(true);
-        expect(getIptvnatorDatabasePath()).toBe(
-            join(dataDir, 'databases', 'iptvnator.db')
+        expect(getKiptvDatabasePath()).toBe(
+            join(dataDir, 'databases', 'kiptv.db')
         );
     });
 
     it('isolates a selected server profile without changing the standalone data root', () => {
-        const previous = process.env['IPTVNATOR_SOURCE_PROFILE'];
+        const previous = process.env['KIPTV_SOURCE_PROFILE'];
         const profile = 'a'.repeat(64);
-        process.env['IPTVNATOR_SOURCE_PROFILE'] = profile;
-        process.env[IPTVNATOR_DATA_DIR_ENV] = tempRoot;
+        process.env['KIPTV_SOURCE_PROFILE'] = profile;
+        process.env[KIPTV_DATA_DIR_ENV] = tempRoot;
         try {
-            expect(getIptvnatorDatabasePath()).toBe(join(tempRoot, 'server-profiles', profile, 'databases', 'iptvnator.db'));
-            expect(getIptvnatorDataRoot()).toBe(tempRoot);
-            process.env['IPTVNATOR_SOURCE_PROFILE'] = '../outside';
-            expect(getIptvnatorDatabasePath()).toBe(join(tempRoot, 'databases', 'iptvnator.db'));
+            expect(getKiptvDatabasePath()).toBe(join(tempRoot, 'server-profiles', profile, 'databases', 'kiptv.db'));
+            expect(getKiptvDataRoot()).toBe(tempRoot);
+            process.env['KIPTV_SOURCE_PROFILE'] = '../outside';
+            expect(getKiptvDatabasePath()).toBe(join(tempRoot, 'databases', 'kiptv.db'));
         } finally {
-            if (previous === undefined) delete process.env['IPTVNATOR_SOURCE_PROFILE'];
-            else process.env['IPTVNATOR_SOURCE_PROFILE'] = previous;
+            if (previous === undefined) delete process.env['KIPTV_SOURCE_PROFILE'];
+            else process.env['KIPTV_SOURCE_PROFILE'] = previous;
         }
     });
 
-    it('lets the E2E override win over IPTVNATOR_DATA_DIR', () => {
+    it('lets the E2E override win over KIPTV_DATA_DIR', () => {
         const e2eDir = join(tempRoot, 'e2e');
-        process.env[IPTVNATOR_E2E_DATA_DIR_ENV] = e2eDir;
-        process.env[IPTVNATOR_DATA_DIR_ENV] = join(tempRoot, 'volume');
+        process.env[KIPTV_E2E_DATA_DIR_ENV] = e2eDir;
+        process.env[KIPTV_DATA_DIR_ENV] = join(tempRoot, 'volume');
 
-        expect(getIptvnatorDataRoot()).toBe(e2eDir);
+        expect(getKiptvDataRoot()).toBe(e2eDir);
     });
 
-    it('ignores a blank IPTVNATOR_DATA_DIR', () => {
-        process.env[IPTVNATOR_DATA_DIR_ENV] = '   ';
+    it('ignores a blank KIPTV_DATA_DIR', () => {
+        process.env[KIPTV_DATA_DIR_ENV] = '   ';
 
-        expect(getIptvnatorDataRoot()).toBe(
-            join(tempRoot, 'home', '.iptvnator')
+        expect(getKiptvDataRoot()).toBe(
+            join(tempRoot, 'home', '.kiptv')
         );
     });
 
     it('uses and creates the E2E data dir override when the env variable is set', () => {
         const e2eDataDir = join(tempRoot, 'e2e-data');
-        process.env[IPTVNATOR_E2E_DATA_DIR_ENV] = e2eDataDir;
+        process.env[KIPTV_E2E_DATA_DIR_ENV] = e2eDataDir;
 
-        expect(getIptvnatorDataRoot()).toBe(e2eDataDir);
+        expect(getKiptvDataRoot()).toBe(e2eDataDir);
         expect(existsSync(e2eDataDir)).toBe(true);
     });
 
-    it('falls back to ~/.iptvnator when the env override is blank', () => {
-        process.env[IPTVNATOR_E2E_DATA_DIR_ENV] = '   ';
+    it('falls back to ~/.kiptv when the env override is blank', () => {
+        process.env[KIPTV_E2E_DATA_DIR_ENV] = '   ';
 
-        const expectedRoot = join(tempRoot, 'home', '.iptvnator');
+        const expectedRoot = join(tempRoot, 'home', '.kiptv');
 
-        expect(getIptvnatorDataRoot()).toBe(expectedRoot);
+        expect(getKiptvDataRoot()).toBe(expectedRoot);
         expect(existsSync(expectedRoot)).toBe(true);
     });
 
     it('places the databases directory and database file under the data root', () => {
         const e2eDataDir = join(tempRoot, 'e2e-data');
-        process.env[IPTVNATOR_E2E_DATA_DIR_ENV] = e2eDataDir;
+        process.env[KIPTV_E2E_DATA_DIR_ENV] = e2eDataDir;
 
-        const databaseDirectory = getIptvnatorDatabaseDirectory();
+        const databaseDirectory = getKiptvDatabaseDirectory();
 
         expect(databaseDirectory).toBe(join(e2eDataDir, 'databases'));
         expect(existsSync(databaseDirectory)).toBe(true);
-        expect(getIptvnatorDatabasePath()).toBe(
-            join(e2eDataDir, 'databases', 'iptvnator.db')
+        expect(getKiptvDatabasePath()).toBe(
+            join(e2eDataDir, 'databases', 'kiptv.db')
         );
     });
 
@@ -126,7 +126,7 @@ describe('path-utils', () => {
 
     it('creates Electron user-data and config directories under the E2E root', () => {
         const e2eDataDir = join(tempRoot, 'e2e-data');
-        process.env[IPTVNATOR_E2E_DATA_DIR_ENV] = e2eDataDir;
+        process.env[KIPTV_E2E_DATA_DIR_ENV] = e2eDataDir;
 
         const userDataPath = getElectronUserDataPath();
         const configDirectory = getElectronConfigDirectory();

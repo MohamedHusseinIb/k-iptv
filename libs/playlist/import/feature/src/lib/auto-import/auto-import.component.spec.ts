@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
-import { ProviderImportCandidate } from '@iptvnator/shared/interfaces';
+import { ProviderImportCandidate } from '@kiptv/shared/interfaces';
 import { AutoImportComponent } from './auto-import.component';
 
 describe('AutoImportComponent', () => {

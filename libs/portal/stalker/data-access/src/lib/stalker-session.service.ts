@@ -5,9 +5,9 @@ import {
     isFullStalkerPortalUrl,
     Playlist,
     PlaylistMeta,
-} from '@iptvnator/shared/interfaces';
-import { DataService, PlaylistsService } from '@iptvnator/services';
-import { createLogger } from '@iptvnator/portal/shared/util';
+} from '@kiptv/shared/interfaces';
+import { DataService, PlaylistsService } from '@kiptv/services';
+import { createLogger } from '@kiptv/portal/shared/util';
 import {
     getStalkerPortalIdentityFromPlaylist,
     LEGACY_DEFAULT_STALKER_SERIAL,
@@ -123,7 +123,7 @@ export class StalkerSessionService {
     /**
      * Checks if a URL looks like a full stalker portal URL (requires
      * handshake). Delegates to the shared predicate in
-     * `@iptvnator/shared/interfaces` — the flag persisted by endpoint
+     * `@kiptv/shared/interfaces` — the flag persisted by endpoint
      * discovery is authoritative; this URL rule is only the legacy fallback.
      */
     isFullStalkerPortal(url: string): boolean {

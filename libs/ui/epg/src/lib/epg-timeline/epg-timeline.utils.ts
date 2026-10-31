@@ -1,9 +1,9 @@
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { addDays, addMinutes, startOfDay } from 'date-fns';
 import { parseEpgDateKey } from '../epg-date';
 import { getProgramDateKey, getProgramTimeMs } from '../epg-program.utils';
-import type { TimelineAxis } from '@iptvnator/shared/epg';
-export type { TimelineAxis } from '@iptvnator/shared/epg';
+import type { TimelineAxis } from '@kiptv/shared/epg';
+export type { TimelineAxis } from '@kiptv/shared/epg';
 
 export const TIMELINE_MINUTE_MS = 60_000;
 /** Pixels per minute on the ribbon (matches the prototype's SCALE). */

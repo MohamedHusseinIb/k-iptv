@@ -13,7 +13,7 @@ import { afterEach, beforeEach, test } from 'node:test';
 import { parseBaseline, run, serializeBaseline } from './check-drift.mjs';
 
 const EN = {
-    APP: { TITLE: 'IPTVnator', SAVE: 'Save' },
+    APP: { TITLE: 'K-IPTV', SAVE: 'Save' },
     PIN: 'PIN',
 };
 
@@ -58,10 +58,10 @@ function readBaselineFile() {
 test('fails on a new English-identical key that the baseline does not list', () => {
     writeLocale('en', { ...EN, APP: { ...EN.APP, NEW: 'New label' } });
     writeLocale('de', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Speichern', NEW: 'New label' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Speichern', NEW: 'New label' },
         PIN: 'PIN',
     });
-    writeBaseline({ de: { 'APP.TITLE': 'IPTVnator', PIN: 'PIN' } });
+    writeBaseline({ de: { 'APP.TITLE': 'K-IPTV', PIN: 'PIN' } });
 
     const { code, output } = check();
 
@@ -73,10 +73,10 @@ test('fails on a new English-identical key that the baseline does not list', () 
 test('passes a translated key', () => {
     writeLocale('en', EN);
     writeLocale('de', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Speichern' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Speichern' },
         PIN: 'PIN-Code',
     });
-    writeBaseline({ de: { 'APP.TITLE': 'IPTVnator' } });
+    writeBaseline({ de: { 'APP.TITLE': 'K-IPTV' } });
 
     const { code, output } = check();
 
@@ -87,10 +87,10 @@ test('passes a translated key', () => {
 test('passes an English-identical key listed in the baseline', () => {
     writeLocale('en', EN);
     writeLocale('de', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Speichern' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Speichern' },
         PIN: 'PIN',
     });
-    writeBaseline({ de: { 'APP.TITLE': 'IPTVnator', PIN: 'PIN' } });
+    writeBaseline({ de: { 'APP.TITLE': 'K-IPTV', PIN: 'PIN' } });
 
     assert.equal(check().code, 0);
 });
@@ -100,10 +100,10 @@ test('a baseline entry only covers the English text it recorded', () => {
     // new untranslated text, not the value the baseline accepted.
     writeLocale('en', { ...EN, APP: { ...EN.APP, SAVE: 'Save changes' } });
     writeLocale('de', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Save changes' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Save changes' },
         PIN: 'PIN-Code',
     });
-    writeBaseline({ de: { 'APP.TITLE': 'IPTVnator', 'APP.SAVE': 'Save' } });
+    writeBaseline({ de: { 'APP.TITLE': 'K-IPTV', 'APP.SAVE': 'Save' } });
 
     const { code, output } = check();
 
@@ -114,11 +114,11 @@ test('a baseline entry only covers the English text it recorded', () => {
 test('reports baseline entries that are no longer identical without failing', () => {
     writeLocale('en', EN);
     writeLocale('de', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Speichern' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Speichern' },
         PIN: 'PIN-Code',
     });
     writeBaseline({
-        de: { 'APP.TITLE': 'IPTVnator', 'APP.SAVE': 'Save', PIN: 'PIN' },
+        de: { 'APP.TITLE': 'K-IPTV', 'APP.SAVE': 'Save', PIN: 'PIN' },
         fr: { PIN: 'PIN' },
     });
 
@@ -139,20 +139,20 @@ test('reports baseline entries that are no longer identical without failing', ()
 test('a locale without baseline entries fails on every identical value', () => {
     writeLocale('en', EN);
     writeLocale('uk', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Зберегти' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Зберегти' },
         PIN: 'PIN-код',
     });
 
     const { code, output } = check();
 
     assert.equal(code, 1);
-    assert.match(output, /uk\.json APP\.TITLE: "IPTVnator"/);
+    assert.match(output, /uk\.json APP\.TITLE: "K-IPTV"/);
 });
 
 test('still fails on missing and extra keys', () => {
     writeLocale('en', EN);
-    writeLocale('de', { APP: { TITLE: 'IPTVnator', OLD: 'Alt' }, PIN: 'PIN' });
-    writeBaseline({ de: { 'APP.TITLE': 'IPTVnator', PIN: 'PIN' } });
+    writeLocale('de', { APP: { TITLE: 'K-IPTV', OLD: 'Alt' }, PIN: 'PIN' });
+    writeBaseline({ de: { 'APP.TITLE': 'K-IPTV', PIN: 'PIN' } });
 
     const { code, output } = check();
 
@@ -166,26 +166,26 @@ test('still fails on missing and extra keys', () => {
 test('--fail-on-identical ignores the baseline', () => {
     writeLocale('en', EN);
     writeLocale('de', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Speichern' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Speichern' },
         PIN: 'PIN',
     });
-    writeBaseline({ de: { 'APP.TITLE': 'IPTVnator', PIN: 'PIN' } });
+    writeBaseline({ de: { 'APP.TITLE': 'K-IPTV', PIN: 'PIN' } });
 
     const { code, output } = check('--fail-on-identical');
 
     assert.equal(code, 1);
-    assert.match(output, /de\.json APP\.TITLE: "IPTVnator"/);
+    assert.match(output, /de\.json APP\.TITLE: "K-IPTV"/);
     assert.match(output, /de\.json PIN: "PIN"/);
 });
 
 test('--update-baseline records current identical values and drops resolved ones', () => {
     writeLocale('en', EN);
     writeLocale('de', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Speichern' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Speichern' },
         PIN: 'PIN',
     });
     writeLocale('fr', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Enregistrer' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Enregistrer' },
         PIN: 'Code PIN',
     });
     writeBaseline({ de: { 'APP.SAVE': 'Save' }, fr: { PIN: 'PIN' } });
@@ -196,8 +196,8 @@ test('--update-baseline records current identical values and drops resolved ones
     assert.match(output, /^ {2}\+ de PIN: "PIN"$/m);
     assert.match(output, /Baseline written: 3 added, 2 removed\./);
     assert.deepEqual(readBaselineFile(), {
-        de: { 'APP.TITLE': 'IPTVnator', PIN: 'PIN' },
-        fr: { 'APP.TITLE': 'IPTVnator' },
+        de: { 'APP.TITLE': 'K-IPTV', PIN: 'PIN' },
+        fr: { 'APP.TITLE': 'K-IPTV' },
     });
     assert.equal(check().code, 0);
 });
@@ -216,7 +216,7 @@ test('--update-baseline keeps the old baseline when a locale is unreadable', () 
 
 test('--update-baseline keeps the old baseline while keys are missing or extra', () => {
     writeLocale('en', EN);
-    writeLocale('de', { APP: { TITLE: 'IPTVnator', OLD: 'Alt' }, PIN: 'PIN' });
+    writeLocale('de', { APP: { TITLE: 'K-IPTV', OLD: 'Alt' }, PIN: 'PIN' });
     writeBaseline({ de: { 'APP.SAVE': 'Save', PIN: 'PIN' } });
 
     const { code, output } = check('--update-baseline');
@@ -231,7 +231,7 @@ test('--update-baseline keeps the old baseline while keys are missing or extra',
 test('--fail-on-identical audits even when the baseline is damaged', () => {
     writeLocale('en', EN);
     writeLocale('de', {
-        APP: { TITLE: 'IPTVnator', SAVE: 'Speichern' },
+        APP: { TITLE: 'K-IPTV', SAVE: 'Speichern' },
         PIN: 'PIN-Code',
     });
     writeFileSync(baselinePath, '{ broken');
@@ -240,7 +240,7 @@ test('--fail-on-identical audits even when the baseline is damaged', () => {
 
     assert.equal(code, 1);
     assert.match(output, /^FAIL de\.json: missing=0 extra=0 identical_en=1$/m);
-    assert.match(output, /de\.json APP\.TITLE: "IPTVnator"/);
+    assert.match(output, /de\.json APP\.TITLE: "K-IPTV"/);
     assert.equal(check().code, 1);
 });
 

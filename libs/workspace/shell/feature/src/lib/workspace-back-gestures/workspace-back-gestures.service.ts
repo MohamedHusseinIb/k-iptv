@@ -1,9 +1,9 @@
 import { DOCUMENT } from '@angular/common';
 import { DestroyRef, inject, Injectable } from '@angular/core';
-import { WorkspaceBackNavigationService } from '@iptvnator/portal/shared/data-access';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
-import type { ElectronBridgeBackGestureSource } from '@iptvnator/shared/interfaces';
-import { WorkspaceShellContextDrawerService } from '@iptvnator/workspace/shell/util';
+import { WorkspaceBackNavigationService } from '@kiptv/portal/shared/data-access';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
+import type { ElectronBridgeBackGestureSource } from '@kiptv/shared/interfaces';
+import { WorkspaceShellContextDrawerService } from '@kiptv/workspace/shell/util';
 
 /** What asked for Back, other than the mouse Back button. */
 export type WorkspaceBackGestureSource =

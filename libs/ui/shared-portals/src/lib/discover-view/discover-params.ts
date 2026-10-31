@@ -1,4 +1,4 @@
-import { TmdbMediaType, isTmdbYearFacet } from '@iptvnator/shared/interfaces';
+import { TmdbMediaType, isTmdbYearFacet } from '@kiptv/shared/interfaces';
 
 /**
  * Facets of a portal Discover page, parsed from route query params.

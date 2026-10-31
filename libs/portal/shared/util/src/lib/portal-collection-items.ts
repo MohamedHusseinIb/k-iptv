@@ -1,4 +1,4 @@
-import { foldSearchText, XtreamCategory } from '@iptvnator/shared/interfaces';
+import { foldSearchText, XtreamCategory } from '@kiptv/shared/interfaces';
 
 type StandardCollectionBucket = 'all' | 'movie' | 'live' | 'series';
 

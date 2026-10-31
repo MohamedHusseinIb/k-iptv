@@ -22,20 +22,20 @@ import {
     switchMap,
     tap,
 } from 'rxjs';
-import { EpgService } from '@iptvnator/epg/data-access';
+import { EpgService } from '@kiptv/epg/data-access';
 import {
     epgProviderClockMs,
     isCatalogUnavailable,
     normalizeDashboardRailsSettings,
     type EpgProgram,
     type PortalActivityItem,
-} from '@iptvnator/shared/interfaces';
-import { SettingsStore } from '@iptvnator/services';
-import { normalizeEpgUrls } from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/interfaces';
+import { SettingsStore } from '@kiptv/services';
+import { normalizeEpgUrls } from '@kiptv/shared/m3u-utils';
 import {
     buildDashboardPortalLiveEpgKey,
     DashboardDataService,
-} from '@iptvnator/workspace/dashboard/data-access';
+} from '@kiptv/workspace/dashboard/data-access';
 import type { DashboardRailCard } from './dashboard-rail.component';
 import { DashboardLiveEpgClock } from './dashboard-live-epg-clock';
 import { DashboardPortalLiveEpgPresenter } from './dashboard-portal-live-epg.presenter';

@@ -1,10 +1,10 @@
 import { on } from '@ngrx/store';
-import { Channel, Playlist } from '@iptvnator/shared/interfaces';
+import { Channel, Playlist } from '@kiptv/shared/interfaces';
 import {
     resolvePlaylistEpgSourceState,
     playlistRefreshMatchesSource,
     retainPlaylistRefreshSource,
-} from '@iptvnator/shared/m3u-utils';
+} from '@kiptv/shared/m3u-utils';
 import { PlaylistActions } from '../actions';
 import { playlistsAdapter } from '../playlists.state';
 import { PlaylistState } from '../state';

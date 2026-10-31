@@ -3,8 +3,8 @@ import {
     playlistDisplayLabel,
     playlistNameHasCredentials,
     resolvePlaylistSourceKind,
-} from '@iptvnator/shared/interfaces';
-import { decodeFully, findXtreamAccount } from '@iptvnator/shared/logging';
+} from '@kiptv/shared/interfaces';
+import { decodeFully, findXtreamAccount } from '@kiptv/shared/logging';
 import {
     isDisplaySensitiveKey,
     stripUrlCredentials,

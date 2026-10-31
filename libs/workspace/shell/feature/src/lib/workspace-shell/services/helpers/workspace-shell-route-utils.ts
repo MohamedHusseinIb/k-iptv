@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { WorkspacePortalContext } from '@iptvnator/workspace/shell/util';
+import { WorkspacePortalContext } from '@kiptv/workspace/shell/util';
 
 export function toQueryString(queryParams: Record<string, unknown>): string {
     const urlSearchParams = new URLSearchParams();

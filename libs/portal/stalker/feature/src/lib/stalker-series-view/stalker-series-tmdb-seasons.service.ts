@@ -4,11 +4,11 @@ import {
     mergeEpisodesWithTmdb,
     tmdbSeasonPosterUrl,
     type TmdbEpisode,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     XtreamSerieEpisode,
     resolveEnrichmentSeasonNumber,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 interface FetchedTmdbSeason {
     /** Resolved TMDB season number this entry was fetched for */

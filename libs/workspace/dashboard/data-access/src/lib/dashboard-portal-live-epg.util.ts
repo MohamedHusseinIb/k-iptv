@@ -3,12 +3,12 @@ import {
     isCatalogUnavailable,
     type EpgProgram,
     type PortalActivityItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     buildCollectionUid,
     collectionEpgKey,
     type UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 
 /**
  * One dashboard live card's portal EPG request: the key its answer is filed

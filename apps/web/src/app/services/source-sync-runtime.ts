@@ -2,9 +2,9 @@ import { inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
-import { PlaylistActions } from '@iptvnator/m3u-state';
-import { PlaylistsService } from '@iptvnator/services';
-import { SourceSyncService } from '@iptvnator/services/source-sync';
+import { PlaylistActions } from '@kiptv/m3u-state';
+import { PlaylistsService } from '@kiptv/services';
+import { SourceSyncService } from '@kiptv/services/source-sync';
 
 export function initializeSourceSync(): Promise<void> {
     const store = inject(Store);

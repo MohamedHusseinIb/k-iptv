@@ -6,11 +6,11 @@ import {
     DatabaseService,
     PlaylistsService,
     RuntimeCapabilitiesService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { XTREAM_DATA_SOURCE } from './data-sources/xtream-data-source.interface';
 import { withRecentItems } from './with-recent-items';
 
-jest.mock('@iptvnator/portal/shared/util', () => ({
+jest.mock('@kiptv/portal/shared/util', () => ({
     createLogger: () => ({
         debug: jest.fn(),
         info: jest.fn(),

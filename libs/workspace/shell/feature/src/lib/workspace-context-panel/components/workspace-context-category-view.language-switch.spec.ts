@@ -6,9 +6,9 @@ import {
     StalkerItvCacheService,
     StalkerSessionService,
     withStalkerContent,
-} from '@iptvnator/portal/stalker/data-access';
-import { DataService, ParentalLockService } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/stalker/data-access';
+import { DataService, ParentalLockService } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { WorkspaceContextCategoryViewComponent } from './workspace-context-category-view.component';
 
 type ContentType = 'vod' | 'series' | 'itv' | 'radio';

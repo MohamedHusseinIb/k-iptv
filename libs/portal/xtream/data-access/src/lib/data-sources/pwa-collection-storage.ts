@@ -11,7 +11,7 @@ import {
     XTREAM_USER_DATA_KEYS,
     writeXtreamUserDataMap,
     type UserDataStorage,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { XtreamContentItem } from './xtream-data-source.interface';
 
 /** Synchronous persistence and migration using only snapshots and cached identity evidence. */

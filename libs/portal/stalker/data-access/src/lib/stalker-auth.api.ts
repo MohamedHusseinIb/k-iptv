@@ -3,7 +3,7 @@ export interface StalkerAuthTransport { sendIpcEvent<T = unknown>(type: string, 
 import {
     STALKER_REQUEST,
     STALKER_STB_PROFILE_PARAMS,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     normalizeStalkerPortalIdentity,
     type StalkerPortalIdentity,

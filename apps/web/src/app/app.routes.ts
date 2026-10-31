@@ -4,8 +4,8 @@ import {
     ParentalLockService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
-import { WorkspaceStartupPreferencesService } from '@iptvnator/workspace/shell/util';
+} from '@kiptv/services';
+import { WorkspaceStartupPreferencesService } from '@kiptv/workspace/shell/util';
 import {
     serverAccessGuard,
     serverSignInGuard,
@@ -86,7 +86,7 @@ export const routes: Routes = [
             settingsReady: settingsReadyResolver,
         },
         loadComponent: () =>
-            import('@iptvnator/workspace/shell/feature').then(
+            import('@kiptv/workspace/shell/feature').then(
                 (c) => c.WorkspaceShellComponent
             ),
         children: [
@@ -99,21 +99,21 @@ export const routes: Routes = [
                 path: 'dashboard',
                 canActivate: [dashboardAccessGuard],
                 loadComponent: () =>
-                    import('@iptvnator/workspace/dashboard/feature').then(
+                    import('@kiptv/workspace/dashboard/feature').then(
                         (c) => c.WorkspaceDashboardRailsComponent
                     ),
             },
             {
                 path: 'sources',
                 loadComponent: () =>
-                    import('@iptvnator/workspace/shell/feature').then(
+                    import('@kiptv/workspace/shell/feature').then(
                         (c) => c.WorkspaceSourcesComponent
                     ),
             },
             {
                 path: 'playlists/:id',
                 loadChildren: () =>
-                    import('@iptvnator/playlist/m3u/feature-player').then((m) =>
+                    import('@kiptv/playlist/m3u/feature-player').then((m) =>
                         m.createM3uWorkspaceRoutes()
                     ),
             },
@@ -146,7 +146,7 @@ export const routes: Routes = [
                     isGlobalSearch: true,
                 },
                 loadComponent: () =>
-                    import('@iptvnator/portal/xtream/feature').then(
+                    import('@kiptv/portal/xtream/feature').then(
                         (c) => c.GlobalSearchResultsComponent
                     ),
             },
@@ -154,35 +154,35 @@ export const routes: Routes = [
                 path: 'downloads/recording/:recordingId',
                 canActivate: [recordingsCapabilityGuard],
                 loadComponent: () =>
-                    import('@iptvnator/portal/downloads/feature').then(
+                    import('@kiptv/portal/downloads/feature').then(
                         (c) => c.RecordingDetailComponent
                     ),
             },
             {
                 path: 'downloads/:downloadId',
                 loadComponent: () =>
-                    import('@iptvnator/portal/downloads/feature').then(
+                    import('@kiptv/portal/downloads/feature').then(
                         (c) => c.DownloadOfflineDetailComponent
                     ),
             },
             {
                 path: 'downloads',
                 loadComponent: () =>
-                    import('@iptvnator/portal/downloads/feature').then(
+                    import('@kiptv/portal/downloads/feature').then(
                         (c) => c.DownloadsComponent
                     ),
             },
             {
                 path: '',
                 loadChildren: () =>
-                    import('@iptvnator/portal/xtream/feature').then((m) =>
+                    import('@kiptv/portal/xtream/feature').then((m) =>
                         m.createXtreamRoutes()
                     ),
             },
             {
                 path: '',
                 loadChildren: () =>
-                    import('@iptvnator/portal/stalker/feature').then((m) =>
+                    import('@kiptv/portal/stalker/feature').then((m) =>
                         m.createStalkerRoutes()
                     ),
             },

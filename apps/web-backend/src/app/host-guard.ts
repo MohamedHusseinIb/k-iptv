@@ -10,7 +10,7 @@
  *
  * A timeout alone only bounds a single request. Browsing a dead portal issues
  * dozens back to back, so the breaker (shared with the Electron main process,
- * see `@iptvnator/shared/host-health`) fast-fails the rest once a host has
+ * see `@kiptv/shared/host-health`) fast-fails the rest once a host has
  * refused to answer twice in a row.
  *
  * On the axios timeout semantics: with axios 1.20's native HTTP
@@ -27,8 +27,8 @@ import {
     classifyHostRequestFailure,
     failedAfterRedirect,
     portalEndpointKeyOf,
-} from '@iptvnator/shared/host-health';
-import { buildHostConnectivityFastFailMessage } from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/host-health';
+import { buildHostConnectivityFastFailMessage } from '@kiptv/shared/interfaces';
 import { ProviderRequestError } from './provider-request-error';
 import type { NormalizedProviderError } from './provider-error';
 
@@ -64,7 +64,7 @@ export type HostRequestAdmission =
  *
  * A refusal carries the ordinary `{ message, status }` provider-error body, so
  * every route keeps answering in the shape its client already parses. The
- * message itself is the shared one from `@iptvnator/shared/interfaces` — the
+ * message itself is the shared one from `@kiptv/shared/interfaces` — the
  * Stalker renderer classifies transport failures from message text alone, and
  * that wording is the only one it reads as "connection-level failure" rather
  * than as a status, a timeout or an auth problem.

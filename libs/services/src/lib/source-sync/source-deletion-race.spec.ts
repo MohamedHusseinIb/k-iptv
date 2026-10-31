@@ -1,6 +1,6 @@
 import { firstValueFrom } from 'rxjs';
-import type { Playlist, SourceDefinition } from '@iptvnator/shared/interfaces';
-import { applySourceDefinition } from '@iptvnator/shared/interfaces/source-definition';
+import type { Playlist, SourceDefinition } from '@kiptv/shared/interfaces';
+import { applySourceDefinition } from '@kiptv/shared/interfaces/source-definition';
 import type { PlaylistDocumentStore } from '../playlist-storage-backend';
 import { PlaylistsService } from '../playlists.service';
 import { SourceCleanupQueue } from './source-cleanup-queue';

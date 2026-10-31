@@ -1,16 +1,16 @@
 import {
     collectionEpgKey,
     UnifiedCollectionItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import { TestBed } from '@angular/core/testing';
 import { Subject } from 'rxjs';
-import type { EpgProgram } from '@iptvnator/shared/interfaces';
+import type { EpgProgram } from '@kiptv/shared/interfaces';
 import {
     EpgSourceSettingsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
-import { StreamResolverService } from '@iptvnator/portal/shared/data-access';
+} from '@kiptv/services';
+import { StreamResolverService } from '@kiptv/portal/shared/data-access';
 import {
     DASHBOARD_PORTAL_LIVE_EPG_TIMING,
     DashboardPortalLiveEpgService,

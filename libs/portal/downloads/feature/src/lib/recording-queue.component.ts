@@ -15,7 +15,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltip } from '@angular/material/tooltip';
 import { TranslatePipe } from '@ngx-translate/core';
-import type { RecordingItem } from '@iptvnator/services';
+import type { RecordingItem } from '@kiptv/services';
 import { formatDownloadBytes } from './download-queue.component';
 import { DownloadSourceMenuHeaderComponent } from './download-source-menu-header.component';
 import type {

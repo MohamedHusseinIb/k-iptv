@@ -1,5 +1,5 @@
-import { resolveChannelEpgLookupKey } from '@iptvnator/m3u-state';
-import { Channel, EpgProgram } from '@iptvnator/shared/interfaces';
+import { resolveChannelEpgLookupKey } from '@kiptv/m3u-state';
+import { Channel, EpgProgram } from '@kiptv/shared/interfaces';
 
 /**
  * Per-channel EPG metadata stored in a side-car map keyed by EPG lookup key.

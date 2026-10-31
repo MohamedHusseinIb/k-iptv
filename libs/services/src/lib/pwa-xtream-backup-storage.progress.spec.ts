@@ -6,7 +6,7 @@ import {
 import type {
     XtreamPendingRestoreState,
     XtreamPlaylistBackupEntry,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 const state: XtreamPendingRestoreState = {
     favoritesRestoreId: 'import-1',
@@ -252,7 +252,7 @@ describe('PWA restore list receipts', () => {
             if (count > 2)
                 expect(exported.userState.playbackPositions).toEqual([]);
             expect(JSON.stringify(exported)).not.toContain(
-                '__iptvnator_xtream_restore_receipts__'
+                '__kiptv_xtream_restore_receipts__'
             );
         }
     );
@@ -531,7 +531,7 @@ describe('PWA restore list receipts', () => {
         const backup = new PwaXtreamBackupStorage(storage);
         await expect(backup.restore('p', state)).rejects.toThrow();
         const map = read(KEYS.favorites);
-        map['__iptvnator_xtream_restore_receipts__'].p.keys = null;
+        map['__kiptv_xtream_restore_receipts__'].p.keys = null;
         storage.setItem(KEYS.favorites, JSON.stringify(map));
         deny();
         await expect(backup.restore('p', state)).rejects.toThrow(

@@ -30,14 +30,14 @@ for (const mode of ['catalog', 'missing', 'direct'] as const) {
         await page.route('**/assets/app-config.js', (route) =>
             route.fulfill({
                 contentType: 'application/javascript',
-                body: 'window.__IPTVNATOR_CONFIG__ = { BACKEND_URL: "http://localhost:3000" };',
+                body: 'window.__KIPTV_CONFIG__ = { BACKEND_URL: "http://localhost:3000" };',
             })
         );
         // This fixture provides a standalone proxy, not a shared source server.
         await page.route('http://localhost:3000/v1/instance', (route) =>
             route.fulfill({
                 json: {
-                    service: 'iptvnator',
+                    service: 'kiptv',
                     apiVersion: 1,
                     storage: 'none',
                     capabilities: [],

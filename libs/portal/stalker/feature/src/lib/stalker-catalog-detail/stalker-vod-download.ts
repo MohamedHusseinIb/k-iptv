@@ -1,9 +1,9 @@
-import type { DownloadsService } from '@iptvnator/services';
-import { createMovieDownloadSnapshot } from '@iptvnator/portal/shared/util';
+import type { DownloadsService } from '@kiptv/services';
+import { createMovieDownloadSnapshot } from '@kiptv/portal/shared/util';
 import type {
     TmdbEnrichedCastMember,
     VodDetailsItem,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /** The Stalker branch of the item union — the only one carrying `cmd`. */
 type StalkerVodDetailsItem = Extract<VodDetailsItem, { type: 'stalker' }>;
@@ -12,8 +12,8 @@ import {
     normalizeStalkerEntityIdAsNumber,
     resolveStalkerStaticPlaybackUrl,
     type StalkerLinkFlagSource,
-} from '@iptvnator/portal/stalker/data-access';
-import { isStalkerStreamCredentialSafe } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/stalker/data-access';
+import { isStalkerStreamCredentialSafe } from '@kiptv/shared/interfaces';
 
 /**
  * Starting a download of a Stalker VOD item.

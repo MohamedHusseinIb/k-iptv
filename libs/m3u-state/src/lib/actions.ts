@@ -5,7 +5,7 @@ import {
     Playlist,
     PlaylistMeta,
     PlaylistMetaUpdate,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export const PlaylistActions = createActionGroup({
     source: 'Playlists',

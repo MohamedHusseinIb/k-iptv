@@ -1,4 +1,4 @@
-import type { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import type { PlaybackPositionData } from '@kiptv/shared/interfaces';
 import { buildUpNextRailItems } from './up-next-rail.util';
 
 interface TestEpisode {

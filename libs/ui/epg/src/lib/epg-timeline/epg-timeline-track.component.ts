@@ -9,7 +9,7 @@ import {
     output,
 } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
-import { EpgProgram } from '@iptvnator/shared/interfaces';
+import { EpgProgram } from '@kiptv/shared/interfaces';
 import { TranslatePipe } from '@ngx-translate/core';
 import { areProgramsSame } from '../epg-program.utils';
 import {

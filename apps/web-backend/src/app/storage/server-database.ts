@@ -7,7 +7,7 @@ import {
     getDatabasePath,
     initDatabase,
     type DatabaseInstance,
-} from '@iptvnator/shared/database';
+} from '@kiptv/shared/database';
 import {
     SERVER_PLAYLIST_META_BACKFILL_SQL,
     SERVER_PLAYLIST_META_TABLE_SQL,
@@ -27,9 +27,9 @@ export interface ServerDatabase {
 }
 
 /**
- * Opens the shared IPTVnator database (full schema and migrations, the
+ * Opens the shared K-IPTV database (full schema and migrations, the
  * same as the desktop app) and adds the server-only tables. The path comes
- * from `IPTVNATOR_DATA_DIR`.
+ * from `KIPTV_DATA_DIR`.
  */
 export async function openServerDatabase(): Promise<ServerDatabase> {
     const db = await initDatabase();

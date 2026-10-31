@@ -3,7 +3,7 @@ import {
     stalkerWithheldRowKey,
     withoutWithheldStalkerItems,
 } from './stalker-parental-lock.utils';
-import { ALL_CATEGORIES_WITHHELD } from '@iptvnator/shared/interfaces';
+import { ALL_CATEGORIES_WITHHELD } from '@kiptv/shared/interfaces';
 
 describe('stalker-parental-lock.utils', () => {
     const withheld = new Set(['7', '9']);

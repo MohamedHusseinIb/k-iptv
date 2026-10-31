@@ -366,7 +366,7 @@ html {
 // ─── Global refined outlined inputs ──────────────────────────────────────────
 // Applied app-wide AFTER the component themes so these overrides win the
 // cascade. Pairs with the outline + dynamic MAT_FORM_FIELD_DEFAULT_OPTIONS
-// that provideFormFieldDefaults() (@iptvnator/ui/components) sets on each
+// that provideFormFieldDefaults() (@kiptv/ui/components) sets on each
 // component rendering a form field.
 $app-refined-input-density: mat.define-theme(
     (

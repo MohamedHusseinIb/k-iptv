@@ -2,7 +2,7 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { sql } from 'drizzle-orm';
-import { IPTVNATOR_DATA_DIR_ENV } from '@iptvnator/shared/database';
+import { KIPTV_DATA_DIR_ENV } from '@kiptv/shared/database';
 import { openServerDatabase } from './server-database';
 import { ServerPlaylistRepository } from './server-playlist-repository';
 import { m3uDocument } from './server-storage.spec-helpers';
@@ -12,16 +12,16 @@ describe('openServerDatabase', () => {
     let previous: string | undefined;
 
     beforeEach(() => {
-        dataDir = mkdtempSync(join(tmpdir(), 'iptvnator-server-db-'));
-        previous = process.env[IPTVNATOR_DATA_DIR_ENV];
-        process.env[IPTVNATOR_DATA_DIR_ENV] = dataDir;
+        dataDir = mkdtempSync(join(tmpdir(), 'kiptv-server-db-'));
+        previous = process.env[KIPTV_DATA_DIR_ENV];
+        process.env[KIPTV_DATA_DIR_ENV] = dataDir;
     });
 
     afterEach(() => {
         if (previous === undefined) {
-            delete process.env[IPTVNATOR_DATA_DIR_ENV];
+            delete process.env[KIPTV_DATA_DIR_ENV];
         } else {
-            process.env[IPTVNATOR_DATA_DIR_ENV] = previous;
+            process.env[KIPTV_DATA_DIR_ENV] = previous;
         }
         rmSync(dataDir, { recursive: true, force: true });
     });

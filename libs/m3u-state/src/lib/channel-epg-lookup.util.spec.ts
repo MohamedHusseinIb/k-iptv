@@ -1,4 +1,4 @@
-import { Channel } from '@iptvnator/shared/interfaces';
+import { Channel } from '@kiptv/shared/interfaces';
 import { resolveChannelEpgLookupKey } from './channel-epg-lookup.util';
 
 function buildChannel(overrides: Partial<Channel> = {}): Channel {

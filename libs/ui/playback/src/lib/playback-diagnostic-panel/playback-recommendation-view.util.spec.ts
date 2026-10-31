@@ -3,7 +3,7 @@ import {
     type PlaybackRecommendation,
     type PlaybackRecommendationPriority,
     type PlaybackRecommendationTarget,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import {
     getRecommendationIcon,
     getRecommendationKey,

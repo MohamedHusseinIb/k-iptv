@@ -3,7 +3,7 @@ import {
     normalizeStalkerSerialNumber,
     type Playlist,
     type PlaylistMeta,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export const STALKER_PORTAL_URL_PATTERN = /^\s*https?:\/\/[^ "\s]+\s*$/i;
 

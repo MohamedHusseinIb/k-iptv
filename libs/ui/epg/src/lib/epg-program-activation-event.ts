@@ -1,4 +1,4 @@
-import type { EpgProgram } from '@iptvnator/shared/interfaces';
+import type { EpgProgram } from '@kiptv/shared/interfaces';
 
 export interface EpgProgramActivationEvent {
     program: EpgProgram;

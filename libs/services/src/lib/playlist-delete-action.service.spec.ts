@@ -6,7 +6,7 @@ import {
     runInInjectionContext,
 } from '@angular/core';
 import { of, throwError, Subject } from 'rxjs';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { DatabaseService } from './database-electron.service';
 import { PlaylistDeleteActionService } from './playlist-delete-action.service';
 import { PlaylistsService } from './playlists.service';

@@ -2,7 +2,7 @@ import {
     ContentMetadataPatch,
     extractYear,
     normalizeContentMetadataPatch,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * The subset of an Xtream detail response this reads. Movies and series

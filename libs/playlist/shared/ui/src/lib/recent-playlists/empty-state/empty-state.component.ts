@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { TranslatePipe } from '@ngx-translate/core';
 import type { PlaylistType } from '../../add-playlist-menu/playlist-type';
-import { SOURCE_TYPE_ICONS } from '@iptvnator/shared/interfaces';
+import { SOURCE_TYPE_ICONS } from '@kiptv/shared/interfaces';
 
 export type EmptyStateType =
     'welcome-dashboard' | 'welcome-sources' | 'no-data';

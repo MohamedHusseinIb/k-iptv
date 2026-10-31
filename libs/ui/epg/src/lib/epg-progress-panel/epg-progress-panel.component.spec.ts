@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import {
     EpgImportProgress,
     EpgProgressService,
-} from '@iptvnator/epg/data-access';
+} from '@kiptv/epg/data-access';
 import { EpgProgressPanelComponent } from './epg-progress-panel.component';
 
 describe('EpgProgressPanelComponent', () => {

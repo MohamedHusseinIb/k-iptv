@@ -20,7 +20,7 @@ const SIDEBAR_WIDTH_KEY_ALIASES = new Set([
     'workspace-context-panel-width',
     'workspace-settings-panel-width',
     'workspace-favorites-panel-width',
-    'iptvnator_video_sidebar_width',
+    'kiptv_video_sidebar_width',
 ]);
 
 function parseStoredWidth(value: string): number | null {

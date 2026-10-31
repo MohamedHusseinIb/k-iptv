@@ -1,8 +1,8 @@
 import {
     StalkerContentType,
     StalkerStore,
-} from '@iptvnator/portal/stalker/data-access';
-import { Playlist } from '@iptvnator/shared/interfaces';
+} from '@kiptv/portal/stalker/data-access';
+import { Playlist } from '@kiptv/shared/interfaces';
 
 type StalkerStoreInstance = InstanceType<typeof StalkerStore>;
 

@@ -3,7 +3,7 @@ import {
     ParentalLockService,
     PlaylistsService,
     USER_DATA_STORAGE,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import { of } from 'rxjs';
 import { XtreamApiService } from '../services/xtream-api.service';
 import { PwaXtreamDataSource } from './pwa-xtream-data-source';

@@ -1,9 +1,9 @@
-import type { XtreamFavoriteCatalogStatus } from '@iptvnator/shared/interfaces';
+import type { XtreamFavoriteCatalogStatus } from '@kiptv/shared/interfaces';
 /**
  * Unified interface for displaying live TV favorites from any source
  * (M3U playlists, Xtream Codes portals, Stalker portals) in one list.
  */
-import { Channel } from '@iptvnator/shared/interfaces';
+import { Channel } from '@kiptv/shared/interfaces';
 
 export type FavoriteSourceType = 'm3u' | 'xtream' | 'stalker';
 

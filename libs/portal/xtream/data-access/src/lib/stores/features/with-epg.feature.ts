@@ -11,18 +11,18 @@ import {
     buildXtreamEpgMappingKey,
     EpgItem,
     epgProviderClockMs,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     EpgSourceSettingsService,
     RuntimeCapabilitiesService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     XtreamApiService,
     XtreamCredentials,
 } from '../../services/xtream-api.service';
 import { XtreamXmltvFallbackService } from '../../services/xtream-xmltv-fallback.service';
-import { createLogger } from '@iptvnator/portal/shared/util/logger';
+import { createLogger } from '@kiptv/portal/shared/util/logger';
 
 /**
  * EPG state for managing Electronic Program Guide data

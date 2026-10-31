@@ -23,7 +23,7 @@ index c04da5b0f3ebee42a2beb79f75f55a268a80c5da..48b6128308cabe0b4c2b891c7bd7eb5c
 -                    this._abortController.abort();
 -                } catch (e) {}
 -            }
-+        // IPTVnator patch: abort while buffering on Chrome too. Deferring to
++        // K-IPTV patch: abort while buffering on Chrome too. Deferring to
 +        // the next read() leaves a stalled live socket open until the page
 +        // unloads; _pump()'s catch treats an aborted signal as completion.
 +        if (this._abortController) {

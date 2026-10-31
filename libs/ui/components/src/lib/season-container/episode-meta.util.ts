@@ -1,14 +1,14 @@
-import { formatWithIntl } from '@iptvnator/pipes/date-format';
+import { formatWithIntl } from '@kiptv/pipes/date-format';
 import {
     formatDurationLabel,
     formatRemainingLabel,
     isPortalPlaybackInProgress,
     type RemainingTimeLabel,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     PlaybackPositionData,
     XtreamSerieEpisodeInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { episodeRuntimeSeconds } from './episode-progress.util';
 
 /** An i18n key with its parameters, as the meta line's time part. */

@@ -11,7 +11,7 @@ import type {
     DownloadMetadataSnapshot,
     ElectronBridgeDownloadStartPayload,
     ElectronBridgeDownloadStartResult,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { DownloadListLoadState } from './download-list-load-state';
 import { DownloadItem, DownloadsService } from './downloads.service';
 import { RuntimeCapabilitiesService } from './runtime-capabilities.service';

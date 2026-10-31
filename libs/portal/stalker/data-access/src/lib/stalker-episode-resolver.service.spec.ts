@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { DataService } from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { DataService } from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import { StalkerEpisodeResolver } from './stalker-episode-resolver.service';
 import {
     mapVodSeriesEpisodes,

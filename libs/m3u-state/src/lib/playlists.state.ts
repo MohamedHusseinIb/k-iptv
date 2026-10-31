@@ -1,5 +1,5 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 
 export const playlistsAdapter: EntityAdapter<PlaylistMeta> =
     createEntityAdapter<PlaylistMeta>({

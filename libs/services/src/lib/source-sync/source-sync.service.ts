@@ -14,7 +14,7 @@ import { Subject } from 'rxjs';
 import {
     type SourceServerRequest,
     type SourceServerResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { DataService } from '../data.service';
 import { PLAYLIST_DELETE_CLEANUP } from '../playlist-delete-cleanup.token';
 import { PlaylistStorageBackend } from '../playlist-storage-backend';

@@ -4,7 +4,7 @@ import {
     type ElectronBridgeCountResult,
     type ElectronBridgeResult,
     type Playlist,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     type PlaylistDocumentStore,
     PlaylistWriteConflict,

@@ -3,12 +3,12 @@ import {
     PortalRailSection,
     WorkspaceCommandContribution,
     WorkspaceResolvedCommandItem,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     WorkspacePortalContext,
     WorkspaceShellRoute,
-} from '@iptvnator/workspace/shell/util';
-import { SOURCE_TYPE_ICONS } from '@iptvnator/shared/interfaces';
+} from '@kiptv/workspace/shell/util';
+import { SOURCE_TYPE_ICONS } from '@kiptv/shared/interfaces';
 import { TranslateFn } from './workspace-shell-search-labels';
 
 export interface CommandBuilderActions {

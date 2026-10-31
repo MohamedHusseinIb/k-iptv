@@ -8,19 +8,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { By } from '@angular/platform-browser';
-import { VodSourceRowComponent } from '@iptvnator/ui/components';
+import { VodSourceRowComponent } from '@kiptv/ui/components';
 import { StorageMap } from '@ngx-pwa/local-storage';
 import { TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
-import { VideoPlayer } from '@iptvnator/shared/interfaces';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
+import { VideoPlayer } from '@kiptv/shared/interfaces';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
 import { ErrorDetails, ErrorTypes } from 'hls.js';
 import type { WebPlayerViewComponent as WebPlayerViewComponentInstance } from './web-player-view.component';
 import {
     PlaybackDiagnostic,
     PlaybackDiagnosticCode,
     PlaybackDiagnosticSource,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import { PlaybackDiagnosticPanelComponent } from '../playback-diagnostic-panel/playback-diagnostic-panel.component';
 import {
     getDiagnosticCodecHint,

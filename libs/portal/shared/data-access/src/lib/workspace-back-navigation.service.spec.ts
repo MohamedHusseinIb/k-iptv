@@ -8,7 +8,7 @@ import {
     Router,
 } from '@angular/router';
 import { Subject } from 'rxjs';
-import { WorkspaceBackTarget } from '@iptvnator/portal/shared/util';
+import { WorkspaceBackTarget } from '@kiptv/portal/shared/util';
 import {
     WORKSPACE_HISTORY_NAVIGATION,
     WorkspaceBackNavigationService,

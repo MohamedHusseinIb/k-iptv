@@ -1,7 +1,7 @@
 import {
     XTREAM_FAVORITE_IDENTITY_CONFLICT,
     type ContentMetadataPatch,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     collectionSnapshotMatchesContent,
     itemCollectionKey,

@@ -414,7 +414,7 @@ describe('ServerUserDataStorage with other devices', () => {
         await closed.flush();
         // The tab is gone: its record stops being renewed.
         for (const [key, value] of shared.values) {
-            if (key.startsWith('iptvnator-server:unconfirmed:default:')) {
+            if (key.startsWith('kiptv-server:unconfirmed:default:')) {
                 shared.setItem(
                     key,
                     JSON.stringify({ ...JSON.parse(value), at: 0 })
@@ -435,7 +435,7 @@ describe('ServerUserDataStorage with other devices', () => {
         expect(server.state['xtream-favorites']['p1']).toEqual(['S', 'X']);
         expect(
             [...shared.values.keys()].filter((key) =>
-                key.startsWith('iptvnator-server:unsent-writes:')
+                key.startsWith('kiptv-server:unsent-writes:')
             )
         ).toEqual([]);
     });
@@ -772,14 +772,14 @@ describe('ServerUserDataStorage with other devices', () => {
         await before.flush();
         const saved = () =>
             [...local.values.keys()].filter((key) =>
-                key.startsWith('iptvnator-server:unsent-writes:')
+                key.startsWith('kiptv-server:unsent-writes:')
             );
         expect(saved()).toHaveLength(1);
 
         // Storage is full now: the reloaded page cannot save its copy.
         const setItem = local.setItem;
         local.setItem = (key: string, value: string) => {
-            if (key.startsWith('iptvnator-server:unsent-writes:')) {
+            if (key.startsWith('kiptv-server:unsent-writes:')) {
                 throw new DOMException('full', 'QuotaExceededError');
             }
             setItem(key, value);
@@ -974,7 +974,7 @@ describe('ServerUserDataStorage with other devices', () => {
         expect(original.hasUnsentWrites()).toBe(true);
         expect(
             [...local.values.keys()].filter((key) =>
-                key.startsWith('iptvnator-server:unsent-writes:')
+                key.startsWith('kiptv-server:unsent-writes:')
             )
         ).toHaveLength(1);
     });
@@ -1264,7 +1264,7 @@ describe('ServerUserDataStorage with other devices', () => {
         await open.flush();
         // Storage refused the record but kept the saved writes.
         for (const key of [...shared.values.keys()]) {
-            if (key.startsWith('iptvnator-server:unconfirmed:')) {
+            if (key.startsWith('kiptv-server:unconfirmed:')) {
                 shared.removeItem(key);
             }
         }

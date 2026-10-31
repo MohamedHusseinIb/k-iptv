@@ -1,4 +1,4 @@
-import { classifyHostRequestFailure } from '@iptvnator/shared/host-health';
+import { classifyHostRequestFailure } from '@kiptv/shared/host-health';
 import { ProviderRequestError } from './provider-request-error';
 import { ProviderAxiosTransport } from './provider-axios-transport';
 import express from 'express';

@@ -1,5 +1,5 @@
 import { DestroyRef, effect, inject, untracked } from '@angular/core';
-import { PlaylistMeta, sourceHealthKey } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta, sourceHealthKey } from '@kiptv/shared/interfaces';
 import { SourceStatusService } from './source-status.service';
 
 /**

@@ -1,4 +1,4 @@
-import { isCatalogUnavailable } from '@iptvnator/shared/interfaces';
+import { isCatalogUnavailable } from '@kiptv/shared/interfaces';
 import {
     ChangeDetectionStrategy,
     Component,
@@ -27,15 +27,15 @@ import {
     PORTAL_PLAYER,
     UnifiedCollectionItem,
     UnifiedFavoriteChannel,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import { setupUnifiedLiveTabRemoteControl } from './unified-live-tab-remote-control';
-import { ResolvedLiveCollectionDetail } from '@iptvnator/portal/shared/data-access';
+import { ResolvedLiveCollectionDetail } from '@kiptv/portal/shared/data-access';
 import {
     EpgDateNavigationDirection,
     EpgListViewComponent,
     EpgProgramActivationEvent,
     EpgTimelineComponent,
-} from '@iptvnator/ui/epg';
+} from '@kiptv/ui/epg';
 import { GlobalFavoritesListComponent } from '../global-favorites-list/global-favorites-list.component';
 import { OpenInPlaylistChipComponent } from '../open-in-playlist-chip/open-in-playlist-chip.component';
 import { ChannelListHiddenStateComponent } from '../channel-list-hidden-state/channel-list-hidden-state.component';
@@ -47,14 +47,14 @@ import {
     type FullscreenChannelPanelHost,
     type PlaybackFallbackRequest,
     WebPlayerViewComponent,
-} from '@iptvnator/ui/playback';
-import { ResizableDirective } from '@iptvnator/ui/components';
+} from '@kiptv/ui/playback';
+import { ResizableDirective } from '@kiptv/ui/components';
 import {
     RuntimeCapabilitiesService,
     SettingsStore,
     injectTranslationTick,
-} from '@iptvnator/services';
-import { RecordingStoppedEvent } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { RecordingStoppedEvent } from '@kiptv/shared/interfaces';
 import {
     createUnifiedLiveCatchup,
     UnifiedLiveTimeshift,

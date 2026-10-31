@@ -168,8 +168,8 @@ test.describe('server storage @self-hosted @persistence', () => {
             );
             await sibling.goto('/__preferences__');
             await sibling.evaluate(() => {
-                localStorage.removeItem('iptvnator:source-server');
-                localStorage.setItem('iptvnator:source-server-disabled', '1');
+                localStorage.removeItem('kiptv:source-server');
+                localStorage.setItem('kiptv:source-server-disabled', '1');
             });
             offline = false;
             await page.bringToFront();
@@ -179,12 +179,12 @@ test.describe('server storage @self-hosted @persistence', () => {
             await expect(status).toHaveCount(0);
             expect(
                 await page.evaluate(() =>
-                    localStorage.getItem('iptvnator:source-server')
+                    localStorage.getItem('kiptv:source-server')
                 )
             ).toBeNull();
             expect(
                 await page.evaluate(() =>
-                    localStorage.getItem('iptvnator:source-server-disabled')
+                    localStorage.getItem('kiptv:source-server-disabled')
                 )
             ).toBe('1');
         } finally {
@@ -218,7 +218,7 @@ test.describe('server storage @self-hosted @persistence', () => {
             await page.evaluate(
                 (apiUrl) =>
                     sessionStorage.setItem(
-                        `iptvnator:server-token:${JSON.stringify([apiUrl, JSON.parse(localStorage.getItem('iptvnator:source-server')!).instanceId])}`,
+                        `kiptv:server-token:${JSON.stringify([apiUrl, JSON.parse(localStorage.getItem('kiptv:source-server')!).instanceId])}`,
                         'synthetic-saved-secret'
                     ),
                 STORAGE_BACKEND_URL
@@ -299,7 +299,7 @@ test.describe('server storage @self-hosted @persistence', () => {
                 await page.evaluate(
                     (apiUrl) =>
                         sessionStorage.setItem(
-                            `iptvnator:server-token:${JSON.stringify([apiUrl, JSON.parse(localStorage.getItem('iptvnator:source-server')!).instanceId])}`,
+                            `kiptv:server-token:${JSON.stringify([apiUrl, JSON.parse(localStorage.getItem('kiptv:source-server')!).instanceId])}`,
                             'synthetic-saved-secret'
                         ),
                     STORAGE_BACKEND_URL
@@ -406,7 +406,7 @@ test.describe('server storage @self-hosted @persistence', () => {
                 await page.evaluate(
                     ({ apiUrl, instanceId }) =>
                         sessionStorage.setItem(
-                            `iptvnator:server-token:${JSON.stringify([apiUrl, instanceId])}`,
+                            `kiptv:server-token:${JSON.stringify([apiUrl, instanceId])}`,
                             'synthetic-nas-secret'
                         ),
                     {
@@ -500,12 +500,12 @@ test.describe('server storage @self-hosted @persistence', () => {
             await page.evaluate(
                 ({ apiUrl, originalId, replacement }) => {
                     sessionStorage.setItem(
-                        `iptvnator:server-token:${JSON.stringify([apiUrl, originalId])}`,
+                        `kiptv:server-token:${JSON.stringify([apiUrl, originalId])}`,
                         'old-instance-secret'
                     );
                     // Another tab changes shared selection without changing this tab's session storage.
                     localStorage.setItem(
-                        'iptvnator:source-server',
+                        'kiptv:source-server',
                         JSON.stringify(replacement)
                     );
                 },
@@ -732,7 +732,7 @@ test.describe('server storage @self-hosted @persistence', () => {
             await request.get(`${STORAGE_BACKEND_URL}/v1/instance`)
         ).json();
         await page.addInitScript(
-            (id) => localStorage.setItem('iptvnator-server:cache-owner', id),
+            (id) => localStorage.setItem('kiptv-server:cache-owner', id),
             instance.instanceId
         );
         const legacyReads: string[] = [];
@@ -765,7 +765,7 @@ test.describe('server storage @self-hosted @persistence', () => {
                 ({ instanceId, id }) =>
                     new Promise<Record<string, unknown>>((resolve, reject) => {
                         const opening = indexedDB.open(
-                            `iptvnator-server:${instanceId}`
+                            `kiptv-server:${instanceId}`
                         );
                         opening.onerror = () => reject(opening.error);
                         opening.onsuccess = () => {
@@ -852,11 +852,11 @@ test.describe('server storage @self-hosted @persistence', () => {
         await page.addInitScript(
             ({ instanceId, id }) => {
                 localStorage.setItem(
-                    `iptvnator-server:cache:${instanceId}:xtream-favorites`,
+                    `kiptv-server:cache:${instanceId}:xtream-favorites`,
                     JSON.stringify({ [id]: ['movie:987654'] })
                 );
                 localStorage.setItem(
-                    `iptvnator-server:cache:${instanceId}:xtream-collection-items`,
+                    `kiptv-server:cache:${instanceId}:xtream-collection-items`,
                     JSON.stringify({
                         [id]: {
                             'movie:987654': {
@@ -930,7 +930,7 @@ test.describe('server storage @self-hosted @persistence', () => {
         await page.addInitScript(
             ({ instanceId, id }) => {
                 localStorage.setItem(
-                    'iptvnator-server:cache-owner',
+                    'kiptv-server:cache-owner',
                     instanceId
                 );
                 localStorage.setItem(
@@ -972,7 +972,7 @@ test.describe('server storage @self-hosted @persistence', () => {
                     await page.evaluate(
                         ({ instanceId, id }) =>
                             localStorage.getItem(
-                                `iptvnator-server:${instanceId}:xtream-restore-${id}`
+                                `kiptv-server:${instanceId}:xtream-restore-${id}`
                             ),
                         { instanceId: instance.instanceId, id }
                     )
@@ -1050,7 +1050,7 @@ test.describe('server storage @self-hosted @persistence', () => {
                     activityRequests.push(request.method());
             });
             const manifest = {
-                kind: 'iptvnator-playlist-backup',
+                kind: 'kiptv-playlist-backup',
                 version: 1,
                 exportedAt: new Date().toISOString(),
                 includeSecrets: true,

@@ -4,14 +4,14 @@ import {
     formatDurationLabel,
     playbackProgressPercent,
     type ExternalPlaybackButtonLabel,
-} from '@iptvnator/portal/shared/util';
-import type { CrossPortalSimilarItem } from '@iptvnator/services';
+} from '@kiptv/portal/shared/util';
+import type { CrossPortalSimilarItem } from '@kiptv/services';
 import {
     VideoPlayer,
     type ExternalPlayerName,
     type NormalizedVodMeta,
-} from '@iptvnator/shared/interfaces';
-import type { DetailActionButtonState } from '@iptvnator/ui/components';
+} from '@kiptv/shared/interfaces';
+import type { DetailActionButtonState } from '@kiptv/ui/components';
 import {
     buildCastMembers,
     buildCountryChips,

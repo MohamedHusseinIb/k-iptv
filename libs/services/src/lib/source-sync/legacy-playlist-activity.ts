@@ -2,11 +2,11 @@ import { sourceAuthorization } from './source-authorization';
 import {
     type Playlist,
     type SourceServerConnection,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     applySourceDefinition,
     sourceFromPlaylist,
-} from '@iptvnator/shared/interfaces/source-definition';
+} from '@kiptv/shared/interfaces/source-definition';
 import type { PlaylistDocumentStore } from '../playlist-storage-backend';
 import { assertSourceInstance } from './source-connection';
 import { requestSourceServer } from './source-api';

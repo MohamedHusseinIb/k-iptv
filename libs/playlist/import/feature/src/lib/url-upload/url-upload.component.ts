@@ -14,8 +14,8 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TranslatePipe } from '@ngx-translate/core';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
-import { provideFormFieldDefaults } from '@iptvnator/ui/components/form-field-defaults';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
+import { provideFormFieldDefaults } from '@kiptv/ui/components/form-field-defaults';
 
 @Component({
     selector: 'app-url-upload',

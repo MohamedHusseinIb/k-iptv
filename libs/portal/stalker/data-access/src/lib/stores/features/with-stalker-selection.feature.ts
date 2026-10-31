@@ -5,7 +5,7 @@ import {
     withMethods,
     withState,
 } from '@ngrx/signals';
-import { TmdbEnrichmentService } from '@iptvnator/services';
+import { TmdbEnrichmentService } from '@kiptv/services';
 import { StalkerVodSource } from '../../models';
 import { normalizeStalkerEntityId } from '../../stalker-vod.utils';
 import {

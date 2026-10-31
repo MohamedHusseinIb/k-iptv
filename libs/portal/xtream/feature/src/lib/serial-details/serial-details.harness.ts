@@ -11,19 +11,19 @@ import {
     PORTAL_PLAYBACK_POSITIONS,
     PORTAL_PLAYER,
     SeriesResumeTarget,
-} from '@iptvnator/portal/shared/util';
-import { XtreamStore } from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/shared/util';
+import { XtreamStore } from '@kiptv/portal/xtream/data-access';
 import {
     DownloadsService,
     PlaybackPositionRuntimeBridgeService,
     SettingsStore,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     PlaybackPositionData,
     VideoPlayer,
-} from '@iptvnator/shared/interfaces';
-import { SeasonContainerComponent } from '@iptvnator/ui/components';
-import { PortalInlinePlayerComponent } from '@iptvnator/ui/playback';
+} from '@kiptv/shared/interfaces';
+import { SeasonContainerComponent } from '@kiptv/ui/components';
+import { PortalInlinePlayerComponent } from '@kiptv/ui/playback';
 import { BehaviorSubject, EMPTY, of } from 'rxjs';
 import { SerialDetailsComponent } from './serial-details.component';
 import { XTREAM_SERIES_RESUME_TARGET } from './serial-details-resume-target.token';

@@ -5,12 +5,12 @@ import {
     type,
     withMethods,
 } from '@ngrx/signals';
-import { createLogger } from '@iptvnator/portal/shared/util';
-import { DataService } from '@iptvnator/services';
+import { createLogger } from '@kiptv/portal/shared/util';
+import { DataService } from '@kiptv/services';
 import {
     PlaylistMeta,
     StalkerPortalActions,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import { StalkerVodSource } from '../../models';
 import { StalkerPortalRepairService } from '../../stalker-portal-repair.service';
 import { StalkerSessionService } from '../../stalker-session.service';

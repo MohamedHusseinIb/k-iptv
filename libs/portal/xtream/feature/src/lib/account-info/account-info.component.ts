@@ -13,18 +13,18 @@ import {
     XtreamAccountInfo,
     XtreamApiService,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
-import { createLogger } from '@iptvnator/portal/shared/util';
-import { DataService, resetHostConnectivityGuard } from '@iptvnator/services';
+} from '@kiptv/portal/xtream/data-access';
+import { createLogger } from '@kiptv/portal/shared/util';
+import { DataService, resetHostConnectivityGuard } from '@kiptv/services';
 import {
     isHostConnectivityFastFailMessage,
     resolveXtreamPortalStatus,
     type XtreamAccountInfoDialogData,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     DialogHeaderEndDirective,
     DialogShellComponent,
-} from '@iptvnator/ui/components';
+} from '@kiptv/ui/components';
 
 type AccountLoadState = 'loading' | 'ready' | 'error';
 

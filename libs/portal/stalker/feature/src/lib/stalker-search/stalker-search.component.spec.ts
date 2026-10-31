@@ -12,28 +12,28 @@ import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslateService } from '@ngx-translate/core';
 import { BehaviorSubject, of } from 'rxjs';
-import { PlaylistContextFacade } from '@iptvnator/playlist/shared/util';
+import { PlaylistContextFacade } from '@kiptv/playlist/shared/util';
 import {
     PORTAL_EXTERNAL_PLAYBACK,
     PORTAL_PLAYBACK_POSITIONS,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     StalkerPortalRepairService,
     StalkerSessionService,
     StalkerStore,
-} from '@iptvnator/portal/stalker/data-access';
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
+} from '@kiptv/portal/stalker/data-access';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
 import {
     DataService,
     ParentalLockService,
     PlaylistsService,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     ALL_CATEGORIES_WITHHELD,
     CONNECTIVITY_GUARD_RESET,
-} from '@iptvnator/shared/interfaces';
-import type { ResolvedPortalPlayback } from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
+import type { ResolvedPortalPlayback } from '@kiptv/shared/interfaces';
 import { StalkerSearchComponent } from './stalker-search.component';
 
 function deferred<T>() {

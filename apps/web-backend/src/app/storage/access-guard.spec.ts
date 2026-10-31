@@ -32,7 +32,7 @@ describe('createAccessGuard', () => {
             expect(wrong.status).toBe(401);
             // Lets the PWA tell it from a provider's 401 on a proxy route.
             expect(wrong.headers.get('www-authenticate')).toBe(
-                'Bearer realm="iptvnator"'
+                'Bearer realm="kiptv"'
             );
             expect(wrong.headers.get('access-control-expose-headers')).toBe(
                 'WWW-Authenticate'

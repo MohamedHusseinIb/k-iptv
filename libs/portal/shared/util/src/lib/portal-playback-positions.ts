@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { PlaybackPositionData } from '@iptvnator/shared/interfaces';
+import { PlaybackPositionData } from '@kiptv/shared/interfaces';
 
 export interface PortalPlaybackPositions {
     savePlaybackPosition(

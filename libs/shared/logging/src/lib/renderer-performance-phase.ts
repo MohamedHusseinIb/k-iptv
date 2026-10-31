@@ -1,5 +1,5 @@
 export const RENDERER_PERFORMANCE_PHASE_HOOK_KEY =
-    'iptvnator.renderer.performance-phase-hook.v1';
+    'kiptv.renderer.performance-phase-hook.v1';
 
 export const RENDERER_PERFORMANCE_PHASE = {
     M3U_IMPORT_DISPATCH: 'store.m3u-import-dispatch',

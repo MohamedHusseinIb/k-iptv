@@ -12,7 +12,7 @@
 import {
     isHostConnectivityFastFailMessage,
     isStalkerAuthFailureResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Candidate API endpoints for a pasted portal URL, in probe order.
@@ -106,7 +106,7 @@ export function buildStalkerEndpointCandidates(rawUrl: string): string[] {
 }
 
 /**
- * Auth-failure detection lives in `@iptvnator/shared/interfaces` so the
+ * Auth-failure detection lives in `@kiptv/shared/interfaces` so the
  * Electron main process — where these bodies actually arrive — and the
  * renderer classify identically. Re-exported here because discovery,
  * repair and the session service already import it from this module.
@@ -115,7 +115,7 @@ export {
     isStalkerAuthFailureBody,
     isStalkerAuthFailureMessage,
     isStalkerAuthFailureResponse,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export type StalkerProbeClassification =
     'data' | 'auth-required' | 'not-a-portal';

@@ -1,5 +1,5 @@
 import { signal } from '@angular/core';
-import type { ExternalPlayerSession } from '@iptvnator/shared/interfaces';
+import type { ExternalPlayerSession } from '@kiptv/shared/interfaces';
 import { replaceOwnedExternalSession } from './replace-owned-external-session';
 
 function session(

@@ -11,7 +11,7 @@ const fs = require('node:fs');
 
 fs.writeFileSync(
     '/usr/share/nginx/html/assets/app-config.js',
-    `window.__IPTVNATOR_CONFIG__ = ${JSON.stringify(
+    `window.__KIPTV_CONFIG__ = ${JSON.stringify(
         { BACKEND_URL: process.env.BACKEND_URL || '/api' },
         null,
         2
@@ -19,7 +19,7 @@ fs.writeFileSync(
 );
 NODE
 
-node /opt/iptvnator/web-backend/main.cjs &
+node /opt/kiptv/web-backend/main.cjs &
 BACKEND_PID=$!
 
 cleanup_done=0
@@ -63,7 +63,7 @@ backend_ready=0
 # With server storage the backend migrates its database before it listens,
 # which can take a while on a large volume. The loop still exits at once if
 # the backend process dies.
-BACKEND_START_TIMEOUT="${IPTVNATOR_BACKEND_START_TIMEOUT:-300}"
+BACKEND_START_TIMEOUT="${KIPTV_BACKEND_START_TIMEOUT:-300}"
 
 for _ in $(seq 1 "$BACKEND_START_TIMEOUT"); do
     if wget -qO- "http://127.0.0.1:${PORT}/health" >/dev/null 2>&1; then
@@ -83,7 +83,7 @@ for _ in $(seq 1 "$BACKEND_START_TIMEOUT"); do
 done
 
 if [ "$backend_ready" -ne 1 ]; then
-    echo "IPTVnator web backend did not become healthy on port ${PORT} within ${BACKEND_START_TIMEOUT} seconds (IPTVNATOR_BACKEND_START_TIMEOUT)."
+    echo "K-IPTV web backend did not become healthy on port ${PORT} within ${BACKEND_START_TIMEOUT} seconds (KIPTV_BACKEND_START_TIMEOUT)."
     exit 1
 fi
 
@@ -96,7 +96,7 @@ while :; do
         wait "$BACKEND_PID"
         EXIT_STATUS=$?
         set -e
-        echo "IPTVnator web backend exited with status ${EXIT_STATUS}."
+        echo "K-IPTV web backend exited with status ${EXIT_STATUS}."
         exit "$EXIT_STATUS"
     fi
 

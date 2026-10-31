@@ -16,32 +16,32 @@ import {
     liveSidebarStateStorageKey,
     LiveLayoutSidebarStateService,
     PORTAL_PLAYER,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     FavoritesService,
     XtreamStore,
     XtreamUrlService,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import {
     EpgArchiveDownloadService,
     EpgArchiveCopyService,
     EpgListViewComponent,
     EpgTimelineComponent,
-} from '@iptvnator/ui/epg';
+} from '@kiptv/ui/epg';
 import {
     type PlaybackFallbackRequest,
     WebPlayerViewComponent,
-} from '@iptvnator/ui/playback';
+} from '@kiptv/ui/playback';
 import {
     EpgItem,
     EpgProgram,
     ResolvedPortalPlayback,
-} from '@iptvnator/shared/interfaces';
-import { GridListComponent } from '@iptvnator/portal/shared/ui';
+} from '@kiptv/shared/interfaces';
+import { GridListComponent } from '@kiptv/portal/shared/ui';
 import { PortalChannelsListComponent } from '../portal-channels-list/portal-channels-list.component';
 import { LiveStreamLayoutComponent } from './live-stream-layout.component';
-import { RuntimeCapabilitiesService, SettingsStore } from '@iptvnator/services';
-import { createPlaybackSessionKey } from '@iptvnator/playback/util';
+import { RuntimeCapabilitiesService, SettingsStore } from '@kiptv/services';
+import { createPlaybackSessionKey } from '@kiptv/playback/util';
 import { liveHistoryTestCases } from './live-stream-layout-history.spec-data';
 
 import {

@@ -5,11 +5,11 @@ import {
     Injectable,
     signal,
 } from '@angular/core';
-import { RuntimeCapabilitiesService } from '@iptvnator/services';
+import { RuntimeCapabilitiesService } from '@kiptv/services';
 import {
     EmbeddedMpvSupport,
     watchEmbeddedMpvSupport,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 /**
  * Probes the desktop backend for embedded MPV support so the playback

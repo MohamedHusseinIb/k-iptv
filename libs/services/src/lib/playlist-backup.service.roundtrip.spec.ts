@@ -3,7 +3,7 @@ import {
     PlaylistBackupManifestV1,
     XtreamPlaylistBackupEntry,
     XtreamPendingRestoreState,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 import {
     createPlaylistBackupService,
     createStatefulBackupCollaborators,

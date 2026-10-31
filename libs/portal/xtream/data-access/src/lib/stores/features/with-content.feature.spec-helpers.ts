@@ -1,15 +1,15 @@
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
-import { XtreamPendingRestoreState } from '@iptvnator/shared/interfaces';
+import { XtreamPendingRestoreState } from '@kiptv/shared/interfaces';
 import {
     RENDERER_PERFORMANCE_PHASE_HOOK_KEY,
     type RendererPerformancePhaseEvent,
-} from '@iptvnator/shared/logging';
+} from '@kiptv/shared/logging';
 import {
     DataService,
     DatabaseService,
     XtreamPendingRestoreService,
     XtreamPendingRestoreSnapshot,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import {
     XTREAM_DATA_SOURCE,
     XtreamPlaylistData,

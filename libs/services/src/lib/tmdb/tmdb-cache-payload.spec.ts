@@ -1,6 +1,6 @@
 import { mergeSerieInfoWithTmdb } from './tmdb-merge';
 import { trimDetailsForCache } from './tmdb-cache-payload';
-import { XtreamSerieInfo } from '@iptvnator/shared/interfaces';
+import { XtreamSerieInfo } from '@kiptv/shared/interfaces';
 import { TmdbMovieDetails, TmdbTvDetails } from './tmdb.types';
 
 describe('trimDetailsForCache', () => {

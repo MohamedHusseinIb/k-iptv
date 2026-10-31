@@ -1,4 +1,4 @@
-import { ALL_CATEGORIES_WITHHELD } from '@iptvnator/shared/interfaces';
+import { ALL_CATEGORIES_WITHHELD } from '@kiptv/shared/interfaces';
 import type { StalkerContentType } from '../stalker-store.contracts';
 
 /** Minimal item shape the parental lock needs: the category a row belongs to. */

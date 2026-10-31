@@ -10,11 +10,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { provideRouter, RouterOutlet } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
-import { DataService } from '@iptvnator/services';
+import { DataService } from '@kiptv/services';
 import {
     XtreamContentInitBlockReason,
     XtreamStore,
-} from '@iptvnator/portal/xtream/data-access';
+} from '@kiptv/portal/xtream/data-access';
 import { XtreamCachedOfflineNoticeComponent } from './xtream-cached-offline-notice.component';
 import { XtreamContentGateComponent } from './xtream-content-gate.component';
 

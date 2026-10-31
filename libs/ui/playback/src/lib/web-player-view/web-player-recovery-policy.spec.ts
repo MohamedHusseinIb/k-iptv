@@ -4,7 +4,7 @@ import {
     PlaybackDiagnosticSource,
     type PlaybackDiagnostic,
     type PlaybackRecommendationTarget,
-} from '@iptvnator/playback/util';
+} from '@kiptv/playback/util';
 import type { ExternalRecoveryStates } from './external-playback-recovery';
 import { createWebPlayerRecommendations } from './web-player-recovery-policy';
 

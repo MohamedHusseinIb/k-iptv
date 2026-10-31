@@ -1,4 +1,4 @@
-import { PlaylistMeta, StalkerPortalItem } from '@iptvnator/shared/interfaces';
+import { PlaylistMeta, StalkerPortalItem } from '@kiptv/shared/interfaces';
 import {
     StalkerCategoryItem,
     StalkerContentItem,

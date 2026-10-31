@@ -1,13 +1,13 @@
-import type { SeasonEpisodeDownloadAdapter } from '@iptvnator/portal/shared/data-access';
+import type { SeasonEpisodeDownloadAdapter } from '@kiptv/portal/shared/data-access';
 import {
     createSeriesEpisodeDownloadSnapshot,
     type DownloadMovieSnapshotInput,
-} from '@iptvnator/portal/shared/util';
+} from '@kiptv/portal/shared/util';
 import {
     XTREAM_CLIENT_USER_AGENT,
     type XtreamSerieEpisode,
     type XtreamSerieEpisodeInfo,
-} from '@iptvnator/shared/interfaces';
+} from '@kiptv/shared/interfaces';
 
 export interface XtreamSeriesDownloadAdapterOptions {
     readonly playlistId?: string;

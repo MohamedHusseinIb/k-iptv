@@ -5,9 +5,9 @@ import {
     ChangeDetectionStrategy,
 } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { PortalCollectionContextService } from '@iptvnator/portal/shared/util';
+import { PortalCollectionContextService } from '@kiptv/portal/shared/util';
 import { WorkspaceContextCategoryViewComponent } from './components/workspace-context-category-view.component';
-import { WorkspaceShellContextDrawerService } from '@iptvnator/workspace/shell/util';
+import { WorkspaceShellContextDrawerService } from '@kiptv/workspace/shell/util';
 
 /**
  * Context panel rendered in the workspace-shell aside for

@@ -10,13 +10,13 @@ import {
     type TmdbMovieDetails,
     type TmdbTvDetails,
     type XtreamContent,
-} from '@iptvnator/services';
+} from '@kiptv/services';
 import type {
     DownloadMetadataSnapshot,
     Playlist,
     StalkerPortalItem,
-} from '@iptvnator/shared/interfaces';
-import type { DownloadItem } from '@iptvnator/services';
+} from '@kiptv/shared/interfaces';
+import type { DownloadItem } from '@kiptv/services';
 import type { DownloadOfflineDetail } from './download-offline-detail.viewmodel';
 import { DownloadOfflineMetadataService } from './download-offline-metadata.service';
 

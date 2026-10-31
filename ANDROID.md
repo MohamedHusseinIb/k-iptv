@@ -1,15 +1,12 @@
 # K-IPTV for Android
 
-An Android build of **K-IPTV**, a rebranded fork of
-[IPTVnator](https://github.com/4gray/iptvnator), produced by wrapping the
-existing Angular application in [Capacitor](https://capacitorjs.com/). It is the
-same UI and the same code as the PWA — playlists, Xtream Codes portals, Stalker
-portals, favourites, EPG and the video player are all the upstream
-implementations.
+An Android build of **K-IPTV**, produced by wrapping the existing Angular
+application in [Capacitor](https://capacitorjs.com/). It is the same UI and the
+same code as the PWA — playlists, Xtream Codes portals, Stalker portals,
+favourites, EPG and the video player are shared with the web build.
 
-The name and icon are our own, as [upstream's trademark notice](./TRADEMARK.md)
-requires of a redistributed fork; the MIT licence and copyright notice are
-retained unchanged.
+The MIT licence and the copyright notices of the original authors are retained
+unchanged in [LICENSE.md](./LICENSE.md).
 
 The result is a normal installable APK: `com.kiptv.app`, min SDK 23
 (Android 6), target SDK 35 (Android 15), with both a phone/tablet launcher
@@ -52,10 +49,10 @@ flowchart LR
 Key points:
 
 - **`PwaService` is used unmodified.** `environment.android.ts` points
-  `BACKEND_URL` at a sentinel origin (`https://provider-backend.iptvnator.invalid`).
+  `BACKEND_URL` at a sentinel origin (`https://provider-backend.kiptv.invalid`).
   An HTTP interceptor and a narrow `fetch` patch recognise that origin and
   answer it locally. Any other origin is left alone, so pointing the app at a
-  real self-hosted IPTVnator server still works.
+  real self-hosted K-IPTV server still works.
 - **Media never crosses the JavaScript bridge.** `CapacitorHttp` is
   deliberately *not* enabled globally in `capacitor.config.ts`. Enabling it
   patches `fetch` and `XMLHttpRequest` for the whole app, which would push
@@ -242,7 +239,7 @@ For those, the playback error screen now offers **Open in another app**, which
 hands the stream to VLC, MX Player, Just Player or anything else that accepts
 a video `VIEW` intent.
 
-Upstream already has an external-player subsystem — `ExternalPlaybackRecovery`,
+The shared web code already has an external-player subsystem — `ExternalPlaybackRecovery`,
 `supportsManagedExternalPlayers`, `ACTION_OPEN_MPV` / `ACTION_OPEN_VLC` — and it
 was deliberately **not** reused:
 
@@ -276,7 +273,7 @@ locales and still need translating.
 Electron-only features are out of scope, exactly as they are for the PWA:
 *managed* MPV/VLC playback with a supervised session, playlist file downloads
 to disk, local XMLTV file parsing, and the desktop remote-control server.
-Upstream documents the PWA as a reduced feature set for the same reason. The
+The PWA build is a reduced feature set for the same reason. The
 external player fallback above is a one-way intent handoff, not a managed
 session.
 
@@ -419,10 +416,10 @@ one, create a keystore and add a `signingConfigs` block to
 ```gradle
 signingConfigs {
     release {
-        storeFile file(System.getenv("IPTVNATOR_KEYSTORE"))
-        storePassword System.getenv("IPTVNATOR_KEYSTORE_PASSWORD")
-        keyAlias System.getenv("IPTVNATOR_KEY_ALIAS")
-        keyPassword System.getenv("IPTVNATOR_KEY_PASSWORD")
+        storeFile file(System.getenv("KIPTV_KEYSTORE"))
+        storePassword System.getenv("KIPTV_KEYSTORE_PASSWORD")
+        keyAlias System.getenv("KIPTV_KEY_ALIAS")
+        keyPassword System.getenv("KIPTV_KEY_PASSWORD")
     }
 }
 buildTypes {
@@ -436,7 +433,7 @@ buildTypes {
 
 ## Environment notes
 
-These are workarounds for the machine this port was built on, not upstream
+These are workarounds for the machine this port was built on, not project
 requirements. Check whether they apply before copying them.
 
 - **`node-linker=hoisted` in `.npmrc`.** pnpm's default symlinked

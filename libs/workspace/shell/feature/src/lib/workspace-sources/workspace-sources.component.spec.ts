@@ -1,7 +1,7 @@
-import { PORTAL_EXTERNAL_PLAYBACK } from '@iptvnator/portal/shared/util';
-import { SourceActivityService } from '@iptvnator/services';
+import { PORTAL_EXTERNAL_PLAYBACK } from '@kiptv/portal/shared/util';
+import { SourceActivityService } from '@kiptv/services';
 import { MatDialog } from '@angular/material/dialog';
-import { PlaylistRefreshActionService } from '@iptvnator/playlist/shared/ui';
+import { PlaylistRefreshActionService } from '@kiptv/playlist/shared/ui';
 import {
     Component,
     input,
@@ -19,22 +19,22 @@ import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { of, Subject } from 'rxjs';
-import { selectAllPlaylistsMeta } from '@iptvnator/m3u-state';
-import { SourceStatusService } from '@iptvnator/portal/shared/data-access';
-import { SourceRemovalService } from '@iptvnator/playlist/shared/ui';
-import { SourcesViewStateService } from '@iptvnator/playlist/shared/util';
+import { selectAllPlaylistsMeta } from '@kiptv/m3u-state';
+import { SourceStatusService } from '@kiptv/portal/shared/data-access';
+import { SourceRemovalService } from '@kiptv/playlist/shared/ui';
+import { SourcesViewStateService } from '@kiptv/playlist/shared/util';
 import {
     RuntimeCapabilitiesService,
     SortBy,
     SortOrder,
     SortService,
-} from '@iptvnator/services';
-import { PlaylistMeta } from '@iptvnator/shared/interfaces';
+} from '@kiptv/services';
+import { PlaylistMeta } from '@kiptv/shared/interfaces';
 import {
     MenuItemRadioCheckDirective,
     MenuItemRadioDirective,
-} from '@iptvnator/ui/components';
-import { WORKSPACE_SHELL_ACTIONS } from '@iptvnator/workspace/shell/util';
+} from '@kiptv/ui/components';
+import { WORKSPACE_SHELL_ACTIONS } from '@kiptv/workspace/shell/util';
 import { WorkspaceSourcesComponent } from './workspace-sources.component';
 
 @Component({

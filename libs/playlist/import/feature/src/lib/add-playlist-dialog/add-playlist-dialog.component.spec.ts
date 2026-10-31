@@ -3,14 +3,14 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { PlaylistActions } from '@iptvnator/m3u-state';
-import { StalkerPortalDiscoveryService } from '@iptvnator/portal/stalker/data-access';
-import { DataService, RuntimeCapabilitiesService } from '@iptvnator/services';
+import { PlaylistActions } from '@kiptv/m3u-state';
+import { StalkerPortalDiscoveryService } from '@kiptv/portal/stalker/data-access';
+import { DataService, RuntimeCapabilitiesService } from '@kiptv/services';
 import {
     PLAYLIST_PARSE_BY_URL,
     ProviderImportCandidate,
-} from '@iptvnator/shared/interfaces';
-import { PlaylistType } from '@iptvnator/playlist/shared/ui';
+} from '@kiptv/shared/interfaces';
+import { PlaylistType } from '@kiptv/playlist/shared/ui';
 import { AddPlaylistDialogComponent } from './add-playlist-dialog.component';
 
 type ChildSignalKey =
@@ -93,7 +93,7 @@ describe('AddPlaylistDialogComponent', () => {
             form: {
                 getRawValue: () => ({
                     playlistName: '  My Playlist  ',
-                    userAgent: '  IPTVnator-Test/1.0  ',
+                    userAgent: '  K-IPTV-Test/1.0  ',
                     playlistUrl: ' https://example.com/list.m3u ',
                 }),
             },
@@ -105,7 +105,7 @@ describe('AddPlaylistDialogComponent', () => {
             PLAYLIST_PARSE_BY_URL,
             {
                 title: 'My Playlist',
-                userAgent: 'IPTVnator-Test/1.0',
+                userAgent: 'K-IPTV-Test/1.0',
                 url: 'https://example.com/list.m3u',
             }
         );
