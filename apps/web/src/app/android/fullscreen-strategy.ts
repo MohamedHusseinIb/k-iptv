@@ -22,6 +22,7 @@ import {
     type FullscreenStrategy,
 } from '@kiptv/ui/playback/fullscreen-strategy';
 import { isAndroidNativeRuntime } from './android-runtime';
+import { enterImmersiveMode, exitImmersiveMode } from './immersive-mode';
 
 /**
  * Longhand offsets rather than `inset`, which a device still running an older
@@ -171,9 +172,16 @@ function restoreOverlay(target: HTMLElement): void {
  * Filling the screen on a handset means landscape, and the system bars would
  * otherwise sit on top of the video. Neither is essential, so a plugin that
  * refuses must not abort the transition.
+ *
+ * Hiding the bars goes through the `Immersive` plugin because the navigation
+ * bar is out of the StatusBar plugin's reach, and leaving it up is what makes
+ * fullscreen look like a merely maximised window. `StatusBar` remains the
+ * fallback for a shell built without the plugin.
  */
 async function enterSystemFullscreen(): Promise<void> {
-    await StatusBar.hide().catch(() => undefined);
+    if (!(await enterImmersiveMode())) {
+        await StatusBar.hide().catch(() => undefined);
+    }
     await ScreenOrientation.lock({ orientation: 'landscape' }).catch(
         () => undefined
     );
@@ -181,7 +189,9 @@ async function enterSystemFullscreen(): Promise<void> {
 
 async function exitSystemFullscreen(): Promise<void> {
     await ScreenOrientation.unlock().catch(() => undefined);
-    await StatusBar.show().catch(() => undefined);
+    if (!(await exitImmersiveMode())) {
+        await StatusBar.show().catch(() => undefined);
+    }
 }
 
 export const androidFullscreenStrategy: FullscreenStrategy = {

@@ -7,6 +7,9 @@ type FullscreenModule = typeof import('./fullscreen-strategy');
 
 const statusBar = { hide: jest.fn(), show: jest.fn() };
 const screenOrientation = { lock: jest.fn(), unlock: jest.fn() };
+// Mocking the plugin rather than the wrapper keeps the real fallback logic of
+// `immersive-mode.ts` under test.
+const immersivePlugin = { enter: jest.fn(), exit: jest.fn() };
 
 type Global = { Capacitor?: unknown };
 
@@ -32,6 +35,9 @@ describe('android fullscreen strategy', () => {
         jest.unstable_mockModule('@capacitor/screen-orientation', () => ({
             ScreenOrientation: screenOrientation,
         }));
+        jest.unstable_mockModule('@capacitor/core', () => ({
+            registerPlugin: () => immersivePlugin,
+        }));
 
         const strategyModule = await import('./fullscreen-strategy');
         androidFullscreenStrategy = strategyModule.androidFullscreenStrategy;
@@ -46,6 +52,10 @@ describe('android fullscreen strategy', () => {
             screenOrientation.lock,
             screenOrientation.unlock,
         ]) {
+            fn.mockReset();
+            fn.mockResolvedValue(undefined);
+        }
+        for (const fn of [immersivePlugin.enter, immersivePlugin.exit]) {
             fn.mockReset();
             fn.mockResolvedValue(undefined);
         }
@@ -70,13 +80,27 @@ describe('android fullscreen strategy', () => {
         expect(androidFullscreenStrategy.isActive(target)).toBe(true);
     });
 
-    it('hides the system bars and goes landscape', async () => {
+    // Hiding the status bar alone leaves the navigation bar holding a strip of
+    // the screen, which is what made fullscreen look merely maximised.
+    it('hides every system bar and goes landscape', async () => {
         await androidFullscreenStrategy.enter(target);
 
-        expect(statusBar.hide).toHaveBeenCalled();
+        expect(immersivePlugin.enter).toHaveBeenCalled();
+        expect(statusBar.hide).not.toHaveBeenCalled();
         expect(screenOrientation.lock).toHaveBeenCalledWith({
             orientation: 'landscape',
         });
+    });
+
+    it('falls back to the status bar when immersive mode is unavailable', async () => {
+        immersivePlugin.enter.mockRejectedValue(new Error('no plugin'));
+        immersivePlugin.exit.mockRejectedValue(new Error('no plugin'));
+
+        await androidFullscreenStrategy.enter(target);
+        expect(statusBar.hide).toHaveBeenCalled();
+
+        await androidFullscreenStrategy.exit(target);
+        expect(statusBar.show).toHaveBeenCalled();
     });
 
     // The player surface is styled by the app, so leaving fullscreen must put
@@ -101,7 +125,7 @@ describe('android fullscreen strategy', () => {
         await androidFullscreenStrategy.exit(target);
         expect(document.body.style.overflow).toBe('');
         expect(screenOrientation.unlock).toHaveBeenCalled();
-        expect(statusBar.show).toHaveBeenCalled();
+        expect(immersivePlugin.exit).toHaveBeenCalled();
     });
 
     // A transformed ancestor would otherwise become the containing block and
@@ -173,6 +197,7 @@ describe('android fullscreen strategy', () => {
 
     // A plugin that rejects must not leave a half-entered surface behind.
     it('still covers the viewport when the plugins refuse', async () => {
+        immersivePlugin.enter.mockRejectedValue(new Error('no plugin'));
         statusBar.hide.mockRejectedValue(new Error('no status bar'));
         screenOrientation.lock.mockRejectedValue(new Error('locked'));
 
