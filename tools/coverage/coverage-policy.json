@@ -345,10 +345,10 @@
                 ]
             },
             {
-                "name": "@iptvnator/pipes",
+                "name": "@kiptv/pipes",
                 "root": "libs/ui/pipes",
                 "sourceRoot": "libs/ui/pipes/src",
-                "validationCommand": "pnpm nx test @iptvnator/pipes",
+                "validationCommand": "pnpm nx test @kiptv/pipes",
                 "e2eTags": [
                     "@epg",
                     "@settings"
