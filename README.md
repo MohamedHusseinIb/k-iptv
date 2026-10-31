@@ -65,3 +65,14 @@ original authors of the code this project is derived from, as the licence requir
 
 **K-IPTV does not provide any playlists, channels, or other digital content.** It is
 a player only. You are responsible for the sources you add to it.
+
+
+<img width="1280" height="904" alt="image" src="https://github.com/user-attachments/assets/95c7463b-3b63-46b5-b24d-7b7aa42f8eab" />
+
+<img width="1280" height="904" alt="image" src="https://github.com/user-attachments/assets/b5dde849-06f3-4cad-81ab-9717453dc63b" />
+
+<img width="1280" height="904" alt="image" src="https://github.com/user-attachments/assets/a0df23a5-cb69-4f7a-9518-15815da078b7" />
+
+<img width="581" height="1280" alt="image" src="https://github.com/user-attachments/assets/69b6c312-a5b4-4fd7-a5b8-ddc3f4bf2b71" />
+
+
