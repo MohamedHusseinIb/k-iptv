@@ -16,6 +16,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule } from '@ngx-translate/core';
 import {
+    getExternalPlaybackLauncher,
+    isNoExternalPlayerError,
     type PlaybackDiagnostic,
     type PlaybackRecommendation,
     type PlaybackRecommendationTarget,
@@ -51,6 +53,8 @@ import {
 
 /** How many recovery options the error screen shows before it stops helping. */
 const ERROR_SCREEN_ALTERNATIVES = 5;
+
+type ExternalLaunchStatus = 'idle' | 'launching' | 'unavailable' | 'error';
 
 @Component({
     selector: 'app-playback-diagnostic-panel',
@@ -105,6 +109,48 @@ export class PlaybackDiagnosticPanelComponent {
 
     onReportCopied(success: boolean): void {
         this.copyResult.set({ issue: this.diagnostic(), success });
+    }
+
+    /**
+     * Present only where the platform can hand a stream to another app —
+     * Android registers a launcher, the web and Electron builds do not, and
+     * there the whole control disappears.
+     */
+    private readonly externalLauncher = getExternalPlaybackLauncher();
+    private readonly externalLaunch = signal<ExternalLaunchStatus>('idle');
+
+    readonly canLaunchExternally = this.externalLauncher?.isAvailable() ?? false;
+    readonly externalLaunchStatusKey = computed(() => {
+        switch (this.externalLaunch()) {
+            case 'launching':
+                return 'PLAYBACK_DIAGNOSTICS.EXTERNAL_OPENING';
+            case 'unavailable':
+                return 'PLAYBACK_DIAGNOSTICS.EXTERNAL_NO_PLAYER';
+            case 'error':
+                return 'PLAYBACK_DIAGNOSTICS.EXTERNAL_FAILED';
+            case 'idle':
+                return '';
+        }
+    });
+
+    async launchExternally(): Promise<void> {
+        const launcher = this.externalLauncher;
+        if (!launcher || this.externalLaunch() === 'launching') {
+            return;
+        }
+
+        this.externalLaunch.set('launching');
+        try {
+            await launcher.open({
+                url: this.playback().streamUrl,
+                title: this.playback().title,
+            });
+            this.externalLaunch.set('idle');
+        } catch (error) {
+            this.externalLaunch.set(
+                isNoExternalPlayerError(error) ? 'unavailable' : 'error'
+            );
+        }
     }
 
     readonly visibleAlternatives = computed(() =>

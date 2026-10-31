@@ -1,13 +1,19 @@
 import { signal } from '@angular/core';
+import { getFullscreenStrategy } from './fullscreen-strategy';
 
 /**
  * Owns the fullscreen lifecycle for a player surface: tracks the current
- * fullscreen state, listens for `fullscreenchange`, and toggles fullscreen on
- * the target element. The component keeps the capability gating and the
- * label/icon derivation; this helper only deals with the browser API.
+ * fullscreen state, observes external changes, and toggles fullscreen on the
+ * target element. The component keeps the capability gating and the
+ * label/icon derivation; this helper only deals with the mechanism.
+ *
+ * The mechanism itself is pluggable because the Fullscreen API does not
+ * survive an Android WebView — see `fullscreen-strategy`.
  */
 export class ControlsFullscreen {
     readonly isFullscreen = signal(false);
+
+    private readonly unsubscribe: () => void;
 
     private readonly onFullscreenChange = () => {
         this.sync();
@@ -18,32 +24,21 @@ export class ControlsFullscreen {
         private readonly target: () => HTMLElement | null,
         private readonly onChange?: () => void
     ) {
-        if (typeof document !== 'undefined') {
-            document.addEventListener(
-                'fullscreenchange',
-                this.onFullscreenChange
-            );
-        }
+        this.unsubscribe = getFullscreenStrategy().subscribe(
+            this.onFullscreenChange
+        );
     }
 
     sync(): void {
         const target = this.target();
         this.isFullscreen.set(
-            Boolean(
-                target &&
-                typeof document !== 'undefined' &&
-                document.fullscreenElement === target
-            )
+            Boolean(target && getFullscreenStrategy().isActive(target))
         );
     }
 
     canFullscreen(): boolean {
         const target = this.target();
-        return (
-            typeof document !== 'undefined' &&
-            Boolean(target?.requestFullscreen) &&
-            Boolean(document.exitFullscreen)
-        );
+        return Boolean(target && getFullscreenStrategy().isSupported(target));
     }
 
     async toggle(): Promise<void> {
@@ -51,11 +46,12 @@ export class ControlsFullscreen {
         if (!target || !this.canFullscreen()) {
             return;
         }
+        const strategy = getFullscreenStrategy();
         try {
-            if (document.fullscreenElement === target) {
-                await document.exitFullscreen();
+            if (strategy.isActive(target)) {
+                await strategy.exit(target);
             } else {
-                await target.requestFullscreen();
+                await strategy.enter(target);
             }
         } catch {
             return;
@@ -63,11 +59,6 @@ export class ControlsFullscreen {
     }
 
     dispose(): void {
-        if (typeof document !== 'undefined') {
-            document.removeEventListener(
-                'fullscreenchange',
-                this.onFullscreenChange
-            );
-        }
+        this.unsubscribe();
     }
 }

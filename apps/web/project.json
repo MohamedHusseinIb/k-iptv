@@ -9,11 +9,17 @@
             "enabled": false
         }
     },
-    "tags": ["scope:app", "domain:web", "type:app"],
+    "tags": [
+        "scope:app",
+        "domain:web",
+        "type:app"
+    ],
     "targets": {
         "build": {
             "executor": "@angular/build:application",
-            "outputs": ["{workspaceRoot}/dist/apps/web"],
+            "outputs": [
+                "{workspaceRoot}/dist/apps/web"
+            ],
             "options": {
                 "outputPath": {
                     "base": "dist/apps/web",
@@ -47,7 +53,8 @@
                     "keycode",
                     "safe-json-parse/tuple",
                     "@xmldom/xmldom",
-                    "url-toolkit"
+                    "url-toolkit",
+                    "epg-parser"
                 ]
             },
             "configurations": {
@@ -112,6 +119,44 @@
                         {
                             "replace": "apps/web/src/environments/environment.ts",
                             "with": "apps/web/src/environments/environment.prod.ts"
+                        }
+                    ]
+                },
+                "android": {
+                    "baseHref": "/",
+                    "serviceWorker": false,
+                    "budgets": [
+                        {
+                            "type": "initial",
+                            "maximumWarning": "1.8mb",
+                            "maximumError": "2mb"
+                        },
+                        {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "12.5kb",
+                            "maximumError": "15kb"
+                        }
+                    ],
+                    "optimization": {
+                        "scripts": true,
+                        "styles": {
+                            "minify": true,
+                            "inlineCritical": false,
+                            "removeSpecialComments": true
+                        },
+                        "fonts": true
+                    },
+                    "outputHashing": "all",
+                    "extractLicenses": true,
+                    "sourceMap": false,
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/web/src/environments/environment.ts",
+                            "with": "apps/web/src/environments/environment.android.ts"
+                        },
+                        {
+                            "replace": "apps/web/src/environments/platform.providers.ts",
+                            "with": "apps/web/src/environments/platform.providers.android.ts"
                         }
                     ]
                 },
@@ -206,7 +251,9 @@
         },
         "test": {
             "executor": "nx:run-commands",
-            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+            ],
             "options": {
                 "command": [
                     "node",

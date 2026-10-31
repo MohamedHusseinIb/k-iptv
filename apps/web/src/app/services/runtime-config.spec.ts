@@ -63,6 +63,22 @@ describe('runtime config helpers', () => {
         ).toBe(false);
     });
 
+    it('disables service worker for the Capacitor runtime', () => {
+        // The android build ships no ngsw-worker.js, and Capacitor serves the
+        // bundle from https://localhost, so the protocol check alone would let
+        // a registration through.
+        expect(
+            shouldEnableServiceWorker(
+                true,
+                { serviceWorker: {} } as Navigator,
+                {
+                    capacitorBridge: {},
+                    protocol: 'https:',
+                }
+            )
+        ).toBe(false);
+    });
+
     it('disables service worker for file origins without an Electron bridge', () => {
         expect(
             shouldEnableServiceWorker(

@@ -9,6 +9,7 @@ export * from './controls-chrome-interactions';
 export * from './controls-feedback';
 export * from './controls-stream-stats';
 export * from './controls-fullscreen';
+export * from './fullscreen-strategy';
 export * from './controls-shortcuts';
 export * from './legacy-player-shortcuts';
 export * from './controls-surface';

@@ -8,6 +8,34 @@ function pointerTypedEvent(type: string, pointerType: string): MouseEvent {
     return event;
 }
 
+/** A touch pointer event carrying the identity and position a tap needs. */
+function touchPointerEvent(
+    type: string,
+    {
+        x = 0,
+        y = 0,
+        id = 1,
+        isPrimary = true,
+        pointerType = 'touch',
+    }: {
+        x?: number;
+        y?: number;
+        id?: number;
+        isPrimary?: boolean;
+        pointerType?: string;
+    } = {}
+): MouseEvent {
+    const event = new MouseEvent(type, {
+        bubbles: true,
+        clientX: x,
+        clientY: y,
+    });
+    Object.defineProperty(event, 'pointerType', { value: pointerType });
+    Object.defineProperty(event, 'pointerId', { value: id });
+    Object.defineProperty(event, 'isPrimary', { value: isPrimary });
+    return event;
+}
+
 describe('ControlsSurface', () => {
     let reveal: jest.Mock;
     let toggleFullscreen: jest.Mock;
@@ -237,6 +265,117 @@ describe('ControlsSurface', () => {
             jest.advanceTimersByTime(300);
             expect(reveal).toHaveBeenCalledTimes(1);
             expect(togglePlay).not.toHaveBeenCalled();
+        });
+
+        // Video.js calls preventDefault() on touchend over the media element,
+        // so a tap there never produces a click and the overlay could not be
+        // recovered once it auto-hid.
+        describe('taps whose click Video.js cancels', () => {
+            const tap = (
+                target: HTMLElement,
+                options: Parameters<typeof touchPointerEvent>[1] = {}
+            ) => {
+                target.dispatchEvent(
+                    touchPointerEvent('pointerdown', options)
+                );
+                target.dispatchEvent(touchPointerEvent('pointerup', options));
+            };
+
+            it('reveals from the pointer stream when no click follows', () => {
+                controlsVisible = false;
+                surface.attachSurface(element);
+                tap(element);
+                expect(reveal).toHaveBeenCalledTimes(1);
+            });
+
+            it('hides from the pointer stream when no click follows', () => {
+                surface.attachSurface(element);
+                tap(element);
+                expect(hideControls).toHaveBeenCalledTimes(1);
+                expect(togglePlay).not.toHaveBeenCalled();
+            });
+
+            it('runs the tap once when the click is delivered too', () => {
+                surface.attachSurface(element);
+                tap(element);
+                element.dispatchEvent(pointerTypedEvent('click', 'touch'));
+                expect(hideControls).toHaveBeenCalledTimes(1);
+            });
+
+            it('still handles a mouse click after a tap', () => {
+                surface.attachSurface(element);
+                tap(element);
+                element.dispatchEvent(pointerTypedEvent('click', 'mouse'));
+                expect(reveal).toHaveBeenCalledTimes(1);
+            });
+
+            it('ignores a drag past the tap movement threshold', () => {
+                surface.attachSurface(element);
+                element.dispatchEvent(touchPointerEvent('pointerdown'));
+                element.dispatchEvent(
+                    touchPointerEvent('pointermove', { x: 40, y: 0 })
+                );
+                element.dispatchEvent(
+                    touchPointerEvent('pointerup', { x: 40, y: 0 })
+                );
+                expect(hideControls).not.toHaveBeenCalled();
+                expect(reveal).not.toHaveBeenCalled();
+            });
+
+            it('ignores a release far from where the press landed', () => {
+                surface.attachSurface(element);
+                element.dispatchEvent(touchPointerEvent('pointerdown'));
+                element.dispatchEvent(
+                    touchPointerEvent('pointerup', { x: 0, y: 60 })
+                );
+                expect(hideControls).not.toHaveBeenCalled();
+            });
+
+            it('ignores a press held longer than a tap', () => {
+                jest.useFakeTimers();
+                surface.attachSurface(element);
+                element.dispatchEvent(touchPointerEvent('pointerdown'));
+                jest.advanceTimersByTime(900);
+                element.dispatchEvent(touchPointerEvent('pointerup'));
+                expect(hideControls).not.toHaveBeenCalled();
+            });
+
+            it('ignores a cancelled press', () => {
+                surface.attachSurface(element);
+                element.dispatchEvent(touchPointerEvent('pointerdown'));
+                element.dispatchEvent(touchPointerEvent('pointercancel'));
+                element.dispatchEvent(touchPointerEvent('pointerup'));
+                expect(hideControls).not.toHaveBeenCalled();
+            });
+
+            it('ignores a secondary finger of a multi-touch gesture', () => {
+                surface.attachSurface(element);
+                tap(element, { id: 2, isPrimary: false });
+                expect(hideControls).not.toHaveBeenCalled();
+            });
+
+            it('ignores a release from a different pointer', () => {
+                surface.attachSurface(element);
+                element.dispatchEvent(touchPointerEvent('pointerdown'));
+                element.dispatchEvent(touchPointerEvent('pointerup', { id: 7 }));
+                expect(hideControls).not.toHaveBeenCalled();
+            });
+
+            it('leaves mouse releases to the click handler', () => {
+                surface.attachSurface(element);
+                tap(element, { pointerType: 'mouse' });
+                expect(hideControls).not.toHaveBeenCalled();
+                expect(reveal).not.toHaveBeenCalled();
+            });
+
+            it('reveals on a tap landing on an interactive control', () => {
+                const button = document.createElement('button');
+                element.appendChild(button);
+                surface.attachSurface(element);
+                tap(button);
+                expect(reveal).toHaveBeenCalledTimes(1);
+                expect(hideControls).not.toHaveBeenCalled();
+            });
         });
 
         it('attributes pointer-typeless events to a recent touch pointerdown', () => {

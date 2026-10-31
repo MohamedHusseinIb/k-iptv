@@ -36,6 +36,44 @@
             </div>
         }
 
+        @if (canLaunchExternally) {
+            <div
+                class="web-player-diagnostic__external-launch"
+                data-test-id="playback-external-launch"
+            >
+                <button
+                    type="button"
+                    class="web-player-diagnostic__player-card"
+                    (click)="launchExternally()"
+                >
+                    <mat-icon aria-hidden="true">open_in_new</mat-icon>
+                    <span class="web-player-diagnostic__player-copy">
+                        <span class="web-player-diagnostic__player-label">
+                            {{
+                                'PLAYBACK_DIAGNOSTICS.ACTION_OPEN_EXTERNAL'
+                                    | translate
+                            }}
+                        </span>
+                        <span class="web-player-diagnostic__player-hint">
+                            {{
+                                'PLAYBACK_DIAGNOSTICS.REASON_EXTERNAL_CODEC_OR_CONTAINER_SUPPORT'
+                                    | translate
+                            }}
+                        </span>
+                        @if (externalLaunchStatusKey(); as statusKey) {
+                            <span
+                                class="web-player-diagnostic__player-status"
+                                aria-live="polite"
+                                data-test-id="playback-external-launch-status"
+                            >
+                                {{ statusKey | translate }}
+                            </span>
+                        }
+                    </span>
+                </button>
+            </div>
+        }
+
         <div
             class="web-player-diagnostic__recommendations"
             role="group"

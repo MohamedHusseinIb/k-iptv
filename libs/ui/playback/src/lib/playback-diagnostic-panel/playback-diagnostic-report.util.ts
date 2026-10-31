@@ -1,5 +1,6 @@
 import {
     collectPlaybackCodecs,
+    getPlatformDiagnostics,
     InlinePlaybackPlayer,
     PlaybackDiagnosticCode,
     PlaybackDiagnosticSource,
@@ -50,7 +51,7 @@ export function createDiagnosticReport(
     return JSON.stringify(
         {
             schemaVersion: 1,
-            app: 'IPTVnator',
+            app: 'K-IPTV',
             appVersion:
                 /^\d{1,4}\.\d{1,4}\.\d{1,4}(?:-(?:alpha|beta|rc)\.?\d{1,5})?$/.test(
                     appVersion
@@ -112,6 +113,7 @@ export function createDiagnosticReport(
             drmSystems: Object.values(PlaybackDrmSystem).filter((system) =>
                 issue.drmSystems?.includes(system)
             ),
+            platform: getPlatformDiagnostics(),
         },
         null,
         2

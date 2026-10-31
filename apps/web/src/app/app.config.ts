@@ -37,6 +37,7 @@ import {
 } from '@iptvnator/services';
 import { dbConfig } from '@iptvnator/shared/interfaces';
 import { getInitialLanguage } from './app-language-preference';
+import { platformProviders } from '../environments/platform.providers';
 import { storeDevtoolsProviders } from '../environments/store-devtools.providers';
 import { routes } from './app.routes';
 import { ElectronService } from './services/electron.service';
@@ -103,6 +104,9 @@ export const appConfig: ApplicationConfig = {
         provideEffects([PlaylistEffects]),
         provideRouterStore(),
         ...storeDevtoolsProviders,
+        // Empty everywhere but the android build configuration, which swaps in
+        // the Capacitor wiring and the in-app provider backend.
+        ...platformProviders,
         provideServiceWorker('ngsw-worker.js', {
             enabled: shouldEnableServiceWorker(),
             registrationStrategy: 'registerWhenStable:30000',

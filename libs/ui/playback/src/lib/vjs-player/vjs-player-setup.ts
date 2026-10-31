@@ -1,3 +1,4 @@
+import { withPlayerTechOverrides } from '@iptvnator/playback/util';
 import type {
     VideoJsPlayer,
     VideoPlayerOptions,
@@ -9,9 +10,10 @@ export function createVjsPlayerOptions(
     isMpegTs: boolean,
     sharedControls: boolean
 ): VideoPlayerOptions {
+    const withOverrides = withPlayerTechOverrides(options);
     const baseOptions = isMpegTs
-        ? { ...options, sources: [], autoplay: false }
-        : { ...options, autoplay: true };
+        ? { ...withOverrides, sources: [], autoplay: false }
+        : { ...withOverrides, autoplay: true };
     if (!sharedControls) {
         // Controls must be enabled through the constructor, not a `[controls]`
         // template binding: `player.reset()` (raw MPEG-TS/live path) replaces

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    A large share of IPTV providers, and almost every self-hosted playlist on
+    a home LAN, are reachable only over plain HTTP. Android blocks cleartext
+    by default since API 28, which would make those sources simply fail to
+    load, so cleartext is permitted for provider traffic.
+
+    The app's own origin stays https://localhost, served by Capacitor.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <!-- Lets a user trust a private CA, which self-hosted playlist
+                 servers behind a home reverse proxy commonly use. -->
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

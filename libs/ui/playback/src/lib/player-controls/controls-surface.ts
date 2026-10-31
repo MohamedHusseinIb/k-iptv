@@ -39,11 +39,35 @@ const VIEWPORT_CLICK_PAUSE_DELAY_MS = 250;
  */
 const POINTER_ATTRIBUTION_WINDOW_MS = 1000;
 
+/**
+ * Video.js suppresses the click a tap would synthesize: `Tech.emitTapEvents()`
+ * and `Player.handleTechTouchEnd_()` both call `preventDefault()` on `touchend`
+ * over the media element, so a tap on the video never reaches the `click`
+ * listener and the overlay could never be revealed again on a touch device.
+ * The surface therefore recognizes the tap itself from the pointer stream,
+ * which Video.js cannot cancel, using Video.js' own movement threshold.
+ */
+const TOUCH_TAP_MOVE_THRESHOLD_PX = 10;
+
+/**
+ * A deliberate tap is slower than Video.js' 200 ms internal threshold; the
+ * gesture only toggles the overlay, so a press-and-release is still a tap.
+ */
+const TOUCH_TAP_MAX_DURATION_MS = 700;
+
 const INTERACTIVE_SELECTOR = 'button, input, [role="slider"]';
 
 interface PointerPress {
     at: number;
     target: EventTarget | null;
+}
+
+interface TouchTap {
+    id: number;
+    x: number;
+    y: number;
+    at: number;
+    moved: boolean;
 }
 
 /**
@@ -64,6 +88,10 @@ export class ControlsSurface {
     private lastPointerDownClick: PointerPress | null = null;
     /** Set while {@link releasePointerFocus} dispatches its `focusout`. */
     private pointerFocusRelease = false;
+    /** The touch press in flight on the surface, if it may still be a tap. */
+    private touchTap: TouchTap | null = null;
+    /** When a tap was handled from the pointer stream, to drop its click. */
+    private touchTapHandledAt: number | null = null;
 
     private readonly onDocumentPointerDown = (event: PointerEvent) => {
         const now = Date.now();
@@ -114,6 +142,8 @@ export class ControlsSurface {
         this.clearClickPauseTimer();
         this.surfaceCleanup?.();
         this.surfaceCleanup = null;
+        this.touchTap = null;
+        this.touchTapHandledAt = null;
         this.surface = surface;
         if (!surface) {
             return () => undefined;
@@ -123,19 +153,40 @@ export class ControlsSurface {
         // hidden" and touch reveal/hide semantics would be unreachable.
         const reveal = (event: PointerEvent) => {
             if (event.pointerType === 'touch') {
+                this.trackTapMovement(event);
                 return;
             }
             this.handlers.reveal();
         };
-        const click = (event: MouseEvent) => this.onClick(event);
+        const pointerdown = (event: PointerEvent) => this.onPointerDown(event);
+        const pointerup = (event: PointerEvent) => this.onPointerUp(event);
+        const pointercancel = () => {
+            this.touchTap = null;
+        };
+        const click = (event: MouseEvent) => {
+            if (this.consumeHandledTapClick(event)) {
+                return;
+            }
+            this.onClick(event);
+        };
         const dblclick = (event: MouseEvent) => this.onDblClick(event);
         surface.addEventListener('pointermove', reveal, { passive: true });
         surface.addEventListener('pointerenter', reveal);
+        surface.addEventListener('pointerdown', pointerdown, {
+            passive: true,
+        });
+        surface.addEventListener('pointerup', pointerup, { passive: true });
+        surface.addEventListener('pointercancel', pointercancel, {
+            passive: true,
+        });
         surface.addEventListener('click', click);
         surface.addEventListener('dblclick', dblclick);
         this.surfaceCleanup = () => {
             surface.removeEventListener('pointermove', reveal);
             surface.removeEventListener('pointerenter', reveal);
+            surface.removeEventListener('pointerdown', pointerdown);
+            surface.removeEventListener('pointerup', pointerup);
+            surface.removeEventListener('pointercancel', pointercancel);
             surface.removeEventListener('click', click);
             surface.removeEventListener('dblclick', dblclick);
         };
@@ -269,6 +320,83 @@ export class ControlsSurface {
      */
     wasPointerFocusRelease(): boolean {
         return this.pointerFocusRelease;
+    }
+
+    /** Start tracking a single-finger press that may turn out to be a tap. */
+    private onPointerDown(event: PointerEvent): void {
+        if (event.pointerType !== 'touch' || !event.isPrimary) {
+            this.touchTap = null;
+            return;
+        }
+        this.touchTap = {
+            id: event.pointerId,
+            x: event.clientX,
+            y: event.clientY,
+            at: Date.now(),
+            moved: false,
+        };
+    }
+
+    /**
+     * Complete a tracked press. A short, stationary release is the tap whose
+     * `click` Video.js cancelled, so it runs the click semantics directly.
+     */
+    private onPointerUp(event: PointerEvent): void {
+        const tap = this.touchTap;
+        this.touchTap = null;
+        if (
+            tap === null ||
+            event.pointerType !== 'touch' ||
+            tap.id !== event.pointerId ||
+            tap.moved ||
+            this.movedBeyondTapThreshold(tap, event) ||
+            Date.now() - tap.at > TOUCH_TAP_MAX_DURATION_MS
+        ) {
+            return;
+        }
+        this.touchTapHandledAt = Date.now();
+        this.onClick(event);
+    }
+
+    /** A drag or scroll disqualifies the press from becoming a tap. */
+    private trackTapMovement(event: PointerEvent): void {
+        const tap = this.touchTap;
+        if (
+            tap === null ||
+            tap.id !== event.pointerId ||
+            !this.movedBeyondTapThreshold(tap, event)
+        ) {
+            return;
+        }
+        tap.moved = true;
+    }
+
+    private movedBeyondTapThreshold(tap: TouchTap, event: PointerEvent) {
+        return (
+            Math.hypot(event.clientX - tap.x, event.clientY - tap.y) >
+            TOUCH_TAP_MOVE_THRESHOLD_PX
+        );
+    }
+
+    /**
+     * Whether this click is the one a just-handled tap produced. Engines that
+     * leave the synthesized click intact — any surface Video.js does not cover
+     * — would otherwise run the tap semantics twice and cancel them out.
+     */
+    private consumeHandledTapClick(event: MouseEvent): boolean {
+        const handledAt = this.touchTapHandledAt;
+        if (handledAt === null) {
+            return false;
+        }
+        if (Date.now() - handledAt > POINTER_ATTRIBUTION_WINDOW_MS) {
+            this.touchTapHandledAt = null;
+            return false;
+        }
+        if (!this.wasTouchInteraction(event)) {
+            return false;
+        }
+        this.touchTapHandledAt = null;
+        return true;
     }
 
     private onClick(event: MouseEvent): void {

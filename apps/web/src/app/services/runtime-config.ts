@@ -23,16 +23,18 @@ export function getRuntimeBackendUrl(): string {
 
 export interface ServiceWorkerRuntimeContext {
     readonly electronBridge?: unknown;
+    readonly capacitorBridge?: unknown;
     readonly protocol?: string;
 }
 
 function getDefaultServiceWorkerRuntimeContext(): ServiceWorkerRuntimeContext {
     const browserWindow = globalThis.window as
-        | (Window & { electron?: unknown })
+        | (Window & { electron?: unknown; Capacitor?: unknown })
         | undefined;
 
     return {
         electronBridge: browserWindow?.electron,
+        capacitorBridge: browserWindow?.Capacitor,
         protocol:
             browserWindow?.location?.protocol ?? globalThis.location?.protocol,
     };
@@ -48,6 +50,10 @@ export function shouldEnableServiceWorker(
         !!navigatorRef &&
         'serviceWorker' in navigatorRef &&
         !runtimeContext.electronBridge &&
+        // Capacitor serves the bundle from its own local server and the
+        // android build ships no ngsw-worker.js, so registering one there
+        // would only fail.
+        !runtimeContext.capacitorBridge &&
         runtimeContext.protocol !== 'file:'
     );
 }
