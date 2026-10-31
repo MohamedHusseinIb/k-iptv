@@ -34,13 +34,6 @@ leanback launcher entry.
 
 ### Not included
 
-
-<img width="1280" height="904" alt="image" src="https://github.com/user-attachments/assets/95c7463b-3b63-46b5-b24d-7b7aa42f8eab" />
-
-<img width="1280" height="904" alt="image" src="https://github.com/user-attachments/assets/b5dde849-06f3-4cad-81ab-9717453dc63b" />
-
-<img width="1280" height="904" alt="image" src="https://github.com/user-attachments/assets/a0df23a5-cb69-4f7a-9518-15815da078b7" />
-
 ## Building from source
 
 You need Node.js (`^22.23.4 || ^24.22.1`), pnpm 10, JDK 21, and the Android SDK
